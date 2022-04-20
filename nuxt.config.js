@@ -38,7 +38,15 @@ export default {
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
   ],
+  loaders: {
+    sass: {
+      implementation: require('sass'),
+    },
+    scss: {
+      implementation: require('sass'),
+    },
+  },
+  build: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 }
