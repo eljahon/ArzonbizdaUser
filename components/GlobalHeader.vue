@@ -1,14 +1,12 @@
 <template>
-  <div class="container">
-    <h2>asdasdas</h2>
-    <!-- <CButton variant-color="green">Button</CButton> -->
+  <div>
     <CThemeProvider>
       <c-button
         variant="primary"
         size="md"
         height="50px"
         width="250px"
-        bg-color="color.TextColor2"
+        bg-color="none"
         border="none"
         _focus="none"
         cursor="pointer"

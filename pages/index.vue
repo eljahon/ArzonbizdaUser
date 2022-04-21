@@ -1,15 +1,23 @@
 <template>
-  <defaultVue />
+  <div>
+    <HeaderButton />
+    <HeaderInput />
+    <LangButton />
+  </div>
 </template>
 
 <script lang="js">
 import "@/assets/main.scss"
-import defaultVue from "~/layouts/default.vue"
+import HeaderButton from "~/library/HeaderButton.vue"
+import HeaderInput from "~/library/HeaderInput.vue"
+import LangButton from "~/library/LangButton.vue"
 export default {
 
 name:"IndexComponent",
 components: {
-  defaultVue
+    HeaderButton,
+    HeaderInput,
+    LangButton
 },
 }
 </script>
