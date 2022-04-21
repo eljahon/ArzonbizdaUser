@@ -1,6 +1,9 @@
 <template>
   <div>
+    <div class="container">
     <h3>test header</h3>
+
+    </div>
   </div>
 </template>
 
