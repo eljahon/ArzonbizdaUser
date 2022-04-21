@@ -26,12 +26,12 @@ export default {
           _focus="none"
           border="LangBorder"
           color="color.InputColor"
-          aria-placeholder="Eng"
+          placeholder="Eng"
           h="56px"
         >
-          <option value="Eng">Eng</option>
-          <option value="Uzb">Uzb</option>
           <option value="jRus">RU</option>
+          <option value="Uzb">Uzb</option>
+          <option value="Eng">Eng</option>
         </c-select>
       </c-box>
     </CThemeProvider>

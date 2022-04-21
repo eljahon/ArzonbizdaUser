@@ -1,18 +1,20 @@
-<template>
-  <div class="container">
-    <GlobalHeader />
-    <Nuxt />
-    
-  </div>
-</template>
 <script>
-import GlobalHeader from '~/components/GlobalHeader.vue'
+import Header from '~/components/Header.vue'
 
 export default {
-  name: 'DefaultLayout',
+  name: 'ContainerBox',
 
   components: {
-    GlobalHeader,
+    Header,
   },
 }
 </script>
+
+<template>
+  <div class="containerBox">
+    <Header />
+    <Nuxt />
+  </div>
+</template>
+
+<style lang="scss" scoped></style>

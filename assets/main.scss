@@ -26,18 +26,39 @@ li {
   list-style: none;
 }
 
-.container {
+.containerBox {
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 240px;
 }
 
-.css-efmfwx-className {
-  border: none;
+.slick-prev {
+  border: 1px solid #e3e6e6 !important;
+  width: 40px !important;
+  height: 40px !important;
+  left: -50px !important;
+  border-radius: 50%;
 
-  &:focus {
-    box-shadow: none !important;
+  &::before {
+    position: absolute;
+    content: url('@/assets/img/chavron-left.png') !important;
+    top: 6px;
+    right: 16px;
+  }
+}
+
+.slick-next {
+  border: 1px solid #3bcff5 !important;
+  width: 40px !important;
+  height: 40px !important;
+  right: -47px !important;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: url('@/assets/img/chavron-right.png') !important;
+    top: 6px;
+    right: 16px;
   }
 }
 

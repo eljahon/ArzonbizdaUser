@@ -21,7 +21,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          max-width="708px"
+          width="708px"
           height="56px"
           _focus="none"
           _hover="none"

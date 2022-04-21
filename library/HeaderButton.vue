@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div>
     <CThemeProvider>
       <c-button
         align-item="center"
@@ -28,6 +28,7 @@ export default {
         background-color="none"
         justify-content="center"
         gap="8.5px"
+        bg="transparent"
       >
         <Icon name="comparison" />
         Сравнить
