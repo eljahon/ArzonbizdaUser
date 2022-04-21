@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>asdasdas</h2>
+    <p>Телефоны</p>
     <!-- <CButton variant-color="green">Button</CButton> -->
     <CThemeProvider>
       <c-button
@@ -36,7 +36,9 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
 
-h2 {
-  color: $RouteColor;
+p {
+  font-family: 'Yandex Sans Display';
+  font-size: 20px;
+  color: red;
 }
 </style>
