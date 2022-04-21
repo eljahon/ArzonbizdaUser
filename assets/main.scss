@@ -32,3 +32,11 @@ li {
   box-sizing: border-box;
   padding: 0 240px;
 }
+
+.css-efmfwx-className {
+  border: none;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
