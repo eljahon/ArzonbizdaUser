@@ -32,3 +32,37 @@ li {
   box-sizing: border-box;
   padding: 0 240px;
 }
+
+.css-efmfwx-className {
+  border: none;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+// Yandex Fonts
+
+@font-face {
+  font-family: 'Yandex Sans Display';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Yandex Sans Display'),
+    url('~assets/font/YandexSansDisplay-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Yandex Sans Display';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Yandex Sans Display'),
+    url('~assets/font/YandexSansDisplay-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Yandex Sans Display';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Yandex Sans Display'),
+    url('~assets/font/YandexSansDisplay-Regular.woff') format('woff');
+}

@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div class="container">
+    <p>Телефоны</p>
+    <!-- <CButton variant-color="green">Button</CButton> -->
     <CThemeProvider>
       <c-button
         variant="primary"
@@ -34,7 +36,9 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
 
-h2 {
-  color: $RouteColor;
+p {
+  font-family: 'Yandex Sans Display';
+  font-size: 20px;
+  color: red;
 }
 </style>
