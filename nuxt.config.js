@@ -1,3 +1,5 @@
+import customTheme from './custom-theme'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,11 +13,17 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        // href: '@/layouts/global.css',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/main.scss', '@/assets/variables.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -32,12 +40,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/chakra
-    '@chakra-ui/nuxt',
-    // https://go.nuxtjs.dev/emotion
-    '@nuxtjs/emotion',
-  ],
+  modules: ['@chakra-ui/nuxt', '@nuxtjs/emotion'],
+
+  chakra: {
+    extendTheme: customTheme,
+  },
+
   loaders: {
     sass: {
       implementation: require('sass'),
@@ -46,6 +54,7 @@ export default {
       implementation: require('sass'),
     },
   },
+
   build: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
