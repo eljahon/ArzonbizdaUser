@@ -24,4 +24,9 @@ export default {
       RouteColor: '#0F6CB0',
     },
   },
+
+  borders: {
+    InputBorder: '2px solid #E50914',
+    LangBorder: '1px solid #E3E6E6',
+  },
 }
