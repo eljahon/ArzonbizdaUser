@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <!-- Right arrow start -->
+    <svg
+      v-if="name === 'rightArrow'"
+      width="13"
+      height="14"
+      viewBox="0 0 14 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.75 11L13 6L7.75 1M13 6L1 6L13 6Z"
+        stroke="#E50914"
+        stroke-width="1.3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <!-- Right arrow end -->
+  </div>
+</template>
+<script>
+export default {
+  name: 'IconComponent',
+  props: ['name'],
+}
+</script>

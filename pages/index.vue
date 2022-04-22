@@ -1,15 +1,12 @@
 <template>
-  <defaultVue />
+  <main>
+    <categories-component />
+    <brands-component />
+  </main>
 </template>
-
 <script lang="js">
 import "@/assets/main.scss"
-import defaultVue from "~/layouts/default.vue"
 export default {
-
-name:"IndexComponent",
-components: {
-  defaultVue
-},
+  name:"IndexComponent",
 }
 </script>
