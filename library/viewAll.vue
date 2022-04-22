@@ -10,7 +10,7 @@
         :width="['77px', '102px', '124px', '152px']"
         white-space="nowrap"
       >
-        Простмотреть все <icon-component name="rightArrow" />
+        Простмотреть все <icon-component name="right_arrow" />
       </c-flex>
     </c-link>
   </div>
@@ -18,7 +18,7 @@
 
 <script>
 import { CLink } from '@chakra-ui/vue'
-import iconComponent from '~/components/icons/iconComponent.vue'
+import iconComponent from '~/assets/icon/icon.vue'
 export default {
   components: { iconComponent, CLink },
 }

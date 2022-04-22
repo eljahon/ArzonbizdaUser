@@ -13,11 +13,13 @@
         h="auto"
       />
       <c-text
-        :font-size="['8px', '10px', '14px', '16px']"
-        :line-height="['10px', '12px', '18px', '20px']"
+        :font-size="['10px', '12px', '14px', '16px']"
+        :line-height="['12px', '14px', '18px', '20px']"
+        font-weight="700"
         color="color.TextColor1"
         text-align="center"
-        >Очистители и увлажнители воздуха</c-text
+        mt="16px"
+        >{{ item.name }}</c-text
       >
     </c-flex>
   </CThemeProvider>

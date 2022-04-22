@@ -1,3 +1,15 @@
+<script>
+import { CThemeProvider, CFlex, CText } from '@chakra-ui/vue'
+export default {
+  name: 'CategoryComponent',
+  components: {
+    CFlex,
+    CThemeProvider,
+    CText,
+  },
+  props: ['item'],
+}
+</script>
 <template>
   <CThemeProvider>
     <c-flex
@@ -13,24 +25,15 @@
         h="auto"
       />
       <c-text
-        :font-size="['8px', '10px', '14px', '16px']"
-        :line-height="['10px', '12px', '18px', '20px']"
+        font-family="Yandex Sans Display"
+        :font-size="['10px', '12px', '14px', '16px']"
+        :line-height="['12px', '14px', '18px', '20px']"
+        font-weight="700"
         color="color.TextColor1"
         text-align="center"
+        mt="16px"
         >Очистители и увлажнители воздуха</c-text
       >
     </c-flex>
   </CThemeProvider>
 </template>
-<script>
-import { CThemeProvider, CFlex, CText } from '@chakra-ui/vue'
-export default {
-  name: 'CategoryComponent',
-  components: {
-    CFlex,
-    CThemeProvider,
-    CText,
-  },
-  props: ['item'],
-}
-</script>

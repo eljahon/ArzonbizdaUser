@@ -11,6 +11,7 @@
         :row-gap="['12px', '22px', '32px', '40px']"
         :column-gap="['42px', '38px', '34px', '30px']"
         justify-items="center"
+        justify-content="center"
       >
         <c-grid-item v-for="item in categoryItem" :key="item">
           <category-component :item="item" />
@@ -21,7 +22,7 @@
 </template>
 <script>
 import { CThemeProvider, CGrid, CGridItem } from '@chakra-ui/vue'
-import CategoryComponent from '~/components/categories-component/categoryComponent.vue'
+import CategoryComponent from '~/my-components/categories-component/categoryComponent.vue'
 import ViewAll from '~/library/ViewAll.vue'
 export default {
   name: 'CategoriesComponent',
