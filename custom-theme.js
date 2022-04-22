@@ -1,9 +1,9 @@
 export default {
   breakpoints: ['30em', '48em', '62em', '80em'],
   fonts: {
-    heading: '"Avenir Next", sans-serif',
-    body: 'system-ui, sans-serif',
-    mono: 'Menlo, monospace',
+    heading: '"Yandex Sans Display", sans-serif',
+    body: '"Yandex Sans Display", sans-serif',
+    mono: '"Yandex Sans Display", monospace',
   },
   colors: {
     color: {
@@ -22,6 +22,7 @@ export default {
       WarningColor1: '#E50914',
       WarningColor2: '#FF3838',
       RouteColor: '#0F6CB0',
+      ImageBgColor: '#F5F7F7',
     },
   },
 
