@@ -34,7 +34,7 @@ export default {
           color="color.TextColor1"
           text-align="center"
           :mt="['10px', '15px', '20px', '26px']"
-          >Очистители и увлажнители воздуха</CText
+          >{{ item.name }}</CText
         >
       </CBox>
     </CFlex>

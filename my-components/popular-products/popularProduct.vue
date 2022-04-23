@@ -35,7 +35,7 @@ export default {
             as="h2"
             :font-size="['12px', '16px', '20px', '24px']"
             mb="8px"
-            >от 3 324 000 сум</CHeading
+            >{{ $t('from') }} {{ item.price }} {{ $t('currency') }}</CHeading
           >
           <CBox
             as="span"
@@ -43,7 +43,7 @@ export default {
             :font-size="['10px', '14px', '17px', '20px']"
             :line-height="['15px', '20px', '25px', '30px']"
             color="color.TextColor2"
-            >Xiaomi Poco X3 Pro 8/256GB</CBox
+            >{{ item.name }}</CBox
           >
         </CBox>
       </CStack>

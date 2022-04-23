@@ -5,30 +5,90 @@ import ViewAll from '~/library/viewAll.vue'
 export default {
   name: 'CategoriesComponent',
   components: {
-    ViewAll,
     CThemeProvider,
     CSimpleGrid,
     CBox,
     PopularProduct,
+    ViewAll,
   },
   data() {
     return {
       popular: [
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
-        { img: 'poco.png' },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
+        {
+          img: 'poco.png',
+          name: 'Xiaomi Poco X3 Pro 8/256GB',
+          price: '3 324 000',
+        },
       ],
     }
   },
@@ -42,7 +102,7 @@ export default {
         justify="space-between"
         :mb="['10px', '20px', '30px', '40px']"
       >
-        <h1 class="main_header">Популярные товары</h1>
+        <h1 class="main_header">{{ $t('populargoods') }}</h1>
         <ViewAll />
       </CFlex>
 

@@ -6,7 +6,7 @@
         justify="space-between"
         :mb="['10px', '20px', '30px', '40px']"
       >
-        <h1 class="main_header">Категории</h1>
+        <h1 class="main_header">{{ $t('category') }}</h1>
         <ViewAll />
       </CFlex>
 
@@ -32,6 +32,7 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import CategoryComponent from '~/my-components/categories-component/categoryComponent.vue'
+import ViewAll from '~/library/viewAll.vue'
 export default {
   name: 'CategoriesComponent',
   components: {
@@ -39,22 +40,23 @@ export default {
     CThemeProvider,
     CSimpleGrid,
     CBox,
+    ViewAll,
   },
   data() {
     return {
       categoryItem: [
-        { img: 'category1.png' },
-        { img: 'category2.png' },
-        { img: 'category3.png' },
-        { img: 'category4.png' },
-        { img: 'category5.png' },
-        { img: 'category6.png' },
-        { img: 'category7.png' },
-        { img: 'category8.png' },
-        { img: 'category9.png' },
-        { img: 'category10.png' },
-        { img: 'category11.png' },
-        { img: 'category12.png' },
+        { img: 'category1.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category2.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category3.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category4.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category5.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category6.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category7.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category8.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category9.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category10.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category11.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category12.png', name: 'Очистители и увлажнители воздуха' },
       ],
     }
   },

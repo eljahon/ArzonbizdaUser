@@ -5,8 +5,7 @@
         font-family="Yandex Sans Display"
         :font-size="['10px', '12px', '14px', '16px']"
         :line-height="['18px', '20px', '22px', '24px']"
-      >
-        Простмотреть все <icon-component name="right_arrow" />
+        >{{ $t('viewAll') }}<Icon name="right_arrow" />
       </c-flex>
     </c-link>
   </div>
@@ -14,8 +13,9 @@
 
 <script>
 import { CLink } from '@chakra-ui/vue'
-import iconComponent from '~/assets/icon/icon.vue'
+import Icon from '~/assets/icon/icon.vue'
 export default {
-  components: { CLink, iconComponent },
+  name: 'ViewAllIcon',
+  components: { CLink, Icon },
 }
 </script>

@@ -3,8 +3,8 @@ import { CFlex, CThemeProvider } from "@chakra-ui/vue";
 import HeaderButton from "~/library/HeaderButton.vue";
 import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
-import BurgerBtn from "~/library/BurgerBtn.vue";
-
+// import BurgerBtn from "~/library/BurgerBtn.vue";
+import Drawer from "~/library/Drawer.vue";
 
 export default {
 
@@ -15,7 +15,8 @@ export default {
     CFlex,
     HeaderInput,
     LangButton,
-    BurgerBtn,
+    // BurgerBtn,
+    Drawer,
 },
 }
 </script>
@@ -33,7 +34,7 @@ export default {
             height="42px"
           />
         </NuxtLink>
-        <BurgerBtn />
+        <Drawer />
         <HeaderInput />
         <LangButton />
         <HeaderButton />

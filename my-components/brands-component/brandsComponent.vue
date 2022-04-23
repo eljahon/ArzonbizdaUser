@@ -6,7 +6,7 @@
         justify="space-between"
         :mb="['10px', '20px', '30px', '40px']"
       >
-        <h1 class="main_header">Бренды</h1>
+        <h1 class="main_header">{{ $t('brand') }}</h1>
         <ViewAll />
       </CFlex>
 
@@ -28,6 +28,7 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
+import ViewAll from '~/library/viewAll.vue'
 export default {
   name: 'BrandsComponent',
   components: {
@@ -35,6 +36,7 @@ export default {
     CThemeProvider,
     CSimpleGrid,
     CBox,
+    ViewAll,
   },
   data() {
     return {
