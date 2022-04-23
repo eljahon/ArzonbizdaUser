@@ -3,7 +3,7 @@ import customTheme from './custom-theme'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'arzon-bizda',
+    title: 'Arzon bizda',
     htmlAttrs: {
       lang: 'en',
     },
@@ -57,6 +57,18 @@ export default {
     scss: {
       implementation: require('sass'),
     },
+  },
+
+  i18n: {
+    locales: [
+      {
+        code: 'ru',
+        file: 'ru.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'ru',
   },
 
   build: {},
