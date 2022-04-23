@@ -38,7 +38,7 @@ export default {
   <CThemeProvider>
     <div class="categories_list">
       <c-flex align="center" justify="space-between" mb="40px">
-        <h1 class="main_header">Популярные товары</h1>
+        <h1 class="main_header">{{$t('populargoods')}}</h1>
         <view-all />
       </c-flex>
 
