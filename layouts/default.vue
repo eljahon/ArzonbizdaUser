@@ -1,18 +1,18 @@
 <script>
-import Header from '~/components/Header.vue'
+// import Header from '~/components/Header.vue'
 
 export default {
   name: 'ContainerBox',
 
   components: {
-    Header,
+    // Header,
   },
 }
 </script>
 
 <template>
   <div class="containerBox">
-    <Header />
+    <!-- <Header /> -->
     <Nuxt />
   </div>
 </template>

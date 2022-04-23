@@ -1,5 +1,6 @@
 export default {
   breakpoints: ['30em', '48em', '62em', '80em'],
+  // 480px   768px    992     280
   fonts: {
     heading: '"Avenir Next", sans-serif',
     body: 'system-ui, sans-serif',
