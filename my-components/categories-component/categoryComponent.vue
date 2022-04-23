@@ -12,28 +12,41 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <c-flex
+    <CFlex
       class="category"
-      max-w="215px"
+      :max-w="['52px', '106px', '160px', '215px']"
       flex-direction="column"
       align="center"
       justify="center"
     >
-      <c-image
+      <CImage
         :src="require(`@/assets/img/${item.img}`)"
         :width="['52px', '71px', '87px', '104px']"
         h="auto"
       />
-      <c-text
-        font-family="Yandex Sans Display"
-        :font-size="['10px', '12px', '14px', '16px']"
-        :line-height="['12px', '14px', '18px', '20px']"
-        font-weight="700"
-        color="color.TextColor1"
-        text-align="center"
-        mt="16px"
-        >Очистители и увлажнители воздуха</c-text
-      >
-    </c-flex>
+      <CBox>
+        <CText
+          class="text"
+          font-family="Yandex Sans Display"
+          :font-size="['10px', '12px', '14px', '16px']"
+          :line-height="['12px', '14px', '18px', '20px']"
+          font-weight="700"
+          color="color.TextColor1"
+          text-align="center"
+          :mt="['10px', '15px', '20px', '26px']"
+          >Очистители и увлажнители воздуха</CText
+        >
+      </CBox>
+    </CFlex>
   </CThemeProvider>
 </template>
+<style lang="scss" scoped>
+@media screen and(max-width: 800px) {
+  .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+</style>

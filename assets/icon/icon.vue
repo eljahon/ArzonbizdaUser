@@ -75,6 +75,7 @@
     <!-- right_arrow start -->
     <svg
       v-if="name === 'right_arrow'"
+      class="right_arrow"
       width="14"
       height="12"
       viewBox="0 0 14 12"
@@ -91,7 +92,7 @@
     </svg>
     <!-- right_arrow end -->
 
-    <!-- star start -->
+    <!-- star icon start -->
     <svg
       v-if="name === 'star'"
       width="26"
@@ -106,9 +107,9 @@
       />
     </svg>
 
-    <!-- star end -->
+    <!-- star icon end -->
 
-    <!-- comment start -->
+    <!-- comment icon start -->
     <svg
       v-if="name === 'comment'"
       width="20"
@@ -132,7 +133,7 @@
       />
     </svg>
 
-    <!-- comment end -->
+    <!-- comment icon end -->
   </div>
 </template>
 
@@ -142,3 +143,22 @@ export default {
   props: ['name'],
 }
 </script>
+
+<style lang="scss">
+.right_arrow {
+  position: relative;
+  top: 1px;
+  margin-left: 10px;
+  padding-top: 1px;
+  @media screen and(max-width: 62em) {
+    margin-left: 8px;
+    padding-top: 3px;
+  }
+  @media screen and(max-width: 48em) {
+    margin-left: 6px;
+    padding-top: 3px;
+    width: 14px;
+    height: 12px;
+  }
+}
+</style>

@@ -1,9 +1,9 @@
 <template>
   <div>
     <SliderComponent />
-    <popular-products />
-    <categories-component />
-    <brands-component />
+    <PopularProducts />
+    <CategoriesComponent />
+    <BrandsComponent />
   </div>
 </template>
 

@@ -1,41 +1,44 @@
 <template>
   <CThemeProvider>
-    <div class="categories_list">
-      <c-flex align="center" justify="space-between" mb="40px">
+    <CBox :mb="['24px', '37px', '50px', '64px']">
+      <CFlex
+        align="center"
+        justify="space-between"
+        :mb="['10px', '20px', '30px', '40px']"
+      >
         <h1 class="main_header">Бренды</h1>
-        <view-all />
-      </c-flex>
+        <ViewAll />
+      </CFlex>
 
-      <c-grid
-        template-columns="repeat(4, minmax(52px, 215px))"
-        :row-gap="['12px', '22px', '32px', '40px']"
-        :column-gap="['42px', '38px', '34px', '30px']"
+      <CSimpleGrid
+        :columns="['4', '4', '4', '6']"
+        rows="2"
+        spacing-x="30"
+        :spacing-y="['18px', '25px', '32px', '40px']"
         justify-items="center"
         justify-content="center"
       >
-        <c-grid-item v-for="item in categoryItem" :key="item">
-          <brand-component :item="item" />
-        </c-grid-item>
-      </c-grid>
-    </div>
+        <CBox v-for="item in brandItem" :key="item" class="brands__component">
+          <BrandComponent :item="item" />
+        </CBox>
+      </CSimpleGrid>
+    </CBox>
   </CThemeProvider>
 </template>
 <script>
-import { CThemeProvider, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
-import ViewAll from '~/library/ViewAll.vue'
 export default {
-  name: 'CategoriesComponent',
+  name: 'BrandsComponent',
   components: {
     BrandComponent,
-    ViewAll,
     CThemeProvider,
-    CGrid,
-    CGridItem,
+    CSimpleGrid,
+    CBox,
   },
   data() {
     return {
-      categoryItem: [
+      brandItem: [
         { img: 'acer.png', name: 'Acer' },
         { img: 'apple.png', name: 'Apple' },
         { img: 'asus.png', name: 'Asus' },
@@ -53,3 +56,12 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.brands__component {
+  @media screen and(max-width: 62em) {
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
+}
+</style>

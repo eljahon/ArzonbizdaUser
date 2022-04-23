@@ -1,8 +1,7 @@
 <template>
   <CThemeProvider>
     <c-flex
-      class="category"
-      max-w="215px"
+      :max-w="['64px', '114', '164px', '215px']"
       flex-direction="column"
       align="center"
       justify="center"

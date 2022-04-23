@@ -1,14 +1,14 @@
 <script>
-import { CThemeProvider, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import PopularProduct from './popularProduct.vue'
-import ViewAll from '~/library/ViewAll.vue'
+import ViewAll from '~/library/viewAll.vue'
 export default {
   name: 'CategoriesComponent',
   components: {
     ViewAll,
     CThemeProvider,
-    CGrid,
-    CGridItem,
+    CSimpleGrid,
+    CBox,
     PopularProduct,
   },
   data() {
@@ -36,23 +36,46 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <div class="categories_list">
-      <c-flex align="center" justify="space-between" mb="40px">
+    <CBox :mb="['27px', '47px', '67px', '88px']">
+      <CFlex
+        align="center"
+        justify="space-between"
+        :mb="['10px', '20px', '30px', '40px']"
+      >
         <h1 class="main_header">Популярные товары</h1>
-        <view-all />
-      </c-flex>
+        <ViewAll />
+      </CFlex>
 
-      <c-grid
-        template-columns="repeat(auto-fit, minmax(105px, 264px))"
-        :row-gap="['12px', '22px', '32px', '40px']"
-        :column-gap="['42px', '38px', '34px', '30px']"
+      <CSimpleGrid
+        :columns="['3', '3', '4', '5']"
+        :rows="['1', '2', '3', '3']"
+        :row-gap="['10px', '20px', '30px', '40px']"
         justify-items="center"
         justify-content="center"
       >
-        <c-grid-item v-for="item in popular" :key="item">
-          <popular-product :item="item" />
-        </c-grid-item>
-      </c-grid>
-    </div>
+        <CBox v-for="item in popular" :key="item" class="popular__product">
+          <PopularProduct :item="item" />
+        </CBox>
+      </CSimpleGrid>
+    </CBox>
   </CThemeProvider>
 </template>
+<style lang="scss" scoped>
+.popular__product {
+  @media screen and(max-width: 62em) {
+    &:nth-child(n + 10) {
+      display: none;
+    }
+  }
+  @media screen and(max-width: 48em) {
+    &:nth-child(n + 7) {
+      display: none;
+    }
+  }
+  @media screen and(max-width: 30em) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
+</style>

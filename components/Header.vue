@@ -22,7 +22,7 @@ export default {
 
 <template>
   <CThemeProvider>
-    <c-flex>
+    <CFlex>
       <header class="header">
         <NuxtLink to="/">
           <img
@@ -38,7 +38,7 @@ export default {
         <LangButton />
         <HeaderButton />
       </header>
-    </c-flex>
+    </CFlex>
   </CThemeProvider>
 </template>
 
