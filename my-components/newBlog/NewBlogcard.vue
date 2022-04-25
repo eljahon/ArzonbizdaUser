@@ -14,8 +14,8 @@ export default {
   <CBox
     ><CBox
       class="imgDiv"
-      :height="['200px', '250px', '300px', '370px']"
-      :border-radius="['8px','10px','12px','16px']"
+      :height="['102px', '122px', '230px', '280px', '300px', '370px']"
+      :border-radius="['8px', '10px', '12px', '14px', '15px', '16px']"
       overflow="hidden"
       position="relative"
       ><CImage
@@ -30,27 +30,16 @@ export default {
     <CBox>
       <CText
         class="__qator2"
-        :mt="['10px', '15px', '20px', '24px']"
-        color="color.#242625"
+        :mt="['5px', '12px', '15px', '17px', '20px', '24px']"
+        color="color.TextColor3"
         text-align="start"
-        :font-size="['10px', '25px', '20px', '24px']"
+        :font-size="['8px', '13px', '18px', '25px', '20px', '24px']"
         font-family="Yandex Sans Display"
         font-weight="700"
-        :line-height="['14px', '20px', '24px', '28px']"
-        >{{ item.textName }}</CText
+        :line-height="['9px', '18px', '24px', '28px', '28px', '28px']"
+        >{{ $t(item.textName) }}</CText
       >
     </CBox>
   </CBox>
 </template>
-<style lang="scss" scoped>
-@media (max-width: 489px) {
-  .imgDiv {
-    height: 122px;
-  }
-}
-@media (max-width: 489px) {
-  .imgDiv {
-    height: 102px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

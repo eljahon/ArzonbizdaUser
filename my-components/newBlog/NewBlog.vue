@@ -42,19 +42,19 @@ export default {
   <CThemeProvider>
     <div>
       <CHeading
-        :mt="['26px','40px','60px','88px']"
-        :mb="['16px','25px','32px','40px']"
+        :mt="['26px', '40px', '60px', '88px']"
+        :mb="['16px', '25px', '32px', '40px']"
         color="color.TextColor2"
         :font-size="['12px', '15px', '20px', '24px']"
         font-family="Yandex Sans Display"
         font-weight="700"
         :line-height="['16px', '18px', '20px', '24px']"
-        >Новые блоги</CHeading
+        >{{ $t('newBlogWord') }}</CHeading
       >
       <CSimpleGrid
         align-items="center"
-        :columns="['3', '3', '4', '4']"
-        :spacing="['10px', '20px', '25px', '30px']"
+        :columns="['3', '3', '3', '3', '4', '4']"
+        :spacing="['10px', '12px', '15px', '20px', '25px', '30px']"
       >
         <CBox
           v-for="item in cardsData"
@@ -74,7 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 .products__div {
-  @media screen and(max-width: 48em) {
+  @media screen and(max-width: 912px) {
     &:nth-child(n + 4) {
       display: none;
     }
