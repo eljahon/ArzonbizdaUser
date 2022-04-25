@@ -1,6 +1,6 @@
 <script>
 import { CThemeProvider, CButton } from '@chakra-ui/vue'
-import Icon from '~/assets/icon/icon.vue'
+import Icon from '~/components/icon.vue'
 
 export default {
   name: 'HeaderButton',
@@ -21,6 +21,7 @@ export default {
         variant-color="color.WhiteColor"
         border-color="color.BorderColor"
         border="1px solid"
+        rounded="12"
         _focus="none"
         color="color.InputBorder"
         height="56px"

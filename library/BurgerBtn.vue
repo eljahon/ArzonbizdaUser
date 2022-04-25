@@ -1,8 +1,8 @@
 <script>
-import icon from '~/assets/icon/icon.vue'
+import Icon from '~/components/icon.vue'
 export default {
   components: {
-    icon,
+    Icon,
   },
 }
 </script>
@@ -10,7 +10,7 @@ export default {
 <template>
   <div>
     <button class="burger__btn">
-      <icon name="burger" />
+      <Icon name="burger" />
     </button>
   </div>
 </template>

@@ -6,15 +6,19 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
   components: { VueSlickCarousel },
 
-  settings: {
-    dots: true,
-    dotsClass: 'slick-dots custom-dot-class',
-    edgeFriction: 0.35,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
+  data() {
+    return {
+      settings: {
+        dots: false,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0.35,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+      },
+    }
   },
 }
 </script>
@@ -50,8 +54,8 @@ export default {
 
 <style lang="scss">
 .banner__hero {
-  max-width: 1400px;
-  height: 440px;
+  max-width: 1440px;
+  max-height: 440px;
   border-radius: 25px;
 }
 </style>

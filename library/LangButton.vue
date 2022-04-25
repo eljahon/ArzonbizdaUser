@@ -5,11 +5,22 @@ export default {
   components: {
     CThemeProvider,
   },
+  props: {
+    langOptins: {
+      type: Array,
+      default: () => [],
+    },
+  },
 
   data() {
     return {
-      burgerType: '',
+      loacales: '',
     }
+  },
+  watch: {
+    loacales(event) {
+      this.$router.push(this.switchLocalePath(event))
+    },
   },
 }
 </script>
@@ -19,9 +30,9 @@ export default {
 
   <div>
     <CThemeProvider>
-      <c-box mb="3" w="87px" height="56px">
+      <c-box w="87px" height="56px">
         <c-select
-          v-model="burgerType"
+          v-model="loacales"
           border-radius="12px"
           _focus="none"
           border="LangBorder"
@@ -29,9 +40,9 @@ export default {
           placeholder="Eng"
           h="56px"
         >
-          <option value="jRus">RU</option>
-          <option value="Uzb">Uzb</option>
-          <option value="Eng">Eng</option>
+          <option value="ru">Ru</option>
+          <option value="uz">Uzb</option>
+          <option value="en">Eng</option>
         </c-select>
       </c-box>
     </CThemeProvider>

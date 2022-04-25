@@ -1,4 +1,5 @@
 import customTheme from './custom-theme'
+import { vueI18n } from './loacals/i18n-config'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -44,7 +45,8 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@chakra-ui/nuxt', '@nuxtjs/emotion'],
+  modules: ['@chakra-ui/nuxt', '@nuxtjs/emotion', '@nuxtjs/i18n'],
+  i18n: vueI18n,
 
   chakra: {
     extendTheme: customTheme,
@@ -57,18 +59,6 @@ export default {
     scss: {
       implementation: require('sass'),
     },
-  },
-
-  i18n: {
-    locales: [
-      {
-        code: 'ru',
-        file: 'ru.js',
-      },
-    ],
-    lazy: true,
-    langDir: 'lang/',
-    defaultLocale: 'ru',
   },
 
   build: {},
