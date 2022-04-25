@@ -1,9 +1,10 @@
 import customTheme from './custom-theme'
-import { vueI18n } from './locales/i18n-config'
+import { vueI18n } from './loacals/i18n-config'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'arzon-bizda',
+    title: 'Arzon bizda',
     htmlAttrs: {
       lang: 'en',
     },

@@ -2,6 +2,7 @@
 import { CThemeProvider, CGrid, CGridItem } from '@chakra-ui/vue'
 import PopularProduct from './popularProduct.vue'
 import ViewAll from '~/library/ViewAll.vue'
+
 export default {
   name: 'CategoriesComponent',
   components: {
@@ -11,6 +12,7 @@ export default {
     CGridItem,
     PopularProduct,
   },
+
   data() {
     return {
       popular: [
@@ -34,11 +36,12 @@ export default {
   },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <div class="categories_list">
       <c-flex align="center" justify="space-between" mb="40px">
-        <h1 class="main_header">{{$t('populargoods')}}</h1>
+        <h1 class="main_header">{{ $t('populargoods') }}</h1>
         <view-all />
       </c-flex>
 

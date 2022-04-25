@@ -1,26 +1,26 @@
 <template>
   <div>
     <SliderComponent />
-    <popular-products />
-    <categories-component />
-    <brands-component />
+    <!-- <PopularProducts /> -->
+    <!-- <CategoriesComponent />
+    <BrandsComponent /> -->
   </div>
 </template>
 
 <script lang="js">
 import SliderComponent from "@/my-components/banner/SliderComponent.vue";
-import CategoriesComponent from "@/my-components/categories-component/categoriesComponent.vue";
-import BrandsComponent from "@/my-components/brands-component/brandsComponent.vue";
-import PopularProducts from "@/my-components/popular-products/popularProducts.vue";
+// import CategoriesComponent from "@/my-components/categories-component/categoriesComponent.vue";
+// import BrandsComponent from "@/my-components/brands-component/brandsComponent.vue";
+// import PopularProducts from "@/my-components/popular-products/popularProducts.vue";
 
 export default {
 
 name:"IndexComponent",
 components: {
     SliderComponent,
-    CategoriesComponent,
-    BrandsComponent,
-    PopularProducts
+    // CategoriesComponent,
+    // BrandsComponent,
+    // PopularProducts
 },
 }
 </script>

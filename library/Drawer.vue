@@ -58,7 +58,7 @@ export default {
     >
       <c-drawer-overlay />
       <c-drawer-content>
-        <c-drawer-close-button />
+        <!-- <c-drawer-close-button /> -->
         <c-drawer-header></c-drawer-header>
 
         <c-drawer-body>
