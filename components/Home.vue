@@ -1,12 +1,3 @@
-<template>
-  <div>
-    <SliderComponent />
-    <PopularProducts />
-    <CategoriesComponent />
-    <BrandsComponent />
-  </div>
-</template>
-
 <script lang="js">
 import SliderComponent from "@/my-components/banner/SliderComponent.vue";
 import CategoriesComponent from "@/my-components/categories-component/categoriesComponent.vue";
@@ -24,3 +15,11 @@ components: {
 },
 }
 </script>
+<template>
+  <div>
+    <SliderComponent />
+    <PopularProducts />
+    <CategoriesComponent />
+    <BrandsComponent />
+  </div>
+</template>

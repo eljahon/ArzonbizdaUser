@@ -3,49 +3,63 @@ import { CFlex, CThemeProvider } from "@chakra-ui/vue";
 import HeaderButton from "~/library/HeaderButton.vue";
 import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
-// import BurgerBtn from "~/library/BurgerBtn.vue";
-import Drawer from "~/library/Drawer.vue";
+import BurgerBtn from "~/library/BurgerBtn.vue"
+// import Drawer from "~/library/Drawer.vue";
 
 export default {
+  name: 'HeaderComponent',
 
-  name: 'TestHeader',
   components: {
     HeaderButton,
     CThemeProvider,
     CFlex,
     HeaderInput,
     LangButton,
-    // BurgerBtn,
-    Drawer,
+    BurgerBtn
+    // Drawer,
 },
 }
 </script>
 
 <template>
   <CThemeProvider>
-    <CFlex>
-      <header class="header">
-        <NuxtLink to="/">
-          <img
-            class="header__logo"
-            src="@/assets/img/logo.png"
-            alt="Arzoni bizda"
-            width="187px"
-            height="42px"
-          />
-        </NuxtLink>
-        <Drawer />
-        <HeaderInput />
-        <LangButton />
+    <header>
+      <c-flex
+        align="center"
+        justify-content="space-between"
+        mt="20px"
+        mb="20px"
+      >
+        <c-box>
+          <NuxtLink to="/">
+            <img
+              class="header__logo"
+              src="@/assets/img/logo.png"
+              alt="Arzoni bizda"
+              width="187px"
+              height="42px"
+            />
+          </NuxtLink>
+        </c-box>
+        <!-- <Drawer /> -->
+        <c-box>
+          <c-flex justify="space-between" gap="34px">
+            <BurgerBtn />
+            <HeaderInput />
+            <LangButton />
+          </c-flex>
+        </c-box>
+
         <HeaderButton />
-      </header>
-    </CFlex>
+      </c-flex>
+    </header>
   </CThemeProvider>
 </template>
 
 <style lang="scss" scoped>
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 19px;
   padding: 20px 0;
@@ -55,6 +69,5 @@ export default {
 .header__logo {
   width: 187px;
   height: 42px;
-  padding-right: 94px;
 }
 </style>

@@ -18,4 +18,5 @@ export const uz = {
   vacancy: 'Vakansiyalar',
   address: 'Manzil',
   reviews: 'Shahr qoldirish',
+  compare: 'Taqqoslash',
 }

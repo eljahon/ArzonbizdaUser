@@ -13,7 +13,7 @@
 
 <script>
 import { CLink } from '@chakra-ui/vue'
-import Icon from '~/assets/icon/icon.vue'
+import Icon from '~/components/icon.vue'
 export default {
   name: 'ViewAllIcon',
   components: { CLink, Icon },

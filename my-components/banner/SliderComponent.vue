@@ -1,5 +1,32 @@
+<script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+export default {
+  components: { VueSlickCarousel },
+
+  data() {
+    return {
+      settings: {
+        dots: false,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0.35,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+      },
+    }
+  },
+}
+</script>
+
 <template>
   <div class="slider__hero" width="1400px" height="440px">
+    <!-- slider hozircha bunday turibdi. Keyin v-for  bilan qilinsin. Esdan chiqib qolmasin-->
+
     <VueSlickCarousel v-bind="settings">
       <div>
         <div class="banner__hero">
@@ -25,34 +52,10 @@
   </div>
 </template>
 
-<script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
-export default {
-  components: { VueSlickCarousel },
-
-  settings: {
-    dots: true,
-    dotsClass: 'slick-dots custom-dot-class',
-    edgeFriction: 0.35,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  },
-}
-</script>
-
 <style lang="scss">
 .banner__hero {
-  max-width: 1400px;
-  height: 440px;
+  max-width: 1440px;
+  max-height: 440px;
   border-radius: 25px;
-
-
 }
 </style>

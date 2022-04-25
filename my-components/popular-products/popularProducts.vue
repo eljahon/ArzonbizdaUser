@@ -11,6 +11,7 @@ export default {
     PopularProduct,
     ViewAll,
   },
+
   data() {
     return {
       popular: [
@@ -94,6 +95,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <CBox :mb="['27px', '47px', '67px', '88px']">
@@ -113,7 +115,11 @@ export default {
         justify-items="center"
         justify-content="center"
       >
-        <CBox v-for="item in popular" :key="item" class="popular__product">
+        <CBox
+          v-for="(item, idx) in popular"
+          :key="idx"
+          class="popular__product"
+        >
           <PopularProduct :item="item" />
         </CBox>
       </CSimpleGrid>

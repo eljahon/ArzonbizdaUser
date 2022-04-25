@@ -1,6 +1,6 @@
 <script>
 import { CBox, CStack, CFlex, CLink, CText } from '@chakra-ui/vue'
-import Icon from '~/assets/icon/icon.vue'
+import Icon from '~/components/icon.vue'
 export default {
   name: 'FooterLogoPart',
   components: {

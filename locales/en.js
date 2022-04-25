@@ -18,4 +18,5 @@ export const en = {
   vacancy: 'Vacancies',
   address: 'Address',
   reviews: 'Reviews',
+  compare: 'Compare',
 }

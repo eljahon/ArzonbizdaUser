@@ -1,6 +1,7 @@
 <script>
-import { CInput, CThemeProvider, CFlex } from '@chakra-ui/vue'
-import Icon from '~/assets/icon/icon.vue'
+import { CInput, CThemeProvider, CFlex, CButton } from '@chakra-ui/vue'
+import Icon from '~/components/icon.vue'
+// import Icon from '~/components/icon.vue'
 
 export default {
   name: 'HeaderInput',
@@ -8,6 +9,7 @@ export default {
     CInput,
     CThemeProvider,
     CFlex,
+    CButton,
     Icon,
   },
 }
@@ -21,7 +23,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          width="708px"
+          :width="['244px', '410px', '650px', '768px']"
           height="56px"
           _focus="none"
           _hover="none"
@@ -31,19 +33,24 @@ export default {
           border-bottom-end-radius="none"
           border-top-right-radius="none"
         />
-        <button class="input__btn"><Icon /></button>
+        <c-button
+          background-color="color.WarningColor1"
+          aria-label="Search database"
+          _focus="none"
+          _hover="none"
+          border="none"
+          height="56px"
+          border-radius="0px
+          11px
+          11px
+          0px;"
+          cursor="pointer"
+        >
+          <Icon name="search" />
+        </c-button>
       </c-flex>
     </CThemeProvider>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.input__btn {
-  background: #e50914;
-  width: 72px;
-  height: 56px;
-  border: none;
-  cursor: pointer;
-  border-radius: 0px 11px 11px 0px;
-}
-</style>
+<style lang="scss" scoped></style>

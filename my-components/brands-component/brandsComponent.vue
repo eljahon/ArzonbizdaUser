@@ -1,30 +1,3 @@
-<template>
-  <CThemeProvider>
-    <CBox :mb="['24px', '37px', '50px', '64px']">
-      <CFlex
-        align="center"
-        justify="space-between"
-        :mb="['10px', '20px', '30px', '40px']"
-      >
-        <h1 class="main_header">{{ $t('brand') }}</h1>
-        <ViewAll />
-      </CFlex>
-
-      <CSimpleGrid
-        :columns="['4', '4', '4', '6']"
-        rows="2"
-        spacing-x="30"
-        :spacing-y="['18px', '25px', '32px', '40px']"
-        justify-items="center"
-        justify-content="center"
-      >
-        <CBox v-for="item in brandItem" :key="item" class="brands__component">
-          <BrandComponent :item="item" />
-        </CBox>
-      </CSimpleGrid>
-    </CBox>
-  </CThemeProvider>
-</template>
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
@@ -58,6 +31,37 @@ export default {
   },
 }
 </script>
+<template>
+  <CThemeProvider>
+    <CBox :mb="['24px', '37px', '50px', '64px']">
+      <CFlex
+        align="center"
+        justify="space-between"
+        :mb="['10px', '20px', '30px', '40px']"
+      >
+        <h1 class="main_header">{{ $t('brand') }}</h1>
+        <ViewAll />
+      </CFlex>
+
+      <CSimpleGrid
+        :columns="['4', '4', '4', '6']"
+        rows="2"
+        spacing-x="30"
+        :spacing-y="['18px', '25px', '32px', '40px']"
+        justify-items="center"
+        justify-content="center"
+      >
+        <CBox
+          v-for="(item, idx) in brandItem"
+          :key="idx"
+          class="brands__component"
+        >
+          <BrandComponent :item="item" />
+        </CBox>
+      </CSimpleGrid>
+    </CBox>
+  </CThemeProvider>
+</template>
 <style lang="scss" scoped>
 .brands__component {
   @media screen and(max-width: 62em) {

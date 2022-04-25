@@ -18,4 +18,6 @@ export const ru = {
   vacancy: 'Вакансии',
   address: 'Адрес',
   reviews: 'Оставить отзыв',
+  search: 'Поиск...',
+  compare: 'Сравнить',
 }
