@@ -3,7 +3,7 @@ export default {
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
-    mono: '"Yandex Sans Display", monospace',
+    mono: '"Yandex Sans Display", sans-serif',
   },
   colors: {
     color: {

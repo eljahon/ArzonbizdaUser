@@ -5,10 +5,14 @@ export default {
 </script>
 
 <template>
-  <div class="containerBox">
-    <Header />
-    <Nuxt />
-  </div>
+  <CThemeProvider>
+    <div class="containerBox">
+      <CReset />
+      <Header />
+      <Nuxt />
+    </div>
+    <FooterGlobal />
+  </CThemeProvider>
 </template>
 
 <style lang="scss" scoped></style>
