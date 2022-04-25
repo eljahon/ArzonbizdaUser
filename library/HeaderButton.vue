@@ -32,7 +32,7 @@ export default {
         bg="transparent"
       >
         <Icon name="comparison" />
-        Сравнить
+        {{ $t('compare') }}
       </c-button>
     </CThemeProvider>
   </div>

@@ -23,7 +23,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          width="708px"
+          :width="['244px', '410px', '650px', '768px']"
           height="56px"
           _focus="none"
           _hover="none"
