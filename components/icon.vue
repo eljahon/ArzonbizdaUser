@@ -1,3 +1,10 @@
+<script>
+export default {
+  name: 'IconComponent',
+  props: ['name'],
+}
+</script>
+
 <template>
   <div class="icon__body">
     <!-- comparison icon start -->
@@ -19,7 +26,7 @@
     <!-- search icon start -->
 
     <svg
-      v-if="name === search"
+      v-if="name === 'search'"
       width="21"
       height="21"
       viewBox="0 0 21 21"
@@ -39,7 +46,7 @@
     <!-- map icon start -->
 
     <svg
-      v-if="name === map"
+      v-if="name === 'map'"
       width="13"
       height="12"
       viewBox="0 0 13 12"
@@ -149,10 +156,3 @@
     <!-- comment end -->
   </div>
 </template>
-
-<script>
-export default {
-  name: 'IconComponent',
-  props: ['name'],
-}
-</script>

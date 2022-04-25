@@ -6,6 +6,7 @@ export default {
     body: '"Yandex Sans Display", sans-serif',
     mono: '"Yandex Sans Display", monospace',
   },
+
   colors: {
     color: {
       InputColor: '#707373',

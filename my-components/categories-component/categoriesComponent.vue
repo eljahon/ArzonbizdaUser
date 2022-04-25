@@ -14,7 +14,7 @@
         justify-content="center"
       >
         <c-grid-item v-for="item in categoryItem" :key="item">
-          <category-component :item="item" />
+          <CategoryComponent :item="item" />
         </c-grid-item>
       </c-grid>
     </div>

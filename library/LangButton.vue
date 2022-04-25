@@ -8,8 +8,8 @@ export default {
   props: {
     langOptins: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
 
   data() {
@@ -18,10 +18,10 @@ export default {
     }
   },
   watch: {
-    loacales (event) {
+    loacales(event) {
       this.$router.push(this.switchLocalePath(event))
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -30,7 +30,7 @@ export default {
 
   <div>
     <CThemeProvider>
-      <c-box mb="3" w="87px" height="56px">
+      <c-box w="87px" height="56px">
         <c-select
           v-model="loacales"
           border-radius="12px"
@@ -39,10 +39,8 @@ export default {
           color="color.InputColor"
           placeholder="Eng"
           h="56px"
-
         >
-          <option value="ru">Ru
-            </option>
+          <option value="ru">Ru</option>
           <option value="uz">Uzb</option>
           <option value="en">Eng</option>
         </c-select>

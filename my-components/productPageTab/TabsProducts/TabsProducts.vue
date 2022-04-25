@@ -1,6 +1,6 @@
 <script>
 import { CBox, CImage, CHeading, CText, CButton } from '@chakra-ui/vue'
-import Icon from '~/assets/icon/icon.vue'
+import Icon from '@/components/icon.vue'
 export default {
   components: {
     CBox,
