@@ -22,11 +22,18 @@ export default {
   <CBox bg="#FAFAFA">
     <CBox v-if="toogleWord === 'one'">
       <CBox
-        display="flex"
+        display="['block','block','block','block','flex','flex']"
         justify-content="space-between"
-        padding="32px 150px 33px 32px"
+        :padding="[
+          '20px',
+          '20px',
+          '20px',
+          '20px',
+          '20px',
+          '32px 150px 33px 32px',
+        ]"
       >
-        <CBox display="flex">
+        <CBox display="['block','block','block','block','flex','flex']">
           <CBox
             border-radius="16px"
             width="194px"
@@ -63,7 +70,12 @@ export default {
               line-height="40px"
               >Poco X3 Pro 8/256GB</CHeading
             >
-            <CBox bg="white" mt="16px" border-radius="16px">
+            <CBox
+              bg="white"
+              mt="16px"
+              display="['inline-block','inline-block','inline-block','block','block','block']"
+              border-radius="16px"
+            >
               <CBox
                 display="flex"
                 justify-content="space-between"
