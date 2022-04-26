@@ -1,5 +1,5 @@
 <script>
-import icon from '@/components/icon.vue'
+import icon from '@/components/Icon.vue'
 
 export default {
   components: {

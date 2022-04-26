@@ -1,6 +1,6 @@
 <script>
 import { CBox, CImage, CHeading, CStack, CFlex } from '@chakra-ui/vue'
-import Icon from '@/components/icon.vue'
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'PopularProduct',
   components: {
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <Nuxt-link to="user">
+  <Nuxt-link to="TabsComponents">
     <CBox :max-w="['105px', '136px', '167px', '198px', '230px', '264px']">
       <CBox
         :py="['22px', '24px', '30px', '34px', '36px', '40px']"
