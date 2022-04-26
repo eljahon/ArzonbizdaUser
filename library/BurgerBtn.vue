@@ -11,6 +11,7 @@ export default {
 <template>
   <div>
     <c-button
+      class="burger__button"
       border="1px solid #e4e6e6"
       border-radius="12px"
       w="56px"
@@ -19,6 +20,7 @@ export default {
       cursor="pointer"
       _focus="none"
       ml="20px"
+      mr="20px"
     >
       <icon name="burger" />
     </c-button>
@@ -26,12 +28,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.burger__btn {
-  border: 1px solid #e3e6e6;
-  border-radius: 12px;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  background: transparent;
+@media screen and(max-width: 768px) {
+  .burger__button {
+    margin-right: 0;
+  }
 }
 </style>

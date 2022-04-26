@@ -16,8 +16,9 @@ export default {
   <div>
     <CThemeProvider>
       <c-button
+        class="header__button"
         align-item="center"
-        :width="['56px', '56px', '56px', '56px', '56px', '215px']"
+        :width="['56px', '56px', '56px', '56px', '215px', '215px']"
         variant-color="color.WhiteColor"
         border-color="color.BorderColor"
         border="1px solid"
@@ -45,6 +46,12 @@ export default {
 @media screen and(max-width: 1024px) {
   .icon__text {
     display: none;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .header__button {
+    margin-left: 0;
   }
 }
 </style>
