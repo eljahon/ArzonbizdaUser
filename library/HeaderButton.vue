@@ -17,7 +17,7 @@ export default {
     <CThemeProvider>
       <c-button
         align-item="center"
-        :width="['56px', '56px', '56px', '56px', '215px', '215px']"
+        :width="['56px', '56px', '56px', '56px', '56px', '215px']"
         variant-color="color.WhiteColor"
         border-color="color.BorderColor"
         border="1px solid"
