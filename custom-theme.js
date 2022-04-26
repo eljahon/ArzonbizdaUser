@@ -1,5 +1,6 @@
 export default {
-  breakpoints: ['30em', '48em', '62em', '80em'],
+  breakpoints: ['375px', '425px', '768px', '912px', '1024px', '1440px'],
+  // 480px   768px    992     1280
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
@@ -24,6 +25,7 @@ export default {
       WarningColor2: '#FF3838',
       RouteColor: '#0F6CB0',
       ImageBgColor: '#F5F7F7',
+      pocoBg: '#F4F4F4',
     },
   },
 

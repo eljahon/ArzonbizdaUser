@@ -1,6 +1,5 @@
 import customTheme from './custom-theme'
 import { vueI18n } from './loacals/i18n-config'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

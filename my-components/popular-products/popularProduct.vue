@@ -1,6 +1,6 @@
 <script>
 import { CBox, CImage, CHeading, CStack, CFlex } from '@chakra-ui/vue'
-import Icon from '~/components/icon.vue'
+import Icon from '@/components/icon.vue'
 export default {
   name: 'PopularProduct',
   components: {
