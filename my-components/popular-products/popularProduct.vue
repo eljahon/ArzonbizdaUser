@@ -16,17 +16,14 @@ export default {
 </script>
 
 <template>
-  <CBox :max-w="['105px', '136px', '167px', '198px', '230px', '264px']">
+  <CBox pb="10px">
     <CBox
       :py="['22px', '24px', '30px', '34px', '36px', '40px']"
       :px="['22px', '24px', '30px', '34px', '36px', '40px']"
       :rounded="['8px', '9px', '10px', '10px', '11px', '12px']"
       bg="color.ImageBgColor"
     >
-      <CImage
-        :src="require(`@/assets/img/${item.img}`)"
-        :max-w="['86px', '104px', '122px', '140px', '158px', '176px']"
-      />
+      <CImage :src="require(`@/assets/img/${item.img}`)" />
     </CBox>
     <CBox>
       <CStack>
