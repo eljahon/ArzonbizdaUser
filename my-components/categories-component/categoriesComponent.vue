@@ -33,21 +33,21 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <CBox :mb="['30px', '49px', '68px', '88px']">
+    <CBox :mb="['30px', '41px', '52px', '64px', '76px', '88px']">
       <CFlex
         align="center"
         justify="space-between"
-        :mb="['10px', '20px', '30px', '40px']"
+        :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
       >
         <h1 class="main_header">{{ $t('category') }}</h1>
         <ViewAll />
       </CFlex>
 
       <CSimpleGrid
-        :columns="['4', '4', '4', '6']"
+        :columns="['4', '4', '4', '4', '4', '6']"
         rows="2"
         spacing-x="30"
-        :spacing-y="['18px', '25px', '32px', '40px']"
+        :spacing-y="['18px', '22px', '26px', '30px', '34px', '40px']"
         justify-items="center"
         justify-content="center"
       >

@@ -98,20 +98,20 @@ export default {
 
 <template>
   <CThemeProvider>
-    <CBox :mb="['27px', '47px', '67px', '88px']">
+    <CBox :mb="['27px', '38px', '52px', '64px', '76px', '88px']">
       <CFlex
         align="center"
         justify="space-between"
-        :mb="['10px', '20px', '30px', '40px']"
+        :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
       >
         <h1 class="main_header">{{ $t('populargoods') }}</h1>
         <ViewAll />
       </CFlex>
 
       <CSimpleGrid
-        :columns="['3', '3', '4', '5']"
-        :rows="['1', '2', '3', '3']"
-        :row-gap="['10px', '20px', '30px', '40px']"
+        :columns="['3', '3', '3', '4', '4', '5']"
+        :rows="['1', '1', '2', '2', '3', '3']"
+        :row-gap="['10px', '15px', '20px', '25px', '30px', '40px']"
         justify-items="center"
         justify-content="center"
       >

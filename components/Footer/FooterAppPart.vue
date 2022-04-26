@@ -14,10 +14,10 @@ export default {
 <template>
   <CBox>
     <CText
-      :font-size="['12px', '14px', '18px', '20px']"
+      :font-size="['12px', '13px', '14px', '16px', '18px', '20px']"
       line-height="24px"
       color="white"
-      :mb="['8px', '13px', '19px', '24px']"
+      :mb="['8px', '12px', '14px', '18px', '20px', '24px']"
       >{{ $t('app') }}</CText
     >
     <CStack :spacing="['8px', '12px', '14px', '16px']">
@@ -29,7 +29,7 @@ export default {
       <CLink
         ><CImage
           :src="require('@/assets/img/googleplay.png')"
-          :max-w="['90px', '120px', '150px', '180px']"
+          :max-w="['90px', '108px', '126px', '144px', '162px', '180px']"
       /></CLink>
     </CStack>
   </CBox>
