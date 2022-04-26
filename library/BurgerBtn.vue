@@ -1,17 +1,27 @@
 <script>
-import Icon from '~/components/icon.vue'
+import icon from '@/components/icon.vue'
+
 export default {
   components: {
-    Icon,
+    icon,
   },
 }
 </script>
 
 <template>
   <div>
-    <button class="burger__btn">
-      <Icon name="burger" />
-    </button>
+    <c-button
+      border="1px solid #e4e6e6"
+      border-radius="12px"
+      w="56px"
+      h="56px"
+      bg="transparent"
+      cursor="pointer"
+      _focus="none"
+      ml="20px"
+    >
+      <icon name="burger" />
+    </c-button>
   </div>
 </template>
 

@@ -1,9 +1,10 @@
 <script lang="js">
-import { CFlex, CThemeProvider } from "@chakra-ui/vue";
+import { CFlex, CThemeProvider,} from "@chakra-ui/vue";
 import HeaderButton from "~/library/HeaderButton.vue";
 import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
 import BurgerBtn from "~/library/BurgerBtn.vue"
+
 // import Drawer from "~/library/Drawer.vue";
 
 export default {
@@ -15,7 +16,7 @@ export default {
     CFlex,
     HeaderInput,
     LangButton,
-    BurgerBtn
+    BurgerBtn,
     // Drawer,
 },
 }
@@ -26,33 +27,43 @@ export default {
     <header>
       <c-icon name="test" color="red" bg="white" fill="white" />
       sdsd
+    <header class="header">
       <c-flex
         align="center"
         justify-content="space-between"
         mt="20px"
         mb="20px"
+        flex-wrap="wrap"
       >
-        <c-box>
+        <c-box width="139px" height="40px">
           <NuxtLink to="/">
             <img
               class="header__logo"
               src="@/assets/img/logo.png"
               alt="Arzoni bizda"
-              width="187px"
-              height="42px"
+              width="139px"
+              height="24px"
             />
           </NuxtLink>
         </c-box>
+
         <!-- <Drawer /> -->
         <c-box>
-          <c-flex justify="space-between" gap="34px">
-            <BurgerBtn />
-            <HeaderInput />
-            <LangButton />
+          <c-flex
+            justify="center"
+            align-items="baseline"
+            gap="10px"
+            flex-wrap="wrap"
+          >
+            <BurgerBtn class="burger__Btn" />
+            <HeaderButton class="mobile" />
           </c-flex>
         </c-box>
 
-        <HeaderButton />
+        <HeaderInput class="header__input" />
+        <LangButton class="lang__btn" />
+
+        <HeaderButton class="desktop" />
       </c-flex>
     </header>
   </CThemeProvider>
@@ -66,10 +77,30 @@ export default {
   gap: 19px;
   padding: 20px 0;
   margin: 0 auto;
+  flex-direction: row;
+}
+
+.mobile {
+  display: none;
 }
 
 .header__logo {
-  width: 187px;
-  height: 42px;
+  width: 139px;
+  height: 40px;
+}
+
+@media screen and(max-width: 1024px) {
+  .lang__btn {
+    display: none;
+  }
+}
+
+@media screen and(max-width: 912px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }
 </style>

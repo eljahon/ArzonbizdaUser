@@ -1,5 +1,5 @@
 import customTheme from './custom-theme'
-// import Test from './assets/icons/Test.vue'
+
 import { vueI18n } from './locales/i18n-config'
 
 const test = {

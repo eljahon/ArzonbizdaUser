@@ -24,6 +24,7 @@ export default {
       WarningColor2: '#FF3838',
       RouteColor: '#0F6CB0',
       ImageBgColor: '#F5F7F7',
+      pocoBg: '#F4F4F4',
     },
   },
 

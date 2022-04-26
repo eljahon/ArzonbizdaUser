@@ -26,11 +26,20 @@ li {
   text-decoration: none;
   list-style: none;
 }
-
+.__qator2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .containerBox {
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0px 30px;
   box-sizing: border-box;
+  padding: 0 60px;
 }
 
 .slick-prev {
@@ -108,5 +117,11 @@ li {
   @media screen and(max-width: 48em) {
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+@media screen and(max-width: 425px) {
+  .containerBox {
+    padding: 0 20px;
   }
 }
