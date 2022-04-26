@@ -6,17 +6,22 @@
         :font-size="['10px', '12px', '14px', '16px']"
         :line-height="['18px', '20px', '22px', '24px']"
         align-items="center"
-        >{{ $t('viewAll') }}<Icon name="right_arrow" />
+        >{{ $t('viewAll')
+        }}<CIcon
+          name="right_arrow"
+          :ml="['6px', '7px', '8px', '9px', '10px', '10px']"
+          size="12px"
+        />
       </c-flex>
     </c-link>
   </div>
 </template>
 
 <script>
-import { CLink } from '@chakra-ui/vue'
-import Icon from '~/components/icon.vue'
+import { CLink, CIcon } from '@chakra-ui/vue'
+
 export default {
   name: 'ViewAllIcon',
-  components: { CLink, Icon },
+  components: { CLink, CIcon },
 }
 </script>
