@@ -28,9 +28,10 @@ li {
 }
 
 .containerBox {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
+  padding: 0 60px;
 }
 
 .slick-prev {
@@ -108,5 +109,11 @@ li {
   @media screen and(max-width: 48em) {
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+@media screen and(max-width: 425px) {
+  .containerBox {
+    padding: 0 20px;
   }
 }

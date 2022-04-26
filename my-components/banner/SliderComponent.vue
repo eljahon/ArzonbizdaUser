@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <div class="slider__hero" width="1400px" height="440px">
+  <div class="slider__hero" :width="['320px', '468px', '920px', '1400px']">
     <!-- slider hozircha bunday turibdi. Keyin v-for  bilan qilinsin. Esdan chiqib qolmasin-->
 
     <VueSlickCarousel v-bind="settings">
@@ -54,8 +54,8 @@ export default {
 
 <style lang="scss">
 .banner__hero {
-  max-width: 1440px;
   max-height: 440px;
   border-radius: 25px;
+  margin-top: 0 auto;
 }
 </style>
