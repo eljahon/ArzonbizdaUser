@@ -1,8 +1,6 @@
 <script>
 import { CInput, CThemeProvider, CFlex, CButton } from '@chakra-ui/vue'
-import Icon from '~/components/icon.vue'
-// import Icon from '~/components/icon.vue'
-
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'HeaderInput',
   components: {
@@ -23,7 +21,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          :width="['244px', '410px', '650px', '768px']"
+          :width="['244px', '280px', '512px', '430px', '360px', '674px']"
           height="56px"
           _focus="none"
           _hover="none"
@@ -32,6 +30,7 @@ export default {
           border-bottom-left-radius="12px"
           border-bottom-end-radius="none"
           border-top-right-radius="none"
+          ml="20px"
         />
         <c-button
           background-color="color.WarningColor1"
@@ -45,6 +44,7 @@ export default {
           11px
           0px;"
           cursor="pointer"
+          mr="20px"
         >
           <Icon name="search" />
         </c-button>
@@ -53,4 +53,10 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and(max-width: 768px) {
+  .header__input {
+    margin: 16px 0 0 20px;
+  }
+}
+</style>

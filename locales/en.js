@@ -1,6 +1,23 @@
 export const en = {
   error: 'error',
   populargoods: 'Popular goods',
+  currency: 'sum',
+  from: 'from',
+  viewAll: 'View all',
+  category: 'Categories',
+  brand: 'Brands',
+  phoneNumber: 'Contact number',
+  info: 'Info',
+  about: 'About',
+  app: 'Apps',
+  publicOffer: 'Public offer',
+  return: 'Return and exchange',
+  installment: 'Installment terms',
+  onlinePayment: 'Online payment',
+  company: 'Our company',
+  vacancy: 'Vacancies',
+  address: 'Address',
+  reviews: 'Reviews',
   compare: 'Compare',
 
   blogText:

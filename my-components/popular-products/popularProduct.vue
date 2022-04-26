@@ -16,43 +16,66 @@ export default {
 </script>
 
 <template>
-  <c-box>
-    <c-box p="44px" bg="color.ImageBgColor" rounded="12px">
-      <c-image :src="require(`@/assets/img/${item.img}`)" />
-    </c-box>
-    <c-box>
-      <c-stack>
-        <c-box pt="5">
-          <c-heading as="h2" size="lg" mb="8px">от 3 324 000 сум</c-heading>
-          <c-box
+  <CBox :max-w="['105px', '136px', '167px', '198px', '230px', '264px']">
+    <CBox
+      :py="['22px', '24px', '30px', '34px', '36px', '40px']"
+      :px="['22px', '24px', '30px', '34px', '36px', '40px']"
+      :rounded="['8px', '9px', '10px', '10px', '11px', '12px']"
+      bg="color.ImageBgColor"
+    >
+      <CImage
+        :src="require(`@/assets/img/${item.img}`)"
+        :max-w="['86px', '104px', '122px', '140px', '158px', '176px']"
+      />
+    </CBox>
+    <CBox>
+      <CStack>
+        <CBox :pt="['8px', '12px', '14px', '18px', '20px', '24px']">
+          <CHeading
+            as="h2"
+            :font-size="['12px', '14px', '16px', '18px', '20px', '24px']"
+            mb="8px"
+            >{{ $t('from') }} {{ item.price }} {{ $t('currency') }}</CHeading
+          >
+          <CBox
             as="span"
             font-family="Yandex Sans Display"
-            font-size="20px"
-            line-height="30px"
+            :font-size="['12px', '13px', '14px', '16px', '18px', '20px']"
+            :line-height="['15px', '18px', '20px', '24px', '26px', '30px']"
             color="color.TextColor2"
-            >Xiaomi Poco X3 Pro 8/256GB</c-box
+            >{{ item.name }}</CBox
           >
-        </c-box>
-      </c-stack>
-    </c-box>
-    <c-box mt="8px">
-      <c-flex align="center">
-        <c-box d="flex" align-items="center" font-family="Yandex Sans Display">
-          <icon name="star" />
-          <c-box as="span" ml="7px">4,8</c-box>
-        </c-box>
-        <c-box
+        </CBox>
+      </CStack>
+    </CBox>
+    <CBox mt="8px">
+      <CFlex align="center">
+        <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
+          <Icon name="star" />
+          <CBox
+            as="span"
+            :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
+            color="color.TextColor5"
+            :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
+            >4,8</CBox
+          >
+        </CBox>
+        <CBox
           d="flex"
           align-items="center"
           font-family="Yandex Sans Display"
-          ml="36px"
+          :ml="['15px', '18px', '20px', '24px', '26px', '30px']"
         >
-          <icon name="comment" />
-          <c-box as="span" ml="7px">26</c-box>
-        </c-box>
-      </c-flex>
-    </c-box>
-  </c-box>
+          <Icon name="comment" />
+          <CBox
+            as="span"
+            :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
+            color="color.TextColor5"
+            :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
+            >26</CBox
+          >
+        </CBox>
+      </CFlex>
+    </CBox>
+  </CBox>
 </template>
-
-<style></style>

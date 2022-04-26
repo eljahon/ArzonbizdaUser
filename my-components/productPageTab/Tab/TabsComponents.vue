@@ -52,12 +52,12 @@ export default {
           py="20px"
           px="63px"
           color="color.TextColor1"
-          @click="one"
           text-align="center"
           font-size="16px"
           font-family="Yandex Sans Display"
           font-weight="400"
           line-height="24px"
+          @click="one"
           >Цены</CButton
         >
         <CButton
@@ -80,11 +80,11 @@ export default {
           px="48px"
           color="color.TextColor1"
           text-align="center"
-          @click="two"
           font-size="16px"
           font-family="Yandex Sans Display"
           font-weight="400"
           line-height="24px"
+          @click="two"
           >Описание</CButton
         >
         <CButton
@@ -107,11 +107,11 @@ export default {
           px="25px"
           color="color.TextColor1"
           text-align="center"
-          @click="three"
           font-size="16px"
           font-family="Yandex Sans Display"
           font-weight="400"
           line-height="24px"
+          @click="three"
           >Отзывы</CButton
         >
         <CButton
@@ -134,10 +134,10 @@ export default {
           color="color.TextColor1"
           text-align="center"
           font-size="16px"
-          @click="four"
           font-family="Yandex Sans Display"
           font-weight="400"
           line-height="24px"
+          @click="four"
           >Характеристики</CButton
         >
       </CBox>

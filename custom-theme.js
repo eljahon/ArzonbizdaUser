@@ -1,10 +1,9 @@
 export default {
   breakpoints: ['375px', '425px', '768px', '912px', '1024px', '1440px'],
-  // 480px   768px    992     1280
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
-    mono: '"Yandex Sans Display", monospace',
+    mono: '"Yandex Sans Display", sans-serif',
   },
 
   colors: {
@@ -31,6 +30,6 @@ export default {
 
   borders: {
     InputBorder: '2px solid #E50914',
-    LangBorder: '1px solid #E3E6E6',
+    LangBorder: '1px solid #E3E5E5',
   },
 }
