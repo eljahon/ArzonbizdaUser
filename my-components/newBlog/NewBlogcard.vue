@@ -29,7 +29,7 @@ export default {
     ></CBox>
     <CBox>
       <CText
-        class="__qator2"
+        class="series2"
         :mt="['5px', '12px', '15px', '17px', '20px', '24px']"
         color="color.TextColor3"
         text-align="start"

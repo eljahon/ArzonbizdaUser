@@ -22,7 +22,7 @@ export default {
   <CBox bg="#FAFAFA">
     <CBox v-if="toogleWord === 'one'">
       <CBox
-        display="['block','block','block','block','flex','flex']"
+        :display="['block', 'block', 'block', 'block', 'flex', 'flex']"
         justify-content="space-between"
         :padding="[
           '20px',
@@ -33,10 +33,10 @@ export default {
           '32px 150px 33px 32px',
         ]"
       >
-        <CBox display="['block','block','block','block','flex','flex']">
+        <CBox :display="['block', 'block', 'block', 'block', 'flex', 'flex']">
           <CBox
             border-radius="16px"
-            width="194px"
+            :width="['105px', '120px', '140px', '160px', '180px', '194px']"
             padding="32px 23px"
             bg="color.pocoBg"
             display="flex"
@@ -53,7 +53,9 @@ export default {
               :src="require('@/assets/img/Poco-X3-128.png')"
             ></CImage>
           </CBox>
-          <CBox ml="30px">
+          <CBox
+            :ml="['initial', 'initial', 'initial', 'initial', '30px', '30px']"
+          >
             <CHeading
               color="color.TextColor2"
               font-size="24px"
@@ -72,8 +74,8 @@ export default {
             >
             <CBox
               bg="white"
+              :width="['200px', '200px', '200px', '200px', 'initial']"
               mt="16px"
-              display="['inline-block','inline-block','inline-block','block','block','block']"
               border-radius="16px"
             >
               <CBox
@@ -116,6 +118,7 @@ export default {
           >
           <CBox display="flex" aligin-items="center" mt="8px">
             <CButton
+              :display="['none', 'none', 'none', 'none', 'block', 'block']"
               color="#FFF"
               font-size="16px"
               font-family="Yandex Sans Display"

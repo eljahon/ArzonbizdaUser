@@ -44,7 +44,7 @@ export default {
           font-style="normal"
           line-height="24px"
           mt="8px"
-          >{{ $t('shoptextSarlavha') }}</c-heading
+          >{{ $t('shoptexttitle') }}</c-heading
         >
         <c-text
           font-family="Yandex Sans Display"
@@ -65,7 +65,7 @@ export default {
           font-weight="400"
           font-style="normal"
           line-height="24px"
-          >{{ $t('shoptextSarlavha2') }}</c-heading
+          >{{ $t('shoptexttitle2') }}</c-heading
         >
         <c-text
           font-family="Yandex Sans Display"

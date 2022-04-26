@@ -74,7 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 .products__div {
-  @media screen and(max-width: 912px) {
+  @media screen and(max-width: 1024px) {
     &:nth-child(n + 4) {
       display: none;
     }
