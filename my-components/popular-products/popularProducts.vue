@@ -110,6 +110,7 @@ export default {
 
       <CSimpleGrid
         :columns="['3', '3', '3', '4', '4', '5']"
+        :spacing="['10px', '15px', '20px', '22px', '24px', '30px']"
         :rows="['1', '1', '2', '2', '3', '3']"
         :row-gap="['10px', '15px', '20px', '25px', '30px', '40px']"
         justify-items="center"
