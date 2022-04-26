@@ -3,7 +3,7 @@ export default {
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
-    mono: '"Yandex Sans Display", monospace',
+    mono: '"Yandex Sans Display", sans-serif',
   },
 
   colors: {
@@ -30,6 +30,6 @@ export default {
 
   borders: {
     InputBorder: '2px solid #E50914',
-    LangBorder: '1px solid #E3E6E6',
+    LangBorder: '1px solid #E3E5E5',
   },
 }

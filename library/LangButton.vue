@@ -1,12 +1,12 @@
 <script>
-import { CThemeProvider } from '@chakra-ui/vue'
+import { CBox } from '@chakra-ui/vue'
 export default {
   name: 'LanguageButton',
   components: {
-    CThemeProvider,
+    CBox,
   },
   props: {
-    langOptins: {
+    langOptions: {
       type: Array,
       default: () => [],
     },
@@ -14,11 +14,11 @@ export default {
 
   data() {
     return {
-      loacales: '',
+      locales: '',
     }
   },
   watch: {
-    loacales(event) {
+    locales(event) {
       this.$router.push(this.switchLocalePath(event))
     },
   },
@@ -26,27 +26,38 @@ export default {
 </script>
 
 <template>
-  <!-- selectga icon qo'yib ketish kerak. Qo'yib qo'yilsin -->
-
-  <div>
-    <CThemeProvider>
-      <c-box w="87px" height="56px">
-        <c-select
-          v-model="loacales"
-          border-radius="12px"
-          _focus="none"
-          border="LangBorder"
-          color="color.InputColor"
-          placeholder="Eng"
-          h="56px"
-        >
-          <option value="ru">Ru</option>
-          <option value="uz">Uzb</option>
-          <option value="en">Eng</option>
-        </c-select>
-      </c-box>
-    </CThemeProvider>
-  </div>
+  <CBox
+    class="for__bgImg"
+    bg-repeat="no-repeat"
+    bg-pos="14px 22px"
+    bg-size="12px 12px"
+    border="LangBorder"
+    rounded="12px"
+    z-index="2"
+  >
+    <CBox
+      v-model="locales"
+      as="select"
+      width="none"
+      py="16px"
+      pl="36px"
+      pr="14px"
+      border="1px"
+      placeholder="RU"
+      line-height="24px"
+      color="color.InputColor"
+      cursor="pointer"
+      z-index="1"
+    >
+      <option value="ru">RU</option>
+      <option value="uz">UZB</option>
+      <option value="en">ENG</option>
+    </CBox>
+  </CBox>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.for__bgImg {
+  background-image: url('@/assets/icons/globe.svg');
+}
+</style>

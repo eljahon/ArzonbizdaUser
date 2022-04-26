@@ -1,55 +1,73 @@
-<template>
-  <CThemeProvider>
-    <div class="categories_list">
-      <c-flex align="center" justify="space-between" mb="40px">
-        <h1 class="main_header">Категории</h1>
-        <view-all />
-      </c-flex>
-
-      <c-grid
-        template-columns="repeat(4, minmax(52px, 215px))"
-        :row-gap="['12px', '22px', '32px', '40px']"
-        :column-gap="['42px', '38px', '34px', '30px']"
-        justify-items="center"
-        justify-content="center"
-      >
-        <c-grid-item v-for="item in categoryItem" :key="item">
-          <CategoryComponent :item="item" />
-        </c-grid-item>
-      </c-grid>
-    </div>
-  </CThemeProvider>
-</template>
 <script>
-import { CThemeProvider, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import CategoryComponent from '~/my-components/categories-component/categoryComponent.vue'
-import ViewAll from '~/library/ViewAll.vue'
+import ViewAll from '~/library/viewAll.vue'
 export default {
   name: 'CategoriesComponent',
   components: {
     CategoryComponent,
-    ViewAll,
     CThemeProvider,
-    CGrid,
-    CGridItem,
+    CSimpleGrid,
+    CBox,
+    ViewAll,
   },
   data() {
     return {
       categoryItem: [
-        { img: 'category1.png' },
-        { img: 'category2.png' },
-        { img: 'category3.png' },
-        { img: 'category4.png' },
-        { img: 'category5.png' },
-        { img: 'category6.png' },
-        { img: 'category7.png' },
-        { img: 'category8.png' },
-        { img: 'category9.png' },
-        { img: 'category10.png' },
-        { img: 'category11.png' },
-        { img: 'category12.png' },
+        { img: 'category1.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category2.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category3.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category4.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category5.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category6.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category7.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category8.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category9.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category10.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category11.png', name: 'Очистители и увлажнители воздуха' },
+        { img: 'category12.png', name: 'Очистители и увлажнители воздуха' },
       ],
     }
   },
 }
 </script>
+<template>
+  <CThemeProvider>
+    <CBox :mb="['30px', '41px', '52px', '64px', '76px', '88px']">
+      <CFlex
+        align="center"
+        justify="space-between"
+        :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
+      >
+        <h1 class="main_header">{{ $t('category') }}</h1>
+        <ViewAll />
+      </CFlex>
+
+      <CSimpleGrid
+        :columns="['4', '4', '4', '4', '4', '6']"
+        rows="2"
+        spacing-x="30"
+        :spacing-y="['18px', '22px', '26px', '30px', '34px', '40px']"
+        justify-items="center"
+        justify-content="center"
+      >
+        <CBox
+          v-for="(item, idx) in categoryItem"
+          :key="idx"
+          class="category__component"
+        >
+          <CategoryComponent :item="item" />
+        </CBox>
+      </CSimpleGrid>
+    </CBox>
+  </CThemeProvider>
+</template>
+<style lang="scss" scoped>
+.category__component {
+  @media screen and(max-width: 62em) {
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
+}
+</style>
