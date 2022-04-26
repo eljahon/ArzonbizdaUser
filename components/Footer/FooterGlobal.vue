@@ -22,6 +22,7 @@ export default {
 <template>
   <CThemeProvider>
     <CBox
+      mt="98px"
       bg="color.TextColor3"
       w="100%"
       :pb="['0', '10px', '15px', '20px', '40px', '50px']"

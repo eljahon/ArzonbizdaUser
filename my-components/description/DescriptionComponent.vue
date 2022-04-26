@@ -13,7 +13,7 @@ export default {
 <template>
   <CThemeProvider>
     <c-box
-      :mt="['25px', '32px', '40px', '45px', '50px', '97px']"
+      :mt="['25px', '32px', '40px', '45px', '50px', '88px']"
       :justify-content="[
         'center',
         'center',

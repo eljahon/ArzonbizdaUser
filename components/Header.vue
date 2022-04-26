@@ -24,9 +24,6 @@ export default {
 
 <template>
   <CThemeProvider>
-    <header>
-      <c-icon name="test" color="red" bg="white" fill="white" />
-      sdsd
     <header class="header">
       <c-flex
         align="center"

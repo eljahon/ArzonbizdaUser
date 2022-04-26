@@ -6,7 +6,9 @@ export default {
 }
 </script>
 <template>
-  <CThemeProvider> <BannerImg image-path="banner1.png" /> </CThemeProvider>
+  <CThemeProvider>
+    <BannerImg mt="88px" image-path="banner1.png" />
+  </CThemeProvider>
 </template>
 
 <style></style>

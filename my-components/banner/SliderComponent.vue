@@ -57,5 +57,6 @@ export default {
   max-height: 440px;
   border-radius: 25px;
   margin-top: 0 auto;
+  margin-top: 64px;
 }
 </style>

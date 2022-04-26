@@ -5,6 +5,7 @@
         font-family="Yandex Sans Display"
         :font-size="['10px', '12px', '14px', '16px']"
         :line-height="['18px', '20px', '22px', '24px']"
+        align-items="center"
         >{{ $t('viewAll') }}<Icon name="right_arrow" />
       </c-flex>
     </c-link>

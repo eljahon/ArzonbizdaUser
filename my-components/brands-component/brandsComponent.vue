@@ -33,7 +33,7 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <CBox :mb="['24px', '32px', '40px', '48px', '56px', '64px']">
+    <CBox mt="88px" :mb="['24px', '32px', '40px', '48px', '56px', '64px']">
       <CFlex
         align="center"
         justify="space-between"
