@@ -1,6 +1,6 @@
 <script>
 import { CThemeProvider, CButton } from '@chakra-ui/vue'
-import Icon from '~/components/icon.vue'
+import Icon from '@/components/Icon.vue'
 
 export default {
   name: 'HeaderButton',
@@ -17,7 +17,7 @@ export default {
     <CThemeProvider>
       <c-button
         align-item="center"
-        width="215px"
+        :width="['56px', '56px', '56px', '56px', '56px', '215px']"
         variant-color="color.WhiteColor"
         border-color="color.BorderColor"
         border="1px solid"
@@ -30,12 +30,21 @@ export default {
         justify-content="center"
         gap="8.5px"
         bg="transparent"
+        ml="20px"
       >
         <Icon name="comparison" />
-        {{ $t('compare') }}
+        <p class="icon__text">
+          {{ $t('compare') }}
+        </p>
       </c-button>
     </CThemeProvider>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media screen and(max-width: 1024px) {
+  .icon__text {
+    display: none;
+  }
+}
+</style>

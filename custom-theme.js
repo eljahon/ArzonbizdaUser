@@ -1,6 +1,5 @@
 export default {
   breakpoints: ['375px', '425px', '768px', '912px', '1024px', '1440px'],
-  // 480px   768px    992     1280
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
