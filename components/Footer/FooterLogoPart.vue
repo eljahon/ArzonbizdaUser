@@ -20,7 +20,7 @@ export default {
           <CIcon
             name="logo_ab"
             :w="['19px', '22px', '25px', '28px', '32px', '36px']"
-            h="36px"
+            :h="['19px', '22px', '25px', '28px', '32px', '36px']"
           />
         </CBox>
         <CBox>
@@ -55,15 +55,30 @@ export default {
     </CStack>
     <CFlex>
       <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
-        ><Icon name="facebook"
+        ><CIcon
+          name="facebook"
+          color="white"
+          :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
       <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
-        ><Icon name="instagram"
+        ><CIcon
+          name="instagram"
+          color="white"
+          :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
       <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
-        ><Icon name="telegram"
+        ><CIcon
+          name="telegram"
+          color="white"
+          :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
-      <CLink><Icon name="tiktok" /></CLink>
+      <CLink
+        ><CIcon
+          name="tiktok"
+          color="white"
+          fill="transparent"
+          :size="['16px', '18px', '20px', '22px', '23px', '24px']"
+      /></CLink>
     </CFlex>
   </CStack>
 </template>
