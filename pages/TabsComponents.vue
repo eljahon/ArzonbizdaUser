@@ -1,6 +1,6 @@
 <script>
 import { CThemeProvider, CBox, CButton } from '@chakra-ui/vue'
-import TabsProducts from '../TabsProducts/TabsProducts.vue'
+import TabsProducts from '../my-components/productPageTab/TabsProducts/TabsProducts.vue'
 export default {
   components: {
     CThemeProvider,
@@ -146,7 +146,7 @@ export default {
   </CThemeProvider>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .button:focus {
   background-color: white;
 }

@@ -20,7 +20,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          :width="['244px', '280px', '512px', '430px', '360px', '674px']"
+          :width="['280px', '332px', '590px', '430px', '360px', '674px']"
           height="56px"
           _focus="none"
           _hover="none"
@@ -29,9 +29,9 @@ export default {
           border-bottom-left-radius="12px"
           border-bottom-end-radius="none"
           border-top-right-radius="none"
-          ml="20px"
         />
         <c-button
+          class="header__button"
           background-color="color.WarningColor1"
           aria-label="Search database"
           _focus="none"
@@ -60,7 +60,15 @@ export default {
 <style lang="scss" scoped>
 @media screen and(max-width: 768px) {
   .header__input {
-    margin: 16px 0 0 20px;
+    margin: 16px 0 0 0px;
+  }
+  .header__button {
+    margin-right: 0;
+  }
+}
+@media screen and(max-width: 425px) {
+  .header__input {
+    margin: 16px 0 0 0px;
   }
 }
 </style>
