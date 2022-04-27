@@ -1,13 +1,12 @@
 <script>
-import { CThemeProvider, CButton } from '@chakra-ui/vue'
-import Icon from '@/components/Icon.vue'
+import { CThemeProvider, CButton, CIcon } from '@chakra-ui/vue'
 
 export default {
   name: 'HeaderButton',
   components: {
     CThemeProvider,
     CButton,
-    Icon,
+    CIcon,
   },
 }
 </script>
@@ -32,7 +31,10 @@ export default {
         bg="transparent"
         ml="20px"
       >
-        <Icon name="comparison" />
+        <CIcon
+          name="comparison"
+          :size="['16px', '16px', '17px', '18px', '19px', '20px']"
+        />
         <p class="icon__text">
           {{ $t('compare') }}
         </p>

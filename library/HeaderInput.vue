@@ -1,6 +1,5 @@
 <script>
-import { CInput, CThemeProvider, CFlex, CButton } from '@chakra-ui/vue'
-import Icon from '@/components/Icon.vue'
+import { CInput, CThemeProvider, CFlex, CButton, CIcon } from '@chakra-ui/vue'
 export default {
   name: 'HeaderInput',
   components: {
@@ -8,7 +7,7 @@ export default {
     CThemeProvider,
     CFlex,
     CButton,
-    Icon,
+    CIcon,
   },
 }
 </script>
@@ -46,7 +45,12 @@ export default {
           cursor="pointer"
           mr="20px"
         >
-          <Icon name="search" />
+          <CIcon
+            name="search"
+            fill="transparent"
+            color="white"
+            :size="['14px', '16px', '18px', '20px', '22px', '24px']"
+          />
         </c-button>
       </c-flex>
     </CThemeProvider>

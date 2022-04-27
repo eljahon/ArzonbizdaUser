@@ -1,6 +1,5 @@
 <script>
-import { CBox, CImage, CHeading, CStack, CFlex } from '@chakra-ui/vue'
-import Icon from '@/components/icon.vue'
+import { CBox, CImage, CHeading, CStack, CFlex, CIcon } from '@chakra-ui/vue'
 export default {
   name: 'PopularProduct',
   components: {
@@ -8,7 +7,7 @@ export default {
     CImage,
     CHeading,
     CStack,
-    Icon,
+    CIcon,
     CFlex,
   },
   props: ['item'],
@@ -48,7 +47,11 @@ export default {
     <CBox mt="8px">
       <CFlex align="center">
         <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
-          <Icon name="star" />
+          <CIcon
+            name="star"
+            color="color.iconBg"
+            :size="['17px', '20px', '23px', '26px', '29px', '32px']"
+          />
           <CBox
             as="span"
             :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
@@ -63,7 +66,12 @@ export default {
           font-family="Yandex Sans Display"
           :ml="['15px', '18px', '20px', '24px', '26px', '30px']"
         >
-          <Icon name="comment" />
+          <CIcon
+            name="comment"
+            color="color.iconBg"
+            fill="white"
+            :size="['15px', '20px', '24px', '27px', '30px', '32px']"
+          />
           <CBox
             as="span"
             :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
