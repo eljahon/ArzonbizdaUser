@@ -1,14 +1,12 @@
 <script lang="js">
-import SliderComponent from "@/my-components/banner/SliderComponent.vue";
 import DescriptionComponent from "@/my-components/description/DescriptionComponent.vue";
 import NewBlog from "@/my-components/newBlog/NewBlog.vue";
 import BannerComponent from "@/my-components/bannerImgBox/BannerComponent.vue";
 import PopularProducts from "~/my-components/popular-products/popularProducts.vue";
 import CategoriesComponent from "~/my-components/categories-component/categoriesComponent.vue";
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
-
-
-
+import ProductFirstSlider from "~/my-components/product-slider/ProductFirstSlider.vue";
+import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
 
 export default {
@@ -16,11 +14,13 @@ export default {
 name:"IndexComponent",
 components: {
     PopularProducts,
-    SliderComponent,
     DescriptionComponent,
-NewBlog,
-BannerComponent,
-CategoriesComponent,BrandsComponent
+    NewBlog,
+    BannerComponent,
+    CategoriesComponent,
+    BrandsComponent,
+    ProductFirstSlider,
+    SliderComponent
 },
 }
 </script>
@@ -36,5 +36,6 @@ CategoriesComponent,BrandsComponent
     <PopularProducts />
     <DescriptionComponent />
     <NewBlog />
+    <ProductFirstSlider />
   </div>
 </template>
