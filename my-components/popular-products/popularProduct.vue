@@ -11,6 +11,11 @@ export default {
     CFlex,
   },
   props: ['item'],
+  methods: {
+    openProductPage(item) {
+      this.$router.push('/products/' + item)
+    },
+  },
 }
 </script>
 
@@ -21,12 +26,18 @@ export default {
       :px="['22px', '24px', '30px', '34px', '36px', '40px']"
       :rounded="['8px', '9px', '10px', '10px', '11px', '12px']"
       bg="color.ImageBgColor"
+      cursor="pointer"
+      @click="openProductPage(item)"
     >
       <CImage :src="require(`@/assets/img/${item.img}`)" />
     </CBox>
     <CBox>
       <CStack>
-        <CBox :pt="['8px', '12px', '14px', '18px', '20px', '24px']">
+        <CBox
+          :pt="['8px', '12px', '14px', '18px', '20px', '24px']"
+          cursor="pointer"
+          @click="openProductPage(item)"
+        >
           <CHeading
             as="h2"
             :font-size="['12px', '14px', '16px', '18px', '20px', '24px']"
