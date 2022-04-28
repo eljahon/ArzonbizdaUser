@@ -44,22 +44,15 @@ export default {
             >{{ $t('from') }} {{ item.price }} {{ $t('currency') }}</CHeading
           >
           <CBox
-            d="flex"
-            align-items="center"
+            as="span"
             font-family="Yandex Sans Display"
-            :ml="['15px', '18px', '20px', '24px', '26px', '30px']"
+            :font-size="['12px', '13px', '14px', '16px', '18px', '20px']"
+            :line-height="['15px', '18px', '20px', '24px', '26px', '30px']"
+            color="color.TextColor2"
+            >{{ item.name }}</CBox
           >
-            <Icon name="comment" />
-
-            <CBox
-              as="span"
-              :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
-              color="color.TextColor5"
-              :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
-              >26</CBox
-            >
-          </CBox>
-      </CBox>
+        </CBox>
+      </CStack>
     </CBox>
     <CBox mt="8px">
       <CFlex align="center">

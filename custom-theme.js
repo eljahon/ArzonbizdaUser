@@ -26,6 +26,8 @@ export default {
       ImageBgColor: '#F5F7F7',
       pocoBg: '#F4F4F4',
       iconBg: '#C8CCCC',
+      greenTick: '#6FCF97',
+      borderColor: '#E50914',
     },
   },
 

@@ -19,15 +19,15 @@ export default {
         <CBox :mr="['4px', '5px', '6px', '7px', '8px', '8px']">
           <CIcon
             name="logo_ab"
-            :w="['19px', '22px', '25px', '28px', '32px', '36px']"
-            :h="['19px', '22px', '25px', '28px', '32px', '36px']"
+            :width="['19px', '22px', '25px', '28px', '32px', '37px']"
+            :height="['19px', '22px', '25px', '28px', '32px', '36px']"
           />
         </CBox>
         <CBox>
           <CIcon
             name="arzonBizda"
-            :w="['73px', '86px', '99px', '112px', '125px', '139px']"
-            :h="['13px', '15px', '17px', '19px', '21px', '24px']"
+            :width="['73px', '86px', '99px', '112px', '125px', '139px']"
+            :height="['13px', '15px', '17px', '19px', '21px', '24px']"
           />
         </CBox>
       </CFlex>

@@ -16,6 +16,7 @@ export default {
     return {
       popular: [
         {
+          id: 1,
           img: 'poco.png',
           name: 'Xiaomi Poco X3 Pro 8/256GB',
           price: '3 324 000',
