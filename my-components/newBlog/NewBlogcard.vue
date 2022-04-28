@@ -37,7 +37,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="700"
         :line-height="['9px', '18px', '24px', '28px', '28px', '28px']"
-        >{{ $t(item.textName) }}</CText
+        >{{ item.textName }}</CText
       >
     </CBox>
   </CBox>
