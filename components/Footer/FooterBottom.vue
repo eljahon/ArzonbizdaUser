@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <CBox bg="color.TextColor2">
+  <CBox bg="color.TextColor2" class="footerBottom">
     <CBox as="div" class="containerBox" py="16px">
       <CText font-weight="300" line-height="24px" color="white">
         © 2022. ООО "Arzon Bizda"
@@ -18,3 +18,10 @@ export default {
     </CBox>
   </CBox>
 </template>
+<style lang="scss" scoped>
+.footerBottom {
+  @media screen and(max-width: 995px) {
+    display: none;
+  }
+}
+</style>

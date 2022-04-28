@@ -1,8 +1,14 @@
 <script>
+import TabsComponents from '~/my-components/productPageTab/tab/TabsComponents.vue'
+import TabsProducts from '~/my-components/productPageTab/TabsProducts/TabsProducts.vue'
 export default {
   name: 'UserComponent',
+  components: { TabsComponents, TabsProducts },
 }
 </script>
 <template>
-  <div></div>
+  <div>
+    <TabsComponents />
+    <TabsProducts />
+  </div>
 </template>

@@ -25,6 +25,7 @@ export default {
       RouteColor: '#0F6CB0',
       ImageBgColor: '#F5F7F7',
       pocoBg: '#F4F4F4',
+      iconBg: '#C8CCCC',
     },
   },
 
