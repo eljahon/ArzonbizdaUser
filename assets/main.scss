@@ -35,6 +35,7 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .containerBox {
   max-width: 1440px;
   margin: 0 auto;
@@ -42,4 +43,10 @@ li {
   padding: 0px 30px;
   box-sizing: border-box;
   padding: 0 60px;
+}
+
+@media screen and(max-width: 425px) {
+  .containerBox {
+    padding: 0 20px !important;
+  }
 }

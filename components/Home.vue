@@ -5,7 +5,7 @@ import BannerComponent from "@/my-components/bannerImgBox/BannerComponent.vue";
 import PopularProducts from "~/my-components/popular-products/popularProducts.vue";
 import CategoriesComponent from "~/my-components/categories-component/categoriesComponent.vue";
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
-import ProductFirstSlider from "~/my-components/product-slider/ProductFirstSlider.vue";
+import ProductFirstSlider from "~/my-components/product-slider/ProductSlider.vue";
 import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
 
