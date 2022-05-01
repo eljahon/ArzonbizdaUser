@@ -54,6 +54,10 @@
 
 // banner slider custom end
 
+// product slider start
+
+
+
 // Yandex Fonts
 
 @font-face {
@@ -99,11 +103,5 @@
   @media screen and(max-width: 48em) {
     font-size: 20px;
     line-height: 22px;
-  }
-}
-
-@media screen and(max-width: 425px) {
-  .containerBox {
-    padding: 0 20px !important;
   }
 }
