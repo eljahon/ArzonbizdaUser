@@ -3,7 +3,7 @@ import TabsComponents from '~/my-components/productPageTab/tab/TabsComponents.vu
 import TabsProducts from '~/my-components/productPageTab/TabsProducts/TabsProducts.vue'
 export default {
   name: 'UserComponent',
-  components: { TabsComponents, TabsProducts },
+  components: { TabsProducts, TabsComponents },
 }
 </script>
 <template>
