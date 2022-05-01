@@ -10,7 +10,6 @@ import Vue from 'vue'
 Vue.use(VueViewer)
 
 export default {
-
   components: {
     VueSlickCarousel,
     CIcon,
