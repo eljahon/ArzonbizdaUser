@@ -1,11 +1,15 @@
 <script>
 import { CBox, CSimpleGrid } from '@chakra-ui/vue'
 import TabsproductItems from './tabsproduct-items.vue'
+import TabDescription from '~/my-components/productPageTab/TabsProducts/TabDescription.vue'
+import TabCharacteristics from '~/my-components/productPageTab/TabsProducts/TabCharacteristics.vue'
 export default {
   components: {
     CBox,
     TabsproductItems,
     CSimpleGrid,
+    TabDescription,
+    TabCharacteristics,
   },
   props: {
     toogleWord: {
@@ -36,13 +40,13 @@ export default {
       </CSimpleGrid>
     </CBox>
     <CBox v-if="toogleWord === 'two'">
-      <CBox> TWO </CBox>
+      <TabDescription />
     </CBox>
     <CBox v-if="toogleWord === 'three'">
-      <CBox> Three </CBox>
+      <CBox> Threeeeee </CBox>
     </CBox>
     <CBox v-if="toogleWord === 'four'">
-      <CBox> Four </CBox>
+      <TabCharacteristics />
     </CBox>
   </CBox>
 </template>

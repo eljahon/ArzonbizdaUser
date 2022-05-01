@@ -62,7 +62,14 @@ export default {
             class="button"
             border="none"
             bg="white"
-            border-right="1px solid #E3E6E6"
+            :border-right="[
+              'none',
+              'none',
+              'none',
+              'none',
+              '1px solid #E3E6E6',
+              '1px solid #E3E6E6',
+            ]"
             :_hover="{ bg: 'white' }"
             :_focus="{ outline: 'none' }"
             :py="['8px', '10px', '12px', '15px', '18px', '20px']"
@@ -105,7 +112,14 @@ export default {
             class="button"
             border="none"
             bg="white"
-            border-right="1px solid #E3E6E6"
+            :border-right="[
+              'none',
+              'none',
+              'none',
+              'none',
+              '1px solid #E3E6E6',
+              '1px solid #E3E6E6',
+            ]"
             :_hover="{ bg: 'white' }"
             :_focus="{ outline: 'none' }"
             :py="['8px', '10px', '12px', '15px', '18px', '20px']"
@@ -148,7 +162,14 @@ export default {
             class="button"
             border="none"
             bg="white"
-            border-right="1px solid #E3E6E6"
+            :border-right="[
+              'none',
+              'none',
+              'none',
+              'none',
+              '1px solid #E3E6E6',
+              '1px solid #E3E6E6',
+            ]"
             :_hover="{ bg: 'white' }"
             :_focus="{ outline: 'none' }"
             :py="['8px', '10px', '12px', '15px', '18px', '20px']"

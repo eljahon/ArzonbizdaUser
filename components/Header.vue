@@ -63,6 +63,7 @@ export default {
         <HeaderButton class="desktop" />
       </c-flex>
     </header>
+    <NavbarPopular />
   </CThemeProvider>
 </template>
 
