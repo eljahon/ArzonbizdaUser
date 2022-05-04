@@ -28,6 +28,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Телефоны</CLink
         ></CBox
       >
@@ -40,6 +41,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Планшеты</CLink
         ></CBox
       >
@@ -52,6 +54,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Телевизоры</CLink
         ></CBox
       >
@@ -64,6 +67,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Ноутбуки</CLink
         ></CBox
       >
@@ -76,6 +80,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Смарт-часы</CLink
         ></CBox
       >
@@ -88,6 +93,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Кондиционеры</CLink
         ></CBox
       >
@@ -100,6 +106,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Холодильники</CLink
         ></CBox
       >
@@ -112,6 +119,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Мониторы</CLink
         ></CBox
       >
@@ -124,6 +132,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_focus="none"
           >Мониторы</CLink
         ></CBox
       >
@@ -132,7 +141,7 @@ export default {
         :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
         line-height="24px"
         color="color.InputBorder"
-        ><CLink as="router-link" to="#" :_hover="none"
+        ><CLink as="router-link" to="#" :_hover="none" :_focus="none"
           ><CIcon
             name="fire"
             mr="8px"
