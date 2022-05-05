@@ -12,7 +12,8 @@ export default {
 
 <template>
   <CBox
-    ><CBox
+    >
+    <CBox
       class="imgDiv"
       :height="['102px', '122px', '230px', '280px', '300px', '370px']"
       :border-radius="['8px', '10px', '12px', '14px', '15px', '16px']"

@@ -1,5 +1,6 @@
 export default {
   breakpoints: ['375px', '425px', '768px', '912px', '1024px', '1440px'],
+
   fonts: {
     heading: '"Yandex Sans Display", sans-serif',
     body: '"Yandex Sans Display", sans-serif',
@@ -27,6 +28,7 @@ export default {
       pocoBg: '#F4F4F4',
       iconBg: '#C8CCCC',
       BgColor: '#FAFAFA',
+      TabBorderRightColor: '#E3E5E5',
     },
   },
 
