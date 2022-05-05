@@ -71,4 +71,10 @@ export default {
     margin: 16px 0 0 0px;
   }
 }
+
+@media screen and(max-width: 320px) {
+  .css-6hv6t1-className {
+    width: 234px;
+  }
+}
 </style>
