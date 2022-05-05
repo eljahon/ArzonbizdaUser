@@ -37,4 +37,17 @@ export const en = {
     'Arzonbizda.uz – this is a company that has been on the market since 2022, but the experience of employees in this field reaches 16 years. We work with good brands of equipment of different price segments and we can offer each client an option for his budget. The convenience of online shopping for you is accompanied by the financial benefits of this format of work. Save and buy reliable products in a few clicks. We will be happy to advise.',
   newBlogWord: 'New Blogs',
   newBlogWordText: 'Great phones for neat guys',
+  tab1: 'Prices',
+  tab2: 'Description',
+  tab3: 'Reviews',
+  tab4: 'Characteristics',
+  sum: 'sum',
+  phoneName: 'Xiaomi Smartphone',
+  phoneCharacteristics: 'Poco X3 Pro 8/256GB',
+  UPDMobile: 'UPD Mobile',
+  NoCredit: 'No credit',
+  magazin: 'To the store',
+  more: 'More',
+  lorem:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
 }
