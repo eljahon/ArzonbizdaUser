@@ -1,11 +1,13 @@
 <script>
-import { CIcon, CInput, CFlex ,
+import {
+  CIcon,
+  CInput,
+  CFlex,
   CSlider,
   CSliderTrack,
   CSliderFilledTrack,
   CSliderThumb,
 } from '@chakra-ui/vue'
-
 
 export default {
   components: {
@@ -22,7 +24,7 @@ export default {
 
 <template>
   <div class="slider__price">
-    <c-slider default-value="16000" w="338px">
+    <c-slider default-value="50" w="338px">
       <c-slider-track color="color.WarningColor1" bg="color.BorderColor2" />
 
       <c-slider-thumb
