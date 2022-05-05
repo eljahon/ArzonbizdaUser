@@ -28,5 +28,5 @@ export const uz = {
   blogText2:
     "Arzonbizda.uz - 2022 yildan beri bozorda faoliyat yuritayotgan kompaniya, ammo bu sohadagi xodimlarning tajribasi 16 yilga etadi. Biz har xil narx segmentlarining yaxshi brendlari bilan ishlaymiz va har bir mijozga o'z byudjetiga mos variantni taklif qilishimiz mumkin. Siz uchun onlayn xarid qilish qulayligi ushbu ish formatining moliyaviy afzalliklari bilan birga keladi. Bir necha marta bosish orqali ishonchli mahsulotlarni saqlang va sotib oling. Biz maslahat berishdan xursand bo'lamiz.",
   newBlogWord: 'Yangi Bloglar',
-  newBlogWordText: 'Chiroyli yigitlar uchun ajoyib telefonlar',
+  // newBlogWordText: 'Chiroyli yigitlar uchun ajoyib telefonlar',
 }

@@ -28,5 +28,5 @@ export const en = {
   blogText2:
     'Arzonbizda.uz – this is a company that has been on the market since 2022, but the experience of employees in this field reaches 16 years. We work with good brands of equipment of different price segments and we can offer each client an option for his budget. The convenience of online shopping for you is accompanied by the financial benefits of this format of work. Save and buy reliable products in a few clicks. We will be happy to advise.',
   newBlogWord: 'New Blogs',
-  newBlogWordText: 'Great phones for neat guys',
+  // newBlogWordText: 'Great phones for neat guys',
 }
