@@ -23,7 +23,7 @@ components: {
 
 <template>
   <div>
-    <SliderComponent />
+<!--    <SliderComponent />-->
     <PopularProducts />
     <CategoriesComponent />
     <BannerComponent />
