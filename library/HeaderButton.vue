@@ -17,7 +17,7 @@ export default {
       <c-button
         class="header__button"
         align-item="center"
-        :width="['56px', '56px', '56px', '56px', '56px', '215px']"
+        :mw="['56px', '56px', '56px', '56px', '56px', '215px']"
         variant-color="color.WhiteColor"
         border-color="color.BorderColor"
         border="1px solid"
