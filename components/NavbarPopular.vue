@@ -27,7 +27,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Телефоны</CLink
         ></CBox
       >
@@ -39,7 +39,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Планшеты</CLink
         ></CBox
       >
@@ -51,7 +51,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Телевизоры</CLink
         ></CBox
       >
@@ -63,7 +63,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Ноутбуки</CLink
         ></CBox
       >
@@ -75,7 +75,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Смарт-часы</CLink
         ></CBox
       >
@@ -87,7 +87,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Кондиционеры</CLink
         ></CBox
       >
@@ -99,7 +99,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Холодильники</CLink
         ></CBox
       >
@@ -111,7 +111,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Мониторы</CLink
         ></CBox
       >
@@ -123,7 +123,7 @@ export default {
         ><CLink
           as="router-link"
           to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: 'none' }"
+          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           >Мониторы</CLink
         ></CBox
       >
@@ -132,7 +132,7 @@ export default {
         :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
         line-height="24px"
         color="color.InputBorder"
-        ><CLink as="router-link" to="#" :_hover="none"
+        ><CLink as="router-link" to="#" :_hover="false"
           ><CIcon
             name="fire"
             mr="8px"

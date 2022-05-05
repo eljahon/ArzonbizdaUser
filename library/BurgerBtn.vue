@@ -18,7 +18,7 @@ export default {
       h="56px"
       bg="transparent"
       cursor="pointer"
-      :_focus="none"
+      :_focus="false"
       ml="20px"
       mr="20px"
     >
