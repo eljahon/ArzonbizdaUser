@@ -60,8 +60,8 @@ export default {
         <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
           <CIcon
             name="star"
-            color="color.iconBg"
-            :size="['17px', '20px', '23px', '26px', '29px', '32px']"
+            fill="white"
+            :width="['12px', '12px', '12px', '12px', '12px', '12px']"
           />
           <CBox
             as="span"
@@ -81,7 +81,7 @@ export default {
             name="comment"
             color="color.iconBg"
             fill="white"
-            :size="['15px', '20px', '24px', '27px', '30px', '32px']"
+            :width="['12px', '12px', '12px', '12px', '12px', '12px']"
           />
           <CBox
             as="span"
