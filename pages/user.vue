@@ -1,14 +1,13 @@
 <script>
-import TabsComponents from '~/my-components/productPageTab/tab/TabsComponents.vue'
-import TabsProducts from '~/my-components/productPageTab/TabsProducts/TabsProducts.vue'
+import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
 export default {
   name: 'UserComponent',
-  components: { TabsProducts, TabsComponents },
+  components: { ChakraTab },
 }
 </script>
+
 <template>
   <div>
-    <TabsComponents />
-    <TabsProducts />
+    <ChakraTab />
   </div>
 </template>

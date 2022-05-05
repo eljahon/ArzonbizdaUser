@@ -27,6 +27,7 @@ export default {
       pocoBg: '#F4F4F4',
       iconBg: '#C8CCCC',
       BgColor: '#FAFAFA',
+      TabBorderRightColor: '#E3E5E5',
     },
   },
 

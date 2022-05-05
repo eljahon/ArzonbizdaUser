@@ -30,4 +30,17 @@ export const ru = {
     'Arzonbizda.uz – это компания, которая с 2022 года на рынке, но опыт сотрудников в этой сфере достигает 16 лет. Мы работаем с хорошими брендами техники разного ценового сегмента и каждому клиенту сможем предложить вариант на его бюджет. Удобство онлайн-покупок для Вас сопровождается и финансовыми выгодами такого формата работы. Экономьте и покупайте надежные товары в несколько кликов. Будем рады проконсультировать.',
   newBlogWord: 'Новые блоги',
   newBlogWordText: 'Отличные телефоны для аккуратных парней',
+  tab1: 'Цены',
+  tab2: 'Описание',
+  tab3: 'Отзывы',
+  tab4: 'Характеристики',
+  sum: 'сум',
+  phoneName: 'Смартфон Xiaomi',
+  phoneCharacteristics: 'Poco X3 Pro 8/256 ГБ',
+  UPDMobile: 'UPD Мобильный',
+  NoCredit: 'Без кредита',
+  magazin: 'В магазин',
+  more: 'Подробнее',
+  lorem:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
 }

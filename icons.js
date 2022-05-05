@@ -167,4 +167,9 @@ export default {
             </g>`,
     viewBox: `0 0 22 16`,
   },
+  stars: {
+    path: `<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="-1" y="-2" width="13.5" height="14" fill="#F8D34F"/>
+  </svg>`,
+  },
 }
