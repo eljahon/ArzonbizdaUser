@@ -1,17 +1,12 @@
 <script>
-import TabsComponents from '~/my-components/productPageTab/tab/TabsComponents.vue'
-import TabsProducts from '~/my-components/productPageTab/TabsProducts/TabsProducts.vue'
-import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
-
+import PriceSlider from '~/my-components/price-slider/PriceSlider.vue'
 export default {
   name: 'UserComponent',
-  components: { TabsProducts, TabsComponents, ProductSlider },
+  components: { PriceSlider },
 }
 </script>
 <template>
   <div>
-    <ProductSlider />
-    <TabsComponents />
-    <TabsProducts />
+    <PriceSlider />
   </div>
 </template>
