@@ -20,6 +20,15 @@ export const ru = {
   reviews: 'Оставить отзыв',
   search: 'Поиск...',
   compare: 'Сравнить',
+  telephone: 'Телефоны',
+  tablet: 'Планшеты',
+  tv: 'Телевизоры',
+  noutbook: 'Ноутбуки',
+  smartWatch: 'Смарт-часы',
+  conditionair: 'Кондиционеры',
+  fridge: 'Холодильники',
+  monitor: 'Мониторы',
+
   blogText:
     'Комфортную жизнь любого человека и удобный быт невозможно представить без современной техники. Рабочие и личные вопросы - в смартфоне, любимые фильмы и сериалы – телевизор, уборка – пылесос, готовка – плита, духовка и множество более мелких, но не менее полезных девайсов. Кроме того, технологии развиваются, а поэтому электроника требует регулярного обновления, хочется испытать новые модели или попросту не хватает мощности имеющихся девайсов. В связи с этим полезно иметь надежное место для покупки бытовой техники. Если Вы пока такового для себя не нашли, мы приглашаем на несколько минут задержаться на нашем сайте. Уверяем, Вы убедитесь, что не зря потратили свое время.',
   shoptext: 'Интернет магазин - ArzonBizda',
@@ -28,5 +37,18 @@ export const ru = {
   blogText2:
     'компания, которая с 2022 года на рынке, но опыт сотрудников в этой сфере достигает 16 лет. Мы работаем с хорошими брендами техники разного ценового сегмента и каждому клиенту сможем предложить вариант на его бюджет. Удобство онлайн-покупок для Вас сопровождается и финансовыми выгодами такого формата работы. Экономьте и покупайте надежные товары в несколько кликов. Будем рады проконсультировать.',
   newBlogWord: 'Новые блоги',
-  // newBlogWordText: 'Отличные телефоны для аккуратных парней',
+  newBlogWordText: 'Отличные телефоны для аккуратных парней',
+  tab1: 'Цены',
+  tab2: 'Описание',
+  tab3: 'Отзывы',
+  tab4: 'Характеристики',
+  sum: 'сум',
+  phoneName: 'Смартфон Xiaomi',
+  phoneCharacteristics: 'Poco X3 Pro 8/256 ГБ',
+  UPDMobile: 'UPD Мобильный',
+  NoCredit: 'Без кредита',
+  magazin: 'В магазин',
+  more: 'Подробнее',
+  lorem:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
 }

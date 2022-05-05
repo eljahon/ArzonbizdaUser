@@ -1,12 +1,14 @@
 <script>
-import PriceSlider from '~/my-components/price-slider/PriceSlider.vue'
+import categoryFilter from '../my-components/categories-component/categoryFilter.vue'
+
 export default {
   name: 'UserComponent',
-  components: { PriceSlider },
+  components: { categoryFilter },
 }
 </script>
+
 <template>
   <div>
-    <PriceSlider />
+    <categoryFilter />
   </div>
 </template>
