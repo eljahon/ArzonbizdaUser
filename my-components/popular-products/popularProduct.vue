@@ -13,7 +13,7 @@ export default {
   props: ['item'],
   methods: {
     openProductPage(item) {
-      this.$router.push('/products/' + item)
+      this.$router.push('/products/' + item.id)
     },
   },
 }
@@ -52,7 +52,17 @@ export default {
             color="color.TextColor2"
             >{{ item.name }}</CBox
           >
+
         </CBox>
+            <Icon name="comment" />
+
+            <CBox
+              as="span"
+              :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
+              color="color.TextColor5"
+              :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
+              >26</CBox
+            >
       </CStack>
     </CBox>
     <CBox mt="8px">
