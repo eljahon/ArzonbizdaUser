@@ -2,7 +2,7 @@ export const uz = {
   error: 'xato',
   populargoods: 'Ommabop tovarlar',
   currency: "so'mdan",
-  from: '',
+  from: 'dan',
   viewAll: "Hammasini ko'rish",
   category: 'Kategoriyalar',
   brand: 'Brendlar',
@@ -19,6 +19,14 @@ export const uz = {
   address: 'Manzil',
   reviews: 'Shahr qoldirish',
   compare: 'Taqqoslash',
+  telephone: 'Telefonlar',
+  tablet: 'Planshetlar',
+  tv: 'Televizorlar',
+  noutbook: 'noutbuklar',
+  smartWatch: 'Aqlli soatlar',
+  conditionair: 'Xavo sovutgichlar',
+  fridge: 'Xolodelniklar',
+  monitor: 'Monitorlar',
 
   blogText:
     "Har qanday insonning farovon hayoti va qulay hayotini zamonaviy texnologiyalarsiz tasavvur etib bo'lmaydi. Ish va shaxsiy muammolar - smartfonda, sevimli filmlar va teleko'rsatuvlar - televizor, tozalash - changyutgich, pishirish - pechka, pech va ko'plab kichikroq, ammo foydali qurilmalar. Bundan tashqari, texnologiyalar rivojlanmoqda va shuning uchun elektronika muntazam yangilanishlarni talab qiladi, men yangi modellarni sinab ko'rmoqchiman yoki shunchaki mavjud qurilmalarning kuchi etarli emas. Shu nuqtai nazardan, maishiy texnika sotib olish uchun ishonchli joyga ega bo'lish foydalidir. Agar siz hali o'zingiz uchun birini topa olmagan bo'lsangiz, biz sizni veb-saytimizda bir necha daqiqa qolishni taklif qilamiz. Sizni ishontirib aytamizki, vaqtingizni behuda o'tkazmadingiz.",
@@ -28,5 +36,18 @@ export const uz = {
   blogText2:
     "Arzonbizda.uz - 2022 yildan beri bozorda faoliyat yuritayotgan kompaniya, ammo bu sohadagi xodimlarning tajribasi 16 yilga etadi. Biz har xil narx segmentlarining yaxshi brendlari bilan ishlaymiz va har bir mijozga o'z byudjetiga mos variantni taklif qilishimiz mumkin. Siz uchun onlayn xarid qilish qulayligi ushbu ish formatining moliyaviy afzalliklari bilan birga keladi. Bir necha marta bosish orqali ishonchli mahsulotlarni saqlang va sotib oling. Biz maslahat berishdan xursand bo'lamiz.",
   newBlogWord: 'Yangi Bloglar',
-  // newBlogWordText: 'Chiroyli yigitlar uchun ajoyib telefonlar',
+  newBlogWordText: 'Chiroyli yigitlar uchun ajoyib telefonlar',
+  tab1: 'Narxlar',
+  tab2: 'Tavsif',
+  tab3: 'Sharhlar',
+  tab4: 'Xususiyatlari',
+  sum: "so'm",
+  phoneName: 'Xiaomi smartfoni',
+  phoneCharacteristics: 'Poco X3 Pro 8/256GB',
+  NoCredit: 'Kreditsiz',
+  magazin: "Do'konga",
+  more: "Ko'proq",
+  UPDMobile: 'Mobil UPD',
+  lorem:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
 }

@@ -44,7 +44,7 @@ export default {
           font-weight="700"
           :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
           mt="8px"
-          >3 324 000 сум</CText
+          >3 324 000 {{ $t('sum') }}</CText
         >
         <CHeading
           color="color.TextColor2"
@@ -53,7 +53,8 @@ export default {
           font-family="Yandex Sans Display"
           font-weight="400"
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
-          >Смартфон Xiaomi</CHeading
+        >
+          {{ $t('phoneName') }}</CHeading
         >
         <CHeading
           class="phone__name"
@@ -62,7 +63,7 @@ export default {
           font-family="Yandex Sans Display"
           font-weight="400"
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
-          >Poco X3 Pro 8/256GB</CHeading
+          >{{ $t('phoneCharacteristics') }}</CHeading
         >
         <CBox
           :border="['1px', '1px', '1px', '1px', 'none', 'none']"
@@ -91,7 +92,7 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['9px', '12px', '16px', '20px', '22px', '24px']"
-              >UPD Mobile</CHeading
+              >{{ $t('UPDMobile') }}</CHeading
             >
             <Icon name="green_tick" />
           </CBox>
@@ -106,7 +107,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="400"
         line-height="24px"
-        >Без кредита</CText
+        >{{ $t('NoCredit') }}</CText
       >
       <CText
         :display="['none', 'none', 'none', 'none', 'block', 'block']"
@@ -116,7 +117,7 @@ export default {
         font-weight="700"
         :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
         mt="8px"
-        >3 324 000 сум</CText
+        >3 324 000 {{ $t('sum') }}</CText
       >
       <CBox display="flex" aligin-items="center" mt="8px">
         <CButton
@@ -135,8 +136,14 @@ export default {
           px="48px"
           py="8px"
           :_hover="{ bg: 'white', color: 'color.WarningColor1' }"
-          :_focus="{ outline: 'none' }"
-          >В магазин</CButton
+          :_focus="{
+            outline: 'none',
+            color: 'color.WarningColor1',
+            shadow: 'none',
+            bg: 'white',
+          }"
+        >
+          {{ $t('magazin') }}</CButton
         >
         <CBox display="flex" align-items="center">
           <CButton
@@ -152,7 +159,7 @@ export default {
             :_focus="{ outline: 'none' }"
             as="router-link"
             to="/"
-            >Подробнее</CButton
+            >{{ $t('more') }}</CButton
           >
           <Icon name="right_arrow" />
         </CBox>

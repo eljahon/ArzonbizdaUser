@@ -9,8 +9,23 @@ export default {
 </script>
 <template>
   <CBox
+    :padding="[
+      '24px 0px',
+      '25ppx 0px',
+      '45px 0px',
+      '45px 24px',
+      '24px',
+      '24px',
+    ]"
     class="description___box"
-    bg="['initial'],['initial'],['initial'],['initial'],['color.BgColor'],['color.BgColor']"
+    :bg="[
+      'initial',
+      'initial',
+      'initial',
+      'initial',
+      'color.BgColor',
+      'color.BgColor',
+    ]"
     ><CText
       :width="['initial', 'initial', 'initial', 'initial', '786px', '786px']"
       font-family="Yandex Sans Display"
@@ -18,13 +33,7 @@ export default {
       :font-size="['12px', '12px', '13px', '14px', '16px', '16px']"
       :line-height="['20px', '21px', '22px', '23px', '24px', '24px']"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellus
-      massa non tortor orci, quam id ut. Fames eleifend viverra egestas donec
-      non egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellus
-      vestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed
-      volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra in
-      integer tincidunt orci at id odio montes. Amet volutpat eu, sed egestas
-      volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.
+      {{ $t('lorem') }}
     </CText></CBox
   >
 </template>
