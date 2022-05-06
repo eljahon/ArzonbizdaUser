@@ -1,14 +1,16 @@
 <script>
-import categoryFilter from '../my-components/categories-component/categoryFilter.vue'
+import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
+import PriceSlider from '~/my-components/price-slider/PriceSlider.vue'
 
 export default {
   name: 'UserComponent',
-  components: { categoryFilter },
+  components: { ChakraTab, PriceSlider },
 }
 </script>
 
 <template>
   <div>
-    <categoryFilter />
+    <ChakraTab />
+    <PriceSlider />
   </div>
 </template>

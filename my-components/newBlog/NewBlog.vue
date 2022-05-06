@@ -51,23 +51,25 @@ export default {
         :line-height="['16px', '18px', '20px', '24px']"
         >{{ $t('newBlogWord') }}</CHeading
       >
-      <CSimpleGrid
-        align-items="center"
-        :columns="['3', '3', '3', '3', '4', '4']"
-        :spacing="['10px', '12px', '15px', '20px', '25px', '30px']"
-      >
-        <CBox
-          v-for="item in cardsData"
-          :key="item.id"
-          width="100%"
-          class="products__div"
-          justify-content="center"
+      <nuxt-link to="/blog">
+        <CSimpleGrid
           align-items="center"
-          display="flex"
+          :columns="['3', '3', '3', '3', '4', '4']"
+          :spacing="['10px', '12px', '15px', '20px', '25px', '30px']"
         >
-          <NewBlogcard :item="item" />
-        </CBox>
-      </CSimpleGrid>
+          <CBox
+            v-for="item in cardsData"
+            :key="item.id"
+            width="100%"
+            class="products__div"
+            justify-content="center"
+            align-items="center"
+            display="flex"
+          >
+            <NewBlogcard :item="item" />
+          </CBox>
+        </CSimpleGrid>
+      </nuxt-link>
     </div>
   </CThemeProvider>
 </template>
