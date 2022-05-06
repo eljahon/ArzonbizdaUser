@@ -10,6 +10,8 @@ import {
   CButton,
 } from '@chakra-ui/vue'
 
+
+
 export default {
   name: 'ProductPage',
   components: {
