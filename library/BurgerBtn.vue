@@ -1,9 +1,9 @@
 <script>
-import icon from '@/components/Icon.vue'
+import { CIcon } from '@chakra-ui/vue'
 
 export default {
   components: {
-    icon,
+    CIcon,
   },
   data() {
     return {
@@ -34,7 +34,7 @@ export default {
       mr="20px"
       @click="isOpen = true"
     >
-      <icon name="burger" />
+      <CIcon name="burger" size="24px" />
     </c-button>
 
     <c-drawer
