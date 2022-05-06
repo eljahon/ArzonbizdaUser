@@ -61,7 +61,7 @@ export default {
           <CIcon
             name="star"
             color="color.iconBg"
-            :size="['17px', '20px', '23px', '26px', '29px', '32px']"
+            :size="['15px', '20px', '24px', '27px', '30px', '32px']"
           />
           <CBox
             as="span"
