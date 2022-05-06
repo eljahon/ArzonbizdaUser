@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="product__page">
-    <c-flex gap="30px">
+    <c-flex gap="30px" mt="64px">
       <ProductSlider />
       <product-description />
     </c-flex>
