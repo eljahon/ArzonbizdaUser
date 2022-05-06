@@ -207,9 +207,18 @@ export default {
     viewBox: `0 0 22 16`,
   },
 
-  priceSlider: {
-    path: `<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 12L3.66667 9.33337M13 4.00004H1H13ZM13 4.00004L10.3333 6.66671L13 4.00004ZM13 4.00004L10.3333 1.33337L13 4.00004ZM1 12H13H1ZM1 12L3.66667 14.6667L1 12Z" stroke="#C8CCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+  user: {
+    path: `<g stroke='currentColor'> 
+            <path d="M15 15H9C5.686 15 3 17.686 3 21V22C3 22 6.125 23 12 23C17.875 23 21 22 21 22V21C21 17.686 18.314 15 15 15Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+            <path d="M7 6C7 3.239 9.239 1 12 1C14.761 1 17 3.239 17 6C17 8.761 14.761 12 12 12C9.239 12 7 8.761 7 6Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>    
+            </g>`,
+    viewBox: `0 0 24 24`,
+  },
+  watch: {
+    path: `<g stroke='currentColor'> 
+           <path d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+            <path d="M8 6L12 12H16" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>   
+            </g>`,
+    viewBox: `0 0 24 24`,
   },
 }

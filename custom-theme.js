@@ -29,6 +29,8 @@ export default {
       iconBg: '#C8CCCC',
       BgColor: '#FAFAFA',
       TabBorderRightColor: '#E3E5E5',
+      blog__discBg__Color: '#F8FAFA',
+      blog__discText__Color: '#4A4C4C',
     },
   },
 
