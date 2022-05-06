@@ -2,10 +2,14 @@
   <div>
     <Home />
 <!--    <button @click='() => $store.dispatch("coutn", 3)'>ok</button>-->
+<!--    <h1>adadsas</h1>-->
   </div>
 </template>
 <script lang="js">
 export default {
+  // comments: {
+  //   VueSlider
+  // },
   // async asyncData({ $axios }) {
   //   const data  = await $axios.get("/product/home");
   //   console.log(data.data)
