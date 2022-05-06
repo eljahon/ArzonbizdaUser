@@ -6,7 +6,6 @@ import LangButton from "~/library/LangButton.vue";
 import BurgerBtn from "~/library/BurgerBtn.vue"
 
 
-
 export default {
   name: 'HeaderComponent',
 
@@ -17,7 +16,6 @@ export default {
     HeaderInput,
     LangButton,
     BurgerBtn,
-
 },
 }
 </script>
@@ -68,9 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 19px;
   padding: 20px 0;
   margin: 0 auto;

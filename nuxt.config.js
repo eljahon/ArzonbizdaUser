@@ -46,7 +46,15 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@chakra-ui/nuxt', '@nuxtjs/emotion', '@nuxtjs/i18n'],
+  modules: [
+    '@chakra-ui/nuxt',
+    '@nuxtjs/emotion',
+    '@nuxtjs/i18n',
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    baseURL: process.env.API_BASE_URL,
+  },
   i18n: vueI18n,
 
   chakra: {
