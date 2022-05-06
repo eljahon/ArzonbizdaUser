@@ -1,4 +1,11 @@
 export default {
+  burger: {
+    path: `
+    <path d="M18 12H0V10H18V12ZM18 7H0V5H18V7ZM18 2H9V0H18V2Z" fill="#707373"/>
+    </svg>
+    `,
+    viewBox: `0 0 18 12`,
+  },
   greenTick: {
     path: ` <g fill="currentColor"><circle cx="10" cy="10" r="10" fill="currentColor" />
             <path d="M6.76855 10.0166L9.4846 12.3243L13.4846 7.32428" fill="currentColor" stroke="white"/></g>`,

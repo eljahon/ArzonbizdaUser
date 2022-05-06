@@ -42,7 +42,6 @@ export default {
           </NuxtLink>
         </c-box>
 
-        <!-- <TheDrawer /> -->
         <c-box>
           <c-flex
             justify="center"

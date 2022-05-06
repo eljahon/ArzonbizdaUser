@@ -27,7 +27,7 @@ export default {
       :rounded="['8px', '9px', '10px', '10px', '11px', '12px']"
       bg="color.ImageBgColor"
       cursor="pointer"
-      @click="openProductPage(item)"
+      @click="openProductPage(item.id)"
     >
       <CImage :src="require(`@/assets/img/${item.img}`)" />
     </CBox>
@@ -36,7 +36,7 @@ export default {
         <CBox
           :pt="['8px', '12px', '14px', '18px', '20px', '24px']"
           cursor="pointer"
-          @click="openProductPage(item)"
+          @click="openProductPage(item.id)"
         >
           <CHeading
             as="h2"
