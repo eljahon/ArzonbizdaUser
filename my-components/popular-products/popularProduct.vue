@@ -13,7 +13,7 @@ export default {
   props: ['item'],
   methods: {
     openProductPage(item) {
-      this.$router.push('/products/' + item.id)
+      this.$router.push('/products/' + item)
     },
   },
 }
@@ -52,17 +52,7 @@ export default {
             color="color.TextColor2"
             >{{ item.name }}</CBox
           >
-
         </CBox>
-            <Icon name="comment" />
-
-            <CBox
-              as="span"
-              :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
-              color="color.TextColor5"
-              :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
-              >26</CBox
-            >
       </CStack>
     </CBox>
     <CBox mt="8px">
@@ -70,8 +60,8 @@ export default {
         <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
           <CIcon
             name="star"
-            fill="white"
-            :width="['12px', '12px', '12px', '12px', '12px', '12px']"
+            color="color.iconBg"
+            :size="['17px', '20px', '23px', '26px', '29px', '32px']"
           />
           <CBox
             as="span"
@@ -91,7 +81,7 @@ export default {
             name="comment"
             color="color.iconBg"
             fill="white"
-            :width="['12px', '12px', '12px', '12px', '12px', '12px']"
+            :size="['15px', '20px', '24px', '27px', '30px', '32px']"
           />
           <CBox
             as="span"

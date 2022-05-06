@@ -5,7 +5,6 @@ import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
 import BurgerBtn from "~/library/BurgerBtn.vue"
 
-// import Drawer from "~/library/Drawer.vue";
 
 export default {
   name: 'HeaderComponent',
@@ -17,7 +16,6 @@ export default {
     HeaderInput,
     LangButton,
     BurgerBtn,
-    // Drawer,
 },
 }
 </script>
@@ -44,7 +42,7 @@ export default {
           </NuxtLink>
         </c-box>
 
-        <!-- <Drawer /> -->
+        <!-- <TheDrawer /> -->
         <c-box>
           <c-flex
             justify="center"
