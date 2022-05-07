@@ -14,7 +14,6 @@ components: {
 },
   async asyncData({ $axios, store }) {
     const data  = await $axios.get("/product/home");
-    console.log(data.data.data.products)
     const sendData = data.data.data.products.map(el => {
       return {
         id: el.id,

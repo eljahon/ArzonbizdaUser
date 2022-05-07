@@ -24,11 +24,6 @@ export default {
       return this.productsList
     }
   },
-  watch: {
-    popular(olvalue, newvalue) {
-      console.log(olvalue, newvalue)
-    }
-  }
 }
 </script>
 

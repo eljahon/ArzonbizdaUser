@@ -50,7 +50,7 @@ export default { CBox, CText, CTextarea }
         mt="24px"
         height="160px"
         resize="none"
-        :_focus="{ shadow: none }"
+        :_focus="{ shadow: 'none' }"
         border-width="1px"
         bg="color.BgColor"
         border-color="color.iconBg"
