@@ -52,4 +52,6 @@ export const uz = {
   UPDMobile: 'Mobil UPD',
   lorem:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
+  forguys: 'Chiroyli yigitlar uchun ajoyib telefonlar',
+  ivan: 'Ivan Ivanovich Ivanov.',
 }
