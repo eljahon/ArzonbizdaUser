@@ -27,6 +27,8 @@ export const en = {
   conditionair: 'Condition Airs',
   fridge: 'Fridges',
   monitor: 'Monitors',
+  showFilter: 'Show filter',
+  sortBy: 'Sort by',
 
   blogText:
     'The comfortable life of any person and convenient life cannot be imagined without modern technology. Work and personal issues - in a smartphone, favorite films and TV shows - a TV, cleaning - a vacuum cleaner, cooking - a stove, oven and many smaller, but no less useful devices. In addition, technologies are developing, and therefore electronics require regular updates, I want to test new models, or simply there is not enough power of existing devices. In this regard, it is useful to have a reliable place to buy household appliances. If you have not yet found one for yourself, we invite you to stay on our website for a few minutes. We assure you that you have not wasted your time.',
@@ -50,4 +52,6 @@ export const en = {
   more: 'More',
   lorem:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
+  forguys: 'Great phones for neat guys',
+  ivan: 'Ivan Ivanovich Ivanov.',
 }

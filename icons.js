@@ -177,7 +177,7 @@ export default {
     path: ` <g fill="currentColor"> 
             <path d="M11.608 1.46627C12.1119 0.211569 13.8881 0.211571 14.392 1.46627L16.7871 7.43064C17.0016 7.96494 17.5031 8.32928 18.0776 8.36823L24.4901 8.80303C25.8391 8.8945 26.388 10.5838 25.3504 11.4507L20.4181 15.5717C19.9763 15.9409 19.7847 16.5304 19.9252 17.0887L21.4933 23.3218C21.8231 24.6331 20.3861 25.6771 19.241 24.9582L13.7976 21.5407C13.3099 21.2346 12.6901 21.2346 12.2024 21.5407L6.75898 24.9582C5.61386 25.6771 4.17687 24.6331 4.50674 23.3218L6.07481 17.0887C6.21528 16.5304 6.02374 15.9409 5.58189 15.5717L0.649578 11.4507C-0.388017 10.5838 0.160864 8.8945 1.50986 8.80303L7.92244 8.36823C8.49689 8.32928 8.99836 7.96494 9.21292 7.43064L11.608 1.46627Z" fill="currentColor"/>
             </g>`,
-    viewBox: `0 0 26 26`,
+    viewBox: `0 0 32 32`,
   },
 
   telegram: {
@@ -214,9 +214,18 @@ export default {
     viewBox: `0 0 22 16`,
   },
 
-  priceSlider: {
-    path: `<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 12L3.66667 9.33337M13 4.00004H1H13ZM13 4.00004L10.3333 6.66671L13 4.00004ZM13 4.00004L10.3333 1.33337L13 4.00004ZM1 12H13H1ZM1 12L3.66667 14.6667L1 12Z" stroke="#C8CCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+  user: {
+    path: `<g stroke='currentColor'> 
+            <path d="M15 15H9C5.686 15 3 17.686 3 21V22C3 22 6.125 23 12 23C17.875 23 21 22 21 22V21C21 17.686 18.314 15 15 15Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+            <path d="M7 6C7 3.239 9.239 1 12 1C14.761 1 17 3.239 17 6C17 8.761 14.761 12 12 12C9.239 12 7 8.761 7 6Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>    
+            </g>`,
+    viewBox: `0 0 24 24`,
+  },
+  watch: {
+    path: `<g stroke='currentColor'> 
+           <path d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+            <path d="M8 6L12 12H16" stroke="#AFB2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>   
+            </g>`,
+    viewBox: `0 0 24 24`,
   },
 }
