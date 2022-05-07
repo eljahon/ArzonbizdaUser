@@ -1,10 +1,6 @@
 <script>
-import {
-  CThemeProvider,
-  CBox,
-  CText,
-} from '@chakra-ui/vue'
-import FilterHeader from "./FilterHeader.vue"
+import { CThemeProvider, CBox, CText } from '@chakra-ui/vue'
+import FilterHeader from './filterHeader.vue'
 export default {
   name: 'CategoryFilter',
   components: {
@@ -142,5 +138,4 @@ export default {
   align-items: center;
   margin-top: 16px;
 }
-
 </style>
