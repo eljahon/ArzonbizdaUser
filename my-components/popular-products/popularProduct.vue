@@ -29,7 +29,7 @@ export default {
       cursor="pointer"
       @click="openProductPage(item.id)"
     >
-      <CImage :src="require(`@/assets/img/${item.img}`)" />
+      <CImage :src="item.img" />
     </CBox>
     <CBox>
       <CStack>
