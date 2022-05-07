@@ -1,9 +1,7 @@
 <script>
 import { CIcon } from '@chakra-ui/vue'
-
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-
 import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 import Vue from 'vue'
@@ -40,6 +38,7 @@ export default {
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
+    console.log(VueSlickCarousel)
   },
 
   methods: {
@@ -49,12 +48,12 @@ export default {
       })
     },
 
-    next() {
-      this.$refs.carousel.next()
+    previous() {
+      this.$refs.c2.next()
     },
 
-    previous() {
-      this.$refs.carousel.prev()
+    next() {
+      this.$refs.c1.prev()
     },
   },
 }
@@ -66,9 +65,11 @@ export default {
       <VueSlickCarousel
         ref="c1"
         v-viewer
+        :arrows="false"
+        :dots="false"
         :as-nav-for="c2"
         :focus-on-select="true"
-        infinite="true"
+        :infinite="true"
         style="
           height: 583px;
           width: 705px;
@@ -94,7 +95,7 @@ export default {
       <VueSlickCarousel
         ref="c2"
         :slides-to-show="4"
-        infinite="true"
+        :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
         style="width: 705px"
