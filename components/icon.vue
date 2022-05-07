@@ -1,7 +1,9 @@
 <script>
 export default {
   name: 'IconComponent',
-  props: ['name'],
+  props: {
+    type: String,
+  },
 }
 </script>
 
@@ -375,7 +377,7 @@ export default {
       />
     </svg>
     <!-- tiktok icon end -->
-    
+
   </div>
 </template>
 
