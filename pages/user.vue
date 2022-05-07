@@ -1,14 +1,48 @@
 <script>
-import categoryFilter from '../my-components/categories-component/categoryFilter.vue'
-
+import { CFlex, CBox } from '@chakra-ui/vue'
+import CategoryFilter from '../my-components/categories-component/CategoryFilter.vue'
+import CategoryMainWrapper from '../my-components/categories-component/CategoryMainWrapper.vue'
+import BannerImage from '../my-components/bannerImgBox/BannerImg.vue'
 export default {
   name: 'UserComponent',
-  components: { categoryFilter },
+  components: {
+    CategoryFilter,
+    BannerImage,
+    CategoryMainWrapper,
+    CFlex,
+    CBox,
+  },
+  data() {
+    return {
+      switched: false,
+    }
+  },
+  methods: {
+    done() {
+      this.switched = !this.switched
+    },
+  },
 }
 </script>
 
 <template>
   <div>
-    <categoryFilter />
+    <CFlex>
+      <CBox v-if="switched">
+        <CategoryFilter class="category" />
+      </CBox>
+      <CBox>
+        <CFlex direction="column">
+          <BannerImage mt="88px" image-path="banner1.png" />
+          <CategoryMainWrapper @switch="done" />
+        </CFlex>
+      </CBox>
+    </CFlex>
   </div>
 </template>
+
+<style scoped>
+.category {
+  margin-right: 48px;
+}
+</style>
