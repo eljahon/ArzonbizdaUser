@@ -29,7 +29,7 @@ export default {
       cursor="pointer"
       @click="openProductPage(item.id)"
     >
-      <CImage :src="item.img" />
+      <CImage w="176px" h="212px" :src="item.img" object-fit="cover" />
     </CBox>
     <CBox>
       <CStack>
