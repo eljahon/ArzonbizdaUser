@@ -2,7 +2,10 @@
 export default {
   name: 'IconComponent',
   props: {
-    type: String,
+    name: {
+      type: String,
+      default: () => ''
+    }
   },
 }
 </script>
@@ -15,7 +18,7 @@ export default {
       width="36"
       height="36"
       viewBox="0 0 36 36"
-      fill="none"
+      fill="'none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -34,7 +37,7 @@ export default {
       width="140"
       height="25"
       viewBox="0 0 140 25"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -87,7 +90,7 @@ export default {
       width="188"
       height="42"
       viewBox="0 0 188 42"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -152,7 +155,7 @@ export default {
       width="13"
       height="12"
       viewBox="0 0 13 12"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -168,7 +171,7 @@ export default {
       width="18"
       height="18"
       viewBox="0 0 18 18"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -185,7 +188,7 @@ export default {
       width="21"
       height="21"
       viewBox="0 0 21 21"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -205,7 +208,7 @@ export default {
       width="13"
       height="12"
       viewBox="0 0 13 12"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -223,7 +226,7 @@ export default {
       width="18"
       height="12"
       viewBox="0 0 18 12"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -241,7 +244,7 @@ export default {
       width="14"
       height="12"
       viewBox="0 0 14 12"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -260,7 +263,7 @@ export default {
       width="26"
       height="26"
       viewBox="0 0 26 26"
-      fill="none"
+      fill="'non'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -277,7 +280,7 @@ export default {
       width="20"
       height="19"
       viewBox="0 0 20 19"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -299,7 +302,7 @@ export default {
       width="20"
       height="20"
       viewBox="0 0 20 20"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle cx="10" cy="10" r="10" fill="#6FCF97" />
@@ -317,7 +320,7 @@ export default {
       width="10"
       height="19"
       viewBox="0 0 10 19"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -333,7 +336,7 @@ export default {
       width="19"
       height="19"
       viewBox="0 0 19 19"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -349,7 +352,7 @@ export default {
       width="20"
       height="19"
       viewBox="0 0 20 19"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -366,7 +369,7 @@ export default {
       width="18"
       height="20"
       viewBox="0 0 18 20"
-      fill="none"
+      fill="'none'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
