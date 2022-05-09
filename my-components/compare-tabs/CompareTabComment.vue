@@ -19,13 +19,7 @@ export default {
         line-height="24px"
         color="color.TextColor1"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsum
-        enim, nulla libero ratione atque provident similique ex ullam mollitia,
-        debitis sint iusto fuga, voluptate a exercitationem ipsam beatae harum?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        ullam neque necessitatibus, ab aperiam blanditiis vitae quis molestias
-        accusantium porro illo quasi. Ipsa earum eveniet voluptate dolores
-        doloremque, veritatis beatae?
+        {{ $t('lorem') }}
       </c-text>
     </c-box>
   </CThemeProvider>

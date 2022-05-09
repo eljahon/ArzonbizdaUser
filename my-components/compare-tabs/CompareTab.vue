@@ -56,7 +56,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >Цены</c-tab
+        >{{ $t('tab1') }}</c-tab
       >
       <c-tab
         class="c-tab"
@@ -87,7 +87,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >Описание</c-tab
+        >{{ $t('tab2') }}</c-tab
       >
       <c-tab
         class="c-tab"
@@ -118,7 +118,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >Отзывы</c-tab
+        >{{ $t('tab3') }}</c-tab
       >
       <c-tab
         :_active="{ bg: 'transparent' }"
@@ -139,7 +139,7 @@ export default {
         font-family="Yandex Sans Display"
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >Характеристики</c-tab
+        >{{ $t('tab4') }}</c-tab
       >
     </c-tab-list>
 
