@@ -17,10 +17,11 @@ export default {
     <CThemeProvider>
       <c-flex align="center">
         <c-input
+        class="header___input"
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          :width="['280px', '332px', '590px', '430px', '360px', '674px']"
+          :width="['280px', '332px', '590px', '430px', '300px', '540px']"
           height="56px"
           _focus="none"
           _hover="none"
@@ -58,6 +59,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@media screen and(max-width: 1333px) {
+}
 @media screen and(max-width: 768px) {
   .header__input {
     margin: 16px 0 0 0px;

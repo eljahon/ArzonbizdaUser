@@ -1,8 +1,8 @@
 <script>
-import { CBox, CImage, CHeading, CText, CButton } from '@chakra-ui/vue'
-import Icon from '@/components/icon.vue'
+import { CBox, CImage, CHeading, CText, CButton, CIcon } from '@chakra-ui/vue'
+
 export default {
-  components: [CBox, CImage, CHeading, CText, CButton, Icon],
+  components: [CBox, CImage, CHeading, CText, CButton, CIcon],
 }
 </script>
 <template>
@@ -94,7 +94,7 @@ export default {
               :line-height="['9px', '12px', '16px', '20px', '22px', '24px']"
               >{{ $t('UPDMobile') }}</CHeading
             >
-            <Icon name="green_tick" />
+            <CIcon name="green_tick" color="color.greenTick" />
           </CBox>
         </CBox>
       </CBox>
@@ -161,7 +161,11 @@ export default {
             to="/"
             >{{ $t('more') }}</CButton
           >
-          <Icon name="right_arrow" />
+          <CIcon
+            :ml="['10px', '10px', '10px', '10px', '0px', '0px']"
+            name="right_arrow"
+            size="24px"
+          />
         </CBox>
       </CBox>
     </CBox>
