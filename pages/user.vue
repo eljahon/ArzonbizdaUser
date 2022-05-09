@@ -1,18 +1,15 @@
 <script>
-// import ProductSliderVue from '~/my-components/product-slider/ProductSlider.vue'
-import PriceRangeSlider from '~/my-components/price-slider/PriceRangeSlider.vue'
+import CategoryMain from '~/my-components/categories-component/CategoryMain.vue'
 export default {
   name: 'UserComponent',
   components: {
-    // ProductSliderVue,
-    PriceRangeSlider,
+    CategoryMain,
   },
 }
 </script>
 
 <template>
   <div>
-    <PriceRangeSlider />
-    <!-- <ProductSliderVue /> -->
+    <CategoryMain />
   </div>
 </template>

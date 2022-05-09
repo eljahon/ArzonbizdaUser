@@ -1,52 +1,3 @@
-<template>
-    <form class="slider__price">
-        <div class="track-container">
-            <div ref="_vpcTrack" class="track"></div>
-            <div ref="trackHighlight" class="track-highlight" ></div>
-            <button ref="track1" class="track-btn track1" ></button>
-            <button ref="track2" class="track-btn track2" ></button>
-        </div>
-        <CFlex align="center" gap="9px" mt="29px">
-            <c-input
-            color="color.InputColor"
-            :value="minValue"
-            _focus="none"
-            w="103px"
-            border-radius="12px"
-            border-color="borders.InputBorder"
-            bg="transparent"
-            placeholder="от"
-            />
-
-            <CIcon name="priceSlider" />
-
-            <c-input
-            :value="maxValue"
-            color="color.InputColor"
-            _focus="none"
-            w="103px"
-            border-radius="12px"
-            border-color="borders.InputBorder"
-            bg="transparent"
-            placeholder="до"
-            />
-
-            <c-button
-            background-color="color.TextColor2"
-            color="white"
-            cursor="pointer"
-            _focus="none"
-            border-radius="12px"
-            _hover="none"
-            font-weight="300"
-            type="submit"
-            >
-            {{ $t("search")}}
-        </c-button>
-    </CFlex>
-</form>
-</template>
-
 <script>
     import { CIcon, CInput, CFlex } from '@chakra-ui/vue'
     export default {
@@ -162,7 +113,6 @@
 
                 },
                 mousedown(ev, track){
-
                     if(this.isDragging) return;
                     this.isDragging = true;
                     this.pos.curTrack = track;
@@ -224,7 +174,61 @@
         };
     </script>
 
+<template>
+    <form class="slider__price">
+        <div class="track-container">
+            <div ref="_vpcTrack" class="track"></div>
+            <div ref="trackHighlight" class="track-highlight" ></div>
+            <button ref="track1" class="track-btn track1" ></button>
+            <button ref="track2" class="track-btn track2" ></button>
+        </div>
+        <CFlex align="center" gap="9px" mt="29px">
+            <c-input
+            color="color.InputColor"
+            :value="minValue"
+            _focus="none"
+            w="103px"
+            border-radius="12px"
+            border-color="borders.InputBorder"
+            bg="transparent"
+            placeholder="от"
+            />
+
+            <CIcon name="priceSlider" />
+
+            <c-input
+            :value="maxValue"
+            color="color.InputColor"
+            _focus="none"
+            w="103px"
+            border-radius="12px"
+            border-color="borders.InputBorder"
+            bg="transparent"
+            placeholder="до"
+            />
+
+            <c-button
+            background-color="color.TextColor2"
+            color="white"
+            cursor="pointer"
+            _focus="none"
+            border-radius="12px"
+            _hover="none"
+            font-weight="300"
+            type="submit"
+            >
+            {{ $t("search")}}
+        </c-button>
+    </CFlex>
+</form>
+</template>
+
+
+
     <style>
+        .slider__price{
+            margin-top: 32px;
+        }
         .range-value{
             position: absolute;
             top: -2rem;
