@@ -1,5 +1,6 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
+import {mapGetters} from 'vuex'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
 import ViewAll from '~/library/viewAll.vue'
 export default {
@@ -13,22 +14,14 @@ export default {
   },
   data() {
     return {
-      brandItem: [
-        { img: 'acer.png', name: 'Acer' },
-        { img: 'apple.png', name: 'Apple' },
-        { img: 'asus.png', name: 'Asus' },
-        { img: 'dell.png', name: 'Dell' },
-        { img: 'HP.png', name: 'HP' },
-        { img: 'lenovo.png', name: 'Lenovo' },
-        { img: 'LG.png', name: 'LG' },
-        { img: 'midea.png', name: 'Midea' },
-        { img: 'samsung.png', name: 'Samsung' },
-        { img: 'sony.png', name: 'Sony' },
-        { img: 'versace.png', name: 'Versace' },
-        { img: 'xiaomi.png', name: 'Xiaomi' },
-      ],
     }
   },
+  computed: {
+    ...mapGetters(['brandItem']),
+    brandItems () {
+      return this.brandItem
+    }
+  }
 }
 </script>
 <template>
@@ -52,7 +45,7 @@ export default {
         justify-content="center"
       >
         <CBox
-          v-for="(item, idx) in brandItem"
+          v-for="(item, idx) in brandItems"
           :key="idx"
           class="brands__component"
         >
