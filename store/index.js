@@ -4,9 +4,11 @@ export const getters = {
   },
   brandItem: (state) => state.brandItem,
 }
-export const state = {
-  productsList: [],
-  brandItem: [],
+export const state = () => {
+  return {
+    productsList: [],
+    brandItem: [],
+  }
 }
 export const mutations = {
   SET_Products_LIST(state, payload) {
