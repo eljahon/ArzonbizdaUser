@@ -41,7 +41,7 @@ export default {
           font-family="Yandex Sans Display"
           :font-weight="['700', '700', '700', '400', '400', '400']"
           :line-height="['16px', '20px', '24px', '30px', '44px', '48px']"
-          >Отличные телефоны для аккуратныx парней</CText
+          >{{ $t('forguys') }}</CText
         >
         <CBox
           :mt="['9px', '12px', '14px', '16px', '18px', '20px']"
@@ -61,7 +61,7 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >Иван Иванович Иванов.</CText
+              >{{ $t('ivan') }}</CText
             >
           </CBox>
           <CBox ml="42px" display="flex" align-items="center">
@@ -83,7 +83,7 @@ export default {
         </CBox>
         <blog-disc-img-banner image-path="1.png" />
         <blog-disc-text-component
-          text="  Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
+          text=" Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
       исследования стал опрос 500 клиентов Apple, которые приобрели продукт
       Apple в апреле-июне. Сюда входят iPhone, iPad, компьютер Mac или Apple
       Watch. По мере ослабления ограничений, связанных с пандемией, потребители
@@ -96,7 +96,7 @@ export default {
         />
         <blog-disc-img-banner image-path="2.png" />
         <blog-disc-text-component
-          text="  Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
+          text=" Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
       исследования стал опрос 500 клиентов Apple, которые приобрели продукт
       Apple в апреле-июне. Сюда входят iPhone, iPad, компьютер Mac или Apple
       Watch. По мере ослабления ограничений, связанных с пандемией, потребители

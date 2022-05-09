@@ -1,14 +1,14 @@
 <script>
-import AndPageDescription from '../andPageDescription/andPageDescription.vue'
+import EndPageDescription from '../end-page-description/EndPageDescription.vue'
 import blogDiscComponent from './blog-disc-component.vue'
 export default {
-  components: { blogDiscComponent, AndPageDescription },
+  components: { blogDiscComponent, EndPageDescription },
 }
 </script>
 <template>
   <div>
     <blog-disc-component />
-    <and-page-description
+    <end-page-description
       description-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa duis hac
         tellus nunc, neque fermentum netus magna. Turpis volutpat neque, odio
         mollis sit justo, blandit. Faucibus luctus odio aliquet ultrices. Mauris
