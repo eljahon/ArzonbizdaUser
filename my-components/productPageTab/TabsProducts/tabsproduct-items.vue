@@ -161,11 +161,13 @@ export default {
             to="/"
             >{{ $t('more') }}</CButton
           >
-          <CIcon
-            :ml="['10px', '10px', '10px', '10px', '0px', '0px']"
-            name="right_arrow"
-            size="24px"
-          />
+          <c-box mt="12px">
+            <CIcon
+              :ml="['10px', '10px', '10px', '10px', '0px', '0px']"
+              name="right_arrow"
+              size="24px"
+            />
+          </c-box>
         </CBox>
       </CBox>
     </CBox>
