@@ -54,4 +54,14 @@ export const en = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
   forguys: 'Great phones for neat guys',
   ivan: 'Ivan Ivanovich Ivanov.',
+
+  category_phones: 'Smartphones',
+  category_tablets: 'Tablets',
+  category_tv: 'TV',
+  category_laptops: 'Laptops',
+  smart_watches: 'Smart-watches',
+  category_ac: 'Air conditioner',
+  category_fridge: 'Fridges',
+  category_monitors: 'Monitors',
+  hitSeller: 'On fire',
 }
