@@ -1,5 +1,5 @@
 <template>
-    <div class="slider__price">
+    <form class="slider__price">
         <div class="track-container">
             <div ref="_vpcTrack" class="track"></div>
             <div ref="trackHighlight" class="track-highlight" ></div>
@@ -39,11 +39,12 @@
             border-radius="12px"
             _hover="none"
             font-weight="300"
+            type="submit"
             >
-            Поиск
+            {{ $t("search")}}
         </c-button>
     </CFlex>
-</div>
+</form>
 </template>
 
 <script>

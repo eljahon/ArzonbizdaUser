@@ -6,6 +6,7 @@ export const uz = {
   viewAll: "Hammasini ko'rish",
   category: 'Kategoriyalar',
   brand: 'Brendlar',
+  search: 'Qidirish...',
   phoneNumber: 'Aloqa nomeri',
   info: 'Info',
   about: 'Biz haqimizda',

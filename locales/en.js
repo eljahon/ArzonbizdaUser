@@ -9,6 +9,7 @@ export const en = {
   phoneNumber: 'Contact number',
   info: 'Info',
   about: 'About',
+  search: 'Search',
   app: 'Apps',
   publicOffer: 'Public offer',
   return: 'Return and exchange',
