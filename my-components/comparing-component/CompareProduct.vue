@@ -10,27 +10,46 @@ export default {
 }
 </script>
 <template>
-  <c-box>
+  <c-box class="comparing__product">
     <c-stack :spacing="4">
       <c-heading
         as="h2"
         font-weight="400"
-        :font-size="['24px', '24px', '25px', '26px', '27px', '28px']"
+        :font-size="['24px', '24px', '26px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
         >Смартфон Xiaomi Poco X3 Pro 8/256GB</c-heading
       >
       <c-flex>
         <c-box d="flex" align-items="center">
-          <c-icon name="star" mr="5px" />
-          <c-icon name="star" mr="5px" />
-          <c-icon name="star" mr="5px" />
-          <c-icon name="star" mr="5px" />
-          <c-icon name="star" />
+          <c-icon
+            name="star"
+            :size="['12px', '14px', '14px', '16px', '20px', '24px']"
+            mr="5px"
+          />
+          <c-icon
+            name="star"
+            :size="['12px', '14px', '14px', '16px', '20px', '24px']"
+            mr="5px"
+          />
+          <c-icon
+            name="star"
+            :size="['12px', '14px', '14px', '16px', '20px', '24px']"
+            mr="5px"
+          />
+          <c-icon
+            name="star"
+            :size="['12px', '14px', '14px', '16px', '20px', '24px']"
+            mr="5px"
+          />
+          <c-icon
+            name="star"
+            :size="['12px', '14px', '14px', '16px', '20px', '24px']"
+          />
           <c-box
             as="span"
-            :ml="['6px', '6px', '6px', '6px', '8px', '10px']"
-            :mr="['16px', '16px', '16px', '16px', '16px', '24px']"
+            :ml="['6px', '6px', '6px', '6px', '6px', '10px']"
+            :mr="['14px', '14px', '14px', '14px', '14px', '24px']"
             :font-size="['10px', '10px', '10px', '12px', '14px', '16px']"
             :line-height="['12px', '12px', '12px', '16px', '20px', '24px']"
             font-weight="400"
@@ -44,8 +63,8 @@ export default {
             name="comment"
             width="24px"
             height="24px"
-            ml="24px"
-            mr="10px"
+            :ml="['6px', '6px', '6px', '6px', '6px', '10px']"
+            :mr="['10px', '10px', '10px', '12px', '14px', '24px']"
             fill="transparent"
             color="color.TextColor5"
           />
@@ -55,13 +74,19 @@ export default {
             :font-size="['10px', '10px', '10px', '12px', '14px', '16px']"
             :line-height="['12px', '12px', '12px', '16px', '20px', '24px']"
             color="color.TextColor5"
-            mr="24px"
+            :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
             >26</c-box
           >
         </c-box>
         <c-divider orientation="vertical" border-color="color.iconBg" />
         <c-box d="flex" align-items="center">
-          <c-icon name="view" fill="white" size="24px" ml="24px" mr="10px" />
+          <c-icon
+            name="view"
+            fill="white"
+            :size="['16px', '16px', '18px', '20px', '22px', '24px']"
+            :ml="['6px', '6px', '6px', '6px', '6px', '10px']"
+            :mr="['6px', '6px', '8px', '10px', '12px', '24px']"
+          />
           <c-box
             as="span"
             :font-size="['10px', '10px', '10px', '12px', '14px', '16px']"
@@ -84,8 +109,8 @@ export default {
           >
           <c-heading
             as="h1"
-            :font-size="['12px', '12px', '12px', '24px', '32px', '36px']"
-            :line-height="['13px', '13px', '13px', '28px', '42px', '48px']"
+            :font-size="['12px', '18px', '20px', '24px', '32px', '36px']"
+            :line-height="['13px', '24px', '26px', '28px', '42px', '48px']"
             color="color.TextColor2"
             >3 324 000 сум</c-heading
           >
@@ -161,7 +186,6 @@ export default {
               font-size="13px"
               line-height="19px"
               color="color.InputColor"
-              text-align="justify"
               ml="12px"
               >Доставка по Ташкенту до 1 дня, по Узбекистану до 5 дней</c-text
             >
@@ -221,6 +245,11 @@ export default {
   }
   @media screen and(max-width: 1250px) {
     margin-top: 15px;
+  }
+}
+.comparing__product {
+  @media screen and (max-width: 767.5px) {
+    display: none;
   }
 }
 </style>
