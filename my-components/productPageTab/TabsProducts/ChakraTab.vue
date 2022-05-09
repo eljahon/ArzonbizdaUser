@@ -12,6 +12,7 @@ import TabDescription from './TabDescription.vue'
 import TabsProducts from './TabsProducts.vue'
 import TabCharacteristics from './TabCharacteristics.vue'
 import TabReviews from './TabReviews.vue'
+
 export default {
   components: {
     CThemeProvider,
@@ -42,6 +43,7 @@ export default {
             'start',
           ]"
           border-bottom="none"
+          mt="84px"
         >
           <CTab
             :_selected="{

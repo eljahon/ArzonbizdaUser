@@ -1,5 +1,6 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
+import {mapGetters} from 'vuex'
 import PopularProduct from './popularProduct.vue'
 import ViewAll from '~/library/viewAll.vue'
 export default {
@@ -11,101 +12,16 @@ export default {
     PopularProduct,
     ViewAll,
   },
+  props: ['products'],
 
   data() {
     return {
-      popular: [
-        {
-          id: 1,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 2,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 3,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 4,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 5,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 6,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 7,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 8,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 9,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 10,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 11,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 12,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 13,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 14,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-        {
-          id: 15,
-          img: 'poco.png',
-          name: 'Xiaomi Poco X3 Pro 8/256GB',
-          price: '3 324 000',
-        },
-      ],
+    }
+  },
+  computed: {
+    ...mapGetters(['productsList']),
+    popular () {
+      return this.productsList
     }
   },
 }
@@ -131,7 +47,7 @@ export default {
         justify-content="center"
       >
         <CBox
-          v-for="(item, idx) in $store.getters.popularList"
+          v-for="(item, idx) in products"
           :key="idx"
           class="popular__product"
         >

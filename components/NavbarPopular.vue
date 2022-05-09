@@ -28,7 +28,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Телефоны</CLink
+          :_focus="false"
+          >{{ $t('category_phones') }}</CLink
         ></CBox
       >
       <CBox
@@ -40,7 +41,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Планшеты</CLink
+          :_focus="false"
+          >{{ $t('category_tablets') }}</CLink
         ></CBox
       >
       <CBox
@@ -52,7 +54,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Телевизоры</CLink
+          :_focus="false"
+          >{{ $t('category_tv') }}</CLink
         ></CBox
       >
       <CBox
@@ -64,7 +67,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Ноутбуки</CLink
+          :_focus="false"
+          >{{ $t('category_laptops') }}</CLink
         ></CBox
       >
       <CBox
@@ -76,7 +80,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Смарт-часы</CLink
+          :_focus="false"
+          >{{ $t('smart_watches') }}</CLink
         ></CBox
       >
       <CBox
@@ -88,7 +93,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Кондиционеры</CLink
+          :_focus="false"
+          >{{ $t('category_ac') }}</CLink
         ></CBox
       >
       <CBox
@@ -100,7 +106,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Холодильники</CLink
+          :_focus="false"
+          >{{ $t('category_fridge') }}</CLink
         ></CBox
       >
       <CBox
@@ -112,7 +119,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Мониторы</CLink
+          :_focus="false"
+          >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
       <CBox
@@ -124,7 +132,8 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          >Мониторы</CLink
+          :_focus="false"
+          >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
       <CBox
@@ -132,14 +141,14 @@ export default {
         :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
         line-height="24px"
         color="color.InputBorder"
-        ><CLink as="router-link" to="#" :_hover="false"
+        ><CLink as="router-link" to="#" :_hover="false" :_focus="false"
           ><CIcon
             name="fire"
             mr="8px"
             color="transparent"
             pos="relative"
             bottom="2px"
-          />Хит продаж</CLink
+          />{{ $t('hitSeller') }}</CLink
         ></CBox
       >
     </CBox>
