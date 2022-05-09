@@ -1,7 +1,7 @@
 export const getters = {
   popularList: (state) => state.popularList,
 }
-export const state = {
+export const state = () => ({
   popularList: [
     {
       id: 1,
@@ -94,7 +94,7 @@ export const state = {
       price: '3 324 000',
     },
   ],
-}
+})
 export const mutations = {
   SET_USER_LIST(state, payload) {
     state.popularList = payload

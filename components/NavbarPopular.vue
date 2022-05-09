@@ -29,7 +29,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Телефоны</CLink
+          >{{ $t('category_phones') }}</CLink
         ></CBox
       >
       <CBox
@@ -42,7 +42,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Планшеты</CLink
+          >{{ $t('category_tablets') }}</CLink
         ></CBox
       >
       <CBox
@@ -55,7 +55,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Телевизоры</CLink
+          >{{ $t('category_tv') }}</CLink
         ></CBox
       >
       <CBox
@@ -68,7 +68,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Ноутбуки</CLink
+          >{{ $t('category_laptops') }}</CLink
         ></CBox
       >
       <CBox
@@ -81,7 +81,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Смарт-часы</CLink
+          >{{ $t('smart_watches') }}</CLink
         ></CBox
       >
       <CBox
@@ -94,7 +94,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Кондиционеры</CLink
+          >{{ $t('category_ac') }}</CLink
         ></CBox
       >
       <CBox
@@ -107,7 +107,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Холодильники</CLink
+          >{{ $t('category_fridge') }}</CLink
         ></CBox
       >
       <CBox
@@ -120,7 +120,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Мониторы</CLink
+          >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
       <CBox
@@ -133,7 +133,7 @@ export default {
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
-          >Мониторы</CLink
+          >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
       <CBox
@@ -148,7 +148,7 @@ export default {
             color="transparent"
             pos="relative"
             bottom="2px"
-          />Хит продаж</CLink
+          />{{ $t('hitSeller') }}</CLink
         ></CBox
       >
     </CBox>
