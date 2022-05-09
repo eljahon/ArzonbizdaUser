@@ -1,16 +1,48 @@
 <script>
-import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
-import PriceSlider from '~/my-components/price-slider/PriceSlider.vue'
-
+import { CFlex, CBox } from '@chakra-ui/vue'
+import CategoryFilter from '../my-components/categories-component/CategoryFilter.vue'
+import CategoryMainWrapper from '../my-components/categories-component/CategoryMainWrapper.vue'
+import BannerImage from '../my-components/bannerImgBox/BannerImg.vue'
 export default {
   name: 'UserComponent',
-  components: { ChakraTab, PriceSlider },
+  components: {
+    CategoryFilter,
+    BannerImage,
+    CategoryMainWrapper,
+    CFlex,
+    CBox,
+  },
+  data() {
+    return {
+      switched: true,
+    }
+  },
+  methods: {
+    done() {
+      this.switched = !this.switched
+    },
+  },
 }
 </script>
 
 <template>
   <div>
-    <ChakraTab />
-    <PriceSlider />
+    <CFlex>
+      <CBox v-if="switched">
+        <CategoryFilter class="category" />
+      </CBox>
+      <CBox>
+        <CFlex direction="column">
+          <BannerImage mt="88px" image-path="banner1.png" />
+          <CategoryMainWrapper @switch="done" />
+        </CFlex>
+      </CBox>
+    </CFlex>
   </div>
 </template>
+
+<style scoped>
+.category {
+  margin-right: 48px;
+}
+</style>

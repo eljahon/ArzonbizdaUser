@@ -1,7 +1,7 @@
 <script>
 import { CThemeProvider, CBox, CHeading } from '@chakra-ui/vue'
 export default {
-  // name:"descriptions"
+  name: 'DescriptionComponent',
   components: {
     CThemeProvider,
     CBox,

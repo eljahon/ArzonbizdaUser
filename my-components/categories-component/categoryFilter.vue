@@ -1,19 +1,15 @@
 <script>
 import {
-  // CCheckbox,
   CThemeProvider,
-  // CCheckboxGroup,
   CBox,
   CText,
 } from '@chakra-ui/vue'
-import filterHeader from './filterHeader.vue'
+import FilterHeader from "./FilterHeader.vue"
 export default {
   name: 'CategoryFilter',
   components: {
-    filterHeader,
-    // CCheckbox,
+    FilterHeader,
     CThemeProvider,
-    // CCheckboxGroup,
     CText,
     CBox,
   },
@@ -94,7 +90,7 @@ export default {
 <template>
   <div class="category-filter">
     <CThemeProvider>
-      <filterHeader title="category" />
+      <FilterHeader title="category" />
 
       <div
         v-for="(items, index) in filters"
@@ -113,7 +109,7 @@ export default {
       </div>
 
       <CBox mt="40px">
-        <filterHeader title="brand" />
+        <FilterHeader title="brand" />
 
         <div
           v-for="(brand, index) in brands"
@@ -139,9 +135,6 @@ export default {
   width: 328px;
   margin-top: 48px;
 }
-.salom {
-  display: flexx;
-}
 
 .category__items {
   display: flex;
@@ -149,4 +142,5 @@ export default {
   align-items: center;
   margin-top: 16px;
 }
+
 </style>
