@@ -41,7 +41,24 @@ export default {
 }
 </script>
 <template>
-  <CBox>
+  <CBox
+    :padding="[
+      '15px 10px',
+      '20px 15px',
+      '20px 15px',
+      '25px 20px',
+      '30px 24px',
+      '32px 24px',
+    ]"
+    :bg="[
+      'initial',
+      'initial',
+      'initial',
+      'initial',
+      'color.BgColor',
+      'color.BgColor',
+    ]"
+  >
     <CFlex>
       <CBox>
         <CBox
