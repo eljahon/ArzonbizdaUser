@@ -18,13 +18,19 @@ components: {
     CategoriesComponent,
     BrandsComponent,
 },
+  props: ['products'],
+  // async asyncData({ $axios }) {
+  //   const data  = await $axios.get("/product/home");
+  //   console.log(data.data)
+  //   return {data:data.data.data.products};
+  // },
 }
 </script>
 
 <template>
   <div>
 <!--    <SliderComponent />-->
-    <PopularProducts />
+    <PopularProducts :products='products'/>
     <CategoriesComponent />
     <BannerComponent />
     <BrandsComponent />
