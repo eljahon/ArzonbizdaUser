@@ -7,15 +7,14 @@ export default {
     CThemeProvider,
     CText,
   },
-  props:{
-    item:{
-      type:Object,
-      required:true
-    }
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>
-
 
 <template>
   <CThemeProvider>
@@ -26,7 +25,6 @@ export default {
       align="center"
       justify="center"
     >
-    <CText>{{ item.name }}</CText>
       <CImage
         :src="require(`@/assets/img/${item.img}`)"
         :width="['52px', '62px', '72px', '83px', '94px', '104px']"
