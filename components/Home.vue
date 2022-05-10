@@ -5,6 +5,7 @@ import BannerComponent from "@/my-components/bannerImgBox/BannerComponent.vue";
 import PopularProducts from "~/my-components/popular-products/popularProducts.vue";
 import CategoriesComponent from "~/my-components/categories-component/categoriesComponent.vue";
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
+import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
 
 export default {
@@ -17,6 +18,7 @@ components: {
     BannerComponent,
     CategoriesComponent,
     BrandsComponent,
+    SliderComponent
 },
   props: ['products'],
   // async asyncData({ $axios }) {
@@ -29,10 +31,9 @@ components: {
 
 <template>
   <div>
-<!--    <SliderComponent />-->
-    <PopularProducts :products='products'/>
+    <SliderComponent />
+    <PopularProducts :products="products" />
     <CategoriesComponent />
-    <BannerComponent />
     <BrandsComponent />
     <BannerComponent />
     <PopularProducts />
