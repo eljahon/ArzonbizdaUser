@@ -10,10 +10,10 @@ export default {
     <c-text
       mt="24px"
       font-family="Yandex Sans Display"
-      font-size="16px"
+      :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
+      :line-height="['15px', '17px', '19px', '20px', '23px', '24px']"
       font-weight="700"
       font-style="normal"
-      line-height="24px"
       color="color.TextColor1"
       >{{ data.version }}</c-text
     >
