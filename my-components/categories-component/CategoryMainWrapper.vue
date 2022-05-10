@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       selectedItem: '',
-      switched: false,
+      switched: true,
     }
   },
   computed: {
@@ -50,6 +50,7 @@ export default {
                 color="red"
                 size="md"
                 mr="12px"
+                :is-checked="true"
                 @click="Switched($event)"
               />
               <CFormLabel
