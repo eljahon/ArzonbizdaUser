@@ -51,13 +51,12 @@ export default {
         justify-items="center"
         justify-content="center"
       >
-        <CBox
+        <CategoryComponent
           v-for="(item, idx) in categoryItem"
           :key="idx"
+          :item="item"
           class="category__component"
-        >
-          <CategoryComponent :item="item" />
-        </CBox>
+        />
       </CSimpleGrid>
     </CBox>
   </CThemeProvider>
