@@ -7,15 +7,9 @@ export default {
     CThemeProvider,
     CText,
   },
-  props: {
-    item: {
-      type: Object,
-      required: true,
-    },
-  },
+  props: ['item'],
 }
 </script>
-
 <template>
   <CThemeProvider>
     <CFlex
@@ -46,7 +40,6 @@ export default {
     </CFlex>
   </CThemeProvider>
 </template>
-
 <style lang="scss" scoped>
 @media screen and(max-width: 800px) {
   .text {

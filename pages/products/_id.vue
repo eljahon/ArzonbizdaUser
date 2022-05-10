@@ -6,14 +6,26 @@ import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue
 
 export default {
   name: 'ProductPage',
+
   components: { ProductDescription, ProductSlider, CFlex, ChakraTab },
+
+  async asyncData({ $axios, params }) {
+    // console.log(params)
+    const { data } = await $axios.get(`/product/${params.id}`)
+    // console.log(data.data.product.images)
+
+    // console.log(imageList.data.product.images)
+    return {
+      imageList: data.product.images,
+    }
+  },
 }
 </script>
 
 <template>
   <div class="product__page">
     <c-flex gap="30px" mt="64px">
-      <ProductSlider />
+      <ProductSlider :images="imageList" />
       <product-description />
     </c-flex>
     <ChakraTab />

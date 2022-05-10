@@ -31,10 +31,9 @@ export default {
   },
 }
 </script>
-
 <template>
   <CThemeProvider>
-    <CBox mt="88px" :mb="['30px', '41px', '52px', '64px', '76px', '88px']">
+    <CBox :mb="['30px', '41px', '52px', '64px', '76px', '88px']">
       <CFlex
         align="center"
         justify="space-between"
@@ -62,7 +61,6 @@ export default {
     </CBox>
   </CThemeProvider>
 </template>
-
 <style lang="scss" scoped>
 .category__component {
   @media screen and(max-width: 62em) {
