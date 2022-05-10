@@ -5,6 +5,7 @@ import BannerComponent from "@/my-components/bannerImgBox/BannerComponent.vue";
 import PopularProducts from "~/my-components/popular-products/popularProducts.vue";
 import CategoriesComponent from "~/my-components/categories-component/categoriesComponent.vue";
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
+import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
 
 export default {
@@ -17,16 +18,22 @@ components: {
     BannerComponent,
     CategoriesComponent,
     BrandsComponent,
+    SliderComponent
 },
+  props: ['products'],
+  // async asyncData({ $axios }) {
+  //   const data  = await $axios.get("/product/home");
+  //   console.log(data.data)
+  //   return {data:data.data.data.products};
+  // },
 }
 </script>
 
 <template>
   <div>
-<!--    <SliderComponent />-->
-    <PopularProducts />
+    <SliderComponent />
+    <PopularProducts :products="products" />
     <CategoriesComponent />
-    <BannerComponent />
     <BrandsComponent />
     <BannerComponent />
     <PopularProducts />

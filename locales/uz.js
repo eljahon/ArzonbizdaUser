@@ -6,6 +6,7 @@ export const uz = {
   viewAll: "Hammasini ko'rish",
   category: 'Kategoriyalar',
   brand: 'Brendlar',
+  search: 'Qidirish...',
   phoneNumber: 'Aloqa nomeri',
   info: 'Info',
   about: 'Biz haqimizda',
@@ -29,6 +30,7 @@ export const uz = {
   monitor: 'Monitorlar',
   showFilter: "Filterlarni ko'rsat",
   sortBy: 'Orqali tartibla',
+  cost: 'Narxi',
 
   blogText:
     "Har qanday insonning farovon hayoti va qulay hayotini zamonaviy texnologiyalarsiz tasavvur etib bo'lmaydi. Ish va shaxsiy muammolar - smartfonda, sevimli filmlar va teleko'rsatuvlar - televizor, tozalash - changyutgich, pishirish - pechka, pech va ko'plab kichikroq, ammo foydali qurilmalar. Bundan tashqari, texnologiyalar rivojlanmoqda va shuning uchun elektronika muntazam yangilanishlarni talab qiladi, men yangi modellarni sinab ko'rmoqchiman yoki shunchaki mavjud qurilmalarning kuchi etarli emas. Shu nuqtai nazardan, maishiy texnika sotib olish uchun ishonchli joyga ega bo'lish foydalidir. Agar siz hali o'zingiz uchun birini topa olmagan bo'lsangiz, biz sizni veb-saytimizda bir necha daqiqa qolishni taklif qilamiz. Sizni ishontirib aytamizki, vaqtingizni behuda o'tkazmadingiz.",
@@ -54,4 +56,14 @@ export const uz = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet tellusmassa non tortor orci, quam id ut. Fames eleifend viverra egestas donecnon egestas erat. Eu, et pulvinar dolor facilisis malesuada. Lectus tellusvestibulum tempor est vestibulum sit sed tristique. Non vitae sed sed volutpat mauris nulla. Risus, curabitur neque risus rhoncus. Viverra ininteger tincidunt orci at id odio montes. Amet volutpat eu, sed egestas volutpat maecenas ultricies semper. Ut elit cursus morbi id faucibus.',
   forguys: 'Chiroyli yigitlar uchun ajoyib telefonlar',
   ivan: 'Ivan Ivanovich Ivanov.',
+
+  category_phones: 'Telefonlar',
+  category_tablets: 'Planshetlar',
+  category_tv: 'Televizorlar',
+  category_laptops: 'Noutbuklar',
+  smart_watches: 'Smart-soatlar',
+  category_ac: 'Konditsioner',
+  category_fridge: 'Sovitgich',
+  category_monitors: 'Monitors',
+  hitSeller: 'Ommabob',
 }
