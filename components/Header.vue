@@ -32,7 +32,7 @@ export default {
         flex-wrap="wrap"
       >
         <c-box width="139px" height="40px">
-          <NuxtLink to="/">
+          <NuxtLink as="router-link" to="/">
             <!-- <img
               class="header__logo"
               src="@/assets/img/logo.png"
