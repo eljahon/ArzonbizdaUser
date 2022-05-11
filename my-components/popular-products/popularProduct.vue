@@ -1,5 +1,6 @@
 <script>
 import { CBox, CImage, CHeading, CStack, CFlex, CIcon } from '@chakra-ui/vue'
+import SingleStar from '~/library/SingleStar.vue'
 export default {
   name: 'PopularProduct',
   components: {
@@ -9,6 +10,7 @@ export default {
     CStack,
     CIcon,
     CFlex,
+    SingleStar,
   },
   props: ['item'],
   methods: {
@@ -55,20 +57,18 @@ export default {
         </CBox>
       </CStack>
     </CBox>
+
     <CBox mt="8px">
       <CFlex align="center">
         <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
-          <CIcon
-            name="star"
-            color="color.iconBg"
-            :size="['15px', '20px', '24px', '27px', '30px', '32px']"
-          />
+          <single-star :rating="4.5" :size="'27px'" />
           <CBox
             as="span"
             :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
             color="color.TextColor5"
             :ml="['3px', '4px', '5px', '6px', '7px', '7px']"
-            >4,8</CBox
+          >
+            4,8</CBox
           >
         </CBox>
         <CBox
