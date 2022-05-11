@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import { CThemeProvider, CGrid, CBox } from '@chakra-ui/vue'
 import CompareTab from './CompareTab.vue'
 export default {
@@ -41,4 +41,12 @@ export default {
     display: none;
   }
 }
-</style>
+</style> -->
+
+<template>
+  <div>asdas</div>
+</template>
+
+<script>
+export default {}
+</script>
