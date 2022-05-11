@@ -12,14 +12,12 @@ export default {
     VueSlickCarousel,
     CIcon,
   },
-
   props: {
     images: {
       type: Array,
       required: true,
     },
   },
-
   data() {
     return {
       // items: [
@@ -36,17 +34,14 @@ export default {
       //     image: 'https://picsum.photos/443/469',
       //   },
       // ],
-
       c1: undefined,
       c2: undefined,
     }
   },
-
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
   },
-
   methods: {
     show() {
       this.$viewerApi({
@@ -132,7 +127,6 @@ export default {
 .product__slider {
   margin: 57px 0 0 131px;
 }
-
 .slider__card {
   margin-top: 20px;
   background: #f4f4f4;
@@ -141,27 +135,23 @@ export default {
   border-radius: 12px;
   cursor: pointer;
   padding: 9px;
-
   &:hover {
     border: 3px solid rgba(15, 108, 176, 0.3);
     border-radius: 12px;
   }
 }
-
 .slider__footer {
   display: flex;
   gap: 30px;
   justify-content: space-between;
   width: 705px;
 }
-
 .slide__btn {
   width: 40px;
   height: 100px;
   border: 1px solid #e3e6e6;
   margin-top: 20px;
   border-radius: 12px;
-
   &:hover {
     border: 1px solid #3bcff5;
   }
