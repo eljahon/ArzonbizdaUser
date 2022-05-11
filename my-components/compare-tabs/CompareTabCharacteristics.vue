@@ -43,7 +43,16 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <c-box>
+    <c-box
+      :padding="[
+        '15px 25px',
+        '15px 25px',
+        '17px',
+        '20px 30px',
+        '22px 43px',
+        '24px 45px',
+      ]"
+    >
       <c-flex>
         <c-box>
           <c-box v-for="item in phoneModel" :key="item.id">

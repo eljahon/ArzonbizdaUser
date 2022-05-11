@@ -1,5 +1,5 @@
 <script lang="js">
-import { CFlex, CThemeProvider,} from "@chakra-ui/vue";
+import { CFlex, CThemeProvider,CIcon,CBox} from "@chakra-ui/vue";
 import HeaderButton from "~/library/HeaderButton.vue";
 import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
@@ -16,6 +16,7 @@ export default {
     HeaderInput,
     LangButton,
     BurgerBtn,
+    CIcon,CBox
 },
 }
 </script>
@@ -32,13 +33,17 @@ export default {
       >
         <c-box width="139px" height="40px">
           <NuxtLink to="/">
-            <img
+            <!-- <img
               class="header__logo"
               src="@/assets/img/logo.png"
               alt="Arzoni bizda"
               width="139px"
               height="24px"
-            />
+            /> -->
+            <c-flex display="flex" align-items="center">
+              <c-icon name="logo_ab" size="36px" />
+              <c-icon name="arzonBizdaHeader" width="139px" height="24px" />
+            </c-flex>
           </NuxtLink>
         </c-box>
 
@@ -53,17 +58,14 @@ export default {
             <HeaderButton class="mobile" />
           </c-flex>
         </c-box>
-
         <HeaderInput class="header__input" />
         <LangButton class="lang__btn" />
-
         <HeaderButton class="desktop" />
       </c-flex>
     </header>
     <NavbarPopular />
   </CThemeProvider>
 </template>
-
 <style lang="scss" scoped>
 .header {
   gap: 19px;
@@ -85,6 +87,8 @@ export default {
   .lang__btn {
     display: none;
   }
+}
+@media screen and(max-width: 1333px) {
 }
 
 @media screen and(max-width: 912px) {

@@ -24,7 +24,7 @@ export default {
 
   right_arrow: {
     path: `<path fill="transparent" d="M7.75 11L13 6L7.75 1M13 6L1 6L13 6Z" stroke="#E50914" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>`,
-    viewBox: `0 0 14 12`,
+    viewBox: `0 0 24 24`,
   },
 
   arzonBizdaHeader: {

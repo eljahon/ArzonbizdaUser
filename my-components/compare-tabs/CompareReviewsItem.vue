@@ -18,53 +18,73 @@ export default {
 </script>
 <template>
   <CBox>
-    <CBox display="flex" align-items="center" mt="51px">
+    <CBox
+      display="flex"
+      align-items="center"
+      :mt="['10px', '20px', '30px', '40px', '45px', '51px']"
+    >
       <CBox display="flex" align-items="center">
         <CText
           color="color.TextColor1"
-          font-size="16px"
+          :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
           font-family="Yandex Sans Display"
           font-weight="700"
-          line-height="24px"
+          :line-height="['24px', '24px', '18px', '20px', '23px', '24px']"
           >{{ item.fullName }}</CText
         >
         <CText
           ml="20px"
           color="color.TextColor1"
-          font-size="16px"
+          :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
           font-family="Yandex Sans Display"
           font-weight="400"
-          line-height="24px"
+          :line-height="['24px', '24px', '18px', '20px', '23px', '24px']"
           >{{ item.address }}</CText
         >
       </CBox>
       <CText
-        ml="183px"
+        :ml="['183px', '183px', '87px', '160px', '173px', '183px']"
         color="color.TextColor4"
-        font-size="14px"
+        :font-size="['12px', '13px', '12px', '12px', '14px', '14px']"
+        :line-height="['24px', '24px', '18px', '20px', '23px', '24px']"
         font-family="Yandex Sans Display"
         font-weight="400"
-        line-height="24px"
         >{{ item.time }}</CText
       >
     </CBox>
     <CBox display="flex" align-items="center">
       <CBox>
         <CIcon name="star" width="21px" />
-        <CIcon name="star" ml="4px" width="21px" />
-        <CIcon name="star" ml="4px" width="21px" />
-        <CIcon name="star" ml="4px" width="21px" />
-        <CIcon name="star" ml="4px" width="21px" />
+        <CIcon
+          name="star"
+          :ml="['4px', '4px', '2px', '3px', '4px', '4px']"
+          :width="['21px', '15px', '17px', '19px', '20px', '21px']"
+        />
+        <CIcon
+          name="star"
+          :ml="['4px', '4px', '2px', '3px', '4px', '4px']"
+          :width="['21px', '15px', '17px', '19px', '20px', '21px']"
+        />
+        <CIcon
+          name="star"
+          :ml="['4px', '4px', '2px', '3px', '4px', '4px']"
+          :width="['21px', '15px', '17px', '19px', '20px', '21px']"
+        />
+        <CIcon
+          name="star"
+          :ml="['4px', '4px', '2px', '3px', '4px', '4px']"
+          :width="['21px', '15px', '17px', '19px', '20px', '21px']"
+        />
       </CBox>
       <CBox>
         <CText
           mt="2px"
           ml="10px"
           color="color.TextColor4"
-          font-size="16px"
+          :font-size="['12px', '13px', '12px', '12px', '14px', '14px']"
+          :line-height="['24px', '24px', '18px', '20px', '23px', '24px']"
           font-family="Yandex Sans Display"
           font-weight="400"
-          line-height="24px"
           >4</CText
         >
       </CBox>
@@ -72,7 +92,7 @@ export default {
     <CGrid
       mt="22px"
       class="grid__img__box"
-      width="360px"
+      :width="['initial', 'initial', 'initial', '360px', '360px', '360px']"
       template-columns="repeat(3, 1fr)"
       gap="4px"
     >
@@ -80,24 +100,26 @@ export default {
         <tab-reviews-img :data="data" />
       </CBox>
     </CGrid>
-    <CBox w="559px" mt="24px">
+    <CBox
+      :w="['initial', 'initial', 'initial', 'initial', 'initial', '559px']"
+      mt="24px"
+    >
       <CText
         color="color.TextColor1"
-        font-size="16px"
+        :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
         font-family="Yandex Sans Display"
         font-weight="400"
         line-height="24px"
       >
         {{ item.description }}
-        }
       </CText>
       <CText
         color="color.TextColor1"
-        font-size="16px"
-        mt="30px"
+        :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
+        :mt="['30px', '30px', '15px', '20px', '30px', '30px']"
         font-family="Yandex Sans Display"
         font-weight="400"
-        line-height="24px"
+        :line-height="['15px', '17px', '19px', '20px', '23px', '24px']"
       >
         {{ item.workTime }}</CText
       >
@@ -105,10 +127,4 @@ export default {
   </CBox>
 </template>
 
-<style>
-@media (max-width: 522px) {
-  .grid__img__box {
-    width: 100%;
-  }
-}
-</style>
+<style></style>

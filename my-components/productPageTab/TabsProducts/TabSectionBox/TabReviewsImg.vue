@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
   <CBox
-    height="131px"
+    :height="['100px', '100px', '115px', '128px', '131px', '131px']"
     class="img__box"
     border-radius="12px"
     overflow="hidden"

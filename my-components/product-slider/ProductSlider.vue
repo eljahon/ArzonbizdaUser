@@ -5,8 +5,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 import Vue from 'vue'
-
 Vue.use(VueViewer)
+
 export default {
   components: {
     VueSlickCarousel,
@@ -48,9 +48,11 @@ export default {
         images: this.images,
       })
     },
+
     previous() {
       this.$refs.c2.next()
     },
+
     next() {
       this.$refs.c1.prev()
     },

@@ -1,15 +1,18 @@
 <script>
-import { CSimpleGrid } from '@chakra-ui/vue'
+import { CSimpleGrid, CBox } from '@chakra-ui/vue'
 import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
 
 export default {
   name: 'ComparePage',
-  components: { CompareProduct, CSimpleGrid },
+  components: { CompareProduct, CSimpleGrid, CBox },
 }
 </script>
 <template>
-  <c-simple-grid :columns="2" :spacing="'30px'" mt="40px">
-    <compare-product />
-    <compare-product />
-  </c-simple-grid>
+  <c-box>
+    <c-simple-grid :columns="2" :spacing="'30px'" >
+      <compare-product />
+      <compare-product />
+    </c-simple-grid>
+  </c-box>
 </template>
+

@@ -6,14 +6,14 @@ export default {
 }
 </script>
 <template>
-  <c-box w="300px">
+  <c-box :w="['100px', '100px', '170px', '210px', '280px', '300px']">
     <c-text
       mt="24px"
       font-family="Yandex Sans Display"
-      font-size="16px"
+      :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
+      :line-height="['15px', '17px', '19px', '20px', '23px', '24px']"
       font-weight="700"
       font-style="normal"
-      line-height="24px"
       color="color.TextColor1"
       >{{ item.name }}</c-text
     >

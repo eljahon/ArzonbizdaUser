@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      switched: false,
+      switched: true,
     }
   },
   methods: {
