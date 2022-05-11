@@ -236,9 +236,7 @@ export default {
   </div>
 </template>
 
-
-
-    <style>
+<style>
 .slider__price {
   margin-top: 32px;
 }
