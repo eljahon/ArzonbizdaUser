@@ -26,8 +26,16 @@ export default {
   <div class="product__page">
     <c-flex gap="30px" mt="64px">
       <ProductSlider :images="imageList" />
-      <product-description />
+      <product-description class="product-desc"/>
     </c-flex>
     <ChakraTab />
   </div>
 </template>
+
+<style>
+  @media screen and (max-width:500px) {
+    .product-desc{
+      display: none;
+    }
+  }
+</style>
