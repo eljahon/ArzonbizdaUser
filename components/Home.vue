@@ -21,11 +21,6 @@ components: {
     SliderComponent
 },
   props: ['products'],
-  // async asyncData({ $axios }) {
-  //   const data  = await $axios.get("/product/home");
-  //   console.log(data.data)
-  //   return {data:data.data.data.products};
-  // },
 }
 </script>
 

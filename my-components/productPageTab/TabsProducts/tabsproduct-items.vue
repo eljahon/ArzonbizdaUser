@@ -2,36 +2,30 @@
 import { CBox, CImage, CHeading, CText, CButton, CIcon } from '@chakra-ui/vue'
 
 export default {
-  components: [CBox, CImage, CHeading, CText, CButton, CIcon],
-
-  // async asyncData({ $axios, params }) {
-  //   const { data } = await $axios.get(`/product/${params.id}`)
-  //   console.log(data)
-  // },
-
-  // data() {
-  //   return {
-  //     items: [
-  //       {
-  //         image: 'https://picsum.photos/443/469',
-  //       },
-  //       {
-  //         name: 'https://picsum.photos/443/469',
-  //       },
-  //       {
-  //         price: 'https://picsum.photos/443/469',
-  //       },
-  //       {
-  //         credit: 'https://picsum.photos/443/469',
-  //       },
-  //     ],
-  //   }
-  // },
+  name:"TabsProduct",
+  components: {
+    CBox,
+    CImage,
+    CHeading,
+    CText,
+    CButton,
+    CIcon
+  },
+  props:{
+    item:{
+      type:Array,
+      required:true
+    }
+  },
+  mounted(){
+    console.log(this.item)
+  }
 }
 </script>
 
 <template>
   <CBox
+    v-if="item"
     :display="['block', 'block', 'block', 'block', 'flex', 'flex']"
     justify-content="space-between"
     :padding="['0px', '0px', '0px', '0px', '0px', '32px 150px 33px 32px']"
@@ -70,7 +64,7 @@ export default {
           font-weight="700"
           :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
           mt="8px"
-          >3 324 000 {{ $t('sum') }}</CText
+          > {{ item.price }} {{  $t('sum') }}</CText
         >
 
         <CHeading
@@ -81,10 +75,10 @@ export default {
           font-weight="400"
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
         >
-          {{ $t('phoneName') }}</CHeading
+          {{ item.name }}</CHeading
         >
 
-        <CHeading
+        <!-- <CHeading
           class="phone__name"
           color="color.TextColor2"
           :font-size="['10px', '13px', '17px', '20px', '22px', '24px']"
@@ -92,7 +86,7 @@ export default {
           font-weight="400"
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
           >{{ $t('phoneCharacteristics') }}</CHeading
-        >
+        > -->
 
         <CBox
           :border="['1px', '1px', '1px', '1px', 'none', 'none']"
@@ -146,7 +140,7 @@ export default {
         font-weight="700"
         :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
         mt="8px"
-        >3 324 000 {{ $t('sum') }}</CText
+        > {{ item.price }} {{ $t('sum') }}</CText
       >
       <CBox display="flex" aligin-items="center" mt="8px">
         <CButton

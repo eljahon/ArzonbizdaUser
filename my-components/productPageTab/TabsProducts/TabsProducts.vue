@@ -2,11 +2,18 @@
 import { CBox, CSimpleGrid } from '@chakra-ui/vue'
 import TabsproductItems from './tabsproduct-items.vue'
 export default {
+  name:"TabsProducts",
   components: {
     CBox,
     CSimpleGrid,
     TabsproductItems,
   },
+  props:{
+    products:{
+      type:Object,
+      required:true
+    }
+  }
 }
 </script>
 <template>
@@ -20,7 +27,7 @@ export default {
       spacing="10px"
       :columns="['3', '3', '3', '3', '1', '1']"
     >
-      <TabsproductItems />
+      <TabsproductItems  v-for="(item, id) in products" :key="id" :item="item"/>
     </CSimpleGrid>
   </CBox>
 </template>

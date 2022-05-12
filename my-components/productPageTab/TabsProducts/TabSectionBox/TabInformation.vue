@@ -3,7 +3,11 @@ import { CBox, CGrid } from '@chakra-ui/vue'
 import TabReviewsImg from './TabReviewsImg.vue'
 export default {
   name: 'TableInformation',
-  components: { CBox, CGrid, TabReviewsImg },
+  components: {
+    CBox,
+    CGrid,
+    TabReviewsImg,
+  },
   props: ['item'],
   data() {
     return {

@@ -8,6 +8,12 @@ export default {
     PhoneName,
     PhoneCharacteristics,
   },
+  props:{
+    characterics:{
+      type:Array,
+      required:true
+    }
+  },
   data() {
     return {
       PhoneName: [
@@ -38,6 +44,9 @@ export default {
       ],
     }
   },
+  mounted(){
+    console.log(this.characterics)
+  },
 }
 </script>
 <template>
@@ -62,21 +71,21 @@ export default {
     <CFlex>
       <CBox>
         <CBox
-          v-for="data in PhoneName"
+          v-for="data in characterics"
           :key="data.id"
           :width="['153px', '170px', '300px', '320px', '320px', '314px']"
         >
-          <PhoneCharacteristics :data="data" />
+        <PhoneName :data="data" />
         </CBox>
       </CBox>
       <CBox display="flex" flex-direction="column">
         <CBox
-          v-for="datas in phoneVersion"
+          v-for="datas in characterics"
           :key="datas.id"
           display="flex"
           margin-left="30px"
         >
-          <PhoneName :datas="datas" />
+        <PhoneCharacteristics :datas="datas" />
         </CBox>
       </CBox>
     </CFlex>

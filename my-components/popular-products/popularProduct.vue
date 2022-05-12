@@ -30,6 +30,7 @@ export default {
   methods: {
     openProductPage(item) {
       this.$router.push('/products/' + item)
+      console.log(item)
     },
   },
 }
