@@ -6,7 +6,6 @@ import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 import Vue from 'vue'
 Vue.use(VueViewer)
-
 export default {
   components: {
     VueSlickCarousel,
@@ -48,11 +47,9 @@ export default {
         images: this.images,
       })
     },
-
     previous() {
       this.$refs.c2.next()
     },
-
     next() {
       this.$refs.c1.prev()
     },
@@ -83,7 +80,7 @@ export default {
           :key="index"
           class="product__slider"
         >
-          <img :src="item.src" alt="product-image" class="slider__img" />
+          <img :src="item.src" alt="" />
         </div>
       </VueSlickCarousel>
     </div>
@@ -95,7 +92,7 @@ export default {
 
       <VueSlickCarousel
         ref="c2"
-        :slides-to-show="5"
+        :slides-to-show="4"
         :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
@@ -154,23 +151,6 @@ export default {
   border-radius: 12px;
   &:hover {
     border: 1px solid #3bcff5;
-  }
-}
-
-.slider__img {
-  height: 469px;
-}
-
-.slick-next {
-  .slide__btn {
-    width: 40px;
-    height: 100px;
-    border: 1px solid #e3e6e6;
-    margin-top: 20px;
-    border-radius: 12px;
-    &:hover {
-      border: 1px solid #3bcff5;
-    }
   }
 }
 </style>

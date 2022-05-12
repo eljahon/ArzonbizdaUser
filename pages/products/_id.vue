@@ -34,3 +34,11 @@ export default {
     <ChakraTab />
   </div>
 </template>
+
+<style>
+@media screen and (max-width: 500px) {
+  .product-desc {
+    display: none;
+  }
+}
+</style>
