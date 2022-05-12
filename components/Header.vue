@@ -1,5 +1,5 @@
 <script lang="js">
-import { CFlex, CThemeProvider,CIcon,CBox} from "@chakra-ui/vue";
+import { CFlex, CThemeProvider,CBox} from "@chakra-ui/vue";
 import HeaderButton from "~/library/HeaderButton.vue";
 import HeaderInput from "~/library/HeaderInput.vue";
 import LangButton from "~/library/LangButton.vue";
@@ -16,7 +16,7 @@ export default {
     HeaderInput,
     LangButton,
     BurgerBtn,
-    CIcon,CBox
+    CBox
 },
 }
 </script>
@@ -33,17 +33,17 @@ export default {
       >
         <c-box width="139px" height="40px">
           <NuxtLink as="router-link" to="/">
-            <!-- <img
+            <img
               class="header__logo"
               src="@/assets/img/logo.png"
               alt="Arzoni bizda"
               width="139px"
               height="24px"
-            /> -->
-            <c-flex display="flex" align-items="center">
+            />
+            <!-- <c-flex display="flex" align-items="center">
               <c-icon name="logo_ab" size="36px" />
               <c-icon name="arzonBizdaHeader" width="139px" height="24px" />
-            </c-flex>
+            </c-flex> -->
           </NuxtLink>
         </c-box>
 

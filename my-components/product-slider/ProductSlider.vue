@@ -83,7 +83,7 @@ export default {
           :key="index"
           class="product__slider"
         >
-          <img :src="item.src" alt="" />
+          <img :src="item.src" alt="product-image" class="slider__img" />
         </div>
       </VueSlickCarousel>
     </div>
@@ -95,7 +95,7 @@ export default {
 
       <VueSlickCarousel
         ref="c2"
-        :slides-to-show="4"
+        :slides-to-show="5"
         :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
@@ -154,6 +154,23 @@ export default {
   border-radius: 12px;
   &:hover {
     border: 1px solid #3bcff5;
+  }
+}
+
+.slider__img {
+  height: 469px;
+}
+
+.slick-next {
+  .slide__btn {
+    width: 40px;
+    height: 100px;
+    border: 1px solid #e3e6e6;
+    margin-top: 20px;
+    border-radius: 12px;
+    &:hover {
+      border: 1px solid #3bcff5;
+    }
   }
 }
 </style>

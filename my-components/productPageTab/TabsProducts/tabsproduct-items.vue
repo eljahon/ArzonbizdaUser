@@ -3,8 +3,33 @@ import { CBox, CImage, CHeading, CText, CButton, CIcon } from '@chakra-ui/vue'
 
 export default {
   components: [CBox, CImage, CHeading, CText, CButton, CIcon],
+
+  // async asyncData({ $axios, params }) {
+  //   const { data } = await $axios.get(`/product/${params.id}`)
+  //   console.log(data)
+  // },
+
+  // data() {
+  //   return {
+  //     items: [
+  //       {
+  //         image: 'https://picsum.photos/443/469',
+  //       },
+  //       {
+  //         name: 'https://picsum.photos/443/469',
+  //       },
+  //       {
+  //         price: 'https://picsum.photos/443/469',
+  //       },
+  //       {
+  //         credit: 'https://picsum.photos/443/469',
+  //       },
+  //     ],
+  //   }
+  // },
 }
 </script>
+
 <template>
   <CBox
     :display="['block', 'block', 'block', 'block', 'flex', 'flex']"
@@ -34,6 +59,7 @@ export default {
           :src="require('@/assets/img/poco.png')"
         ></CImage>
       </CBox>
+
       <CBox :ml="['initial', 'initial', 'initial', 'initial', '30px', '30px']">
         <CText
           class="phone__value"
@@ -46,6 +72,7 @@ export default {
           mt="8px"
           >3 324 000 {{ $t('sum') }}</CText
         >
+
         <CHeading
           color="color.TextColor2"
           class="phone__name"
@@ -56,6 +83,7 @@ export default {
         >
           {{ $t('phoneName') }}</CHeading
         >
+
         <CHeading
           class="phone__name"
           color="color.TextColor2"
@@ -65,6 +93,7 @@ export default {
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
           >{{ $t('phoneCharacteristics') }}</CHeading
         >
+
         <CBox
           :border="['1px', '1px', '1px', '1px', 'none', 'none']"
           :border-color="[

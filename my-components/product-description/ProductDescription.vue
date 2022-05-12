@@ -10,6 +10,8 @@ import {
   CButton,
 } from '@chakra-ui/vue'
 
+import priceSpacer from '@/helpers/price-spacer'
+
 export default {
   name: 'ProductPage',
   components: {
@@ -22,7 +24,21 @@ export default {
     CText,
     CButton,
   },
-  props: ['item'],
+
+  mixins: [
+    {
+      methods: {
+        priceSpacer,
+      },
+    },
+  ],
+
+  props: {
+    items: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
@@ -34,7 +50,7 @@ export default {
         :font-size="['24px', '24px', '25px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
-        >Смартфон Xiaomi Poco X3 Pro 8/256GB</CHeading
+        >{{ items.name }}</CHeading
       >
       <CFlex>
         <CBox d="flex" align-items="center">
@@ -87,8 +103,8 @@ export default {
             font-size="36px"
             line-height="48px"
             color="color.TextColor2"
-            >3 324 000 сум</CHeading
-          >
+            >{{ priceSpacer(items.price.toString()) }} сум
+          </CHeading>
           <CBox
             as="span"
             font-size="14px"
@@ -127,11 +143,7 @@ export default {
         line-height="24px"
         color="color.InputColor"
         mt="32px"
-        >Внимание! Неправильно указанный номер телефона, неточный или неполный
-        адрес могут привести к дополнительной задержке! Пожалуйста, внимательно
-        проверяйте Ваши персональные данные при регистрации и оформлении заказа.
-        Конфиденциальность ваших регистрационных данных гарантируется.
-        <br /><br />
+        >{{ items.disc }} <br /><br />
         Доставка выполняется ежедневно с 09:00 до 19:00 часов.
       </CText>
 
@@ -142,9 +154,10 @@ export default {
         mt="32px"
         >25 предложений</CText
       >
-      <CText line-height="20px" color="color.WarningColor1"
-        >В наличии у 13 продавцов</CText
-      >
+      <CText line-height="20px" color="color.WarningColor1">
+        В наличии у {{ items.compares.length }} продавцов
+      </CText>
+
       <CBox d="flex" justify-content="space-between" mt="24px">
         <CButton
           height="64px"
