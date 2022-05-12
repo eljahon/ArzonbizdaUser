@@ -8,10 +8,11 @@ import {
   CTab,
   CTabPanel,
 } from '@chakra-ui/vue'
-import TabDescription from './TabDescription.vue'
+
+// import TabDescription from './TabDescription.vue'
 import TabsProducts from './TabsProducts.vue'
-import TabCharacteristics from './TabCharacteristics.vue'
-import TabReviews from './TabReviews.vue'
+// import TabCharacteristics from './TabCharacteristics.vue'
+// import TabReviews from './TabReviews.vue'
 
 export default {
   components: {
@@ -22,13 +23,14 @@ export default {
     CTabPanels,
     CTab,
     CTabPanel,
-    TabDescription,
+    // TabDescription,
     TabsProducts,
-    TabCharacteristics,
-    TabReviews,
+    // TabCharacteristics,
+    // TabReviews,
   },
 }
 </script>
+
 <template>
   <CThemeProvider
     ><CBox>
@@ -155,21 +157,26 @@ export default {
             >{{ $t('tab4') }}</CTab
           >
         </CTabList>
+
         <CTabPanels>
           <CTabPanel>
             <tabs-products />
           </CTabPanel>
-          <CTabPanel>
+
+          <!-- <CTabPanel>
             <tab-description />
           </CTabPanel>
+
           <CTabPanel>
             <TabReviews />
           </CTabPanel>
+
           <CTabPanel>
             <tab-characteristics />
-          </CTabPanel>
-        </CTabPanels> </CTabs
-    ></CBox>
+          </CTabPanel> -->
+        </CTabPanels>
+      </CTabs></CBox
+    >
   </CThemeProvider>
 </template>
 

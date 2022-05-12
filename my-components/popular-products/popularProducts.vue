@@ -1,10 +1,13 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
+
 import PopularProduct from './popularProduct.vue'
 import ViewAll from '~/library/viewAll.vue'
+
 export default {
   name: 'CategoriesComponent',
+
   components: {
     CThemeProvider,
     CSimpleGrid,
@@ -12,17 +15,17 @@ export default {
     PopularProduct,
     ViewAll,
   },
+
   props: ['products'],
 
   data() {
-    return {
-    }
+    return {}
   },
   computed: {
     ...mapGetters(['productsList']),
-    popular () {
+    popular() {
       return this.productsList
-    }
+    },
   },
 }
 </script>

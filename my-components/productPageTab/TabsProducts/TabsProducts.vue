@@ -21,12 +21,6 @@ export default {
       :columns="['3', '3', '3', '3', '1', '1']"
     >
       <TabsproductItems />
-      <TabsproductItems />
-      <TabsproductItems />
-      <TabsproductItems />
-      <TabsproductItems />
-      <TabsproductItems />
-      <TabsproductItems />
     </CSimpleGrid>
   </CBox>
 </template>

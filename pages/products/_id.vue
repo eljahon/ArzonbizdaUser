@@ -10,14 +10,17 @@ export default {
   components: { ProductDescription, ProductSlider, CFlex, ChakraTab },
 
   async asyncData({ $axios, params }) {
-    // console.log(params)
     const { data } = await $axios.get(`/product/${params.id}`)
-    // console.log(data.data.product.images)
 
-    // console.log(imageList.data.product.images)
-    return {
+    const propsList = {
       imageList: data.product.images,
+      name: data.product.name,
+      price: data.product.price,
+      disc: data.product.description,
+      compares: data.compares,
     }
+
+    return { props: propsList }
   },
 }
 </script>
@@ -25,17 +28,17 @@ export default {
 <template>
   <div class="product__page">
     <c-flex gap="30px" mt="64px">
-      <ProductSlider :images="imageList" />
-      <product-description class="product-desc"/>
+      <ProductSlider :images="props.imageList" />
+      <product-description :items="props" />
     </c-flex>
     <ChakraTab />
   </div>
 </template>
 
 <style>
-  @media screen and (max-width:500px) {
-    .product-desc{
-      display: none;
-    }
+@media screen and (max-width: 500px) {
+  .product-desc {
+    display: none;
   }
+}
 </style>
