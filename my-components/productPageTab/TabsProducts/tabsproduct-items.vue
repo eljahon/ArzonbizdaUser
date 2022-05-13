@@ -1,25 +1,32 @@
 <script>
 import { CBox, CImage, CHeading, CText, CButton, CIcon } from '@chakra-ui/vue'
-
+import priceSpacer from '@/helpers/price-spacer'
 export default {
-  name:"TabsProduct",
+  name: 'TabsProduct',
   components: {
     CBox,
     CImage,
     CHeading,
     CText,
     CButton,
-    CIcon
+    CIcon,
   },
-  props:{
-    item:{
-      type:Array,
-      required:true
-    }
+  mixins: [
+    {
+      methods: {
+        priceSpacer,
+      },
+    },
+  ],
+  props: {
+    item: {
+      type: Array,
+      required: true,
+    },
   },
-  mounted(){
+  mounted() {
     console.log(this.item)
-  }
+  },
 }
 </script>
 
@@ -48,9 +55,9 @@ export default {
           padding="10px 23px"
           width="100%"
           height="100%"
-          object-fit="fill"
+          object-fit="contain"
           position="absolute"
-          :src="require('@/assets/img/poco.png')"
+          :src="item.images[0].src"
         ></CImage>
       </CBox>
 
@@ -64,7 +71,8 @@ export default {
           font-weight="700"
           :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
           mt="8px"
-          > {{ item.price }} {{  $t('sum') }}</CText
+        >
+          {{ item.price }} {{ $t('sum') }}</CText
         >
 
         <CHeading
@@ -78,16 +86,6 @@ export default {
           {{ item.name }}</CHeading
         >
 
-        <!-- <CHeading
-          class="phone__name"
-          color="color.TextColor2"
-          :font-size="['10px', '13px', '17px', '20px', '22px', '24px']"
-          font-family="Yandex Sans Display"
-          font-weight="400"
-          :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
-          >{{ $t('phoneCharacteristics') }}</CHeading
-        > -->
-
         <CBox
           :border="['1px', '1px', '1px', '1px', 'none', 'none']"
           :border-color="[
@@ -99,7 +97,7 @@ export default {
             'none',
           ]"
           :bg="['none', 'none', 'none', 'none', 'white', 'white']"
-          :width="['100%', '100%', '100%', '200px', 'initial']"
+          :width="['100%', '100%', '100%', '200px']"
           :mt="['16px', '16px', '16px', '16px', '16px', '16px']"
           :border-radius="['4px', '6px', '8px', '10px', '14px', '16px']"
         >
@@ -140,7 +138,8 @@ export default {
         font-weight="700"
         :line-height="['14px', '18px', '20px', '23px', '30px', '40px']"
         mt="8px"
-        > {{ item.price }} {{ $t('sum') }}</CText
+      >
+        {{ priceSpacer(item.price.toString()) }} {{ $t('sum') }}</CText
       >
       <CBox display="flex" aligin-items="center" mt="8px">
         <CButton
@@ -200,6 +199,9 @@ export default {
 <style lang="scss" scoped>
 .button:focus {
   background-color: white;
+}
+.phone__name {
+  max-width: 250px;
 }
 @media (min-width: 425px) and (max-width: 474px) {
   .phone__name {
