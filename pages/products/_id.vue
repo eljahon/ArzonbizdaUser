@@ -7,11 +7,15 @@ import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue
 export default {
   name: 'ProductPage',
 
-  components: { ProductDescription, ProductSlider, CFlex, ChakraTab },
+  components: {
+    ProductDescription,
+    ProductSlider,
+    CFlex,
+    ChakraTab
+  },
 
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
-
     const propsList = {
       imageList: data.product.images,
       name: data.product.name,
@@ -20,7 +24,10 @@ export default {
       compares: data.compares,
     }
 
-    return { props: propsList }
+    return {
+      props: propsList,
+      productData:data
+    }
   },
 }
 </script>
@@ -31,7 +38,7 @@ export default {
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" />
     </c-flex>
-    <ChakraTab />
+    <ChakraTab :selected-product="productData"/>
   </div>
 </template>
 

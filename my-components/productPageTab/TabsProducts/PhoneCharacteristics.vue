@@ -4,7 +4,7 @@ export default {
   components: {
     CText,
   },
-  props: ['data'],
+  props: ['datas'],
 }
 </script>
 <template>
@@ -15,7 +15,7 @@ export default {
     font-family="Yandex Sans Display"
     font-weight="700"
     :mt="['10px', '12px', '14px', '16px', '22px', '24px']"
-    >{{ data.namephone }}</CText
+    >{{ datas.value }}</CText
   >
 </template>
 

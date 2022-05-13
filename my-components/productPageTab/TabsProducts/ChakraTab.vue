@@ -9,12 +9,13 @@ import {
   CTabPanel,
 } from '@chakra-ui/vue'
 
-// import TabDescription from './TabDescription.vue'
+import TabDescription from './TabDescription.vue'
 import TabsProducts from './TabsProducts.vue'
-// import TabCharacteristics from './TabCharacteristics.vue'
-// import TabReviews from './TabReviews.vue'
+import TabCharacteristics from './TabCharacteristics.vue'
+import TabReviews from './TabReviews.vue'
 
 export default {
+  name:"ChakraTab",
   components: {
     CThemeProvider,
     CBox,
@@ -23,11 +24,20 @@ export default {
     CTabPanels,
     CTab,
     CTabPanel,
-    // TabDescription,
+    TabDescription,
     TabsProducts,
-    // TabCharacteristics,
-    // TabReviews,
+    TabCharacteristics,
+    TabReviews,
   },
+  props:{
+    selectedProduct:{
+      type:Object,
+      required:true
+    }
+  },
+  mounted(){
+    console.log(this.selectedProduct.product)
+  }
 }
 </script>
 
@@ -160,20 +170,20 @@ export default {
 
         <CTabPanels>
           <CTabPanel>
-            <tabs-products />
+            <tabs-products  :products="selectedProduct.compares"/>
           </CTabPanel>
 
-          <!-- <CTabPanel>
+          <CTabPanel>
             <tab-description />
           </CTabPanel>
 
           <CTabPanel>
-            <TabReviews />
+            <TabReviews :reviews="selectedProduct.product"/>
           </CTabPanel>
 
           <CTabPanel>
-            <tab-characteristics />
-          </CTabPanel> -->
+            <tab-characteristics  :characterics="selectedProduct.product.characteristics"/>
+          </CTabPanel>
         </CTabPanels>
       </CTabs></CBox
     >

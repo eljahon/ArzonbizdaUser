@@ -12,6 +12,12 @@ export default {
     TabInformation,
     TabComment,
   },
+  props:{
+    reviews:{
+      type:Object,
+      required:true
+    }
+  },
   data() {
     return {
       TabInformation: [
@@ -48,6 +54,7 @@ export default {
       ],
     }
   },
+
 }
 </script>
 
