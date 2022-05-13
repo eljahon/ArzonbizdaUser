@@ -12,10 +12,10 @@ import {
 import TabDescription from './TabDescription.vue'
 import TabsProducts from './TabsProducts.vue'
 import TabCharacteristics from './TabCharacteristics.vue'
-import TabReviews from './TabReviews.vue'
+// import TabReviews from './TabReviews.vue'
 
 export default {
-  name:"ChakraTab",
+  name: 'ChakraTab',
   components: {
     CThemeProvider,
     CBox,
@@ -27,18 +27,17 @@ export default {
     TabDescription,
     TabsProducts,
     TabCharacteristics,
-    TabReviews,
+    // TabReviews,
   },
-  props:{
-    selectedProduct:{
-      type:Object,
-      required:true
-    }
+  props: {
+    selectedProduct: {
+      type: Object,
+      required: true,
+    },
   },
-  
-  mounted(){
+  mounted() {
     console.log(this.selectedProduct.product)
-  }
+  },
 }
 </script>
 
@@ -118,7 +117,7 @@ export default {
             :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
             >{{ $t('tab2') }}</CTab
           >
-          <CTab
+          <!-- <CTab
             :_selected="{
               fontWeight: '700',
               color: 'color.WarningColor1',
@@ -146,7 +145,7 @@ export default {
             font-weight="400"
             :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
             >{{ $t('tab3') }}</CTab
-          >
+          > -->
           <CTab
             :_selected="{
               fontWeight: '700',
@@ -171,23 +170,24 @@ export default {
 
         <CTabPanels>
           <CTabPanel>
-            <tabs-products  :products="selectedProduct.compares"/>
+            <tabs-products :products="selectedProduct.compares" />
           </CTabPanel>
 
           <CTabPanel>
             <tab-description />
           </CTabPanel>
 
-          <CTabPanel>
+          <!-- <CTabPanel>
             <TabReviews :reviews="selectedProduct.product"/>
-          </CTabPanel>
+          </CTabPanel> -->
 
           <CTabPanel>
-            <tab-characteristics  :characterics="selectedProduct.product.characteristics"/>
+            <tab-characteristics
+              :characterics="selectedProduct.product.characteristics"
+            />
           </CTabPanel>
-        </CTabPanels>
-      </CTabs></CBox
-    >
+        </CTabPanels> </CTabs
+    ></CBox>
   </CThemeProvider>
 </template>
 
