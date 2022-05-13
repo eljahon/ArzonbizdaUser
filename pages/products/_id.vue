@@ -11,7 +11,7 @@ export default {
     ProductDescription,
     ProductSlider,
     CFlex,
-    ChakraTab
+    ChakraTab,
   },
 
   async asyncData({ $axios, params }) {
@@ -26,7 +26,7 @@ export default {
 
     return {
       props: propsList,
-      productData:data
+      productData: data,
     }
   },
 }
@@ -38,7 +38,7 @@ export default {
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" />
     </c-flex>
-    <ChakraTab :selected-product="productData"/>
+    <ChakraTab :selected-product="productData" />
   </div>
 </template>
 
