@@ -14,6 +14,35 @@ export default {
     CompareTab,
     CompareProductMobile,
   },
+  mounted() {
+    this.fetchItems()
+  },
+  methods: {
+    async fetchItems() {
+      // const query = { prs: this.$store.state.isBadge }
+      const { data } = await this.$axios.get('/product/compare', {
+        params: {
+          prs: [
+            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+          ],
+        },
+      })
+      console.log(data)
+    },
+  },
+  //  asyncData({ $axios }) {
+  //   // const query = { prs: this.$store.state.isBadge }
+  //   const { data } = await $axios.get('/products/compares', {
+  //     params: {
+  //       prs: [
+  //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+  //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+  //       ],
+  //     },
+  //   })
+  //   console.log(data)
+  // },
 }
 </script>
 <template>
