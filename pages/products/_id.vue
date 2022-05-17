@@ -13,7 +13,6 @@ export default {
     CFlex,
     ChakraTab,
   },
-
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
     const propsList = {
