@@ -19,13 +19,10 @@ export default {
   },
   methods: {
     async fetchItems() {
-      // const query = { prs: this.$store.state.isBadge }
-      const { data } = await this.$axios.get('/product/compare', {
+      const query = { prs: this.$store.state.isBadge }
+      const { data } = await this.$axios.get('/product/compares', {
         params: {
-          prs: [
-            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-          ],
+          prs: query.prs,
         },
       })
       console.log(data)
