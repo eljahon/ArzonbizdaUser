@@ -8,16 +8,30 @@ export const state = () => {
   return {
     productsList: [],
     brandItem: [],
+    title: 'afsdfdssdfd',
   }
 }
 export const mutations = {
-  SET_Products_LIST(state, payload) {
-    state.producsList = payload
+  SET_PRODUCTS_LIST(state, payload) {
+    // const {data}  = await this.$axios.get("/product/home");
+    // const sendData = data.data.products.map(el => {
+    //   return {
+    //     id: el.id,
+    //     name: el.brand_name,
+    //     img: el.images[0].src,
+    //     price: el.price
+    //   }
+    // });
+    state.productsList = payload
   },
 }
 export const actions = {
-  changeProducts(vuexContext, payload) {
-    const sendata = payload.map((el) => {
+  async changeProducts(ctx, { axios, query }) {
+    const { data } = await axios.get(
+      query ? '/product/search' : '/product/home',
+      query ? { params: { q: query } } : undefined
+    )
+    const sendData = data.data.products.map((el) => {
       return {
         id: el.id,
         name: el.brand_name,
@@ -25,7 +39,6 @@ export const actions = {
         price: el.price,
       }
     })
-    // console.log("sendata=====>>>>", sendata)
-    vuexContext.commit('SET_Products_LIST', sendata)
+    ctx.commit('SET_PRODUCTS_LIST', sendData)
   },
 }

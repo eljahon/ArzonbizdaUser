@@ -11,19 +11,13 @@ export default {
   },
   data() {
     return {
-      search: '',
+      search: this.$route.query.search ? this.$route.query.search : '',
     }
   },
   methods: {
-    async searchProductGetAll() {
-      const query = { q: this.search, per_page: 1 }
-      const { data } = await this.$axios.get('product/search', {
-        params: { q: query.q, per_page: query.per_page },
-      })
-      console.log(data)
-      if (this.search) {
-        this.$router.push({ path: '/' })
-      }
+     searchProductGetAll() {
+        this.$router.push({ path: this.localePath('/'),query: {search: this.search} })
+        this.$store.dispatch("changeProducts",{axios: this.$axios, query: this.search})
     },
   },
 }

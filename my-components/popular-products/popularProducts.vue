@@ -1,7 +1,5 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
-import { mapGetters } from 'vuex'
-
 import PopularProduct from './popularProduct.vue'
 import ViewAll from '~/library/viewAll.vue'
 
@@ -16,20 +14,13 @@ export default {
     ViewAll,
   },
 
-  props: ['products'],
-
   data() {
     return {}
   },
   computed: {
-    ...mapGetters(['productsList']),
-    popular() {
-      return this.productsList
-    },
   },
 }
 </script>
-
 <template>
   <CThemeProvider>
     <CBox mt="88px" :mb="['27px', '38px', '52px', '64px', '76px', '88px']">
@@ -50,7 +41,7 @@ export default {
         justify-content="center"
       >
         <CBox
-          v-for="(item, idx) in products"
+          v-for="(item, idx) in $store.state.productsList"
           :key="idx"
           class="popular__product"
         >
