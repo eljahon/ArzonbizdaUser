@@ -9,6 +9,23 @@ export default {
     CButton,
     CIcon,
   },
+  data() {
+    return {
+      search: '',
+    }
+  },
+  methods: {
+    async searchProductGetAll() {
+      const query = { q: this.search, per_page: 1 }
+      const { data } = await this.$axios.get('product/search', {
+        params: { q: query.q, per_page: query.per_page },
+      })
+      console.log(data)
+      if (this.search) {
+        this.$router.push({ path: '/' })
+      }
+    },
+  },
 }
 </script>
 
@@ -17,7 +34,9 @@ export default {
     <CThemeProvider>
       <c-flex align="center">
         <c-input
-        class="header___input"
+          v-model="search"
+          class="header___input"
+          type="text"
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
@@ -31,8 +50,10 @@ export default {
           border-bottom-end-radius="none"
           border-top-right-radius="none"
         />
+
         <c-button
           class="header__button"
+          type="submit"
           background-color="color.WarningColor1"
           aria-label="Search database"
           _focus="none"
@@ -45,6 +66,8 @@ export default {
           0px;"
           cursor="pointer"
           mr="20px"
+          :disabled="search.length === 0"
+          @click="searchProductGetAll"
         >
           <CIcon
             name="search"
@@ -74,7 +97,6 @@ export default {
     margin: 16px 0 0 0px;
   }
 }
-
 @media screen and(max-width: 320px) {
   .css-6hv6t1-className {
     width: 234px;
