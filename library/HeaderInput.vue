@@ -15,9 +15,21 @@ export default {
     }
   },
   methods: {
-     searchProductGetAll() {
-        this.$router.push({ path: this.localePath('/'),query: {search: this.search} })
-        this.$store.dispatch("changeProducts",{axios: this.$axios, query: this.search})
+    searchProductGetAll() {
+      this.$router.push({
+        path: this.localePath('/search'),
+        query: { search: this.search },
+      })
+      this.$store.dispatch('changeProducts', {
+        axios: this.$axios,
+        query: this.search,
+      })
+    },
+
+    handleKeyPress(event) {
+      if (event.charCode === 13) {
+        this.searchProductGetAll()
+      }
     },
   },
 }
@@ -43,6 +55,7 @@ export default {
           border-bottom-left-radius="12px"
           border-bottom-end-radius="none"
           border-top-right-radius="none"
+          @keypress="handleKeyPress"
         />
 
         <c-button
@@ -60,9 +73,9 @@ export default {
           0px;"
           cursor="pointer"
           mr="20px"
-          :disabled="search.length === 0"
           @click="searchProductGetAll"
         >
+          <!-- :disabled="search.length === 0" -->
           <CIcon
             name="search"
             fill="transparent"
@@ -92,7 +105,7 @@ export default {
   }
 }
 @media screen and(max-width: 320px) {
-  .css-6hv6t1-className {
+  .header__input {
     width: 234px;
   }
 }

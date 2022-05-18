@@ -1,22 +1,27 @@
 <template>
   <div>
-    <Home :products="sendData"/>
+    <Home :products="sendData" />
   </div>
 </template>
+
 <script lang="js">
 import { mapGetters } from "vuex"
-export default {
 
+export default {
 name:"IndexComponent",
+
   async asyncData({ $axios, store, query }) {
    await store.dispatch("changeProducts",{axios: $axios, query: query.search})
   },
+
   computed: {
     ...mapGetters(['productsList'])
   },
+
   mounted() {
     // this.feat()
   },
+
   methods: {
    async feat ()  {
      const {data}  = await this.$axios.get("/product/home");
