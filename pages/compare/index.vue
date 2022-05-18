@@ -26,7 +26,7 @@ export default {
         params: {
           prs: [
             'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+            'e0f1796a-abea-43a7-bd11-a5d76d73e29f',
           ],
         },
       })

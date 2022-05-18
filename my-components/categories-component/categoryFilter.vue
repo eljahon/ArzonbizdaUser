@@ -1,5 +1,6 @@
 <script>
 import { CThemeProvider, CBox, CText } from '@chakra-ui/vue'
+import PriceRangeSlider from '../price-slider/PriceRangeSlider.vue'
 import FilterHeader from './filterHeader.vue'
 export default {
   name: 'CategoryFilter',
@@ -8,6 +9,7 @@ export default {
     CThemeProvider,
     CText,
     CBox,
+    PriceRangeSlider,
   },
   data() {
     return {
@@ -124,6 +126,7 @@ export default {
 
       <CBox mt="40px">
         <FilterHeader title="cost" />
+        <PriceRangeSlider />
       </CBox>
     </CThemeProvider>
   </div>
