@@ -22,11 +22,8 @@ export default {
     item: {
       type: Array,
       required: true,
-    },
-  },
-  mounted() {
-    console.log(this.item)
-  },
+    }
+  }
 }
 </script>
 

@@ -24,6 +24,11 @@ export const mutations = {
     // });
     state.productsList = payload
   },
+  SET_ISCOM(state, payload) {
+    if (state.isBadge.length <= 2) {
+      state.isBadge.push(payload)
+    }
+  },
 }
 export const actions = {
   async changeProducts(ctx, { axios, query }) {

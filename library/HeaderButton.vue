@@ -1,5 +1,6 @@
 <script>
-import { CThemeProvider, CButton, CIcon, CLink } from '@chakra-ui/vue'
+import { CThemeProvider, CButton, CIcon, CLink, CBadge } from '@chakra-ui/vue'
+import {mapGetters} from "vuex"
 
 export default {
   name: 'HeaderButton',
@@ -8,6 +9,10 @@ export default {
     CButton,
     CIcon,
     CLink,
+    CBadge
+  },
+  computed:{
+    ...mapGetters(["isBadgeLength"]),
   },
 }
 </script>
@@ -41,6 +46,9 @@ export default {
           <p class="icon__text">
             {{ $t('compare') }}
           </p>
+          <CBadge variant='solid' color-scheme='green'>
+            {{ isBadgeLength }}
+          </CBadge>
         </c-button>
       </c-link>
     </CThemeProvider>
