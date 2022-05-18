@@ -11,18 +11,24 @@ export default {
   },
   data() {
     return {
-      search: '',
+      search: this.$route.query.search ? this.$route.query.search : '',
     }
   },
   methods: {
-    async searchProductGetAll() {
-      const query = { q: this.search, per_page: 1 }
-      const { data } = await this.$axios.get('product/search', {
-        params: { q: query.q, per_page: query.per_page },
+    searchProductGetAll() {
+      this.$router.push({
+        path: this.localePath('/search'),
+        query: { search: this.search },
       })
-      console.log(data)
-      if (this.search) {
-        this.$router.push({ path: '/' })
+      this.$store.dispatch('changeProducts', {
+        axios: this.$axios,
+        query: this.search,
+      })
+    },
+
+    handleKeyPress(event) {
+      if (event.charCode === 13) {
+        this.searchProductGetAll()
       }
     },
   },
@@ -49,6 +55,7 @@ export default {
           border-bottom-left-radius="12px"
           border-bottom-end-radius="none"
           border-top-right-radius="none"
+          @keypress="handleKeyPress"
         />
 
         <c-button
@@ -66,9 +73,9 @@ export default {
           0px;"
           cursor="pointer"
           mr="20px"
-          :disabled="search.length === 0"
           @click="searchProductGetAll"
         >
+          <!-- :disabled="search.length === 0" -->
           <CIcon
             name="search"
             fill="transparent"
@@ -98,7 +105,7 @@ export default {
   }
 }
 @media screen and(max-width: 320px) {
-  .css-6hv6t1-className {
+  .header__input {
     width: 234px;
   }
 }

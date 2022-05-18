@@ -27,11 +27,11 @@ components: {
 <template>
   <div>
     <SliderComponent />
-    <PopularProducts :products="products" />
+    <PopularProducts :products="products" title="Популярные товары" />
     <CategoriesComponent />
     <BrandsComponent />
     <BannerComponent />
-    <PopularProducts />
+    <PopularProducts title="Популярные товары" />
     <DescriptionComponent />
     <NewBlog />
   </div>

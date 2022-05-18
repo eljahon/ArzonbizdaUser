@@ -1,7 +1,4 @@
 export const getters = {
-  isBadgeLength: (state) => {
-    return state.isBadge.length
-  },
   productsList: (state) => {
     return state.productsList
   },
@@ -11,12 +8,21 @@ export const state = () => {
   return {
     productsList: [],
     brandItem: [],
-    isBadge: [],
+    title: 'afsdfdssdfd',
   }
 }
 export const mutations = {
-  SET_Products_LIST(state, payload) {
-    state.producsList = payload
+  SET_PRODUCTS_LIST(state, payload) {
+    // const {data}  = await this.$axios.get("/product/home");
+    // const sendData = data.data.products.map(el => {
+    //   return {
+    //     id: el.id,
+    //     name: el.brand_name,
+    //     img: el.images[0].src,
+    //     price: el.price
+    //   }
+    // });
+    state.productsList = payload
   },
   SET_ISCOM(state, payload) {
     if (state.isBadge.length <= 2) {
@@ -25,11 +31,12 @@ export const mutations = {
   },
 }
 export const actions = {
-  actionsIsCom(vuexContext, payload) {
-    vuexContext.commit('SET_ISCOM', payload)
-  },
-  changeProducts(vuexContext, payload) {
-    const sendata = payload.map((el) => {
+  async changeProducts(ctx, { axios, query }) {
+    const { data } = await axios.get(
+      query ? '/product/search' : '/product/home',
+      query ? { params: { q: query } } : undefined
+    )
+    const sendData = data.data.products.map((el) => {
       return {
         id: el.id,
         name: el.brand_name,
@@ -37,7 +44,6 @@ export const actions = {
         price: el.price,
       }
     })
-    // console.log("sendata=====>>>>", sendata)
-    vuexContext.commit('SET_Products_LIST', sendata)
+    ctx.commit('SET_PRODUCTS_LIST', sendData)
   },
 }
