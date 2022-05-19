@@ -1,15 +1,14 @@
 <script>
-import CategoryMain from '~/my-components/categories-component/CategoryMain.vue'
+import LoaderComponent from '../library/LoaderComponent.vue'
 export default {
   name: 'UserComponent',
-  components: {
-    CategoryMain,
-  },
+  components: { LoaderComponent },
 }
 </script>
 
 <template>
   <div>
-    <CategoryMain />
+    <h1>asdasd</h1>
+    <LoaderComponent />
   </div>
 </template>

@@ -35,15 +35,15 @@ export default {
   <div class="product__page">
     <c-flex gap="30px" mt="64px">
       <ProductSlider :images="props.imageList" />
-      <product-description :items="props" />
+      <product-description :items="props" class="product__disc" />
     </c-flex>
     <ChakraTab :selected-product="productData" />
   </div>
 </template>
 
-<style>
-@media screen and (max-width: 500px) {
-  .product-desc {
+<style lang="scss" scoped>
+@media screen and (max-width: 1024px) {
+  .product__disc {
     display: none;
   }
 }
