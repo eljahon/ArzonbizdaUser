@@ -34,6 +34,7 @@ name:"IndexComponent",
        }
      });
 this.$store.commit("SET_PRODUCTS_LIST", sendData)
+this.$store.commit("SET_LOADING", false)
    }
   }
 }

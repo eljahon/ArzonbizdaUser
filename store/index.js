@@ -3,12 +3,14 @@ export const getters = {
     return state.productsList
   },
   brandItem: (state) => state.brandItem,
+  // loading: false,
 }
 export const state = () => {
   return {
     productsList: [],
     brandItem: [],
     title: 'afsdfdssdfd',
+    // loading: true,
   }
 }
 export const mutations = {
@@ -24,11 +26,16 @@ export const mutations = {
     // });
     state.productsList = payload
   },
+
   SET_ISCOM(state, payload) {
     if (state.isBadge.length <= 2) {
       state.isBadge.push(payload)
     }
   },
+
+  // SET_LOADING(state, payload) {
+  //   state.loading = payload
+  // },
 }
 export const actions = {
   async changeProducts(ctx, { axios, query }) {
