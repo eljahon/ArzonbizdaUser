@@ -14,8 +14,14 @@ import TabsProducts from './TabsProducts.vue'
 import TabCharacteristics from './TabCharacteristics.vue'
 // import TabReviews from './TabReviews.vue'
 
+import aos from '@/helpers/aos'
+
+import AOS from '@/node_modules/aos/dist/aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: 'ChakraTab',
+
   components: {
     CThemeProvider,
     CBox,
@@ -29,11 +35,24 @@ export default {
     TabCharacteristics,
     // TabReviews,
   },
+
+  mixins: [
+    {
+      methods: {
+        aos,
+      },
+    },
+  ],
+
   props: {
     selectedProduct: {
       type: Object,
       required: true,
     },
+  },
+
+  mounted() {
+    AOS.init({})
   },
 }
 </script>
@@ -167,11 +186,14 @@ export default {
 
         <CTabPanels>
           <CTabPanel>
-            <tabs-products :products="selectedProduct.compares" />
+            <tabs-products
+              :products="selectedProduct.compares"
+              data-aos="fade-up"
+            />
           </CTabPanel>
 
           <CTabPanel>
-            <tab-description />
+            <tab-description data-aos="fade-up" />
           </CTabPanel>
 
           <!-- <CTabPanel>
@@ -180,6 +202,7 @@ export default {
 
           <CTabPanel>
             <tab-characteristics
+              data-aos="fade-up"
               :characterics="selectedProduct.product.characteristics"
             />
           </CTabPanel>

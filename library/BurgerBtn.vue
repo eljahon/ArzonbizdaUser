@@ -61,15 +61,7 @@ export default {
         </c-box>
         <c-drawer-body>
           <Drawer />
-          <!-- <c-input ref="inputInsideModal" placeholder="Type here..." /> -->
         </c-drawer-body>
-
-        <c-drawer-footer>
-          <!-- <c-button variant="outline" mr="3" @click="isOpen = false"
-            >Cancel</c-button
-          >
-          <c-button variant-color="blue">Save</c-button> -->
-        </c-drawer-footer>
       </c-drawer-content>
     </c-drawer>
   </div>

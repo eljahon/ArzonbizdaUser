@@ -4,6 +4,11 @@ import ProductDescription from '~/my-components/product-description/ProductDescr
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
 
+import aos from '@/helpers/aos'
+
+import AOS from '@/node_modules/aos/dist/aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: 'ProductPage',
 
@@ -13,6 +18,15 @@ export default {
     CFlex,
     ChakraTab,
   },
+
+  mixins: [
+    {
+      methods: {
+        aos,
+      },
+    },
+  ],
+
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
     const propsList = {
@@ -28,11 +42,15 @@ export default {
       productData: data,
     }
   },
+
+  mounted() {
+    AOS.init({})
+  },
 }
 </script>
 
 <template>
-  <div class="product__page">
+  <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
     <c-flex gap="30px" mt="64px">
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
