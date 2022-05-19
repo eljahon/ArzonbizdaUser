@@ -3,14 +3,16 @@ export const getters = {
     return state.productsList
   },
   brandItem: (state) => state.brandItem,
-  // loading: false,
+  loading: (state) => state.loading,
+  has_content: (state) => state.has_content,
 }
 export const state = () => {
   return {
     productsList: [],
     brandItem: [],
-    title: 'afsdfdssdfd',
-    // loading: true,
+    title: 'title',
+    loading: false,
+    has_content: 'pending',
   }
 }
 export const mutations = {
@@ -33,12 +35,19 @@ export const mutations = {
     }
   },
 
-  // SET_LOADING(state, payload) {
-  //   state.loading = payload
-  // },
+  SET_LOADING(state, payload) {
+    state.loading = payload
+  },
+
+  SET_HAS_CONTENT(state, payload) {
+    state.has_content = payload
+  },
 }
 export const actions = {
   async changeProducts(ctx, { axios, query }) {
+    ctx.commit('SET_LOADING', true)
+    ctx.commit('SET_HAS_CONTENT', 'pending')
+
     const { data } = await axios.get(
       query ? '/product/search' : '/product/home',
       query ? { params: { q: query } } : undefined
@@ -51,6 +60,9 @@ export const actions = {
         price: el.price,
       }
     })
+
     ctx.commit('SET_PRODUCTS_LIST', sendData)
+    ctx.commit('SET_LOADING', false)
+    ctx.commit('SET_HAS_CONTENT', !sendData.length ? 'no_content' : 'content')
   },
 }
