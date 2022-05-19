@@ -26,8 +26,24 @@ export default {
 
 <template>
   <div>
-    <LoaderComponent />
-    <popular-products data-aos="fade-up" title="Найденные данные" />
+    <LoaderComponent v-if="$store.state.loading" />
+    <popular-products
+      v-if="$store.state.has_content === 'content'"
+      data-aos="fade-up"
+      title="Найденные данные"
+    />
+    <div
+      v-if="$store.state.has_content === 'no_content' && !$store.state.loading"
+      data-aos="fade-up"
+    >
+      Информация не найдена
+    </div>
+    <div
+      v-if="$store.state.has_content === 'pending' && !$store.state.loading"
+      data-aos="fade-up"
+    >
+      Искать что-то
+    </div>
   </div>
 </template>
 

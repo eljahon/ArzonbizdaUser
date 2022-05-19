@@ -2,18 +2,18 @@
 import { CBox, CSimpleGrid } from '@chakra-ui/vue'
 import TabsproductItems from './tabsproduct-items.vue'
 export default {
-  name:"TabsProducts",
+  name: 'TabsProducts',
   components: {
     CBox,
     CSimpleGrid,
     TabsproductItems,
   },
-  props:{
-    products:{
-      type:Object,
-      required:true
-    }
-  }
+  props: {
+    products: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 <template>
@@ -27,7 +27,15 @@ export default {
       spacing="10px"
       :columns="['3', '3', '3', '3', '1', '1']"
     >
-      <TabsproductItems  v-for="(item, id) in products" :key="id" :item="item"/>
+      <TabsproductItems v-for="(item, id) in products" :key="id" :item="item" />
+      <div
+        v-if="
+          $store.state.has_content === 'no_content' && !$store.state.loading
+        "
+        data-aos="fade-up"
+      >
+        Информация не найдена
+      </div>
     </CSimpleGrid>
   </CBox>
 </template>
