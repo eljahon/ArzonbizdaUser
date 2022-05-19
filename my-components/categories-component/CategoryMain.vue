@@ -27,24 +27,33 @@ export default {
 
 <template>
   <div>
-    <CFlex>
+    <div class="category__main" :class="{ showHide: !switched }">
       <CBox v-if="switched">
         <CategoryFilter class="category" />
       </CBox>
       <CBox>
         <CFlex direction="column">
-          <BannerImage mt="88px" image-path="banner1.png" />
-          <CategoryMainWrapper @switch="done" />
+          <BannerImage
+            mt="88px"
+            image-path="banner1.png"
+            style="margin-bottom: 40px; width: 100%"
+          />
         </CFlex>
+        <CategoryMainWrapper @switch="done" />
       </CBox>
-    </CFlex>
+    </div>
   </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 .category {
   margin-right: 48px;
+}
+.category__main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.showHide {
+  grid-template-columns: 1fr !important;
 }
 </style>

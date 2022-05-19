@@ -9,6 +9,7 @@ export default {
     CButton,
     CIcon,
   },
+
   data() {
     return {
       search: this.$route.query.search ? this.$route.query.search : '',

@@ -20,17 +20,20 @@ export default {
     PopularProducts,
     CSelect,
   },
+
   data() {
     return {
       selectedItem: '',
       switched: true,
     }
   },
+
   computed: {
     item() {
       return this.selectedItem
     },
   },
+
   methods: {
     Switched(e) {
       this.$emit('switch', e.target.checked)
@@ -38,6 +41,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <div>
     <CFlex direction="column">
@@ -53,6 +57,7 @@ export default {
                 :is-checked="true"
                 @click="Switched($event)"
               />
+
               <CFormLabel
                 html-for="email-alerts"
                 color="color.InputColor"
@@ -65,6 +70,7 @@ export default {
             </CFlex>
           </CFormControl>
         </CBox>
+
         <CBox p="10px">
           <CSelect
             v-model="selectedItem"
@@ -80,10 +86,10 @@ export default {
           </CSelect>
         </CBox>
       </CFlex>
-      <PopularProducts />
+
+      <PopularProducts title="Категория товаров" />
     </CFlex>
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

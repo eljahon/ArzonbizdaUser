@@ -2,6 +2,7 @@
 import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
 import 'vue-slider-component/dist-css/vue-slider-component.css'
 import { CIcon, CInput, CFlex } from '@chakra-ui/vue'
+
 export default {
   name: 'PriceRangeSlider',
   components: {
@@ -10,6 +11,7 @@ export default {
     CFlex,
     VueSlider,
   },
+
   data() {
     return {
       value: [0, 30],
@@ -21,13 +23,12 @@ export default {
 <template>
   <div class="slider__price">
     <div>
-      <vue-slider
-        v-model="value"
-      ></vue-slider>
+      <vue-slider v-model="value"></vue-slider>
     </div>
+
     <CFlex align="center" gap="9px" mt="29px">
       <c-input
-      v-model="value[0]"
+        v-model="value[0]"
         color="color.InputColor"
         _focus="none"
         w="103px"
@@ -37,10 +38,10 @@ export default {
         placeholder="от"
       />
 
-      <CIcon name="priceSlider" />
+      <CIcon name="priceIcon" />
 
       <c-input
-      v-model="value[1]"
+        v-model="value[1]"
         color="color.InputColor"
         _focus="none"
         w="103px"
@@ -71,19 +72,19 @@ export default {
   margin-top: 32px;
 }
 .vue-slider {
-  background: #E3E5E5;
+  background: #e3e5e5;
   border-radius: 12px;
   height: 6px !important;
   padding: 0 !important;
 }
-.vue-slider-process{
+.vue-slider-process {
   background: red;
 }
-.vue-slider-dot{
+.vue-slider-dot {
   border-radius: 12px;
-  background: #4A4D4D;
+  background: #4a4d4d;
 }
-.vue-slider-dot-tooltip{
+.vue-slider-dot-tooltip {
   display: none;
 }
 </style>

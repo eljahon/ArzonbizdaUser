@@ -35,13 +35,6 @@ export default {
       >
         <c-box width="139px" height="40px">
           <NuxtLink as="router-link" to="/">
-            <!-- <img
-              class="header__logo"
-              src="@/assets/img/logo.png"
-              alt="Arzoni bizda"
-              width="139px"
-              height="24px"
-            /> -->
             <svg
               width="188"
               height="42"

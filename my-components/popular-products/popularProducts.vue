@@ -34,7 +34,9 @@ export default {
         justify="space-between"
         :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
       >
-        <h1 class="main_header">{{ title }}</h1>
+        <h1 class="main_header">
+          {{ title }}
+        </h1>
 
         <ViewAll />
       </CFlex>
