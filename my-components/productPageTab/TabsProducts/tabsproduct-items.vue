@@ -20,10 +20,10 @@ export default {
   ],
   props: {
     item: {
-      type: Array,
+      type: Object,
       required: true,
     }
-  }
+  },
 }
 </script>
 

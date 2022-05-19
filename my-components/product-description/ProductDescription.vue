@@ -34,7 +34,7 @@ export default {
   ],
   props: {
     items: {
-      type: String,
+      type: Object,
       required: true,
     },
   },
@@ -52,7 +52,7 @@ export default {
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
       } else if (this.isBadgeLength === 2) {
-        this.$router.push('/compare')
+        localStorage.setItem("contrastArray", JSON.stringify(this.$store.state.isBadge))
       }
     },
   },
@@ -198,7 +198,7 @@ export default {
         </CButton>
         <CButton
           height="64px"
-          :disabled="badgeLength === 2"
+          :disabled="isBadgeLength === 2"
           max-w="337px"
           w="100%"
           border="1px"

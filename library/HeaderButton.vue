@@ -1,6 +1,6 @@
 <script>
-import { CThemeProvider, CButton, CIcon, CLink, CBadge } from '@chakra-ui/vue'
-import {mapGetters} from "vuex"
+import { CThemeProvider, CButton, CIcon, CBadge } from '@chakra-ui/vue'
+import { mapGetters } from "vuex"
 
 export default {
   name: 'HeaderButton',
@@ -8,11 +8,26 @@ export default {
     CThemeProvider,
     CButton,
     CIcon,
-    CLink,
     CBadge
+  },
+  data(){
+    return{
+      oneId: "",
+      secondId: ""
+    }
   },
   computed:{
     ...mapGetters(["isBadgeLength"]),
+  },
+  methods:{
+    toRoute(){
+      const data = JSON.parse(localStorage.getItem("contrastArray"))
+      console.log(data)
+      if(data.length === 2 && this.isBadgeLength === 2){
+        this.$router.push("/compare")
+        // this.$router.push(this.localePath({ path: "/compare", query: { firstId: data[0], secondId: data[1] } }));
+      }
+    }
   },
 }
 </script>
@@ -20,7 +35,6 @@ export default {
 <template>
   <div>
     <CThemeProvider>
-      <c-link as="router-link" to="/compare" :_hover="false">
         <c-button
           class="header__button"
           align-item="center"
@@ -38,6 +52,7 @@ export default {
           gap="8.5px"
           bg="transparent"
           ml="20px"
+          @click="toRoute"
         >
           <CIcon
             name="comparison"
@@ -46,11 +61,10 @@ export default {
           <p class="icon__text">
             {{ $t('compare') }}
           </p>
-          <CBadge variant='solid' color-scheme='green'>
+          <CBadge variant='solid' border-radius="5px" color-scheme='green'>
             {{ isBadgeLength }}
           </CBadge>
         </c-button>
-      </c-link>
     </CThemeProvider>
   </div>
 </template>

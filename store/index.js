@@ -7,6 +7,7 @@ export const getters = {
   },
   brandItem: (state) => state.brandItem,
 }
+
 export const state = () => {
   return {
     productsList: [],

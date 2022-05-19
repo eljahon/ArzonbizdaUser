@@ -7,6 +7,12 @@ export default {
     CStack,
     CFlex,
   },
+  props:{
+    item:{
+      type:Object,
+      required:true
+    }
+  }
 }
 </script>
 <template>
@@ -18,7 +24,7 @@ export default {
         :font-size="['24px', '24px', '26px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
-        >Смартфон Xiaomi Poco X3 Pro 8/256GB</c-heading
+        >{{ item.name }}</c-heading
       >
       <c-flex>
         <c-box d="flex" align-items="center">
@@ -75,7 +81,7 @@ export default {
             :line-height="['12px', '12px', '12px', '16px', '20px', '24px']"
             color="color.TextColor5"
             :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
-            >26</c-box
+            >{{ item.comments.length }}</c-box
           >
         </c-box>
         <c-divider orientation="vertical" border-color="color.iconBg" />
@@ -112,7 +118,7 @@ export default {
             :font-size="['12px', '18px', '20px', '24px', '32px', '36px']"
             :line-height="['13px', '24px', '26px', '28px', '42px', '48px']"
             color="color.TextColor2"
-            >3 324 000 сум</c-heading
+            >{{ item.price }} сум</c-heading
           >
           <c-box
             as="span"
@@ -217,6 +223,9 @@ export default {
           >В наличии у 13 продавцов</c-text
         >
         <c-button
+          as="nuxt-link"
+          target="_blank"
+          :to="item.link"
           height="64px"
           max-w="337px"
           w="100%"
