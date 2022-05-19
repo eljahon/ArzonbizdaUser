@@ -10,6 +10,7 @@
         }}<CIcon
           name="right_arrow"
           :ml="['6px', '7px', '8px', '9px', '10px', '10px']"
+          mt="10px"
           size="12px"
         />
       </c-flex>

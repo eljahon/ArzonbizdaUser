@@ -54,25 +54,38 @@ export default {
       </CLink>
     </CStack>
     <CFlex>
-      <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
+      <CLink
+        href="https://www.facebook.com/"
+        is-external
+        :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
         ><CIcon
           name="facebook"
           color="white"
           :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
-      <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
-        ><CIcon
+
+      <CLink
+        href="https://www.instagram.com/"
+        is-external
+        :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
+      >
+        <CIcon
           name="instagram"
           color="white"
           :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
-      <CLink :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
+
+      <CLink
+        href="https://www.telegram.me/abdulvohid_karimov"
+        is-external
+        :mr="['12px', '13px', '14px', '14px', '15px', '16px']"
         ><CIcon
           name="telegram"
           color="white"
           :size="['16px', '18px', '20px', '22px', '23px', '24px']"
       /></CLink>
-      <CLink
+
+      <CLink href="https://www.tiktok.com/" is-external
         ><CIcon
           name="tiktok"
           color="white"

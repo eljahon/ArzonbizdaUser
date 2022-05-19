@@ -36,7 +36,7 @@ export default {
           _focus="none"
           border="LangBorder"
           color="color.InputColor"
-          placeholder="Eng"
+          placeholder="Рус"
           h="56px"
         >
           <option value="ru">Ru</option>

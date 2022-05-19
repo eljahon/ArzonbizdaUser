@@ -77,7 +77,7 @@ export default {
     <CBox mt="8px">
       <CFlex align="center">
         <CBox d="flex" align-items="center" font-family="Yandex Sans Display">
-          <single-star :rating="2" />
+          <single-star :rating="5" />
           <CBox
             as="span"
             :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
