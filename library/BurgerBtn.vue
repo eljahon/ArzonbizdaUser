@@ -1,9 +1,13 @@
 <script>
 import { CIcon } from '@chakra-ui/vue'
+import Drawer from '~/my-components/drawer/Drawer.vue'
+import LangButton from '~/library/LangButton.vue'
 
 export default {
   components: {
     CIcon,
+    Drawer,
+    LangButton,
   },
   data() {
     return {
@@ -51,18 +55,20 @@ export default {
           justify-content="space-between"
           pr="25px"
         >
-          <c-drawer-header>Create your account</c-drawer-header>
+          <c-drawer-header>Категория товаров </c-drawer-header>
+          <c-drawer-header><LangButton /> </c-drawer-header>
           <c-close-button @click="isOpen = false" />
         </c-box>
         <c-drawer-body>
-          <c-input ref="inputInsideModal" placeholder="Type here..." />
+          <Drawer />
+          <!-- <c-input ref="inputInsideModal" placeholder="Type here..." /> -->
         </c-drawer-body>
 
         <c-drawer-footer>
-          <c-button variant="outline" mr="3" @click="isOpen = false"
+          <!-- <c-button variant="outline" mr="3" @click="isOpen = false"
             >Cancel</c-button
           >
-          <c-button variant-color="blue">Save</c-button>
+          <c-button variant-color="blue">Save</c-button> -->
         </c-drawer-footer>
       </c-drawer-content>
     </c-drawer>

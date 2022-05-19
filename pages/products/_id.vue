@@ -42,7 +42,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .product__disc {
     display: none;
   }
