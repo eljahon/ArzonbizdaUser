@@ -7,10 +7,15 @@ import CategoriesComponent from "~/my-components/categories-component/categories
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
 import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
+import aos from "@/helpers/aos"
+
+import AOS from '@/node_modules/aos/dist/aos'
+import 'aos/dist/aos.css'
 
 export default {
 
 name:"IndexComponent",
+
 components: {
     PopularProducts,
     DescriptionComponent,
@@ -20,19 +25,41 @@ components: {
     BrandsComponent,
     SliderComponent
 },
+  mixins: [
+    {
+      methods: {
+        aos,
+      },
+    },
+  ],
+
   props: ['products'],
+
+  mounted() {
+    AOS.init({ })
+  },
 }
 </script>
 
 <template>
   <div>
-    <SliderComponent />
-    <PopularProducts :products="products" />
-    <CategoriesComponent />
-    <BrandsComponent />
-    <BannerComponent />
-    <PopularProducts />
-    <DescriptionComponent />
-    <NewBlog />
+    <SliderComponent data-aos="zoom-in" data-aos-duration="1000" />
+    <div>
+      <PopularProducts
+        data-aos="fade-up"
+        :products="products"
+        title="Популярные товары"
+      />
+    </div>
+    <CategoriesComponent data-aos="fade-up" data-aos-duration="1000" />
+    <BrandsComponent data-aos="zoom-in-up" data-aos-duration="1000" />
+    <BannerComponent data-aos="zoom-in-down" data-aos-duration="1000" />
+    <PopularProducts
+      data-aos="fade-up"
+      title="Популярные товары"
+      data-aos-duration="1000"
+    />
+    <DescriptionComponent data-aos="fade-up" data-aos-duration="1000" />
+    <NewBlog data-aos="fade-up" data-aos-duration="1000" />
   </div>
 </template>

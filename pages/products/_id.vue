@@ -4,6 +4,11 @@ import ProductDescription from '~/my-components/product-description/ProductDescr
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
 
+import aos from '@/helpers/aos'
+
+import AOS from '@/node_modules/aos/dist/aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: 'ProductPage',
 
@@ -11,8 +16,17 @@ export default {
     ProductDescription,
     ProductSlider,
     CFlex,
-    ChakraTab
+    ChakraTab,
   },
+
+  mixins: [
+    {
+      methods: {
+        aos,
+      },
+    },
+  ],
+
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
     const propsList = {
@@ -25,25 +39,30 @@ export default {
 
     return {
       props: propsList,
-      productData:data
+      productData: data,
     }
+  },
+
+  mounted() {
+    AOS.init({})
   },
 }
 </script>
 
 <template>
-  <div class="product__page">
+  <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
     <c-flex gap="30px" mt="64px">
+      <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
-      <product-description :items="props" />
+      <product-description :items="props" class="product__disc" />
     </c-flex>
-    <ChakraTab :selected-product="productData"/>
+    <ChakraTab :selected-product="productData" />
   </div>
 </template>
 
-<style>
-@media screen and (max-width: 500px) {
-  .product-desc {
+<style lang="scss" scoped>
+@media screen and (max-width: 1200px) {
+  .product__disc {
     display: none;
   }
 }

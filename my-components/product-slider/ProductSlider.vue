@@ -42,6 +42,7 @@ export default {
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
+    console.log(this.images)
   },
   methods: {
     show() {
@@ -70,12 +71,7 @@ export default {
         :as-nav-for="c2"
         :focus-on-select="true"
         :infinite="true"
-        style="
-          height: 583px;
-          width: 705px;
-          background-color: #f4f4f4;
-          border-radius: 12px;
-        "
+        class="slider__wrapper"
       >
 
 
@@ -100,11 +96,17 @@ export default {
         :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
-        style="width: 705px"
+        style="width: 600px"
       >
-        <div v-for="(item, index) in images" :key="index" style="width: 705px">
+        <div v-for="(item, index) in images" :key="index" style="width: 600px">
           <div class="slider__card" width="100px">
-            <img width="81px" height="85px" :src="item.src" alt="image" />
+            <img
+              width="81px"
+              height="85px"
+              :src="item.src"
+              alt="image"
+              class="slider__image"
+            />
           </div>
         </div>
       </VueSlickCarousel>
@@ -125,9 +127,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.product__slider {
-  margin: 57px 0 0 131px;
+div {
+  margin: 0 auto;
 }
+
+.slider__wrapper {
+  height: 583px;
+  width: 705px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+}
+
 .slider__card {
   margin-top: 20px;
   background: #f4f4f4;
@@ -141,6 +151,10 @@ export default {
     border-radius: 12px;
   }
 }
+.slider__image {
+  margin: 0 auto;
+}
+
 .slider__footer {
   display: flex;
   gap: 30px;
@@ -155,6 +169,23 @@ export default {
   border-radius: 12px;
   &:hover {
     border: 1px solid #3bcff5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider__footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .slider__wrapper {
+    max-width: 380px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .slider__wrapper {
+    max-width: 320px;
   }
 }
 </style>

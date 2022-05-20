@@ -26,7 +26,7 @@ export default {
         color="color.InputColor"
         ><CLink
           as="router-link"
-          to="#"
+          to="/category"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
           >{{ $t('category_phones') }}</CLink

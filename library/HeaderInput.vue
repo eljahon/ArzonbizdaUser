@@ -9,6 +9,30 @@ export default {
     CButton,
     CIcon,
   },
+
+  data() {
+    return {
+      search: this.$route.query.search ? this.$route.query.search : '',
+    }
+  },
+  methods: {
+    searchProductGetAll() {
+      this.$router.push({
+        path: this.localePath('/search'),
+        query: { search: this.search },
+      })
+      this.$store.dispatch('changeProducts', {
+        axios: this.$axios,
+        query: this.search,
+      })
+    },
+
+    handleKeyPress(event) {
+      if (event.charCode === 13) {
+        this.searchProductGetAll()
+      }
+    },
+  },
 }
 </script>
 
@@ -17,7 +41,9 @@ export default {
     <CThemeProvider>
       <c-flex align="center">
         <c-input
-        class="header___input"
+          v-model="search"
+          class="header___input"
+          type="text"
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
@@ -30,9 +56,12 @@ export default {
           border-bottom-left-radius="12px"
           border-bottom-end-radius="none"
           border-top-right-radius="none"
+          @keypress="handleKeyPress"
         />
+
         <c-button
           class="header__button"
+          type="submit"
           background-color="color.WarningColor1"
           aria-label="Search database"
           _focus="none"
@@ -45,7 +74,9 @@ export default {
           0px;"
           cursor="pointer"
           mr="20px"
+          @click="searchProductGetAll"
         >
+          <!-- :disabled="search.length === 0" -->
           <CIcon
             name="search"
             fill="transparent"
@@ -74,9 +105,8 @@ export default {
     margin: 16px 0 0 0px;
   }
 }
-
 @media screen and(max-width: 320px) {
-  .css-6hv6t1-className {
+  .header__input {
     width: 234px;
   }
 }

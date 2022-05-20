@@ -1,16 +1,33 @@
 <script>
 import BlogDisc from '~/my-components/blog-disc/blog-disc.vue'
-import CompareChakraTab from '~/my-components/compare-tabs/CompareChakraTab.vue'
 import NewBlog from '~/my-components/newBlog/NewBlog.vue'
+
+import aos from '@/helpers/aos'
+
+import AOS from '@/node_modules/aos/dist/aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: 'BlogComponent',
-  components: { BlogDisc, NewBlog, CompareChakraTab },
+
+  components: { BlogDisc, NewBlog },
+
+  mixins: [
+    {
+      methods: {
+        aos,
+      },
+    },
+  ],
+
+  mounted() {
+    AOS.init({})
+  },
 }
 </script>
 <template>
   <div>
-    <blog-disc />
-    <NewBlog />
-    <compare-chakra-tab />
+    <blog-disc data-aos="fade-up" data-aos-duration="1000" />
+    <NewBlog data-aos="fade-up" data-aos-duration="1000" />
   </div>
 </template>
