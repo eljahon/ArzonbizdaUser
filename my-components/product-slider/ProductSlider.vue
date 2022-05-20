@@ -11,12 +11,14 @@ export default {
     VueSlickCarousel,
     CIcon,
   },
+
   props: {
     images: {
       type: Array,
       required: true,
     },
   },
+
   data() {
     return {
       // items: [
@@ -75,6 +77,8 @@ export default {
           border-radius: 12px;
         "
       >
+
+
         <div
           v-for="(item, index) in images"
           :key="index"
