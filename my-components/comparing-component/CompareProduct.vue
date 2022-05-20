@@ -1,5 +1,6 @@
 <script>
 import { CBox, CStack, CFlex } from '@chakra-ui/vue'
+
 export default {
   name: 'CompareProduct',
   components: {
@@ -9,6 +10,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <c-box class="comparing__product">
     <c-stack :spacing="4">

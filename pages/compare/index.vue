@@ -14,6 +14,8 @@ export default {
     CompareTab,
     CompareProductMobile,
   },
+
+
   mounted() {
     this.fetchItems()
   },

@@ -9,8 +9,10 @@ import {
   CText,
   CButton,
 } from '@chakra-ui/vue'
+
 export default {
   name: 'CompareProductMobile',
+
   components: {
     CBox,
     CHeading,
@@ -23,6 +25,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <c-box max-width="375px">
     <c-stack :spacing="'8px'" mb="22px">
