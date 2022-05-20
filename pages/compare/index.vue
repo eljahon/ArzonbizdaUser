@@ -15,36 +15,40 @@ export default {
     CompareProductMobile,
   },
 
-
   mounted() {
     this.fetchItems()
+    // },
+    // methods: {
+    //   async fetchItems() {
+    //     // const query = { prs: this.$store.state.isBadge }
+    //     const { data } = await this.$axios.get(
+    //       'http://arzonbizda.herokuapp.com/product/compare',
+    //       null,
+    //       JSON.stringify({
+    //         prs: [
+    //           'fef225f3-08b6-4a91-a8e5-a1627f7ec23c',
+    //           'fef225f3-08b6-4a91-a8e5-a1627f7ec23c',
+    //         ],
+    //       })
+    //     )
+
+    //     console.log(data)
+    //   },
+    // },
+    
+    //  asyncData({ $axios }) {
+    //   // const query = { prs: this.$store.state.isBadge }
+    //   const { data } = await $axios.get('/products/compares', {
+    //     params: {
+    //       prs: [
+    //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+    //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+    //       ],
+    //     },
+    //   })
+    //   console.log(data)
+    // },
   },
-  methods: {
-    async fetchItems() {
-      // const query = { prs: this.$store.state.isBadge }
-      const { data } = await this.$axios.get('/product/compare', {
-        params: {
-          prs: [
-            'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-            'e0f1796a-abea-43a7-bd11-a5d76d73e29f',
-          ],
-        },
-      })
-      console.log(data)
-    },
-  },
-  //  asyncData({ $axios }) {
-  //   // const query = { prs: this.$store.state.isBadge }
-  //   const { data } = await $axios.get('/products/compares', {
-  //     params: {
-  //       prs: [
-  //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-  //         'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
-  //       ],
-  //     },
-  //   })
-  //   console.log(data)
-  // },
 }
 </script>
 <template>
@@ -52,8 +56,8 @@ export default {
     <c-simple-grid :columns="2" :spacing="'30px'">
       <compare-product />
       <compare-product />
-      <compare-product-mobile />
-      <compare-product-mobile />
+      <compare-product-mobile data />
+      <compare-product-mobile data />
       <compare-tab />
       <compare-tab />
     </c-simple-grid>
