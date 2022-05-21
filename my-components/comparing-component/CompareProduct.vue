@@ -95,7 +95,7 @@ export default {
             :line-height="['12px', '12px', '12px', '16px', '20px', '24px']"
             color="color.TextColor5"
             :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
-            >26</c-box
+            >{{ item.comments.length }}</c-box
           >
         </c-box>
         <c-divider orientation="vertical" border-color="color.iconBg" />

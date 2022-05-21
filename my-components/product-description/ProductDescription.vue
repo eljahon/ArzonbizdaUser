@@ -34,7 +34,7 @@ export default {
   ],
   props: {
     items: {
-      type: String,
+      type: Object,
       required: true,
     },
   },

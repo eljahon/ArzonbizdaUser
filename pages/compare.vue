@@ -24,25 +24,32 @@ export default {
       error: null,
     }
   },
+
   mounted() {
     this.fetchItems()
   },
+
   methods: {
     async fetchItems() {
       const query = { prs: this.$store.state.isBadge }
+
       this.loading = true
+
       const { data } = await this.$axios.get('product/compare', {
         params: query,
       })
+
       this.loading = false
       this.products = data.data.products
     },
   },
 }
 </script>
+
 <template>
   <c-box>
     <loader-component v-if="loading" />
+
     <div v-if="!loading">
       <c-simple-grid :columns="2" :spacing="'30px'">
         <div v-for="(item, id) in products" :key="id">

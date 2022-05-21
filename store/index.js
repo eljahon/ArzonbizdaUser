@@ -9,6 +9,7 @@ export const getters = {
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
 }
+
 export const state = () => {
   return {
     productsList: [],
