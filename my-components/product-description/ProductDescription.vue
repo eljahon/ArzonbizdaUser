@@ -52,7 +52,7 @@ export default {
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
       } else if (this.isBadgeLength === 2) {
-        this.$router.push('/compare')
+        console.log(this.$store.state.isBadge)
       }
     },
   },
@@ -154,8 +154,8 @@ export default {
             <CIcon name="greenTick" color="color.greenTick" size="20px" />
           </CFlex>
           <CText font-size="20px" line-height="24px" color="color.TextColor2"
-            >UPD Mobile</CText
-          >
+            >UPD Mobile
+          </CText>
         </CBox>
       </CFlex>
       <CText
@@ -198,7 +198,7 @@ export default {
         </CButton>
         <CButton
           height="64px"
-          :disabled="badgeLength === 2"
+          :disabled="isBadgeLength === 2"
           max-w="337px"
           w="100%"
           border="1px"

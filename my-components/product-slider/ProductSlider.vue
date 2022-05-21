@@ -73,8 +73,6 @@ export default {
         :infinite="true"
         class="slider__wrapper"
       >
-
-
         <div
           v-for="(item, index) in images"
           :key="index"
@@ -175,6 +173,11 @@ div {
 @media screen and (max-width: 768px) {
   .slider__footer {
     display: none;
+  }
+
+  .slider__wrapper {
+    max-width: 618px;
+    margin: 0 auto;
   }
 }
 

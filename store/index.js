@@ -2,6 +2,9 @@ export const getters = {
   productsList: (state) => {
     return state.productsList
   },
+  isBadgeLength: (state) => {
+    return state.isBadge.length
+  },
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
@@ -13,6 +16,7 @@ export const state = () => {
     title: 'title',
     loading: false,
     has_content: 'pending',
+    isBadge: [],
   }
 }
 export const mutations = {
@@ -44,6 +48,9 @@ export const mutations = {
   },
 }
 export const actions = {
+  actionsIsCom(vuexContext, payload) {
+    vuexContext.commit('SET_ISCOM', payload)
+  },
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')

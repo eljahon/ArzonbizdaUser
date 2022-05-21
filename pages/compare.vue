@@ -4,6 +4,7 @@ import CompareProduct from '~/my-components/comparing-component/CompareProduct.v
 import CompareTab from '~/my-components/compare-tabs/CompareTab.vue'
 import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
+import LoaderComponent from '~/library/LoaderComponent.vue'
 
 export default {
   name: 'ComparePage',
@@ -14,6 +15,7 @@ export default {
     CompareTab,
     CompareProductMobile,
     ProductSlider,
+    LoaderComponent,
   },
   data() {
     return {
@@ -27,37 +29,29 @@ export default {
   },
   methods: {
     async fetchItems() {
-      // const query = { prs: this.$store.state.isBadge }
+      const query = { prs: this.$store.state.isBadge }
       this.loading = true
-      const { data } = await this.$axios.get(
-        'http://arzonbizda.herokuapp.com/product/compare',
-        {
-          params: {
-            prs: [
-              'fef225f3-08b6-4a91-a8e5-a1627f7ec23c',
-              'fef225f3-08b6-4a91-a8e5-a1627f7ec23c',
-            ],
-          },
-        }
-      )
+      const { data } = await this.$axios.get('product/compare', {
+        params: query,
+      })
       this.loading = false
       this.products = data.data.products
-      console.log(data)
     },
   },
 }
 </script>
 <template>
   <c-box>
-    <c-simple-grid :columns="2" :spacing="'30px'">
-      <div v-if="!loading">
-        <div v-for="(item, index) in products" :key="index">
+    <loader-component v-if="loading" />
+    <div v-if="!loading">
+      <c-simple-grid :columns="2" :spacing="'30px'">
+        <div v-for="(item, id) in products" :key="id">
           <product-slider :images="item.images" />
-          <compare-product item />
-          <compare-product-mobile item />
-          <compare-tab item />
+          <compare-product :item="item" />
+          <compare-product-mobile :item="item" />
+          <compare-tab :item="item.characteristics" />
         </div>
-      </div>
-    </c-simple-grid>
+      </c-simple-grid>
+    </div>
   </c-box>
 </template>

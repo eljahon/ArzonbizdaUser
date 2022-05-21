@@ -5,6 +5,7 @@ import CompareTabComment from './CompareTabComment.vue'
 import CompareTabCharacteristics from './CompareTabCharacteristics.vue'
 import CompareReviews from './CompareReviews.vue'
 export default {
+  name: 'CompareTabs',
   components: {
     CTabs,
     CTabList,
@@ -16,8 +17,20 @@ export default {
     CompareTabCharacteristics,
     CompareReviews,
   },
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.item)
+  },
 }
 </script>
+
 <template>
   <c-tabs
     mt="58px"
@@ -166,7 +179,7 @@ export default {
         <compare-reviews />
       </c-tab-panel>
       <c-tab-panel>
-        <compare-tab-characteristics />
+        <compare-tab-characteristics :character="item.characteristics" />
       </c-tab-panel>
     </c-tab-panels>
   </c-tabs>
