@@ -11,12 +11,14 @@ export default {
     VueSlickCarousel,
     CIcon,
   },
+
   props: {
     images: {
       type: Array,
       required: true,
     },
   },
+
   data() {
     return {
       // items: [
@@ -171,6 +173,11 @@ div {
 @media screen and (max-width: 768px) {
   .slider__footer {
     display: none;
+  }
+
+  .slider__wrapper {
+    max-width: 618px;
+    margin: 0 auto;
   }
 }
 

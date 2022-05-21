@@ -7,7 +7,12 @@ export default {
     CImage,
     CText,
   },
-  props: ['data'],
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 <template>
@@ -18,7 +23,7 @@ export default {
           padding="12px 20px"
           bg="color.pocoBg"
           border-radius="12px"
-          :src="require('@/assets/img/poco.png')"
+          :src="item.images[0].src"
           position="absolute"
           width="100%"
           height="100%"

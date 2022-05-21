@@ -1,14 +1,34 @@
 <script>
 import { CBox, CStack, CFlex } from '@chakra-ui/vue'
+
+import priceSpacer from '@/helpers/price-spacer'
+
 export default {
   name: 'CompareProduct',
+
   components: {
     CBox,
     CStack,
     CFlex,
   },
+
+  mixins: [
+    {
+      methods: {
+        priceSpacer,
+      },
+    },
+  ],
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
+
 <template>
   <c-box class="comparing__product">
     <c-stack :spacing="4">
@@ -18,7 +38,7 @@ export default {
         :font-size="['24px', '24px', '26px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
-        >Смартфон Xiaomi Poco X3 Pro 8/256GB</c-heading
+        >{{ item.name }}</c-heading
       >
       <c-flex>
         <c-box d="flex" align-items="center">
@@ -75,7 +95,7 @@ export default {
             :line-height="['12px', '12px', '12px', '16px', '20px', '24px']"
             color="color.TextColor5"
             :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
-            >26</c-box
+            >{{ item.comments.length }}</c-box
           >
         </c-box>
         <c-divider orientation="vertical" border-color="color.iconBg" />
@@ -112,7 +132,7 @@ export default {
             :font-size="['12px', '18px', '20px', '24px', '32px', '36px']"
             :line-height="['13px', '24px', '26px', '28px', '42px', '48px']"
             color="color.TextColor2"
-            >3 324 000 сум</c-heading
+            >{{ priceSpacer(item.price.toString()) }}</c-heading
           >
           <c-box
             as="span"
@@ -142,8 +162,14 @@ export default {
             >
             <c-icon name="greenTick" color="color.greenTick" size="20px" />
           </c-flex>
-          <c-text font-size="20px" line-height="24px" color="color.TextColor2"
-            >UPD Mobile</c-text
+          <c-link
+            :href="someVariable"
+            :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
+            :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
+            color="color.TextColor2"
+            :_hover="false"
+            cursor="pointer"
+            >UPD Mobile</c-link
           >
         </c-box>
       </c-flex>
@@ -213,10 +239,12 @@ export default {
           mt="32px"
           >25 предложений</c-text
         >
-        <c-text line-height="20px" color="color.WarningColor1"
-          >В наличии у 13 продавцов</c-text
-        >
+        <!-- <c-text line-height="20px" color="color.WarningColor1"
+          >В наличии у {{ item.compares.length }} продавцов</c-text
+        > -->
         <c-button
+          as="nuxt-link"
+          :to="item.link"
           height="64px"
           max-w="337px"
           w="100%"
