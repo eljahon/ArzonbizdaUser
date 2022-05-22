@@ -1,31 +1,46 @@
 <script>
-import { CSimpleGrid, CBox } from '@chakra-ui/vue'
-import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
+import { CBox } from '@chakra-ui/vue'
+// import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
+import BreadCumb from '../my-components/breadcumb/Breadcumb.vue'
 // import CompareTab from '~/my-components/compare-tabs/CompareTab.vue'
-import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
+// import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
 // import ProductSlider from '~/my-components/product-slider/.vue'
 export default {
   name: 'ComparePage',
   components: {
-    CompareProduct,
-    CSimpleGrid,
+    // CompareProduct,
+    // CSimpleGrid,
     CBox,
+    BreadCumb,
     // CFlex,
     // CompareTab,
-    CompareProductMobile,
+    // CompareProductMobile,
   },
-  async asyncData({ $axios }) {
-    const arr = JSON.parse(localStorage.getItem('contrastArray'))
-
-    const { data } = await $axios.get('/product/compare', {
-      data: arr,
-    })
-
+  data() {
     return {
-      data: data.data.products,
-      firstData: data.data.products[0],
-      secondData: data.data.products[1],
+      route: this.$route,
     }
+  },
+  // async asyncData({ $axios }) {
+  //   const arr = JSON.parse(localStorage.getItem('contrastArray'))
+
+  //   const { data } = await $axios.get('/product/compare', {
+  //     data: arr,
+  //   })
+
+  //   return {
+  //     data: data.data.products,
+  //     firstData: data.data.products[0],
+  //     secondData: data.data.products[1],
+  //   }
+  // },
+  mounted() {
+    this.storeData()
+  },
+  methods: {
+    storeData() {
+      this.$store.dispatch('addBreadcumbs', this.route)
+    },
   },
   // methods: {
   //   async fetchItems() {
@@ -47,13 +62,14 @@ export default {
 
 <template>
   <c-box>
+    <BreadCumb />
     //
     <!-- <c-simple-grid :columns="2" :spacing="'30px'"> -->
-    <c-simple-grid :columns="2" :spacing="'30px'">
+    <!-- <c-simple-grid :columns="2" :spacing="'30px'">
       <compare-product v-for="(item, id) in data" :key="id" :item="item" />
     </c-simple-grid>
     <compare-product-mobile />
-    <compare-product-mobile />
+    <compare-product-mobile /> -->
     //
     <!-- <compare-tab />
       <compare-tab /> -->

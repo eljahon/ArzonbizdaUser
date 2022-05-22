@@ -1,6 +1,6 @@
 <script>
+import BreadCumb from '../my-components/breadcumb/Breadcumb.vue'
 import CategoryMain from '~/my-components/categories-component/CategoryMain.vue'
-
 import aos from '@/helpers/aos'
 
 import AOS from '@/node_modules/aos/dist/aos'
@@ -11,6 +11,7 @@ export default {
 
   components: {
     CategoryMain,
+    BreadCumb,
   },
 
   mixins: [
@@ -20,8 +21,14 @@ export default {
       },
     },
   ],
+  data() {
+    return {
+      route: this.$route,
+    }
+  },
 
   mounted() {
+    this.$store.dispatch('addBreadcumbs', this.route)
     AOS.init({})
   },
 }
@@ -29,6 +36,7 @@ export default {
 
 <template>
   <div>
+    <BreadCumb />
     <CategoryMain data-aos="fade-up" data-aos-duration="1000" />
   </div>
 </template>

@@ -2,17 +2,23 @@ export const getters = {
   productsList: (state) => {
     return state.productsList
   },
+  isBadgeLength: (state) => {
+    return state.isBadge.length
+  },
+  breadCumbs: (state) => state.breadCumbs,
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
 }
 export const state = () => {
   return {
+    isBadge: [],
     productsList: [],
     brandItem: [],
     title: 'title',
     loading: false,
     has_content: 'pending',
+    breadCumbs: [],
   }
 }
 export const mutations = {
@@ -27,6 +33,16 @@ export const mutations = {
     //   }
     // });
     state.productsList = payload
+  },
+
+  SET_BREADCUMBS(state, payload) {
+    state.breadCumbs.forEach((item) => {
+      if (item.fullPath === payload.fullPath) {
+        state.breadCumbs[-1] = item
+      } else {
+        state.breadCumbs.push(payload)
+      }
+    })
   },
 
   SET_ISCOM(state, payload) {
@@ -44,6 +60,9 @@ export const mutations = {
   },
 }
 export const actions = {
+  addBreadcumbs(ctx, payload) {
+    ctx.commit('SET_BREADCUMBS', payload)
+  },
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')

@@ -1,5 +1,7 @@
 <script>
 import { CFlex } from '@chakra-ui/vue'
+import BreadCumb from '../../my-components/breadcumb/Breadcumb.vue'
+
 import ProductDescription from '~/my-components/product-description/ProductDescription.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
@@ -13,6 +15,7 @@ export default {
   name: 'ProductPage',
 
   components: {
+    BreadCumb,
     ProductDescription,
     ProductSlider,
     CFlex,
@@ -42,15 +45,28 @@ export default {
       productData: data,
     }
   },
+  data() {
+    return {
+      route: this.$route,
+    }
+  },
 
   mounted() {
+    this.storeData()
     AOS.init({})
+  },
+
+  methods: {
+    storeData() {
+      this.$store.dispatch('addBreadcumbs', this.route)
+    },
   },
 }
 </script>
 
 <template>
   <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
+    <BreadCumb />
     <c-flex gap="30px" mt="64px">
       <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
