@@ -7,6 +7,7 @@ import priceSpacer from '@/helpers/price-spacer'
 
 export default {
   name: 'PopularProduct',
+
   components: {
     CBox,
     CImage,

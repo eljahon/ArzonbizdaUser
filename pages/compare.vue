@@ -51,14 +51,16 @@ export default {
     <loader-component v-if="loading" />
 
     <div v-if="!loading">
-      <c-simple-grid :columns="2" :spacing="'30px'">
+      <c-simple-grid :columns="2" gap="30px" :spacing="'30px'">
         <div v-for="(item, id) in products" :key="id">
           <product-slider :images="item.images" />
           <compare-product :item="item" />
           <compare-product-mobile :item="item" />
-          <compare-tab :item="item.characteristics" />
+          <compare-tab :item="item" />
         </div>
       </c-simple-grid>
     </div>
   </c-box>
 </template>
+
+<style lang="scss" scoped></style>

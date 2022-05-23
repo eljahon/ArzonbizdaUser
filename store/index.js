@@ -2,9 +2,11 @@ export const getters = {
   productsList: (state) => {
     return state.productsList
   },
+
   isBadgeLength: (state) => {
     return state.isBadge.length
   },
+
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,

@@ -5,7 +5,7 @@ import {
   CStack,
   CFlex,
   CIcon,
-  CLink,
+  // CLink,
   CText,
   CButton,
 } from '@chakra-ui/vue'
@@ -21,7 +21,7 @@ export default {
     CStack,
     CFlex,
     CIcon,
-    CLink,
+    // CLink,
     CText,
     CButton,
   },
@@ -63,6 +63,7 @@ export default {
       >
         {{ item.name }}
       </c-heading>
+
       <c-flex>
         <c-box d="flex" align-items="center">
           <c-icon
@@ -104,7 +105,7 @@ export default {
         :max-h="['20px', '35px', '50px', '65px', '75px', '96px']"
         :p="['6px', '8px', '12px', '18px', '24px', '26px']"
       >
-        <c-link
+        <!-- <c-link
           :href="someVariable"
           :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
           :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
@@ -112,7 +113,7 @@ export default {
           :_hover="false"
           cursor="pointer"
           >UPD Mobile</c-link
-        >
+        > -->
         <c-icon name="greenTick" size="9px" color="color.greenTick" />
       </c-box>
     </c-stack>

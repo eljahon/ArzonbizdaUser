@@ -59,11 +59,15 @@ export default {
       // ],
     }
   },
+
+  mounted() {
+    console.log(this.item)
+  },
 }
 </script>
 <template>
   <CThemeProvider>
-    <c-box v-for="data in item" :key="data.id"
+    <c-box v-for="data in item" :key="data"
       ><prices-tab-content-item :item="item" /></c-box
   ></CThemeProvider>
 </template>

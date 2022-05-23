@@ -88,7 +88,7 @@ export default {
             fill="transparent"
             color="color.TextColor5"
           />
-          <c-box
+          <!-- <c-box
             as="span"
             font-weight="400"
             :font-size="['10px', '10px', '10px', '12px', '14px', '16px']"
@@ -96,7 +96,7 @@ export default {
             color="color.TextColor5"
             :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
             >{{ item.comments.length }}</c-box
-          >
+          > -->
         </c-box>
         <c-divider orientation="vertical" border-color="color.iconBg" />
         <c-box d="flex" align-items="center">

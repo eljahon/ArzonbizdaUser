@@ -10,16 +10,22 @@ export default {
     CIcon,
     CBadge,
   },
+
   computed: {
     ...mapGetters(['isBadgeLength']),
   },
+
   methods: {
     toRoute() {
-      const data = JSON.parse(localStorage.getItem('contrastArray'))
-      console.log(data)
-      if (data.length === 2 && this.isBadgeLength === 2) {
-        this.$router.push('/compare')
-        // this.$router.push(this.localePath({ path: "/compare", query: { firstId: data[0], secondId: data[1] } }));
+      const data = this.$store.state.isBadge
+      if (this.isBadgeLength === 2) {
+        // this.$router.push('/compare')
+        this.$router.push(
+          this.localePath({
+            path: '/compare',
+            query: { firstId: data[0], secondId: data[1] },
+          })
+        )
       }
     },
   },
@@ -70,7 +76,6 @@ export default {
     display: none;
   }
 }
-
 @media screen and(max-width: 768px) {
   .header__button {
     margin-left: 0;
