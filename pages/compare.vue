@@ -36,6 +36,7 @@ export default {
   // },
   mounted() {
     this.storeData()
+    console.log(this.route)
   },
   methods: {
     storeData() {

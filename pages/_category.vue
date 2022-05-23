@@ -30,6 +30,7 @@ export default {
   mounted() {
     this.$store.dispatch('addBreadcumbs', this.route)
     AOS.init({})
+    console.log(this.route)
   },
 }
 </script>
