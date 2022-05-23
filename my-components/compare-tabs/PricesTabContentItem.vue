@@ -33,7 +33,7 @@ export default {
 </script>
 <template>
   <c-box display="flex" mt="40px">
-    <CLink as="nuxt-link" :to="item.link" target="_blank">
+    <CLink :href="item.link" is-external>
       <c-box>
         <c-box width="143px" height="152px" position="relative"
           ><c-image

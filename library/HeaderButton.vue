@@ -19,7 +19,6 @@ export default {
     toRoute() {
       const data = this.$store.state.isBadge
       if (this.isBadgeLength === 2) {
-        // this.$router.push('/compare')
         this.$router.push(
           this.localePath({
             path: '/compare',
@@ -62,7 +61,12 @@ export default {
         <p class="icon__text">
           {{ $t('compare') }}
         </p>
-        <CBadge variant="solid" color-scheme="green">
+        <CBadge
+          variant="solid"
+          background="#6FCF97"
+          border-radius="10px"
+          margin-bottom="10px"
+        >
           {{ isBadgeLength }}
         </CBadge>
       </c-button>
