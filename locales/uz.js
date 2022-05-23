@@ -20,6 +20,7 @@ export const uz = {
   address: 'Manzil',
   reviews: 'Shahr qoldirish',
   compare: 'Taqqoslash',
+  view: "Ko'rish",
   telephone: 'Telefonlar',
   tablet: 'Planshetlar',
   tv: 'Televizorlar',

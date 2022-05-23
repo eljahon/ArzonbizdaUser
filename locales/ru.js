@@ -20,6 +20,7 @@ export const ru = {
   reviews: 'Оставить отзыв',
   search: 'Поиск...',
   compare: 'Сравнить',
+  view: 'Смотреть',
   telephone: 'Телефоны',
   tablet: 'Планшеты',
   tv: 'Телевизоры',

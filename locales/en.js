@@ -20,6 +20,7 @@ export const en = {
   address: 'Address',
   reviews: 'Reviews',
   compare: 'Compare',
+  view: 'View',
   telephone: 'Telephones',
   tablet: 'Tablets',
   tv: 'Tv Set',
