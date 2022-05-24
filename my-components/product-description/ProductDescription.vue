@@ -15,6 +15,7 @@ import priceSpacer from '@/helpers/price-spacer'
 
 export default {
   name: 'ProductPage',
+
   components: {
     CBox,
     CStack,
@@ -25,6 +26,7 @@ export default {
     CText,
     CButton,
   },
+
   mixins: [
     {
       methods: {
@@ -32,20 +34,24 @@ export default {
       },
     },
   ],
+
   props: {
     items: {
       type: Object,
       required: true,
     },
   },
+
   data() {
     return {
       isCom: false,
     }
   },
+
   computed: {
     ...mapGetters(['isBadgeLength']),
   },
+
   methods: {
     IsComponents() {
       this.$store.dispatch('actionsIsCom', this.$route.params.id)
@@ -63,7 +69,7 @@ export default {
 </script>
 
 <template>
-  <CBox max-w="705px">
+  <CBox max-w="705px" pr="15px">
     <CStack>
       <CHeading
         as="h2"
