@@ -25,6 +25,7 @@ export default {
     return {
       selectedItem: '',
       switched: true,
+      columns:['2', '3', '3', '4', '4', '4']
     }
   },
 
@@ -88,11 +89,12 @@ export default {
       </CFlex>
 
     </CFlex>
-    <PopularProducts title="Категория товаров" />
+    <PopularProducts title="Категория товаров" :columns="columns"/>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
   @media screen and (max-width:1050px) {
     .c-main__wrapper{
       display: none;
