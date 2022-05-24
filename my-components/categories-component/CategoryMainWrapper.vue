@@ -25,7 +25,7 @@ export default {
     return {
       selectedItem: '',
       switched: true,
-      columns:['2', '3', '3', '4', '4', '4']
+      columns: ['4'],
     }
   },
 
@@ -44,8 +44,12 @@ export default {
 </script>
 
 <template>
-  <div >
-    <CFlex direction="column" class="c-main__wrapper">
+  <div>
+    <CFlex
+      direction="column"
+      class="c-main__wrapper"
+      :class="{ showHide: switched }"
+    >
       <CFlex align-items="center">
         <CBox p="10px" border="1px solid #E3E6E6" border-radius="12px">
           <CFormControl>
@@ -87,17 +91,24 @@ export default {
           </CSelect>
         </CBox>
       </CFlex>
-
     </CFlex>
-    <PopularProducts title="Категория товаров" :columns="columns"/>
+    <PopularProducts
+      class="popular__product"
+      :class="{ showHide: switched }"
+      title="Категория товаров"
+      :columns="columns"
+    />
   </div>
 </template>
 
 <style lang="scss" scoped>
-
-  @media screen and (max-width:1050px) {
-    .c-main__wrapper{
-      display: none;
-    }
+@media screen and (max-width: 1050px) {
+  .c-main__wrapper {
+    display: none;
   }
+}
+
+.showHide {
+  grid-template-columns: 1fr !important;
+}
 </style>

@@ -18,17 +18,23 @@ export default {
     title: {
       type: String,
     },
-    columns:{
-      type:Array,
-      required:true
-    }
-  },
 
+    columns: {
+      type: Array,
+      required: true,
+    },
+  },
 
   data() {
     return {}
   },
   computed: {},
+
+  methods: {
+    Switched(e) {
+      this.$emit('switch', e.target.checked)
+    },
+  },
 }
 </script>
 <template>
@@ -47,7 +53,9 @@ export default {
       </CFlex>
 
       <CSimpleGrid
-        :columns="columns.length === 0 ? ['2', '3', '3', '4', '4', '5'] : columns"
+        :columns="
+          columns.length === 0 ? ['2', '3', '3', '4', '4', '5'] : columns
+        "
         :spacing="['10px', '15px', '20px', '22px', '26px', '30px']"
         :rows="['1', '1', '2', '2', '3', '3']"
         justify-items="center"
@@ -65,6 +73,10 @@ export default {
   </CThemeProvider>
 </template>
 <style lang="scss" scoped>
+.showHide {
+  grid-template-columns: repeat(3fr, 1fr);
+}
+
 .popular__product {
   @media screen and(max-width: 62em) {
     &:nth-child(n + 10) {
