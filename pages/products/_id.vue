@@ -49,8 +49,8 @@ export default {
 
 <template>
   <CBox>
+    <LoaderComponent v-if="$store.state.loading" />
     <div class="product__page">
-      <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
     </div>

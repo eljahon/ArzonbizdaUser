@@ -155,7 +155,7 @@ div {
   display: flex;
   gap: 30px;
   justify-content: space-between;
-  max-width: 100%;
+  max-width: 83%;
   margin: 0;
 }
 .slide__btn {
