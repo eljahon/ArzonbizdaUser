@@ -1,5 +1,4 @@
 <script>
-import { CFlex } from '@chakra-ui/vue'
 import ProductDescription from '~/my-components/product-description/ProductDescription.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
@@ -15,7 +14,6 @@ export default {
   components: {
     ProductDescription,
     ProductSlider,
-    CFlex,
     ChakraTab,
   },
 
@@ -50,18 +48,29 @@ export default {
 </script>
 
 <template>
-  <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
-    <c-flex gap="30px" mt="64px">
+  <CBox>
+    <div class="product__page">
       <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
-    </c-flex>
+    </div>
     <ChakraTab :selected-product="productData" />
-  </div>
+  </CBox>
 </template>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 1200px) {
+.product__page {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .product__page {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
   .product__disc {
     display: none;
   }

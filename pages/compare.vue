@@ -1,5 +1,5 @@
 <script>
-import { CSimpleGrid, CBox } from '@chakra-ui/vue'
+import { CGrid, CBox } from '@chakra-ui/vue'
 import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
 import CompareTab from '~/my-components/compare-tabs/CompareTab.vue'
 import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
@@ -10,7 +10,7 @@ export default {
   name: 'ComparePage',
   components: {
     CompareProduct,
-    CSimpleGrid,
+    CGrid,
     CBox,
     CompareTab,
     CompareProductMobile,
@@ -51,16 +51,23 @@ export default {
     <loader-component v-if="loading" />
 
     <div v-if="!loading">
-      <c-simple-grid :columns="2" gap="30px" :spacing="'30px'">
-        <div v-for="(item, id) in products" :key="id">
-          <product-slider :images="item.images" />
-          <compare-product :item="item" />
+      <c-grid template-columns="repeat(2, 50%)" gap="6" mt="64px">
+        <div v-for="(item, id) in products" :key="id" class="compare__wrapper">
+          <product-slider :images="item.images" class="product__slider" />
+          <compare-product class="compare__product" :item="item" />
           <compare-product-mobile :item="item" />
           <compare-tab :item="item" />
         </div>
-      </c-simple-grid>
+      </c-grid>
     </div>
   </c-box>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.compare__wrapper {
+  padding-right: 20px;
+}
+.compare__product {
+  margin-top: 40px;
+}
+</style>

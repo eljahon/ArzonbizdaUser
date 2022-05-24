@@ -31,9 +31,10 @@ export default {
   },
 }
 </script>
+
 <template>
   <c-box display="flex" mt="40px">
-    <CLink :href="item.link" is-external>
+    <CLink :href="item.link" is-external display="flex">
       <c-box>
         <c-box width="143px" height="152px" position="relative"
           ><c-image
