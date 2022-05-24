@@ -56,4 +56,9 @@ export default {
 .showHide {
   grid-template-columns: 1fr !important;
 }
+@media screen and (max-width:1050px) {
+  .category__main{
+    display: block;
+  }
+}
 </style>

@@ -43,8 +43,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <CFlex direction="column">
+  <div >
+    <CFlex direction="column" class="c-main__wrapper">
       <CFlex align-items="center">
         <CBox p="10px" border="1px solid #E3E6E6" border-radius="12px">
           <CFormControl>
@@ -87,9 +87,15 @@ export default {
         </CBox>
       </CFlex>
 
-      <PopularProducts title="Категория товаров" />
     </CFlex>
+    <PopularProducts title="Категория товаров" />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  @media screen and (max-width:1050px) {
+    .c-main__wrapper{
+      display: none;
+    }
+  }
+</style>
