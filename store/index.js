@@ -68,6 +68,9 @@ export const mutations = {
   },
 }
 export const actions = {
+  actionsIsCom(ctx, payload) {
+    ctx.commit('SET_ISCOM', payload)
+  },
   addBreadcumbs(ctx, payload) {
     ctx.commit('SET_BREADCUMBS', payload)
   },

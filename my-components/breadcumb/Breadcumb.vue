@@ -12,22 +12,41 @@ export default {
     CBreadcrumbItem,
     CBreadcrumbLink,
   },
+  data(){
+    return{
+      namePage:""
+    }
+  },
   computed: {
     ...mapGetters(['breadCumbs']),
-    bredcrumbsData() {
-      if(this.$route.params) {
-        return Object.keys(this.$route.params).map(item => {
-          return {
-            name: item,
-            param: this.$route.params[item],
-          }
-        })
+    bredcrumbsData: {
+      set(newValue) {
+        console.log("sdsdsdsd", newValue);
+        this.pageN = newValue
+      },
+      get() {
+        if(this.$route.params) {
+          return Object.keys(this.$route.params).map(item => {
+            console.log("item", item)
+            return {
+              name: item,
+              param: this.$route.params[item],
+            }
+          })
+        }
+        return null
       }
-      return null
     }
   },
   mounted(){
-    // console.log(bredcrumbsData)
+    this.getIdProduct(this.$route.params.id)
+  },
+  methods:{
+   async getIdProduct(id){
+      const { data } = await this.$axios.get(`/product/${id}`)
+      const ghg = await data.product.brand_name
+      this.namePage = ghg
+    }
   }
 }
 </script>
@@ -48,7 +67,7 @@ export default {
       :key="index"
       >
         <c-breadcrumb-link as="nuxt-link" :to="localePath({ name: page.name, params: {[page.name]: page.param} })">
-          {{ page.param }}
+          <p>{{ page.name === 'id' ? namePage : page.param }}</p>
         </c-breadcrumb-link>
       </c-breadcrumb-item>
     </c-breadcrumb>
