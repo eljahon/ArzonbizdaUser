@@ -52,7 +52,12 @@ export default {
       cursor="pointer"
       @click="openProductPage(item.id)"
     >
-      <CImage w="176px" h="212px" :src="item.img" object-fit="cover" />
+      <CImage
+        :w="['86px', '104px', '122px', '140px', '158px', '176px']"
+        :h="['104px', '126px', '146px', '168', '190px', '212px']"
+        :src="item.img"
+        object-fit="cover"
+      />
     </CBox>
     <CBox>
       <CStack>
