@@ -58,8 +58,8 @@ export default {
       font-size="sm"
     >
     <c-breadcrumb-item>
-      <c-breadcrumb-link as="nuxt-link" to="/">
-        Main
+      <c-breadcrumb-link  as="nuxt-link" to="/">
+        <p class="breadcumb-item">Main</p>
       </c-breadcrumb-link>
     </c-breadcrumb-item>
       <c-breadcrumb-item
@@ -67,7 +67,7 @@ export default {
       :key="index"
       >
         <c-breadcrumb-link as="nuxt-link" :to="localePath({ name: page.name, params: {[page.name]: page.param} })">
-          <p>{{ page.name === 'id' ? namePage : page.param }}</p>
+          <p class="breadcumb-item">{{ page.name === 'id' ? namePage : page.param }}</p>
         </c-breadcrumb-link>
       </c-breadcrumb-item>
     </c-breadcrumb>
@@ -80,5 +80,8 @@ export default {
 .breadcumb {
   display: flex;
   align-items: center;
+}
+.breadcumb-item{
+  color: #0F6CB0;
 }
 </style>
