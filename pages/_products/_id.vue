@@ -29,6 +29,8 @@ export default {
     },
   ],
 
+  layout: 'ProductLayout',
+
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
 
