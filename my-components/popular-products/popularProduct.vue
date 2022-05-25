@@ -7,6 +7,7 @@ import priceSpacer from '@/helpers/price-spacer'
 
 export default {
   name: 'PopularProduct',
+
   components: {
     CBox,
     CImage,
@@ -34,11 +35,15 @@ export default {
       console.log(item)
     },
   },
+
+  Switched(e) {
+    this.$emit('switch', e.target.checked)
+  },
 }
 </script>
 
 <template>
-  <CBox pb="10px">
+  <CBox pb="10px" :class="{ showHide: !switched }">
     <CBox
       :py="['22px', '24px', '30px', '34px', '36px', '40px']"
       :px="['22px', '24px', '30px', '34px', '36px', '40px']"
@@ -112,3 +117,9 @@ export default {
     </CBox>
   </CBox>
 </template>
+
+<style lang="scss" scoped>
+.showHide {
+  grid-template-columns: repeat(3);
+}
+</style>

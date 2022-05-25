@@ -1,10 +1,11 @@
 <script>
 import { CTabs, CTabList, CTabPanels, CTab, CTabPanel } from '@chakra-ui/vue'
 import PricesTabContent from './PricesTabContent.vue'
-import CompareTabComment from './CompareTabComment.vue'
+// import CompareTabComment from './CompareTabComment.vue'
 import CompareTabCharacteristics from './CompareTabCharacteristics.vue'
-import CompareReviews from './CompareReviews.vue'
+// import CompareReviews from './CompareReviews.vue'
 export default {
+  name: 'CompareTabs',
   components: {
     CTabs,
     CTabList,
@@ -12,12 +13,24 @@ export default {
     CTab,
     CTabPanel,
     PricesTabContent,
-    CompareTabComment,
+    // CompareTabComment,
     CompareTabCharacteristics,
-    CompareReviews,
+    // CompareReviews,
+  },
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.item)
   },
 }
 </script>
+
 <template>
   <c-tabs
     mt="58px"
@@ -100,7 +113,7 @@ export default {
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
         >{{ $t('tab2') }}</c-tab
       >
-      <c-tab
+      <!-- <c-tab
         class="c-tab3"
         :_active="{ bg: 'transparent' }"
         :_selected="{
@@ -130,7 +143,7 @@ export default {
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
         >{{ $t('tab3') }}</c-tab
-      >
+      > -->
       <c-tab
         class="c-tab4"
         :_active="{ bg: 'transparent' }"
@@ -157,16 +170,16 @@ export default {
 
     <c-tab-panels>
       <c-tab-panel>
-        <prices-tab-content />
+        <prices-tab-content :item="item" />
+      </c-tab-panel>
+      <!-- <c-tab-panel>
+        <compare-tab-comment :item="item" />
+      </c-tab-panel> -->
+      <c-tab-panel>
+        <compare-reviews :item="item" />
       </c-tab-panel>
       <c-tab-panel>
-        <compare-tab-comment />
-      </c-tab-panel>
-      <c-tab-panel>
-        <compare-reviews />
-      </c-tab-panel>
-      <c-tab-panel>
-        <compare-tab-characteristics />
+        <compare-tab-characteristics :item="item.characteristics" />
       </c-tab-panel>
     </c-tab-panels>
   </c-tabs>

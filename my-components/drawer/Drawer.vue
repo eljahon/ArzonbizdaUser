@@ -1,5 +1,6 @@
 <script>
 import { CBox, CLink, CIcon } from '@chakra-ui/vue'
+import PriceRangeSlider from '../price-slider/PriceRangeSlider.vue'
 
 export default {
   name: 'DrawerComponents',
@@ -8,6 +9,7 @@ export default {
     CBox,
     CLink,
     CIcon,
+    PriceRangeSlider,
   },
 }
 </script>
@@ -161,6 +163,7 @@ export default {
           ></CBox
         >
       </CBox>
+      <PriceRangeSlider />
     </CBox>
   </div>
 </template>

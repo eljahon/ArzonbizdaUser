@@ -1,5 +1,5 @@
 <script>
-import { CThemeProvider, CButton, CIcon, CLink, CBadge } from '@chakra-ui/vue'
+import { CThemeProvider, CButton, CIcon, CBadge } from '@chakra-ui/vue'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -8,11 +8,25 @@ export default {
     CThemeProvider,
     CButton,
     CIcon,
-    CLink,
     CBadge,
   },
+
   computed: {
     ...mapGetters(['isBadgeLength']),
+  },
+
+  methods: {
+    toRoute() {
+      const data = this.$store.state.isBadge
+      if (this.isBadgeLength === 2) {
+        this.$router.push(
+          this.localePath({
+            path: '/compare',
+            query: { firstId: data[0], secondId: data[1] },
+          })
+        )
+      }
+    },
   },
 }
 </script>
@@ -20,37 +34,44 @@ export default {
 <template>
   <div>
     <CThemeProvider>
-      <c-link as="router-link" to="/compare" :_hover="false">
-        <c-button
-          class="header__button"
-          align-item="center"
-          :mw="['56px', '56px', '56px', '56px', '56px', '215px']"
-          variant-color="color.WhiteColor"
-          border-color="color.BorderColor"
-          border="1px solid"
-          rounded="12"
-          _focus="none"
-          color="color.InputBorder"
-          height="56px"
-          cursor="pointer"
-          background-color="none"
-          justify-content="center"
-          gap="8.5px"
-          bg="transparent"
-          ml="20px"
+      <c-button
+        to="/compare"
+        class="header__button"
+        align-item="center"
+        :mw="['56px', '56px', '56px', '56px', '56px', '215px']"
+        variant-color="color.WhiteColor"
+        border-color="color.BorderColor"
+        border="1px solid"
+        rounded="12"
+        _focus="none"
+        color="color.InputBorder"
+        height="56px"
+        cursor="pointer"
+        background-color="none"
+        justify-content="center"
+        gap="8.5px"
+        bg="transparent"
+        ml="20px"
+        @click="toRoute"
+      >
+        <CIcon
+          name="comparison"
+          :size="['16px', '16px', '17px', '18px', '19px', '20px']"
+        />
+        <p class="icon__text">
+          {{ $t('compare') }}
+        </p>
+        <CBadge
+          variant="solid"
+          background="#6FCF97"
+          border-radius="10px"
+          margin-bottom="10px"
+          w="16px"
+          h="16px"
         >
-          <CIcon
-            name="comparison"
-            :size="['16px', '16px', '17px', '18px', '19px', '20px']"
-          />
-          <p class="icon__text">
-            {{ $t('compare') }}
-          </p>
-          <CBadge variant="solid" color-scheme="green">
-            {{ isBadgeLength }}
-          </CBadge>
-        </c-button>
-      </c-link>
+          {{ isBadgeLength }}
+        </CBadge>
+      </c-button>
     </CThemeProvider>
   </div>
 </template>
@@ -61,7 +82,6 @@ export default {
     display: none;
   }
 }
-
 @media screen and(max-width: 768px) {
   .header__button {
     margin-left: 0;

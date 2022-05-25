@@ -5,24 +5,44 @@ import {
   CStack,
   CFlex,
   CIcon,
-  CLink,
+  // CLink,
   CText,
   CButton,
 } from '@chakra-ui/vue'
+
+import priceSpacer from '@/helpers/price-spacer'
+
 export default {
   name: 'CompareProductMobile',
+
   components: {
     CBox,
     CHeading,
     CStack,
     CFlex,
     CIcon,
-    CLink,
+    // CLink,
     CText,
     CButton,
   },
+
+  mixins: [
+    {
+      methods: {
+        priceSpacer,
+      },
+    },
+  ],
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
+
 <template>
   <c-box max-width="375px">
     <c-stack :spacing="'8px'" mb="22px">
@@ -32,7 +52,7 @@ export default {
         :font-size="['12px', '15px', '18px', '22px', '25px', '28px']"
         :line-height="['14px', '21px', '27px', '34px', '40px', '48px']"
         color="color.TextColor3"
-        >от 3 324 000 сум</c-heading
+        >{{ priceSpacer(item.price.toString()) }} сум</c-heading
       >
       <c-heading
         as="h2"
@@ -41,8 +61,9 @@ export default {
         :line-height="['15px', '21px', '28px', '34px', '42px', '48px']"
         color="color.TextColor2"
       >
-        Xiaomi Poco X3 Pro 8/256GB
+        {{ item.name }}
       </c-heading>
+
       <c-flex>
         <c-box d="flex" align-items="center">
           <c-icon
@@ -84,15 +105,15 @@ export default {
         :max-h="['20px', '35px', '50px', '65px', '75px', '96px']"
         :p="['6px', '8px', '12px', '18px', '24px', '26px']"
       >
-        <c-link
-          as="router-link"
-          to="/"
+        <!-- <c-link
+          :href="someVariable"
           :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
           :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
           color="color.TextColor2"
           :_hover="false"
+          cursor="pointer"
           >UPD Mobile</c-link
-        >
+        > -->
         <c-icon name="greenTick" size="9px" color="color.greenTick" />
       </c-box>
     </c-stack>

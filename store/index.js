@@ -10,6 +10,7 @@ export const getters = {
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
 }
+
 export const state = () => {
   return {
     isBadge: [],
@@ -70,6 +71,9 @@ export const mutations = {
 export const actions = {
   addBreadcumbs(ctx, payload) {
     ctx.commit('SET_BREADCUMBS', payload)
+  },
+  actionsIsCom(vuexContext, payload) {
+    vuexContext.commit('SET_ISCOM', payload)
   },
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)

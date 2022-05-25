@@ -2,9 +2,16 @@
 import { CBox, CText } from '@chakra-ui/vue'
 export default {
   components: { CBox, CText },
-  props: ['data'],
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
+
 <template>
   <c-box>
     <c-text
@@ -15,7 +22,7 @@ export default {
       font-weight="700"
       font-style="normal"
       color="color.TextColor1"
-      >{{ data.version }}</c-text
+      >{{ item.key }}</c-text
     >
   </c-box>
 </template>

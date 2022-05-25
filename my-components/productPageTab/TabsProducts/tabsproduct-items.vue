@@ -1,5 +1,13 @@
 <script>
-import { CBox, CImage, CHeading, CText, CButton, CIcon } from '@chakra-ui/vue'
+import {
+  CBox,
+  CImage,
+  CHeading,
+  CText,
+  CButton,
+  CIcon,
+  CLink,
+} from '@chakra-ui/vue'
 import priceSpacer from '@/helpers/price-spacer'
 export default {
   name: 'TabsProduct',
@@ -10,6 +18,7 @@ export default {
     CText,
     CButton,
     CIcon,
+    CLink,
   },
   mixins: [
     {
@@ -20,10 +29,10 @@ export default {
   ],
   props: {
     item: {
-      type: Array,
+      type: Object,
       required: true,
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -139,7 +148,9 @@ export default {
         {{ priceSpacer(item.price.toString()) }} {{ $t('sum') }}</CText
       >
       <CBox display="flex" aligin-items="center" mt="8px">
-        <CButton
+        <CLink
+          :href="item.link"
+          is-external
           :display="['none', 'none', 'none', 'none', 'block', 'block']"
           color="#FFF"
           font-size="16px"
@@ -162,7 +173,7 @@ export default {
             bg: 'white',
           }"
         >
-          {{ $t('magazin') }}</CButton
+          {{ $t('magazin') }}</CLink
         >
         <CBox display="flex" align-items="center">
           <CButton

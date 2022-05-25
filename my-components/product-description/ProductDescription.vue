@@ -8,13 +8,16 @@ import {
   CIcon,
   CText,
   CButton,
+  CLink,
 } from '@chakra-ui/vue'
 
 import { mapGetters } from 'vuex'
+
 import priceSpacer from '@/helpers/price-spacer'
 
 export default {
   name: 'ProductPage',
+
   components: {
     CBox,
     CStack,
@@ -24,7 +27,9 @@ export default {
     CIcon,
     CText,
     CButton,
+    CLink,
   },
+
   mixins: [
     {
       methods: {
@@ -32,27 +37,31 @@ export default {
       },
     },
   ],
+
   props: {
     items: {
       type: Object,
       required: true,
     },
   },
+
   data() {
     return {
       isCom: false,
     }
   },
+
   computed: {
     ...mapGetters(['isBadgeLength']),
   },
+
   methods: {
     IsComponents() {
       this.$store.dispatch('actionsIsCom', this.$route.params.id)
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
       } else if (this.isBadgeLength === 2) {
-        this.$router.push('/compare')
+        console.log(this.$store.state.isBadge)
       }
     },
   },
@@ -63,7 +72,7 @@ export default {
 </script>
 
 <template>
-  <CBox max-w="705px">
+  <CBox max-w="705px" pr="15px">
     <CStack>
       <CHeading
         as="h2"
@@ -143,19 +152,21 @@ export default {
           pb="18px"
         >
           <CFlex justify="space-between">
-            <CText
+            <CLink
+              :href="items.link"
+              is-external
               font-size="14px"
               line-height="20px"
               color="color.TextColor5"
               letter-spacing="0.02em"
               mb="18px"
-              >МАГАЗИН</CText
+              >МАГАЗИН</CLink
             >
             <CIcon name="greenTick" color="color.greenTick" size="20px" />
           </CFlex>
           <CText font-size="20px" line-height="24px" color="color.TextColor2"
-            >UPD Mobile</CText
-          >
+            >{{ items.shop }}
+          </CText>
         </CBox>
       </CFlex>
       <CText
@@ -198,7 +209,7 @@ export default {
         </CButton>
         <CButton
           height="64px"
-          :disabled="badgeLength === 2"
+          :disabled="isBadgeLength === 2"
           max-w="337px"
           w="100%"
           border="1px"

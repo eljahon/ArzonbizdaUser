@@ -2,9 +2,20 @@
 import { CBox, CText } from '@chakra-ui/vue'
 export default {
   components: { CBox, CText },
-  props: ['item'],
+
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.item)
+  },
 }
 </script>
+
 <template>
   <c-box :w="['100px', '100px', '170px', '210px', '280px', '300px']">
     <c-text
@@ -15,7 +26,7 @@ export default {
       font-weight="700"
       font-style="normal"
       color="color.TextColor1"
-      >{{ item.name }}</c-text
+      >{{ item.value }}</c-text
     >
   </c-box>
 </template>

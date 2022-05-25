@@ -11,12 +11,14 @@ export default {
     VueSlickCarousel,
     CIcon,
   },
+
   props: {
     images: {
       type: Array,
       required: true,
     },
   },
+
   data() {
     return {
       // items: [
@@ -71,11 +73,7 @@ export default {
         :infinite="true"
         class="slider__wrapper"
       >
-        <div
-          v-for="(item, index) in images"
-          :key="index"
-          class="product__slider"
-        >
+        <div v-for="(item, index) in images" :key="index">
           <img :src="item.src" alt="" />
         </div>
       </VueSlickCarousel>
@@ -92,9 +90,9 @@ export default {
         :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
-        style="width: 600px"
+        width="100%"
       >
-        <div v-for="(item, index) in images" :key="index" style="width: 600px">
+        <div v-for="(item, index) in images" :key="index">
           <div class="slider__card" width="100px">
             <img
               width="81px"
@@ -125,13 +123,15 @@ export default {
 <style lang="scss" scoped>
 div {
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .slider__wrapper {
   height: 583px;
-  width: 705px;
+  max-width: 100%;
   background-color: #f4f4f4;
   border-radius: 12px;
+  margin: 0 auto;
 }
 
 .slider__card {
@@ -155,7 +155,8 @@ div {
   display: flex;
   gap: 30px;
   justify-content: space-between;
-  width: 705px;
+  max-width: 83%;
+  margin: 0;
 }
 .slide__btn {
   width: 40px;
@@ -172,16 +173,24 @@ div {
   .slider__footer {
     display: none;
   }
+  .slider__wrapper {
+    height: 350px;
+  }
+
+  // .slider__wrapper {
+  //   max-width: 618px;
+  //   margin: 0 auto;
+  // }
 }
 
 @media screen and (max-width: 425px) {
   .slider__wrapper {
-    max-width: 380px;
+    height: 143px;
   }
 }
 @media screen and (max-width: 375px) {
-  .slider__wrapper {
-    max-width: 320px;
-  }
+  // .slider__wrapper {
+  //   max-width: 320px;
+  // }
 }
 </style>
