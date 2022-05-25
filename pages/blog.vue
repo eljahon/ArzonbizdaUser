@@ -20,7 +20,14 @@ export default {
     },
   ],
 
+  data(){
+    return {
+      route:this.$route
+    }
+  },
+
   mounted() {
+    this.$store.dispatch('addBreadcumbs', this.route)
     AOS.init({})
   },
 }

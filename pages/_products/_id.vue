@@ -1,4 +1,7 @@
 <script>
+import {} from '@chakra-ui/vue'
+import BreadCumb from '../../my-components/breadcumb/Breadcumb.vue'
+
 import ProductDescription from '~/my-components/product-description/ProductDescription.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
@@ -12,6 +15,7 @@ export default {
   name: 'ProductPage',
 
   components: {
+    BreadCumb,
     ProductDescription,
     ProductSlider,
     ChakraTab,
@@ -36,7 +40,7 @@ export default {
       compares: data.compares,
       shop: data.product['shop.name'],
       link: data.product.link,
-      logo: data.product['shop.logo']
+      logo: data.product['shop.logo'],
     }
 
     return {
@@ -44,22 +48,37 @@ export default {
       productData: data,
     }
   },
+  data() {
+    return {
+      route: this.$route,
+    }
+  },
 
   mounted() {
+    this.storeData()
     AOS.init({})
+  },
+
+  methods: {
+    storeData() {
+      this.$store.dispatch('addBreadcumbs', this.route)
+    },
   },
 }
 </script>
 
 <template>
-  <CBox>
-    <LoaderComponent v-if="$store.state.loading" />
-    <div class="product__page">
+  <div>
+    <BreadCumb />
+    <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
+      <!-- <c-flex gap="30px" mt="64px"> -->
+      <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
+      <!-- </c-flex> -->
+      <ChakraTab :selected-product="productData" />
     </div>
-    <ChakraTab :selected-product="productData" />
-  </CBox>
+  </div>
 </template>
 
 <style lang="scss" scoped>
