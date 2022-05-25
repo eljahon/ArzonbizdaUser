@@ -56,7 +56,6 @@ export default {
 
   mounted() {
     this.storeData()
-    console.log(this.route)
     AOS.init({})
   },
 

@@ -69,12 +69,13 @@ export const mutations = {
   },
 }
 export const actions = {
+  actionsIsCom(ctx, payload) {
+    ctx.commit('SET_ISCOM', payload)
+  },
   addBreadcumbs(ctx, payload) {
     ctx.commit('SET_BREADCUMBS', payload)
   },
-  actionsIsCom(vuexContext, payload) {
-    vuexContext.commit('SET_ISCOM', payload)
-  },
+
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')
