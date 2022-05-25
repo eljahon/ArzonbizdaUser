@@ -2,11 +2,10 @@ export const getters = {
   productsList: (state) => {
     return state.productsList
   },
-
   isBadgeLength: (state) => {
     return state.isBadge.length
   },
-
+  breadCumbs: (state) => state.breadCumbs,
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
@@ -14,26 +13,36 @@ export const getters = {
 
 export const state = () => {
   return {
+    isBadge: [],
     productsList: [],
     brandItem: [],
     title: 'title',
     loading: false,
     has_content: 'pending',
-    isBadge: [],
+    breadCumbs: [],
   }
 }
 export const mutations = {
   SET_PRODUCTS_LIST(state, payload) {
-    // const {data}  = await this.$axios.get("/product/home");
-    // const sendData = data.data.products.map(el => {
-    //   return {
-    //     id: el.id,
-    //     name: el.brand_name,
-    //     img: el.images[0].src,
-    //     price: el.price
-    //   }
-    // });
     state.productsList = payload
+  },
+
+  SET_BREADCUMBS(state, payload) {
+    state.breadCumbs.push(payload)
+    // if(state.breadCumbs){
+    //   state.breadCumbs.forEach(el => {
+    //     if(el.name !== payload.name) {
+    //         state.breadCumbs.push(payload)
+    //       // if(el.params.id && el.params.id !== payload.params.id){
+    //       //   console.log("ok")
+    //       // }
+    //     } else if(el.params.id !== payload.params.id){
+    //       state.breadCumbs.push(payload)
+    //     }
+    //  })
+    // } else {
+    //   console.log('salom')
+    // }
   },
 
   SET_ISCOM(state, payload) {
@@ -51,9 +60,13 @@ export const mutations = {
   },
 }
 export const actions = {
-  actionsIsCom(vuexContext, payload) {
-    vuexContext.commit('SET_ISCOM', payload)
+  actionsIsCom(ctx, payload) {
+    ctx.commit('SET_ISCOM', payload)
   },
+  addBreadcumbs(ctx, payload) {
+    ctx.commit('SET_BREADCUMBS', payload)
+  },
+
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')

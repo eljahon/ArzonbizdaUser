@@ -26,7 +26,7 @@ export default {
         color="color.InputColor"
         ><CLink
           as="router-link"
-          to="/category"
+          :to="localePath({ name: 'category', params: {category: 'phones'} })"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
           >{{ $t('category_phones') }}</CLink

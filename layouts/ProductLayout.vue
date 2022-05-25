@@ -1,8 +1,15 @@
 <script>
+import OpenProductBtn from '~/my-components/product-buttons/OpenProductBtn.vue'
+import CompareProductBtn from '~/my-components/product-buttons/CompareProductBtn.vue'
 export default {
   name: 'ProductMobile',
+  components: {
+    OpenProductBtn,
+    CompareProductBtn,
+  },
 }
 </script>
+OpenProductBtn
 
 <template>
   <CThemeProvider>
@@ -34,42 +41,8 @@ export default {
         align-items="center"
         justify-content="space-between"
       >
-        <c-button
-          height="64px"
-          max-w="337px"
-          w="100%"
-          mr="30px"
-          border="1px"
-          border-color="color.BorderColor"
-          rounded="12px"
-          bg="color.BorderColor"
-          :_hover="false"
-          :_active="false"
-          :_focus="false"
-          font-weight="400"
-          color="white"
-        >
-          {{ $t('view') }}
-        </c-button>
-        <c-button
-          height="64px"
-          :disabled="isBadgeLength === 2"
-          max-w="337px"
-          w="100%"
-          border="1px"
-          border-color="color.BorderColor"
-          rounded="12px"
-          bg="white"
-          :_hover="false"
-          :_active="false"
-          :_focus="false"
-          font-weight="400"
-          color="color.BorderColor"
-          @click="IsComponents"
-        >
-          <c-icon name="compare" size="24px" mr="10px" />
-          {{ $t('compare') }}
-        </c-button>
+        <OpenProductBtn />
+        <CompareProductBtn />
       </c-box>
     </c-box>
     <FooterGlobal class="mobileFooter" />

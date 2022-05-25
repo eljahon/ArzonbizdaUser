@@ -13,15 +13,12 @@ name:"IndexComponent",
   async asyncData({ $axios, store, query }) {
    await store.dispatch("changeProducts",{axios: $axios, query: query.search})
   },
-
   computed: {
     ...mapGetters(['productsList'])
   },
-
   mounted() {
     // this.feat()
   },
-
   methods: {
    async feat ()  {
      const {data}  = await this.$axios.get("/product/home");

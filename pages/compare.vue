@@ -1,66 +1,80 @@
 <script>
-import { CSimpleGrid, CBox } from '@chakra-ui/vue'
-import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
-import CompareTab from '~/my-components/compare-tabs/CompareTab.vue'
-import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
-import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
-import LoaderComponent from '~/library/LoaderComponent.vue'
-
+import { CBox } from '@chakra-ui/vue'
+// import CompareProduct from '~/my-components/comparing-component/CompareProduct.vue'
+import BreadCumb from '../my-components/breadcumb/Breadcumb.vue'
+// import CompareTab from '~/my-components/compare-tabs/CompareTab.vue'
+// import CompareProductMobile from '~/my-components/comparing-component/CompareProductMobile.vue'
+// import ProductSlider from '~/my-components/product-slider/.vue'
 export default {
   name: 'ComparePage',
   components: {
-    CompareProduct,
-    CSimpleGrid,
+    // CompareProduct,
+    // CSimpleGrid,
     CBox,
-    CompareTab,
-    CompareProductMobile,
-    ProductSlider,
-    LoaderComponent,
+    BreadCumb,
+    // CFlex,
+    // CompareTab,
+    // CompareProductMobile,
   },
   data() {
     return {
-      loading: false,
-      products: null,
-      error: null,
+      route: this.$route,
     }
   },
+  // async asyncData({ $axios }) {
+  //   const arr = JSON.parse(localStorage.getItem('contrastArray'))
 
+  //   const { data } = await $axios.get('/product/compare', {
+  //     data: arr,
+  //   })
+
+  //   return {
+  //     data: data.data.products,
+  //     firstData: data.data.products[0],
+  //     secondData: data.data.products[1],
+  //   }
+  // },
   mounted() {
-    this.fetchItems()
+    this.storeData()
+    console.log(this.route)
   },
-
   methods: {
-    async fetchItems() {
-      const query = { prs: this.$store.state.isBadge }
-
-      this.loading = true
-
-      const { data } = await this.$axios.get('product/compare', {
-        params: query,
-      })
-
-      this.loading = false
-      this.products = data.data.products
+    storeData() {
+      this.$store.dispatch('addBreadcumbs', this.route)
     },
   },
+  // methods: {
+  //   async fetchItems() {
+  //       // const query = { prs: this.$store.state.isBadge }
+  //     // const { data } = await $axios.get("/product/compare", {data: this.prs});
+  //     const data  = await this.$axios.get('/product/compare', {
+  //         data: {
+  //             'prs': [
+  //               'f17fb9d6-fdc9-4b5d-ba15-f155511268ad',
+  //               'e0f1796a-abea-43a7-bd11-a5d76d73e29f',
+  //             ],
+  //           },
+  //         })
+  //     console.log(data)
+  //   },
+  // },
 }
 </script>
 
 <template>
   <c-box>
-    <loader-component v-if="loading" />
-
-    <div v-if="!loading">
-      <c-simple-grid :columns="2" gap="30px" :spacing="'30px'">
-        <div v-for="(item, id) in products" :key="id">
-          <product-slider :images="item.images" />
-          <compare-product :item="item" />
-          <compare-product-mobile :item="item" />
-          <compare-tab :item="item" />
-        </div>
-      </c-simple-grid>
-    </div>
+    <BreadCumb />
+    //
+    <!-- <c-simple-grid :columns="2" :spacing="'30px'"> -->
+    <!-- <c-simple-grid :columns="2" :spacing="'30px'">
+      <compare-product v-for="(item, id) in data" :key="id" :item="item" />
+    </c-simple-grid>
+    <compare-product-mobile />
+    <compare-product-mobile /> -->
+    //
+    <!-- <compare-tab />
+      <compare-tab /> -->
+    //
+    <!-- </c-simple-grid> -->
   </c-box>
 </template>
-
-<style lang="scss" scoped></style>

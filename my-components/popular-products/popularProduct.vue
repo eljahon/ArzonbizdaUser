@@ -30,7 +30,16 @@ export default {
 
   methods: {
     openProductPage(item) {
-      this.$router.push('/products/' + item)
+      // this.$router.push('/products/' + item)
+      this.$router.push(
+        this.localePath({
+          name: 'products-id',
+          params: {
+            products: this.$route.params.category ?? 'products',
+            id: item,
+          },
+        })
+      )
       console.log(item)
     },
   },
@@ -117,3 +126,5 @@ export default {
     </CBox>
   </CBox>
 </template>
+
+<style lang="scss" scoped></style>
