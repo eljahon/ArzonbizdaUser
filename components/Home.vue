@@ -35,6 +35,12 @@ components: {
 
   props: ['products'],
 
+data(){
+  return{
+    columns:['3', '3', '3', '4', '4', '5']
+  }
+},
+
   mounted() {
     AOS.init({ })
   },
@@ -49,12 +55,14 @@ components: {
         data-aos="fade-up"
         :products="products"
         title="Популярные товары"
+        :columns="columns"
       />
     </div>
     <CategoriesComponent data-aos="fade-up" data-aos-duration="1000" />
     <BrandsComponent data-aos="zoom-in-up" data-aos-duration="1000" />
     <BannerComponent data-aos="zoom-in-down" data-aos-duration="1000" />
     <PopularProducts
+      :columns="columns"
       data-aos="fade-up"
       title="Популярные товары"
       data-aos-duration="1000"

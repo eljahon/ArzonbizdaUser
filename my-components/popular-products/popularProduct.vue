@@ -30,15 +30,20 @@ export default {
 
   methods: {
     openProductPage(item) {
-      this.$router.push('/products/' + item)
+      // this.$router.push('/products/' + item)
+      this.$router.push(this.localePath({name: 'products-id', params: {products: this.$route.params.category ?? 'products', id: item}}))
       console.log(item)
     },
+  },
+
+  Switched(e) {
+    this.$emit('switch', e.target.checked)
   },
 }
 </script>
 
 <template>
-  <CBox pb="10px">
+  <CBox pb="10px" :class="{ showHide: !switched }">
     <CBox
       :py="['22px', '24px', '30px', '34px', '36px', '40px']"
       :px="['22px', '24px', '30px', '34px', '36px', '40px']"
@@ -117,3 +122,9 @@ export default {
     </CBox>
   </CBox>
 </template>
+
+<style lang="scss" scoped>
+.showHide {
+  grid-template-columns: repeat(3);
+}
+</style>

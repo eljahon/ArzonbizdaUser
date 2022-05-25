@@ -125,6 +125,10 @@ export default {
   flex-direction: row;
 }
 
+.header__input {
+  max-width: 100%;
+}
+
 .mobile {
   display: none;
 }

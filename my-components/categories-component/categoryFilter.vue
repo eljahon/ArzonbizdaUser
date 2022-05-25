@@ -144,4 +144,9 @@ export default {
   align-items: center;
   margin-top: 16px;
 }
+@media screen and (max-width:1050px) {
+  .category-filter{
+    display: none;
+  }
+}
 </style>
