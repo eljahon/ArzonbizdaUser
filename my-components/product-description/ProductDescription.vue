@@ -8,9 +8,11 @@ import {
   CIcon,
   CText,
   CButton,
+  CLink,
 } from '@chakra-ui/vue'
 
 import { mapGetters } from 'vuex'
+
 import priceSpacer from '@/helpers/price-spacer'
 
 export default {
@@ -25,6 +27,7 @@ export default {
     CIcon,
     CText,
     CButton,
+    CLink,
   },
 
   mixins: [
@@ -149,18 +152,20 @@ export default {
           pb="18px"
         >
           <CFlex justify="space-between">
-            <CText
+            <CLink
+              :href="items.link"
+              is-external
               font-size="14px"
               line-height="20px"
               color="color.TextColor5"
               letter-spacing="0.02em"
               mb="18px"
-              >МАГАЗИН</CText
+              >МАГАЗИН</CLink
             >
             <CIcon name="greenTick" color="color.greenTick" size="20px" />
           </CFlex>
           <CText font-size="20px" line-height="24px" color="color.TextColor2"
-            >UPD Mobile
+            >{{ items.shop }}
           </CText>
         </CBox>
       </CFlex>

@@ -27,12 +27,16 @@ export default {
 
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(`/product/${params.id}`)
+
     const propsList = {
       imageList: data.product.images,
       name: data.product.name,
       price: data.product.price,
       disc: data.product.description,
       compares: data.compares,
+      shop: data.product['shop.name'],
+      link: data.product.link,
+      logo: data.product['shop.logo']
     }
 
     return {
