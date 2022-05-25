@@ -23,7 +23,7 @@ components: {
     BannerComponent,
     CategoriesComponent,
     BrandsComponent,
-    SliderComponent
+    SliderComponent,
 },
   mixins: [
     {

@@ -18,7 +18,6 @@ export default {
     },
   ],
 
-
   mounted() {
     AOS.init({})
   },
@@ -29,7 +28,7 @@ export default {
   <div>
     <LoaderComponent v-if="$store.state.loading" />
     <popular-products
-      v-if="$store.state.has_content === 'content'"
+      :columns="[]"
       data-aos="fade-up"
       title="Найденные данные"
     />

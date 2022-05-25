@@ -24,15 +24,6 @@ export const state = () => {
 }
 export const mutations = {
   SET_PRODUCTS_LIST(state, payload) {
-    // const {data}  = await this.$axios.get("/product/home");
-    // const sendData = data.data.products.map(el => {
-    //   return {
-    //     id: el.id,
-    //     name: el.brand_name,
-    //     img: el.images[0].src,
-    //     price: el.price
-    //   }
-    // });
     state.productsList = payload
   },
 

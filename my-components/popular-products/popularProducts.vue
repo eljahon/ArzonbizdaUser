@@ -21,7 +21,7 @@ export default {
 
     columns: {
       type: Array,
-      required: true,
+      default: () => [],
     },
   },
 
@@ -29,6 +29,9 @@ export default {
     return {}
   },
   computed: {},
+  mounted() {
+    // console.log(this.$store.state.productsList);
+  },
 
   methods: {
     Switched(e) {
@@ -74,7 +77,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 .showHide {
-  grid-template-columns: repeat(3fr, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .popular__product {
