@@ -45,11 +45,12 @@ export default {
 
       <CSimpleGrid
         :columns="['4', '4', '4', '4', '4', '6']"
-        rows="2"
+        :rows="['2', '2', '2', '2', '2', '2']"
         spacing-x="30"
         :spacing-y="['18px', '22px', '26px', '30px', '34px', '40px']"
         justify-items="center"
         justify-content="center"
+        class="categoriesGrid"
       >
         <CategoryComponent
           v-for="(item, idx) in categoryItem"
@@ -67,6 +68,16 @@ export default {
     &:nth-child(n + 9) {
       display: none;
     }
+  }
+  @media screen and(max-width: 350px) {
+    &:nth-child(n + 7) {
+      display: none;
+    }
+  }
+}
+.categoriesGrid {
+  @media screen and(max-width: 350px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>
