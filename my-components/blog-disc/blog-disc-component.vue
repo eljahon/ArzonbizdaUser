@@ -2,8 +2,10 @@
 import { CThemeProvider, CBox, CText, CIcon } from '@chakra-ui/vue'
 import BlogDiscImgBanner from './Blog-disc-imgBanner.vue'
 import BlogDiscTextComponent from './blog-disc-text-component.vue'
+
 export default {
   name: 'BlogDiscComponents',
+
   components: {
     CThemeProvider,
     CBox,
@@ -12,8 +14,20 @@ export default {
     BlogDiscImgBanner,
     BlogDiscTextComponent,
   },
+
+  props: {
+    blog: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.blog)
+  },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <CBox
@@ -41,8 +55,8 @@ export default {
           font-family="Yandex Sans Display"
           :font-weight="['700', '700', '700', '400', '400', '400']"
           :line-height="['16px', '20px', '24px', '30px', '44px', '48px']"
-          >{{ $t('forguys') }}</CText
-        >
+          >{{ blog.title }}
+        </CText>
         <CBox
           :mt="['9px', '12px', '14px', '16px', '18px', '20px']"
           display="flex"
@@ -61,7 +75,16 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >{{ $t('ivan') }}</CText
+              >{{ blog.firstName }}</CText
+            >
+            <CText
+              ml="5px"
+              color="color.WarningColor1"
+              :font-size="['8px', '10px', '12px', '13px', '15px', '16px']"
+              font-family="Yandex Sans Display"
+              font-weight="400"
+              :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
+              >{{ blog.lastName }}</CText
             >
           </CBox>
           <CBox ml="42px" display="flex" align-items="center">
@@ -77,36 +100,12 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >02.01.2022</CText
+              >{{ blog.time }}</CText
             >
           </CBox>
         </CBox>
-        <blog-disc-img-banner image-path="1.png" />
-        <blog-disc-text-component
-          text=" Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
-      исследования стал опрос 500 клиентов Apple, которые приобрели продукт
-      Apple в апреле-июне. Сюда входят iPhone, iPad, компьютер Mac или Apple
-      Watch. По мере ослабления ограничений, связанных с пандемией, потребители
-      стали покупать более дорогие iPhone. Это привело к удвоению продаж в
-      интернет-магазинах Apple. Согласно опросу, iPhone 12 Pro Max и iPhone 11
-      были самыми продаваемыми моделями, на долю которых пришлось 23% iPhone,
-      купленных респондентами. На все четыре модели iPhone 12 приходилось 63
-      процента всех iPhone. Самыми продаваемыми моделями квартала стали iPhone
-      12 mini и iPhone XR. Их торговая доля составляла всего 5 процентов."
-        />
-        <blog-disc-img-banner image-path="2.png" />
-        <blog-disc-text-component
-          text=" Отчет охватывает все iPhone, проданные в период с апреля по июнь. Частью
-      исследования стал опрос 500 клиентов Apple, которые приобрели продукт
-      Apple в апреле-июне. Сюда входят iPhone, iPad, компьютер Mac или Apple
-      Watch. По мере ослабления ограничений, связанных с пандемией, потребители
-      стали покупать более дорогие iPhone. Это привело к удвоению продаж в
-      интернет-магазинах Apple. Согласно опросу, iPhone 12 Pro Max и iPhone 11
-      были самыми продаваемыми моделями, на долю которых пришлось 23% iPhone,
-      купленных респондентами. На все четыре модели iPhone 12 приходилось 63
-      процента всех iPhone. Самыми продаваемыми моделями квартала стали iPhone
-      12 mini и iPhone XR. Их торговая доля составляла всего 5 процентов."
-        />
+        <blog-disc-img-banner :blog="blog" />
+        <blog-disc-text-component :blog="blog" />
       </CBox>
     </CBox>
   </CThemeProvider>

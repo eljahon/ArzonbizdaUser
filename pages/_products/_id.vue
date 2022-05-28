@@ -43,6 +43,7 @@ export default {
       shop: data.product['shop.name'],
       link: data.product.link,
       logo: data.product['shop.logo'],
+      shopLink: data.product['shop.link'],
     }
 
     return {
@@ -72,14 +73,14 @@ export default {
 <template>
   <div>
     <BreadCumb />
+    <LoaderComponent v-if="$store.state.loading" />
+
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
-      <!-- <c-flex gap="30px" mt="64px"> -->
-      <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
-      <!-- </c-flex> -->
-      <ChakraTab :selected-product="productData" />
     </div>
+
+    <ChakraTab :selected-product="productData" />
   </div>
 </template>
 

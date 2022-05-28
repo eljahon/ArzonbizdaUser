@@ -15,6 +15,7 @@ export default {
       search: this.$route.query.search ? this.$route.query.search : '',
     }
   },
+
   methods: {
     searchProductGetAll() {
       this.$router.push({
@@ -26,7 +27,7 @@ export default {
         query: this.search,
       })
     },
-
+    // oddiy string qilib,
     handleKeyPress(event) {
       if (event.charCode === 13) {
         this.searchProductGetAll()
@@ -47,7 +48,7 @@ export default {
           focus-border-color="color.InputColor"
           placeholder="Поиск..."
           color="color.InputColor"
-          :width="['280px', '332px', '590px', '430px', '300px', '540px']"
+          :width="['100%', '100%', '100%', '430px', '300px', '540px']"
           height="56px"
           _focus="none"
           _hover="none"

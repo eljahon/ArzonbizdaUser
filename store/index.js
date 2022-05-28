@@ -78,7 +78,7 @@ export const actions = {
     const sendData = data.data.products.map((el) => {
       return {
         id: el.id,
-        name: el.brand_name,
+        name: el.name,
         img: el.images[0].src,
         price: el.price,
       }

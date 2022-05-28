@@ -28,6 +28,10 @@ export default {
 
   props: ['item'],
 
+  mounted() {
+    console.log('salom', this.item)
+  },
+
   methods: {
     openProductPage(item) {
       // this.$router.push('/products/' + item)

@@ -14,7 +14,7 @@ export default {
 
   data() {
     return {
-      value: [0, 30],
+      value: [0, 10000000],
     }
   },
 }

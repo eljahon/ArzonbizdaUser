@@ -1,11 +1,24 @@
 <script>
 import { CBox, CImage } from '@chakra-ui/vue'
+
 export default {
   name: 'BlogDiscImgBanner',
+
   components: { CBox, CImage },
-  props: ['imagePath'],
+
+  props: {
+    blog: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.blog)
+  },
 }
 </script>
+
 <template>
   <c-box
     position="relative"
@@ -15,7 +28,7 @@ export default {
   >
     <c-image
       border-radius="12px"
-      :src="require(`@/assets/img/${imagePath}`)"
+      :src="blog.image"
       position="absolute"
       width="100%"
       height="100%"

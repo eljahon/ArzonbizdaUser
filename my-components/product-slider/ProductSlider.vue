@@ -74,7 +74,7 @@ export default {
         class="slider__wrapper"
       >
         <div v-for="(item, index) in images" :key="index">
-          <img :src="item.src" alt="" />
+          <img :src="item.src" alt="" class="slider__image" />
         </div>
       </VueSlickCarousel>
     </div>
@@ -95,8 +95,7 @@ export default {
         <div v-for="(item, index) in images" :key="index">
           <div class="slider__card" width="100px">
             <img
-              width="81px"
-              height="85px"
+              style="width: 81px; height: 85px"
               :src="item.src"
               alt="image"
               class="slider__image"
@@ -164,6 +163,8 @@ div {
   border: 1px solid #e3e6e6;
   margin-top: 20px;
   border-radius: 12px;
+  z-index: 10000;
+
   &:hover {
     border: 1px solid #3bcff5;
   }
