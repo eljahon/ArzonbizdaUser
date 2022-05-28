@@ -72,9 +72,9 @@ export default {
 <template>
   <div>
     <BreadCumb />
+    <LoaderComponent v-if="$store.state.loading" />
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
       <!-- <c-flex gap="30px" mt="64px"> -->
-      <LoaderComponent v-if="$store.state.loading" />
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
       <!-- </c-flex> -->
