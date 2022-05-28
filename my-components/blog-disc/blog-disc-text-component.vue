@@ -1,16 +1,20 @@
 <script>
 import { CBox, CText } from '@chakra-ui/vue'
+
 export default {
   name: 'BlogDiscText',
+
   components: { CBox, CText },
+
   props: {
-    text: {
-      type: String,
+    blog: {
+      type: Array,
       required: true,
     },
   },
 }
 </script>
+
 <template>
   <c-box>
     <c-text
@@ -21,7 +25,7 @@ export default {
       mt="24px"
       :line-height="['16px', '18px', '20px', '21px', '22px', '24px']"
     >
-      {{ text }}
+      {{ blog.body }}
     </c-text>
   </c-box>
 </template>

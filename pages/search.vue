@@ -27,6 +27,7 @@ export default {
 <template>
   <div>
     <LoaderComponent v-if="$store.state.loading" />
+
     <popular-products
       :columns="[]"
       data-aos="fade-up"

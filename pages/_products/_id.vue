@@ -43,6 +43,7 @@ export default {
       shop: data.product['shop.name'],
       link: data.product.link,
       logo: data.product['shop.logo'],
+      shopLink: data.product['shop.link'],
     }
 
     return {
@@ -77,9 +78,9 @@ export default {
       <!-- <c-flex gap="30px" mt="64px"> -->
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
-      <!-- </c-flex> -->
-      <ChakraTab :selected-product="productData" />
     </div>
+
+    <ChakraTab :selected-product="productData" />
   </div>
 </template>
 
