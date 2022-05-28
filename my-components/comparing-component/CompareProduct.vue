@@ -26,6 +26,10 @@ export default {
       required: true,
     },
   },
+
+  mounted() {
+    console.log(this.item)
+  },
 }
 </script>
 
@@ -142,7 +146,9 @@ export default {
             >Цены обновляются каждый день</c-box
           >
         </c-stack>
-        <c-box
+        <c-link
+          :href="item['shop.link']"
+          is-external
           width="215px"
           border="LangBorder"
           rounded="12px"
@@ -163,15 +169,14 @@ export default {
             <c-icon name="greenTick" color="color.greenTick" size="20px" />
           </c-flex>
           <c-link
-            :href="someVariable"
             :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
             :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
             color="color.TextColor2"
             :_hover="false"
             cursor="pointer"
-            >UPD Mobile</c-link
+            >{{ item['shop.name'] }}</c-link
           >
-        </c-box>
+        </c-link>
       </c-flex>
       <c-box>
         <c-divider />
@@ -242,9 +247,9 @@ export default {
         <!-- <c-text line-height="20px" color="color.WarningColor1"
           >В наличии у {{ item.compares.length }} продавцов</c-text
         > -->
-        <c-button
-          as="nuxt-link"
-          :to="item.link"
+        <c-link
+          :href="item.link"
+          is-external
           height="64px"
           max-w="337px"
           w="100%"
@@ -259,9 +264,11 @@ export default {
           font-weight="400"
           color="white"
           mt="24px"
+          text-align="center"
+          pt="20px"
         >
           Смотреть
-        </c-button>
+        </c-link>
       </c-stack>
     </c-stack>
   </c-box>

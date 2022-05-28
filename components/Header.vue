@@ -154,4 +154,9 @@ export default {
     display: block;
   }
 }
+@media screen and(max-width: 768px) {
+  .header__input {
+    width: 100%;
+  }
+}
 </style>

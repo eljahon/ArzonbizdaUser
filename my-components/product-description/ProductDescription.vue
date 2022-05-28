@@ -142,7 +142,9 @@ export default {
             >Цены обновляются каждый день</CBox
           >
         </CStack>
-        <CBox
+        <CLink
+          :href="items.shopLink"
+          is-external
           width="215px"
           border="LangBorder"
           rounded="12px"
@@ -153,7 +155,7 @@ export default {
         >
           <CFlex justify="space-between">
             <CLink
-              :href="items.link"
+              :href="items.shopLink"
               is-external
               font-size="14px"
               line-height="20px"
@@ -167,7 +169,7 @@ export default {
           <CText font-size="20px" line-height="24px" color="color.TextColor2"
             >{{ items.shop }}
           </CText>
-        </CBox>
+        </CLink>
       </CFlex>
       <CText
         font-size="16px"
@@ -190,7 +192,9 @@ export default {
       </CText>
 
       <CBox d="flex" justify-content="space-between" mt="24px">
-        <CButton
+        <CLink
+          :href="items.link"
+          is-external
           height="64px"
           max-w="337px"
           w="100%"
@@ -204,9 +208,12 @@ export default {
           :_focus="false"
           font-weight="400"
           color="white"
+          text-align="center"
+          pt="20px"
         >
           Смотреть
-        </CButton>
+        </CLink>
+
         <CButton
           height="64px"
           :disabled="isBadgeLength === 2"

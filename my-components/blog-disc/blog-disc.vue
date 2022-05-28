@@ -1,14 +1,26 @@
 <script>
-import EndPageDescription from '../end-page-description/EndPageDescription.vue'
 import blogDiscComponent from './blog-disc-component.vue'
+
 export default {
-  components: { blogDiscComponent, EndPageDescription },
+  components: { blogDiscComponent },
+
+  props: {
+    blog: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  mounted() {
+    console.log(this.blog)
+  },
 }
 </script>
+
 <template>
   <div>
-    <blog-disc-component />
-    <end-page-description
+    <blog-disc-component :blog="blog" />
+    <!-- <end-page-description
       description-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa duis hac
         tellus nunc, neque fermentum netus magna. Turpis volutpat neque, odio
         mollis sit justo, blandit. Faucibus luctus odio aliquet ultrices. Mauris
@@ -21,7 +33,7 @@ export default {
         tellus dignissim consectetur eu, senectus maecenas. Vel vulputate velit
         proin nam pulvinar. Volutpat, consequat cursus nisl nunc. Felis aliquam
         in eu convallis. Nulla dui eu diam feugiat mollis tellus."
-    />
+    /> -->
   </div>
 </template>
 
