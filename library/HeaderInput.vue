@@ -27,7 +27,6 @@ export default {
         query: this.search,
       })
     },
-    // oddiy string qilib,
     handleKeyPress(event) {
       if (event.charCode === 13) {
         this.searchProductGetAll()

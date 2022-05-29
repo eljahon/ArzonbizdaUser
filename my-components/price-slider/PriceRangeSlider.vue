@@ -1,10 +1,12 @@
 <script>
 import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
 import 'vue-slider-component/dist-css/vue-slider-component.css'
+
 import { CIcon, CInput, CFlex } from '@chakra-ui/vue'
 
 export default {
   name: 'PriceRangeSlider',
+
   components: {
     CIcon,
     CInput,
@@ -14,8 +16,59 @@ export default {
 
   data() {
     return {
-      value: [0, 10000000],
+      value: [1, 30],
+      realMin: null,
+      realMax: null,
     }
+  },
+
+  computed: {
+    minData() {
+      return this.value[0] * 100000
+    },
+    maxData() {
+      return this.value[1] * 100000
+    },
+  },
+
+  watch: {
+    maxData(newVal, oldVal) {
+      this.realMax = newVal
+    },
+    minData(newVal, oldVal) {
+      this.realMin = newVal
+    },
+  },
+
+  methods: {
+    getSearchData() {
+      this.$router.push({
+        path: this.localePath('/search'),
+      })
+      this.$store.dispatch('changePriceProducts', {
+        axios: this.$axios,
+        searchQ: '',
+        maxPrice: this.realMin,
+        minPrice: this.realMax,
+      })
+      this.$axios
+        .get('product/search', {
+          params: {
+            max: this.realMin,
+            min: this.realMax,
+            q: '',
+          },
+        })
+        .then((res) => {
+          console.log(res)
+        })
+    },
+
+    handleKeyPress(event) {
+      if (event.charCode === 13) {
+        this.getSearchData()
+      }
+    },
   },
 }
 </script>
@@ -28,7 +81,8 @@ export default {
 
     <CFlex align="center" gap="9px" mt="29px">
       <c-input
-        v-model="value[0]"
+        v-model="realMin"
+        type="number"
         color="color.InputColor"
         _focus="none"
         w="103px"
@@ -41,7 +95,8 @@ export default {
       <CIcon name="priceIcon" />
 
       <c-input
-        v-model="value[1]"
+        v-model="realMax"
+        type="number"
         color="color.InputColor"
         _focus="none"
         w="103px"
@@ -60,6 +115,8 @@ export default {
         _hover="none"
         font-weight="300"
         type="submit"
+        @click="getSearchData"
+        @keypress="handleKeyPress"
       >
         {{ $t('search') }}
       </c-button>
@@ -71,19 +128,23 @@ export default {
 .slider__price {
   margin-top: 32px;
 }
+
 .vue-slider {
   background: #e3e5e5;
   border-radius: 12px;
   height: 6px !important;
   padding: 0 !important;
 }
+
 .vue-slider-process {
   background: red;
 }
+
 .vue-slider-dot {
   border-radius: 12px;
   background: #4a4d4d;
 }
+
 .vue-slider-dot-tooltip {
   display: none;
 }
