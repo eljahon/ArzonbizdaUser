@@ -47,6 +47,7 @@ export default {
         firstName: data.posts[0]['admin.first_name'],
         lastName: data.posts[0]['admin.last_name'],
         time: data.posts[0]['admin.updatedAt'],
+        body: data.posts[0].body,
       }
 
       console.log(this.blogList)

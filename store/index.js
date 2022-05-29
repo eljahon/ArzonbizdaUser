@@ -67,18 +67,24 @@ export const actions = {
     ctx.commit('SET_BREADCUMBS', payload)
   },
 
-  async changeProducts(ctx, { axios, query }) {
+  async changePriceProducts(ctx, { axios, searchQ, maxPrice, minPrice }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')
 
     const { data } = await axios.get(
-      query ? '/product/search' : '/product/home',
-      query ? { params: { q: query } } : undefined
+      searchQ ? '/product/search' : '/product/home',
+      {
+        params: {
+          max: maxPrice,
+          min: minPrice,
+          q: searchQ,
+        },
+      }
     )
     const sendData = data.data.products.map((el) => {
       return {
         id: el.id,
-        name: el.name,
+        name: el.brand_name,
         img: el.images[0].src,
         price: el.price,
       }
