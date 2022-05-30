@@ -25,8 +25,6 @@ export default {
 
 <template>
   <div class="slider__hero" :width="['320px', '468px', '920px', '1400px']">
-    <!-- slider hozircha bunday turibdi. Keyin v-for  bilan qilinsin. Esdan chiqib qolmasin-->
-
     <VueSlickCarousel v-bind="settings">
       <div>
         <div class="banner__hero">

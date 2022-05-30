@@ -45,12 +45,14 @@ export default {
       this.$router.push({
         path: this.localePath('/search'),
       })
+
       this.$store.dispatch('changePriceProducts', {
         axios: this.$axios,
         searchQ: '',
         maxPrice: this.realMin,
         minPrice: this.realMax,
       })
+      
       this.$axios
         .get('product/search', {
           params: {
