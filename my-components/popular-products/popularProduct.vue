@@ -64,7 +64,7 @@ export default {
         :w="['86px', '104px', '122px', '140px', '158px', '176px']"
         :h="['104px', '126px', '146px', '168', '190px', '212px']"
         :src="item.img"
-        object-fit="cover"
+        object-fit="contain"
       />
     </CBox>
     <CBox>

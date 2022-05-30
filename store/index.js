@@ -67,6 +67,28 @@ export const actions = {
     ctx.commit('SET_BREADCUMBS', payload)
   },
 
+  async changeProducts(ctx, { axios, query }) {
+    ctx.commit('SET_LOADING', true)
+    ctx.commit('SET_HAS_CONTENT', 'pending')
+
+    const { data } = await axios.get(
+      query ? '/product/search' : '/product/home',
+      query ? { params: { q: query } } : undefined
+    )
+    const sendData = data.data.products.map((el) => {
+      return {
+        id: el.id,
+        name: el.brand_name,
+        img: el.images[0].src,
+        price: el.price,
+      }
+    })
+
+    ctx.commit('SET_PRODUCTS_LIST', sendData)
+    ctx.commit('SET_LOADING', false)
+    ctx.commit('SET_HAS_CONTENT', !sendData.length ? 'no_content' : 'content')
+  },
+
   async changePriceProducts(ctx, { axios, searchQ, maxPrice, minPrice }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')
