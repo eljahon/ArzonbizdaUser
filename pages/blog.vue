@@ -26,13 +26,13 @@ export default {
     return {
       route: this.$route,
       loading: false,
-      blogList: [],
+      blogList: {},
     }
   },
 
   mounted() {
     this.$store.dispatch('addBreadcumbs', this.route)
-    AOS.init({})
+    AOS.init()
     this.fetchItems()
   },
 

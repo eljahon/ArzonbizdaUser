@@ -15,7 +15,7 @@ export default {
     return {
       route: this.$route,
       loading: false,
-      blogList: [],
+      blogList: {}
     }
   },
 
