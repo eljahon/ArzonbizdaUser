@@ -26,10 +26,11 @@ export default {
     },
   ],
 
-  props: ['item'],
-
-  mounted() {
-    console.log('salom', this.item)
+  props: {
+    item:{
+      type:Object,
+      required:true
+    }
   },
 
   methods: {
@@ -44,7 +45,6 @@ export default {
           },
         })
       )
-      console.log(item)
     },
   },
 }

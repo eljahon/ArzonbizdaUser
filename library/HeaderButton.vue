@@ -66,6 +66,7 @@ export default {
           background="#6FCF97"
           border-radius="10px"
           margin-bottom="10px"
+          padding-top="2px"
           w="16px"
           h="16px"
         >
