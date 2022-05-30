@@ -24,7 +24,7 @@ export default {
       <CLink
         ><CImage
           :src="require('@/assets/img/appstore.png')"
-          :max-w="['90px', '120px', '150px', '180px']"
+          :max-w="['90px', '108px', '126px', '144px', '162px', '180px']"
       /></CLink>
       <CLink
         ><CImage

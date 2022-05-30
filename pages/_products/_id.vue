@@ -75,12 +75,11 @@ export default {
     <BreadCumb />
     <LoaderComponent v-if="$store.state.loading" />
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
-      <!-- <c-flex gap="30px" mt="64px"> -->
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
     </div>
 
-    <ChakraTab :selected-product="productData" />
+    <ChakraTab :selected-product="productData" class="product__tab" />
   </div>
 </template>
 
@@ -90,6 +89,7 @@ export default {
   grid-template-columns: repeat(2, 50%);
   gap: 30px;
   margin-top: 40px;
+  align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -99,6 +99,22 @@ export default {
   }
   .product__disc {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product__tab {
+    margin-top: 235px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .product__tab {
+    margin-top: 168px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .product__tab {
+    margin-top: 123px;
   }
 }
 </style>

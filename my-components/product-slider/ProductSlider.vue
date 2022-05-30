@@ -21,38 +21,28 @@ export default {
 
   data() {
     return {
-      // items: [
-      //   {
-      //     image: 'https://picsum.photos/443/469',
-      //   },
-      //   {
-      //     image: 'https://picsum.photos/443/469',
-      //   },
-      //   {
-      //     image: 'https://picsum.photos/443/469',
-      //   },
-      //   {
-      //     image: 'https://picsum.photos/443/469',
-      //   },
-      // ],
       c1: undefined,
       c2: undefined,
     }
   },
+
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
     console.log(this.images)
   },
+
   methods: {
     show() {
       this.$viewerApi({
         images: this.images,
       })
     },
+
     previous() {
       this.$refs.c2.next()
     },
+
     next() {
       this.$refs.c1.prev()
     },
@@ -90,12 +80,12 @@ export default {
         :infinite="true"
         :as-nav-for="c1"
         :focus-on-select="true"
-        width="100%"
+        style="width: 80%; height: 83px; align-items: center"
       >
-        <div v-for="(item, index) in images" :key="index">
-          <div class="slider__card" width="100px">
+        <div v-for="(item, index) in images" :key="index" style="width: 83px">
+          <div class="slider__card">
             <img
-              style="width: 81px; height: 85px"
+              style="width: 81px; height: 85px; padding-top: 20px"
               :src="item.src"
               alt="image"
               class="slider__image"
@@ -108,14 +98,6 @@ export default {
         <CIcon name="buttonRight" ml="10px" />
       </button>
     </div>
-
-    <div>
-      <VueSlickCarousel ref="carousel">
-        <div>
-          <div class="slider__fix"></div>
-        </div>
-      </VueSlickCarousel>
-    </div>
   </div>
 </template>
 
@@ -127,8 +109,7 @@ div {
 
 .slider__wrapper {
   height: 583px;
-  max-width: 100%;
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
   border-radius: 12px;
   margin: 0 auto;
 }
@@ -140,30 +121,33 @@ div {
   height: 100px;
   border-radius: 12px;
   cursor: pointer;
-  padding: 9px;
+  padding-top: 10px;
+
   &:hover {
     border: 3px solid rgba(15, 108, 176, 0.3);
     border-radius: 12px;
   }
 }
+
 .slider__image {
   margin: 0 auto;
+  width: 80%;
 }
 
 .slider__footer {
   display: flex;
-  gap: 30px;
   justify-content: space-between;
-  max-width: 83%;
+  width: 100%;
   margin: 0;
 }
+
 .slide__btn {
-  width: 40px;
+  // width: 40px;
   height: 100px;
   border: 1px solid #e3e6e6;
   margin-top: 20px;
   border-radius: 12px;
-  z-index: 10000;
+  // z-index: 10000;
 
   &:hover {
     border: 1px solid #3bcff5;
