@@ -26,13 +26,12 @@ export default {
 
 <template>
   <div>
-    <LoaderComponent v-if="$store.state.loading" />
-
     <popular-products
       :columns="[]"
       data-aos="fade-up"
       title="Найденные данные"
     />
+    <LoaderComponent v-if="$store.state.loading" />
     <div
       v-if="$store.state.has_content === 'no_content' && !$store.state.loading"
       data-aos="fade-up"
