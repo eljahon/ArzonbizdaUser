@@ -6,6 +6,7 @@
     width: 40px !important;
     height: 40px !important;
     left: -50px !important;
+
     border-radius: 50%;
 
     &:hover {
@@ -39,15 +40,17 @@
     }
   }
 
-  @media screen and(max-width: 425px) {
+  @media screen and(max-width: 550px) {
     .slick-next {
       top: 65% !important;
+      margin-top: 10px !important;
     }
   }
 
-  @media screen and(max-width: 425px) {
+  @media screen and(max-width: 550px) {
     .slick-prev {
       top: 65% !important;
+      margin-top: 10px !important;
     }
   }
 }

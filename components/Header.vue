@@ -27,6 +27,7 @@ export default {
   <CThemeProvider>
     <header class="header">
       <c-flex
+      class="header-flex"
         align="center"
         justify-content="space-between"
         mt="20px"
@@ -158,6 +159,12 @@ export default {
 @media screen and(max-width: 768px) {
   .header__input {
     width: 100%;
+  }
+  .header{
+    padding-bottom: 0;
+  }
+  .header-flex{
+    margin-bottom: 0;
   }
 }
 @media screen and(max-width: 350px) {
