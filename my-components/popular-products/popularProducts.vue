@@ -42,7 +42,7 @@ export default {
 </script>
 <template>
   <CThemeProvider>
-    <CBox mt="88px" :mb="['27px', '38px', '52px', '64px', '76px', '88px']">
+    <CBox class="popular-wrapper" mt="88px" :mb="['27px', '38px', '52px', '64px', '76px', '88px']">
       <CFlex
         align="center"
         justify="space-between"
@@ -93,4 +93,13 @@ export default {
     }
   }
 }
+@media screen and (max-width: 350px) {
+    .popular-wrapper {
+      margin-top: 24px;
+    }
+    .main_header{
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 </style>
