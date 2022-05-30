@@ -29,7 +29,10 @@ export default {
       :pt="['5px', '10px', '15px', '20px', '30px', '40px']"
     >
       <div class="containerBox">
-        <CSimpleGrid :columns="['3', '3', '4', '4', '4', '4']">
+        <CSimpleGrid
+          :columns="['3', '3', '4', '4', '4', '4']"
+          class="footer-grid"
+        >
           <FooterLogoPart />
           <FooterInfoPart />
           <FooterAboutPart />
@@ -40,3 +43,10 @@ export default {
     <FooterBottom />
   </CThemeProvider>
 </template>
+<style lang="scss" scoped>
+.footer-grid {
+  @media screen and(max-width: 315px) {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

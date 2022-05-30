@@ -4,7 +4,7 @@ import PopularProduct from './popularProduct.vue'
 import ViewAll from '~/library/viewAll.vue'
 
 export default {
-  name: 'CategoriesComponent',
+  name: 'PopularProducts',
 
   components: {
     CThemeProvider,
@@ -57,7 +57,7 @@ export default {
 
       <CSimpleGrid
         :columns="
-          columns.length === 0 ? ['3', '3', '3', '4', '4', '5'] : columns
+          columns.length === 0 ? ['2', '3', '3', '4', '4', '5'] : columns
         "
         :spacing="['10px', '15px', '20px', '22px', '26px', '30px']"
         :rows="['1', '1', '2', '2', '3', '3']"
@@ -76,10 +76,6 @@ export default {
   </CThemeProvider>
 </template>
 <style lang="scss" scoped>
-.showHide {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .popular__product {
   @media screen and(max-width: 62em) {
     &:nth-child(n + 10) {
