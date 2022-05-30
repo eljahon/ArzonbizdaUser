@@ -88,4 +88,9 @@ export default {
     margin-left: 0;
   }
 }
+@media screen and(max-width: 350px) {
+  .header__button {
+    height: 48px !important;
+  }
+}
 </style>

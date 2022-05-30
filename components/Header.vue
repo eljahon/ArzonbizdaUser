@@ -33,9 +33,10 @@ export default {
         mb="20px"
         flex-wrap="wrap"
       >
-        <c-box width="139px" height="40px">
+        <c-box class="wrapper-logo" width="139px" height="40px">
           <NuxtLink as="router-link" to="/">
             <svg
+            class="logo"
               width="188"
               height="42"
               viewBox="0 0 188 42"
@@ -157,6 +158,14 @@ export default {
 @media screen and(max-width: 768px) {
   .header__input {
     width: 100%;
+  }
+}
+@media screen and(max-width: 350px) {
+  .logo {
+    width: 125px !important;
+  }
+  .wrapper-logo {
+    width: 115px !important;
   }
 }
 </style>

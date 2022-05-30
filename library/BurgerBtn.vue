@@ -73,4 +73,10 @@ export default {
     margin-right: 0;
   }
 }
+@media screen and(max-width: 350px) {
+  .burger__button {
+    height: 48px !important;
+    margin: 0;
+  }
+}
 </style>
