@@ -7,12 +7,6 @@ export default {
     CIcon,
     CButton,
   },
-  props: {
-    items: {
-      type: Object,
-      required: true,
-    },
-  },
   data() {
     return {
       isCom: false,

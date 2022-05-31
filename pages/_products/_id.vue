@@ -2,6 +2,7 @@
 import {} from '@chakra-ui/vue'
 import BreadCumb from '../../my-components/breadcumb/Breadcumb.vue'
 
+import LoaderComponent from '../../library/LoaderComponent.vue'
 import ProductDescription from '~/my-components/product-description/ProductDescription.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
@@ -16,6 +17,7 @@ export default {
 
   components: {
     BreadCumb,
+    LoaderComponent,
     ProductDescription,
     ProductSlider,
     ChakraTab,

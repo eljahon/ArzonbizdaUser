@@ -102,14 +102,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-div {
-  margin: 0 auto;
-  max-width: 100%;
-}
 
 .slider__wrapper {
   height: 583px;
-  // background-color: #f4f4f4;
+  background-color: #f4f4f4;
   border-radius: 12px;
   margin: 0 auto;
 }
@@ -142,12 +138,12 @@ div {
 }
 
 .slide__btn {
-  // width: 40px;
+   width: 40px;
   height: 100px;
   border: 1px solid #e3e6e6;
   margin-top: 20px;
   border-radius: 12px;
-  // z-index: 10000;
+  z-index: 10000;
 
   &:hover {
     border: 1px solid #3bcff5;
@@ -162,10 +158,10 @@ div {
     height: 350px;
   }
 
-  // .slider__wrapper {
-  //   max-width: 618px;
-  //   margin: 0 auto;
-  // }
+   .slider__wrapper {
+     max-width: 618px;
+     margin: 0 auto;
+   }
 }
 
 @media screen and (max-width: 425px) {
@@ -174,8 +170,8 @@ div {
   }
 }
 @media screen and (max-width: 375px) {
-  // .slider__wrapper {
-  //   max-width: 320px;
-  // }
+   .slider__wrapper {
+     max-width: 320px;
+   }
 }
 </style>
