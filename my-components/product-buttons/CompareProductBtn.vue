@@ -10,7 +10,7 @@ export default {
 
   props: {
     items: {
-      type: Object,
+      type: Object || Array,
       required: true,
     },
   },
