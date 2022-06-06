@@ -1,5 +1,6 @@
 <script>
 import { CThemeProvider, CButton, CIcon, CBadge } from '@chakra-ui/vue'
+
 import { mapGetters } from 'vuex'
 
 export default {

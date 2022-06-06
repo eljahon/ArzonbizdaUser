@@ -7,8 +7,6 @@ import ProductDescription from '~/my-components/product-description/ProductDescr
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
 
-import aos from '@/helpers/aos'
-
 import AOS from '@/node_modules/aos/dist/aos'
 import 'aos/dist/aos.css'
 
@@ -22,14 +20,6 @@ export default {
     ProductSlider,
     ChakraTab,
   },
-
-  mixins: [
-    {
-      methods: {
-        aos,
-      },
-    },
-  ],
 
   layout: 'ProductLayout',
 
@@ -95,7 +85,9 @@ export default {
 <template>
   <div>
     <BreadCumb />
+
     <LoaderComponent v-if="$store.state.loading" />
+
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />

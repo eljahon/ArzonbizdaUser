@@ -3,8 +3,10 @@ import { CFlex, CBox } from '@chakra-ui/vue'
 import BannerImage from '../bannerImgBox/BannerImg.vue'
 import CategoryFilter from './CategoryFilter.vue'
 import CategoryMainWrapper from './CategoryMainWrapper.vue'
+
 export default {
   name: 'CategoryMain',
+
   components: {
     CategoryFilter,
     BannerImage,
@@ -12,11 +14,13 @@ export default {
     CFlex,
     CBox,
   },
+
   data() {
     return {
       switched: true,
     }
   },
+
   methods: {
     done() {
       this.switched = !this.switched

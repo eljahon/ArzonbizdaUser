@@ -1,49 +1,55 @@
 <script>
 import { CBreadcrumb, CBreadcrumbItem, CBreadcrumbLink } from '@chakra-ui/vue'
 import { mapGetters } from 'vuex'
+
 export default {
   name: 'BreadcumbItems',
+
   components: {
     CBreadcrumb,
     CBreadcrumbItem,
     CBreadcrumbLink,
   },
+
   data() {
     return {
       namePage: '',
     }
   },
+
   computed: {
     ...mapGetters(['breadCumbs']),
 
     bredcrumbsData: {
       set(newValue) {
-        // console.log('sdsdsdsd', newValue)
         this.pageN = newValue
       },
 
       get() {
         if (this.$route.params) {
           return Object.keys(this.$route.params).map((item) => {
-            // console.log('item', item)
             return {
               name: item,
               param: this.$route.params[item],
             }
           })
         }
+
         return null
       },
     },
   },
+
   mounted() {
     this.getIdProduct(this.$route.params.id)
   },
+
   methods: {
     async getIdProduct(id) {
       const { data } = await this.$axios.get(`/product/${id}`)
-      const ghg = await data.product.brand_name
-      this.namePage = ghg
+
+      const crumb = await data.product.brand_name
+      this.namePage = crumb
     },
   },
 }

@@ -9,11 +9,13 @@ export default {
     Drawer,
     LangButton,
   },
+
   data() {
     return {
       isOpen: false,
     }
   },
+
   methods: {
     close() {
       this.isOpen = false

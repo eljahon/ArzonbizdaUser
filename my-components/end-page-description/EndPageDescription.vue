@@ -1,5 +1,6 @@
 <script>
 import { CThemeProvider, CBox, CText } from '@chakra-ui/vue'
+
 export default {
   components: {
     CThemeProvider,

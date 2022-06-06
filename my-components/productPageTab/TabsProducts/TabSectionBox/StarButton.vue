@@ -1,6 +1,7 @@
 <script>
 export default {}
 </script>
+
 <template>
   <CBox
     padding="12px 17px"

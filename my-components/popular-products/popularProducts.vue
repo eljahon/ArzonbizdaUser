@@ -19,6 +19,7 @@ export default {
   props: {
     title: {
       type: String,
+      default: null,
     },
 
     columns: {
@@ -35,9 +36,6 @@ export default {
     isLoading() {
       return this.$store.getters.loading
     },
-  },
-  mounted() {
-    // console.log(this.$store.state.productsList);
   },
 
   methods: {

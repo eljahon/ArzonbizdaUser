@@ -1,7 +1,9 @@
 <script>
 import { CBox, CText, CTextarea } from '@chakra-ui/vue'
+
 export default { CBox, CText, CTextarea }
 </script>
+
 <template>
   <CBox>
     <CText
@@ -15,6 +17,7 @@ export default { CBox, CText, CTextarea }
       :text-align="['center', 'center', 'center', 'center', 'start', 'start']"
       >Baholang</CText
     >
+
     <CBox
       display="flex"
       align-items="center"
@@ -33,6 +36,7 @@ export default { CBox, CText, CTextarea }
       <CIcon name="star" mb="3px" width="42px" height="42px" ml="13px" />
       <CIcon name="star" mb="3px" width="42px" height="42px" ml="13px" />
     </CBox>
+
     <CText
       :text-align="['center', 'center', 'center', 'center', 'start', 'start']"
       color="color.TextColor1"
@@ -57,6 +61,7 @@ export default { CBox, CText, CTextarea }
         placeholder="Qo’shimcha izoh yozib qoldiring"
       />
     </CBox>
+
     <CBox
       display="flex"
       flex-direction="column"

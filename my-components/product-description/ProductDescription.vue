@@ -40,7 +40,8 @@ export default {
 
   props: {
     items: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -65,9 +66,6 @@ export default {
       }
     },
   },
-  // mounted() {
-  //   this.$store.state.isBadge.length = 0
-  // },
 }
 </script>
 

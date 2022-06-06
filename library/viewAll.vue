@@ -6,8 +6,9 @@
         :font-size="['10px', '12px', '14px', '16px']"
         :line-height="['18px', '20px', '22px', '24px']"
         align-items="center"
-        >{{ $t('viewAll')
-        }}<CIcon
+        >{{ $t('viewAll') }}
+
+        <CIcon
           name="right_arrow"
           :ml="['6px', '7px', '8px', '9px', '10px', '10px']"
           mt="10px"

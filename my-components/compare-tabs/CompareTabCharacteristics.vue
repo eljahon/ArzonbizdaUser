@@ -16,7 +16,8 @@ export default {
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -27,12 +28,9 @@ export default {
       phoneModel: [{ name: 'Android11' }],
     }
   },
-
-  mounted() {
-    // console.log(this.item)
-  },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <c-box

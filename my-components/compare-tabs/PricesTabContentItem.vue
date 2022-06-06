@@ -21,13 +21,10 @@ export default {
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
-  },
-
-  mounted() {
-    // console.log(this.item)
   },
 }
 </script>

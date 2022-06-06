@@ -1,10 +1,12 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
 import ViewAll from '~/library/viewAll.vue'
+
 export default {
   name: 'BrandsComponent',
+
   components: {
     BrandComponent,
     CThemeProvider,
@@ -12,18 +14,21 @@ export default {
     CBox,
     ViewAll,
   },
+
   data() {
-    return {
-    }
+    return {}
   },
+
   computed: {
     ...mapGetters(['brandItem']),
-    brandItems () {
+
+    brandItems() {
       return this.brandItem
-    }
-  }
+    },
+  },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <CBox mt="88px" :mb="['24px', '32px', '40px', '48px', '56px', '64px']">
@@ -55,6 +60,7 @@ export default {
     </CBox>
   </CThemeProvider>
 </template>
+
 <style lang="scss" scoped>
 .brands__component {
   @media screen and(max-width: 62em) {

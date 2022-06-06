@@ -1,7 +1,9 @@
 <script>
 import CompareReviewsItem from './CompareReviewsItem.vue'
+
 export default {
   components: { CompareReviewsItem },
+
   data() {
     return {
       CompareReviewsData: [
@@ -37,6 +39,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <div>
     <compare-reviews-item

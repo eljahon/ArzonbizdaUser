@@ -2,8 +2,10 @@
 import { CThemeProvider, CBox, CText } from '@chakra-ui/vue'
 import PriceRangeSlider from '../price-slider/PriceRangeSlider.vue'
 import FilterHeader from './filterHeader.vue'
+
 export default {
   name: 'CategoryFilter',
+
   components: {
     FilterHeader,
     CThemeProvider,
@@ -11,6 +13,7 @@ export default {
     CBox,
     PriceRangeSlider,
   },
+
   data() {
     return {
       filters: [
@@ -144,8 +147,8 @@ export default {
   align-items: center;
   margin-top: 16px;
 }
-@media screen and (max-width:1050px) {
-  .category-filter{
+@media screen and (max-width: 1050px) {
+  .category-filter {
     display: none;
   }
 }

@@ -1,15 +1,19 @@
 <script>
 import { CThemeProvider, CFlex, CText } from '@chakra-ui/vue'
+
 export default {
   name: 'CategoryComponent',
+
   components: {
     CFlex,
     CThemeProvider,
     CText,
   },
+
   props: ['item'],
 }
 </script>
+
 <template>
   <CThemeProvider>
     <c-flex

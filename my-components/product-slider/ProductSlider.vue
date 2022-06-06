@@ -6,6 +6,7 @@ import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 import Vue from 'vue'
 Vue.use(VueViewer)
+
 export default {
   components: {
     VueSlickCarousel,
@@ -14,7 +15,8 @@ export default {
 
   props: {
     images: {
-      type: Array,
+      type: Array || Object,
+      default: null,
       required: true,
     },
   },
@@ -29,7 +31,6 @@ export default {
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
-    // console.log(this.images)
   },
 
   methods: {
@@ -102,7 +103,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .slider__wrapper {
   height: 583px;
   background-color: #f4f4f4;
@@ -138,7 +138,7 @@ export default {
 }
 
 .slide__btn {
-   width: 40px;
+  width: 40px;
   height: 100px;
   border: 1px solid #e3e6e6;
   margin-top: 20px;
@@ -158,10 +158,10 @@ export default {
     height: 350px;
   }
 
-   .slider__wrapper {
-     max-width: 618px;
-     margin: 0 auto;
-   }
+  .slider__wrapper {
+    max-width: 618px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -170,8 +170,8 @@ export default {
   }
 }
 @media screen and (max-width: 375px) {
-   .slider__wrapper {
-     max-width: 320px;
-   }
+  .slider__wrapper {
+    max-width: 320px;
+  }
 }
 </style>

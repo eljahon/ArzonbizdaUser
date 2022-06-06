@@ -1,6 +1,7 @@
 <script>
 import OpenProductBtn from '~/my-components/product-buttons/OpenProductBtn.vue'
 import CompareProductBtn from '~/my-components/product-buttons/CompareProductBtn.vue'
+
 export default {
   name: 'ProductMobile',
   components: {
@@ -9,7 +10,6 @@ export default {
   },
 }
 </script>
-OpenProductBtn
 
 <template>
   <CThemeProvider>

@@ -1,7 +1,6 @@
 <script>
 import BreadCumb from '../my-components/breadcumb/Breadcumb.vue'
 import CategoryMain from '~/my-components/categories-component/CategoryMain.vue'
-import aos from '@/helpers/aos'
 
 import AOS from '@/node_modules/aos/dist/aos'
 import 'aos/dist/aos.css'
@@ -14,13 +13,6 @@ export default {
     BreadCumb,
   },
 
-  mixins: [
-    {
-      methods: {
-        aos,
-      },
-    },
-  ],
   data() {
     return {
       route: this.$route,

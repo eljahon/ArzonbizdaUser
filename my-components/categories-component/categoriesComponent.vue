@@ -2,6 +2,7 @@
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import CategoryComponent from '~/my-components/categories-component/categoryComponent.vue'
 import ViewAll from '~/library/viewAll.vue'
+
 export default {
   name: 'CategoriesComponent',
   components: {
@@ -11,6 +12,7 @@ export default {
     CBox,
     ViewAll,
   },
+
   data() {
     return {
       categoryItem: [
@@ -31,6 +33,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <CBox :mb="['30px', '41px', '52px', '64px', '76px', '88px']">
@@ -62,6 +65,7 @@ export default {
     </CBox>
   </CThemeProvider>
 </template>
+
 <style lang="scss" scoped>
 .category__component {
   @media screen and(max-width: 62em) {

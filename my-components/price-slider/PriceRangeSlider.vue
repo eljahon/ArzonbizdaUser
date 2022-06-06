@@ -5,6 +5,7 @@ import { CIcon, CInput, CFlex } from '@chakra-ui/vue'
 
 export default {
   name: 'PriceRangeSlider',
+
   components: {
     CIcon,
     CInput,

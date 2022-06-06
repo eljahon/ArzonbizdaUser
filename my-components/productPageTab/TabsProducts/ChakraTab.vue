@@ -14,8 +14,6 @@ import TabsProducts from './TabsProducts.vue'
 import TabCharacteristics from './TabCharacteristics.vue'
 // import TabReviews from './TabReviews.vue'
 
-import aos from '@/helpers/aos'
-
 import AOS from '@/node_modules/aos/dist/aos'
 import 'aos/dist/aos.css'
 
@@ -36,17 +34,10 @@ export default {
     // TabReviews,
   },
 
-  mixins: [
-    {
-      methods: {
-        aos,
-      },
-    },
-  ],
-
   props: {
     selectedProduct: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -103,6 +94,7 @@ export default {
             :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
             >{{ $t('tab1') }}</CTab
           >
+
           <CTab
             :_selected="{
               fontWeight: '700',
@@ -162,6 +154,7 @@ export default {
             :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
             >{{ $t('tab3') }}</CTab
           > -->
+
           <CTab
             :_selected="{
               fontWeight: '700',

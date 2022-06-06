@@ -1,10 +1,14 @@
 <script>
 import { CBox, CGrid } from '@chakra-ui/vue'
 import TabReviewsImg from '../productPageTab/TabsProducts/TabSectionBox/TabReviewsImg.vue'
+
 export default {
   name: 'TableInformation',
+
   components: { CBox, CGrid, TabReviewsImg },
+
   props: ['item'],
+
   data() {
     return {
       imageURLPath: [
@@ -16,6 +20,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CBox>
     <CBox

@@ -1,10 +1,4 @@
 <script>
-//   import {
-//   CBreadcrumb,
-//   CBreadcrumbItem,
-//   CBreadcrumbLink,
-//   CBreadcrumbSeparator,
-// } from '@chakra-ui/vue'
 export default {
   name: 'ContainerBox',
 

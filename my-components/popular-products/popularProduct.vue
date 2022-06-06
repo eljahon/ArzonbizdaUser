@@ -28,15 +28,14 @@ export default {
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
 
   methods: {
     openProductPage(item) {
-      // this.$router.push('/products/' + item)
-
       this.$router.push(
         this.localePath({
           name: 'products-id',

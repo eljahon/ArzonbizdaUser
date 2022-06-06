@@ -4,8 +4,6 @@ import { CBox } from '@chakra-ui/vue'
 import BlogDisc from '~/my-components/blog-disc/blog-disc.vue'
 import NewBlog from '~/my-components/newBlog/NewBlog.vue'
 
-import aos from '@/helpers/aos'
-
 import AOS from '@/node_modules/aos/dist/aos'
 import 'aos/dist/aos.css'
 
@@ -13,14 +11,6 @@ export default {
   name: 'BlogComponent',
 
   components: { BlogDisc, NewBlog, CBox },
-
-  mixins: [
-    {
-      methods: {
-        aos,
-      },
-    },
-  ],
 
   data() {
     return {

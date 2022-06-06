@@ -16,7 +16,8 @@ export default {
 
   props: {
     reviews: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -90,9 +91,11 @@ export default {
           <StarButton />
         </CBox>
       </CBox>
+
       <CBox>
         <TabComment />
       </CBox>
+
       <CBox v-for="item in TabInformation" :key="item.id">
         <TabInformation :item="item" />
       </CBox>

@@ -1,15 +1,19 @@
 <script>
 import { CThemeProvider, CFlex, CText } from '@chakra-ui/vue'
+
 export default {
   name: 'CategoryComponent',
+
   components: {
     CFlex,
     CThemeProvider,
     CText,
   },
+
   props: ['item'],
 }
 </script>
+
 <template>
   <CThemeProvider>
     <CFlex
@@ -40,6 +44,7 @@ export default {
     </CFlex>
   </CThemeProvider>
 </template>
+
 <style lang="scss" scoped>
 @media screen and(max-width: 800px) {
   .text {

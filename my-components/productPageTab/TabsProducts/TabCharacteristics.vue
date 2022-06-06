@@ -10,7 +10,7 @@ export default {
   },
   props: {
     characterics: {
-      type: Array,
+      type: Array || Object,
       required: true,
     },
   },
@@ -44,11 +44,9 @@ export default {
       ],
     }
   },
-  mounted() {
-    // console.log(this.characterics)
-  },
 }
 </script>
+
 <template>
   <CBox
     :padding="[

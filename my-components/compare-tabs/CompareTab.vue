@@ -4,8 +4,10 @@ import PricesTabContent from './PricesTabContent.vue'
 // import CompareTabComment from './CompareTabComment.vue'
 import CompareTabCharacteristics from './CompareTabCharacteristics.vue'
 // import CompareReviews from './CompareReviews.vue'
+
 export default {
   name: 'CompareTabs',
+
   components: {
     CTabs,
     CTabList,
@@ -20,13 +22,10 @@ export default {
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
-  },
-
-  mounted() {
-    // console.log(this.item)
   },
 }
 </script>

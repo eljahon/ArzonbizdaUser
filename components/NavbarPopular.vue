@@ -1,7 +1,9 @@
 <script>
 import { CBox, CLink, CIcon } from '@chakra-ui/vue'
+
 export default {
   name: 'NavbarPopular',
+
   components: {
     CBox,
     CLink,
@@ -9,6 +11,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CBox class="navbarPopular">
     <CBox
@@ -26,7 +29,7 @@ export default {
         color="color.InputColor"
         ><CLink
           as="router-link"
-          :to="localePath({ name: 'category', params: {category: 'phones'} })"
+          :to="localePath({ name: 'category', params: { category: 'phones' } })"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
           >{{ $t('category_phones') }}</CLink

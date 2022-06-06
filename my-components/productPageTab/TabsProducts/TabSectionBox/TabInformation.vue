@@ -63,6 +63,7 @@ export default {
           >{{ item.address }}</CText
         >
       </CBox>
+
       <CText
         :ml="['0px', '0px', '0px', '183px', '183px', '183px']"
         color="color.TextColor4"
@@ -73,6 +74,7 @@ export default {
         >{{ item.time }}</CText
       >
     </CBox>
+
     <CBox display="flex" align-items="center">
       <CBox>
         <CIcon name="star" width="21px" />
@@ -81,6 +83,7 @@ export default {
         <CIcon name="star" ml="4px" width="21px" />
         <CIcon name="star" ml="4px" width="21px" />
       </CBox>
+
       <CBox>
         <CText
           mt="2px"
@@ -94,6 +97,7 @@ export default {
         >
       </CBox>
     </CBox>
+
     <CGrid
       :mt="['12px', '14px', '16px', '18px', '20px', '22px']"
       class="grid__img__box"
@@ -105,6 +109,7 @@ export default {
         <TabReviewsImg :data="data" />
       </CBox>
     </CGrid>
+
     <CBox :w="['100%', '100%', '100%', '100%', '559px', '559px']" mt="24px">
       <CText
         color="color.TextColor1"
@@ -115,6 +120,7 @@ export default {
       >
         {{ item.attention }}
       </CText>
+
       <CText
         color="color.TextColor1"
         :font-size="['10px', '12px', '14px', '15px', '16px', '16px']"

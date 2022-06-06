@@ -1,5 +1,6 @@
 <script>
 import { CBox, CImage } from '@chakra-ui/vue'
+
 export default {
   components: {
     CBox,

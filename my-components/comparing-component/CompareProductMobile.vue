@@ -36,7 +36,8 @@ export default {
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -79,6 +80,7 @@ export default {
             >4,8</c-text
           >
         </c-box>
+
         <c-box d="flex" align-items="center">
           <c-icon
             name="comment"
@@ -95,6 +97,7 @@ export default {
           </c-text></c-box
         >
       </c-flex>
+
       <c-box
         d="flex"
         align-items="center"
@@ -117,6 +120,7 @@ export default {
         <c-icon name="greenTick" size="9px" color="color.greenTick" />
       </c-box>
     </c-stack>
+
     <c-text
       :font-size="['8px', '10px', '12px', '14px', '16px', '16px']"
       :line-height="['14px', '16px', '18px', '20px', '22px', '24px']"
@@ -128,6 +132,7 @@ export default {
       <br />
       Доставка выполняется ежедневно с 09:00 до 19:00 часов.
     </c-text>
+
     <c-button
       :height="['40px', '45px', '50px', '55px', '60px', '64px']"
       w="100%"
@@ -148,6 +153,7 @@ export default {
     </c-button>
   </c-box>
 </template>
+
 <style lang="scss" scoped>
 div {
   @media screen and(min-width: 768px) {

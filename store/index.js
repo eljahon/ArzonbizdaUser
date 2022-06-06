@@ -84,7 +84,8 @@ export const actions = {
         )
       })
     } catch (err) {
-      console.log(err)
+      // console.log(err)
+      ctx.commit('SET_LOADING', true)
     } finally {
       ctx.commit('SET_LOADING', false)
     }

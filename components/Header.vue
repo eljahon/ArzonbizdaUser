@@ -18,7 +18,6 @@ export default {
     LangButton,
     BurgerBtn,
     CBox,
-    // CIcon
 },
 }
 </script>
@@ -111,14 +110,17 @@ export default {
             <HeaderButton class="mobile" />
           </c-flex>
         </c-box>
+
         <HeaderInput class="header__input" />
         <LangButton class="lang__btn" />
         <HeaderButton class="desktop" />
       </c-flex>
     </header>
+
     <NavbarPopular />
   </CThemeProvider>
 </template>
+
 <style lang="scss" scoped>
 .header {
   gap: 19px;

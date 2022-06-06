@@ -13,7 +13,8 @@ export default {
 
   props: {
     products: {
-      type: Array,
+      type: Array || Object,
+      default: null,
       required: true,
     },
   },

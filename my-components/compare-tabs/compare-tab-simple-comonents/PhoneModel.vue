@@ -1,17 +1,15 @@
 <script>
 import { CBox, CText } from '@chakra-ui/vue'
+
 export default {
   components: { CBox, CText },
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
-  },
-
-  mounted() {
-    // console.log(this.item)
   },
 }
 </script>

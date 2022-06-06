@@ -1,12 +1,14 @@
 <script>
 import { CThemeProvider, CBox } from '@chakra-ui/vue'
 import PricesTabContentItem from './PricesTabContentItem.vue'
+
 export default {
   components: { PricesTabContentItem, CThemeProvider, CBox },
 
   props: {
     item: {
-      type: Object,
+      type: Object || Array,
+      default: null,
       required: true,
     },
   },
@@ -59,12 +61,9 @@ export default {
       // ],
     }
   },
-
-  mounted() {
-    // console.log(this.item)
-  },
 }
 </script>
+
 <template>
   <CThemeProvider>
     <c-box v-for="data in item" :key="data"
