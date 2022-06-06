@@ -27,7 +27,7 @@ export default {
         :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
         line-height="24px"
         color="white"
-        _hover="none"
+        :_hover="false" 
         >{{ $t('company') }}</CLink
       >
       <CLink
@@ -36,7 +36,7 @@ export default {
         :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
         line-height="24px"
         color="white"
-        _hover="none"
+        :_hover="false"
         >{{ $t('vacancy') }}</CLink
       >
       <CLink
@@ -45,7 +45,7 @@ export default {
         :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
         line-height="24px"
         color="white"
-        _hover="none"
+        :_hover="false"
         >{{ $t('address') }}</CLink
       >
       <CLink
@@ -54,7 +54,7 @@ export default {
         :font-size="['10px', '11px', '12px', '13px', '14px', '16px']"
         line-height="24px"
         color="white"
-        _hover="none"
+        :_hover="false"
         >{{ $t('reviews') }}</CLink
       >
     </CStack>

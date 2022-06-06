@@ -33,7 +33,7 @@ export default {
         <c-select
           v-model="loacales"
           border-radius="12px"
-          _focus="none"
+          :_focus="false"
           border="LangBorder"
           color="color.InputColor"
           placeholder="Рус"
