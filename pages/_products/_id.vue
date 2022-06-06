@@ -31,29 +31,10 @@ export default {
 
   layout: 'ProductLayout',
 
-  async asyncData({ $axios, params }) {
-    const { data } = await $axios.get(`/product/${params.id}`)
-
-    const propsList = {
-      imageList: data.product.images,
-      name: data.product.name,
-      price: data.product.price,
-      disc: data.product.description,
-      compares: data.compares,
-      shop: data.product['shop.name'],
-      link: data.product.link,
-      logo: data.product['shop.logo'],
-      shopLink: data.product['shop.link'],
-    }
-
-    return {
-      props: propsList,
-      productData: data,
-    }
-  },
   data() {
     return {
       route: this.$route,
+      loading: false,
     }
   },
 
@@ -65,6 +46,45 @@ export default {
   methods: {
     storeData() {
       this.$store.dispatch('addBreadcumbs', this.route)
+    },
+
+    showToast(title, text) {
+      this.$toast({
+        title: title ?? 'An error occurred.',
+        description: text ?? 'Unable to load sharingan. Please shadow clones.',
+        status: 'error',
+        duration: 10000,
+        position: 'top',
+      })
+    },
+
+    async asyncData({ $axios, params }) {
+      this.loading = true
+
+      try {
+        const { data } = await $axios.get(`/product/${params.id}`)
+
+        const propsList = {
+          imageList: data.product.images,
+          name: data.product.name,
+          price: data.product.price,
+          disc: data.product.description,
+          compares: data.compares,
+          shop: data.product['shop.name'],
+          link: data.product.link,
+          logo: data.product['shop.logo'],
+          shopLink: data.product['shop.link'],
+        }
+
+        return {
+          props: propsList,
+          productData: data,
+        }
+      } catch (err) {
+        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
+      } finally {
+        this.loading = false
+      }
     },
   },
 }

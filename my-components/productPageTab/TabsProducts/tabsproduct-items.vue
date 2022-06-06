@@ -8,9 +8,12 @@ import {
   CIcon,
   CLink,
 } from '@chakra-ui/vue'
+
 import priceSpacer from '@/helpers/price-spacer'
+
 export default {
   name: 'TabsProduct',
+
   components: {
     CBox,
     CImage,
@@ -20,6 +23,7 @@ export default {
     CIcon,
     CLink,
   },
+
   mixins: [
     {
       methods: {
@@ -27,6 +31,7 @@ export default {
       },
     },
   ],
+
   props: {
     item: {
       type: Object,

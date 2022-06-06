@@ -8,11 +8,11 @@ export default {
     PhoneName,
     PhoneCharacteristics,
   },
-  props:{
-    characterics:{
-      type:Array,
-      required:true
-    }
+  props: {
+    characterics: {
+      type: Array,
+      required: true,
+    },
   },
   data() {
     return {
@@ -44,8 +44,8 @@ export default {
       ],
     }
   },
-  mounted(){
-    console.log(this.characterics)
+  mounted() {
+    // console.log(this.characterics)
   },
 }
 </script>
@@ -75,7 +75,7 @@ export default {
           :key="data.id"
           :width="['153px', '170px', '300px', '320px', '320px', '314px']"
         >
-        <PhoneName :data="data" />
+          <PhoneName :data="data" />
         </CBox>
       </CBox>
       <CBox display="flex" flex-direction="column">
@@ -85,7 +85,7 @@ export default {
           display="flex"
           margin-left="30px"
         >
-        <PhoneCharacteristics :datas="datas" />
+          <PhoneCharacteristics :datas="datas" />
         </CBox>
       </CBox>
     </CFlex>

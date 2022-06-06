@@ -27,7 +27,7 @@ export default {
   <CThemeProvider>
     <header class="header">
       <c-flex
-      class="header-flex"
+        class="header-flex"
         align="center"
         justify-content="space-between"
         mt="20px"
@@ -37,7 +37,7 @@ export default {
         <c-box class="wrapper-logo" width="139px" height="40px">
           <NuxtLink as="router-link" to="/">
             <svg
-            class="logo"
+              class="logo"
               width="188"
               height="42"
               viewBox="0 0 188 42"
@@ -160,10 +160,10 @@ export default {
   .header__input {
     width: 100%;
   }
-  .header{
+  .header {
     padding-bottom: 0;
   }
-  .header-flex{
+  .header-flex {
     margin-bottom: 0;
   }
 }

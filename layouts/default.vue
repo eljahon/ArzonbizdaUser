@@ -7,6 +7,7 @@
 // } from '@chakra-ui/vue'
 export default {
   name: 'ContainerBox',
+
   computed: {
     crumbs() {
       const crumbs = []
@@ -21,11 +22,11 @@ export default {
           if (item.regex.keys.length > 0) {
             crumbs.push({
               path: item.path.replace(/\/:[^/:]*$/, ''),
-              name: this.$i18n.t('route.' + item.name.replace(/-[^-]*$/, ''))
+              name: this.$i18n.t('route.' + item.name.replace(/-[^-]*$/, '')),
             })
             crumb.path = this.$route.path
             crumb.name = this.$i18n.t('route.' + this.$route.name, [
-              crumb.path.match(/[^/]*$/)[0]
+              crumb.path.match(/[^/]*$/)[0],
             ])
           }
           crumb.classes = 'is-active'
@@ -35,9 +36,8 @@ export default {
       })
 
       return crumbs
-    }
-  }
-
+    },
+  },
 }
 </script>
 

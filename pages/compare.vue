@@ -32,14 +32,30 @@ export default {
   },
 
   methods: {
+    showToast(title, text) {
+      this.$toast({
+        title: title ?? 'An error occurred.',
+        description: text ?? 'Unable to load sharingan. Please shadow clones.',
+        status: 'error',
+        duration: 10000,
+        position: 'top',
+      })
+    },
+
     async fetchItems() {
       const query = { prs: this.$store.state.isBadge }
+
       this.loading = true
-      const { data } = await this.$axios.get('product/compare', {
-        params: query,
-      })
-      this.loading = false
-      this.products = data.data.products
+      try {
+        const { data } = await this.$axios.get('product/compare', {
+          params: query,
+        })
+        this.products = data.data.products
+      } catch (err) {
+        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
+      } finally {
+        this.loading = false
+      }
     },
   },
 }

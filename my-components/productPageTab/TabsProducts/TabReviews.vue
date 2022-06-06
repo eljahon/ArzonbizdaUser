@@ -3,6 +3,7 @@ import { CThemeProvider, CBox, CButton } from '@chakra-ui/vue'
 import StarButton from './TabSectionBox/StarButton.vue'
 import TabInformation from './TabSectionBox/TabInformation.vue'
 import TabComment from './TabSectionBox/TabComment.vue'
+
 export default {
   components: {
     CThemeProvider,
@@ -12,12 +13,14 @@ export default {
     TabInformation,
     TabComment,
   },
-  props:{
-    reviews:{
-      type:Object,
-      required:true
-    }
+
+  props: {
+    reviews: {
+      type: Object,
+      required: true,
+    },
   },
+
   data() {
     return {
       TabInformation: [
@@ -54,7 +57,6 @@ export default {
       ],
     }
   },
-
 }
 </script>
 

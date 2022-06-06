@@ -1,4 +1,6 @@
 <script lang="js">
+import { mapGetters } from 'vuex'
+
 import DescriptionComponent from "@/my-components/description/DescriptionComponent.vue";
 import NewBlog from "@/my-components/newBlog/NewBlog.vue";
 import BannerComponent from "@/my-components/bannerImgBox/BannerComponent.vue";
@@ -7,10 +9,11 @@ import CategoriesComponent from "~/my-components/categories-component/categories
 import BrandsComponent from "~/my-components/brands-component/brandsComponent.vue";
 import SliderComponent from "~/my-components/banner/SliderComponent.vue";
 
-import aos from "@/helpers/aos"
 
 import AOS from '@/node_modules/aos/dist/aos'
 import 'aos/dist/aos.css'
+
+
 
 export default {
 
@@ -25,15 +28,7 @@ components: {
     BrandsComponent,
     SliderComponent,
 },
-  mixins: [
-    {
-      methods: {
-        aos,
-      },
-    },
-  ],
 
-  props: ['products'],
 
 data(){
   return{
@@ -41,8 +36,12 @@ data(){
   }
 },
 
+computed: {
+      ...mapGetters(['productsList'])
+},
+
   mounted() {
-    AOS.init({ })
+    AOS.init()
   },
 }
 </script>
@@ -53,7 +52,7 @@ data(){
     <div>
       <PopularProducts
         data-aos="fade-up"
-        :products="products"
+        :products="productsList"
         title="Популярные товары"
         :columns="columns"
       />

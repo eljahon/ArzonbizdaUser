@@ -57,7 +57,7 @@ export default {
   margin-top: 0 auto;
   margin-top: 64px;
 }
-.slider__hero{
-  padding: 0 48px!important;
+.slider__hero {
+  padding: 0 48px !important;
 }
 </style>

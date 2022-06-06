@@ -1,11 +1,13 @@
 <script>
 import { CImage } from '@chakra-ui/vue'
+
 export default {
-  name:"TabReviewsImg",
+  name: 'TabReviewsImg',
   components: { CImage },
   props: ['data'],
 }
 </script>
+
 <template>
   <CBox
     :height="['100px', '100px', '115px', '128px', '131px', '131px']"

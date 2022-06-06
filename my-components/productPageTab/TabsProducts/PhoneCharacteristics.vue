@@ -1,12 +1,15 @@
 <script>
 import { CText } from '@chakra-ui/vue'
+
 export default {
   components: {
     CText,
   },
+
   props: ['datas'],
 }
 </script>
+
 <template>
   <CText
     color="color.TextColor1"

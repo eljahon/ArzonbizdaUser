@@ -1,5 +1,6 @@
 <script>
 import { CBox, CText } from '@chakra-ui/vue'
+
 export default {
   components: {
     CBox,
@@ -7,6 +8,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CBox
     :padding="[
@@ -26,7 +28,8 @@ export default {
       'color.BgColor',
       'color.BgColor',
     ]"
-    ><CText
+  >
+    <CText
       :width="['initial', 'initial', 'initial', 'initial', '786px', '786px']"
       font-family="Yandex Sans Display"
       color="color.TextColor1"

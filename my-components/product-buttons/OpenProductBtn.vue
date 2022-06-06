@@ -1,12 +1,15 @@
 <script>
 import { CButton } from '@chakra-ui/vue'
+
 export default {
   name: 'OpenProductBtn',
+
   components: {
     CButton,
   },
 }
 </script>
+
 <template>
   <c-button
     height="64px"

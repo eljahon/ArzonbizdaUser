@@ -15,7 +15,7 @@ export default {
     return {
       route: this.$route,
       loading: false,
-      blogList: {}
+      blogList: {},
     }
   },
 
@@ -25,17 +25,30 @@ export default {
   },
 
   methods: {
+    showToast(title, text) {
+      this.$toast({
+        title: title ?? 'An error occurred.',
+        description: text ?? 'Unable to load sharingan. Please shadow clones.',
+        status: 'error',
+        duration: 10000,
+        position: 'top',
+      })
+    },
+
     async fetchItems() {
-      this.loading = true
-      const { data } = await this.$axios.get('admin/blog/posts', {})
+      try {
+        this.loading = true
+        const { data } = await this.$axios.get('admin/blog/posts', {})
 
-      this.blogList = {
-        image: data.posts[0].image,
-        title: data.posts[0].title,
+        this.blogList = {
+          image: data.posts[0].image,
+          title: data.posts[0].title,
+        }
+      } catch (err) {
+        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
+      } finally {
+        this.loading = false
       }
-
-      console.log(this.blogList)
-      this.loading = false
     },
   },
 }

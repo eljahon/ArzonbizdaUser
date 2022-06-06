@@ -18,6 +18,7 @@ export default {
     </CBox>
   </CBox>
 </template>
+
 <style lang="scss" scoped>
 .footerBottom {
   @media screen and(max-width: 995px) {

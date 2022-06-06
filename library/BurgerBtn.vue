@@ -42,6 +42,7 @@ export default {
     </c-button>
 
     <c-drawer
+      w="80%"
       :is-open="isOpen"
       placement="left"
       :on-close="close"

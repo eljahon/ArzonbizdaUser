@@ -18,14 +18,14 @@ export default {
 
     bredcrumbsData: {
       set(newValue) {
-        console.log('sdsdsdsd', newValue)
+        // console.log('sdsdsdsd', newValue)
         this.pageN = newValue
       },
 
       get() {
         if (this.$route.params) {
           return Object.keys(this.$route.params).map((item) => {
-            console.log('item', item)
+            // console.log('item', item)
             return {
               name: item,
               param: this.$route.params[item],

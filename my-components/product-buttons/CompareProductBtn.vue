@@ -7,23 +7,28 @@ export default {
     CIcon,
     CButton,
   },
+
   props: {
     items: {
       type: Object,
       required: true,
     },
   },
+
   data() {
     return {
       isCom: false,
     }
   },
+
   computed: {
     ...mapGetters(['isBadgeLength']),
   },
+
   methods: {
     IsComponents() {
       this.$store.dispatch('actionsIsCom', this.$route.params.id)
+
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
       } else if (this.isBadgeLength === 2) {
@@ -33,6 +38,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <c-button
     height="64px"

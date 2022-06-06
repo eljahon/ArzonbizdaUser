@@ -1,13 +1,16 @@
 <script>
 import { CBox, CSimpleGrid } from '@chakra-ui/vue'
 import TabsproductItems from './tabsproduct-items.vue'
+
 export default {
   name: 'TabsProducts',
+
   components: {
     CBox,
     CSimpleGrid,
     TabsproductItems,
   },
+
   props: {
     products: {
       type: Object,
@@ -16,6 +19,7 @@ export default {
   },
 }
 </script>
+
 <template>
   <CBox
     mt="12px"

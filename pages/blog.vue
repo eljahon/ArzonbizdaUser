@@ -37,21 +37,36 @@ export default {
   },
 
   methods: {
+    showToast(title, text) {
+      this.$toast({
+        title: title ?? 'An error occurred.',
+        description: text ?? 'Unable to load sharingan. Please shadow clones.',
+        status: 'error',
+        duration: 10000,
+        position: 'top',
+      })
+    },
+
     async fetchItems() {
       this.loading = true
-      const { data } = await this.$axios.get('admin/blog/posts', {})
 
-      this.blogList = {
-        image: data.posts[0].image,
-        title: data.posts[0].title,
-        firstName: data.posts[0]['admin.first_name'],
-        lastName: data.posts[0]['admin.last_name'],
-        time: data.posts[0]['admin.updatedAt'],
-        body: data.posts[0].body,
+      try {
+        const { data } = await this.$axios.get('admin/blog/psts', {})
+
+        this.blogList = {
+          image: data.posts[0].image,
+          title: data.posts[0].title,
+          firstName: data.posts[0]['admin.first_name'],
+          lastName: data.posts[0]['admin.last_name'],
+          time: data.posts[0]['admin.updatedAt'],
+          body: data.posts[0].body,
+        }
+        // console.log(this.blogList)
+      } catch (err) {
+        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
+      } finally {
+        this.loading = false
       }
-
-      console.log(this.blogList)
-      this.loading = false
     },
   },
 }

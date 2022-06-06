@@ -1,12 +1,10 @@
 <script>
 import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
 import 'vue-slider-component/dist-css/vue-slider-component.css'
-
 import { CIcon, CInput, CFlex } from '@chakra-ui/vue'
 
 export default {
   name: 'PriceRangeSlider',
-
   components: {
     CIcon,
     CInput,
@@ -19,9 +17,9 @@ export default {
       value: [1, 30],
       realMin: null,
       realMax: null,
+      search: this.$route.query.search ? this.$route.query.search : '',
     }
   },
-
   computed: {
     minData() {
       return this.value[0] * 100000
@@ -30,7 +28,6 @@ export default {
       return this.value[1] * 100000
     },
   },
-
   watch: {
     maxData(newVal, oldVal) {
       this.realMax = newVal
@@ -39,7 +36,6 @@ export default {
       this.realMin = newVal
     },
   },
-
   methods: {
     getSearchData() {
       this.$router.push({
@@ -52,24 +48,17 @@ export default {
         maxPrice: this.realMin,
         minPrice: this.realMax,
       })
-      
       this.$axios
         .get('product/search', {
           params: {
-            max: this.realMin,
-            min: this.realMax,
+            max: this.realMax,
+            min: this.realMin,
             q: '',
           },
         })
         .then((res) => {
           console.log(res)
         })
-    },
-
-    handleKeyPress(event) {
-      if (event.charCode === 13) {
-        this.getSearchData()
-      }
     },
   },
 }
@@ -118,7 +107,6 @@ export default {
         font-weight="300"
         type="submit"
         @click="getSearchData"
-        @keypress="handleKeyPress"
       >
         {{ $t('search') }}
       </c-button>
@@ -130,23 +118,19 @@ export default {
 .slider__price {
   margin-top: 32px;
 }
-
 .vue-slider {
   background: #e3e5e5;
   border-radius: 12px;
   height: 6px !important;
   padding: 0 !important;
 }
-
 .vue-slider-process {
   background: red;
 }
-
 .vue-slider-dot {
   border-radius: 12px;
   background: #4a4d4d;
 }
-
 .vue-slider-dot-tooltip {
   display: none;
 }

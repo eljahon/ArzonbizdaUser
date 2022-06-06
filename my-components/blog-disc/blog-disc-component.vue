@@ -23,7 +23,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.blog)
+    // console.log(this.blog)
   },
 }
 </script>

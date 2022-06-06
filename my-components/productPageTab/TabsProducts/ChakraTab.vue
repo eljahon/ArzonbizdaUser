@@ -190,7 +190,6 @@ export default {
               :products="selectedProduct.compares"
               data-aos="fade-up"
             />
-         
           </CTabPanel>
 
           <CTabPanel>

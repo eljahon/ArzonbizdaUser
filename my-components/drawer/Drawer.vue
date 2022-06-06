@@ -11,6 +11,8 @@ export default {
     CIcon,
     PriceRangeSlider,
   },
+
+  
 }
 </script>
 
