@@ -169,7 +169,7 @@ export default {
             :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
             :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
             color="color.TextColor2"
-            :_hover="false"
+            _hover="{{}}"
             cursor="pointer"
             >{{ item['shop.name'] }}</c-link
           >
@@ -255,9 +255,9 @@ export default {
           border-color="color.BorderColor"
           rounded="12px"
           bg="color.BorderColor"
-          :_hover="false"
-          :_active="false"
-          :_focus="false"
+          _hover="{{}}"
+          _active="{{}}"
+          _focus="{{}}"
           font-weight="400"
           color="white"
           mt="24px"
