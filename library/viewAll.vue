@@ -1,6 +1,6 @@
 <template>
   <div>
-    <c-link _hover="none" href="#" color="color.WarningColor1">
+    <c-link _hover="{{}}" href="#" color="color.WarningColor1">
       <c-flex
         font-family="Yandex Sans Display"
         :font-size="['10px', '12px', '14px', '16px']"

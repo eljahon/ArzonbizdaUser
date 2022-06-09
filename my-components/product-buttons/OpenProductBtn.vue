@@ -20,9 +20,9 @@ export default {
     border-color="color.BorderColor"
     rounded="12px"
     bg="color.BorderColor"
-    :_hover="false"
-    :_active="false"
-    :_focus="false"
+    _hover="{{}}"
+    _active="{{}}"
+    _focus="{{}}"
     font-weight="400"
     color="white"
   >
