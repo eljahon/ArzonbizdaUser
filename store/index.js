@@ -2,11 +2,9 @@ export const getters = {
   productsList: (state) => {
     return state.productsList
   },
-
   isBadgeLength: (state) => {
     return state.isBadge.length
   },
-
   breadCumbs: (state) => state.breadCumbs,
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
@@ -24,7 +22,6 @@ export const state = () => {
     breadCumbs: [],
   }
 }
-
 export const mutations = {
   SET_PRODUCTS_LIST(state, payload) {
     state.productsList = payload
@@ -32,6 +29,20 @@ export const mutations = {
 
   SET_BREADCUMBS(state, payload) {
     state.breadCumbs.push(payload)
+    // if(state.breadCumbs){
+    //   state.breadCumbs.forEach(el => {
+    //     if(el.name !== payload.name) {
+    //         state.breadCumbs.push(payload)
+    //       // if(el.params.id && el.params.id !== payload.params.id){
+    //       //   console.log("ok")
+    //       // }
+    //     } else if(el.params.id !== payload.params.id){
+    //       state.breadCumbs.push(payload)
+    //     }
+    //  })
+    // } else {
+    //   console.log('salom')
+    // }
   },
 
   SET_ISCOM(state, payload) {
@@ -48,12 +59,10 @@ export const mutations = {
     state.has_content = payload
   },
 }
-
 export const actions = {
   actionsIsCom(ctx, payload) {
     ctx.commit('SET_ISCOM', payload)
   },
-
   addBreadcumbs(ctx, payload) {
     ctx.commit('SET_BREADCUMBS', payload)
   },
@@ -62,33 +71,22 @@ export const actions = {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')
 
-    try {
-      const { data } = await axios.get(
-        query ? '/product/search' : '/product/home',
-        query ? { params: { q: query } } : undefined
-      )
+    const { data } = await axios.get(
+      query ? '/product/search' : '/product/home',
+      query ? { params: { q: query } } : undefined
+    )
+    const sendData = data.data.products.map((el) => {
+      return {
+        id: el.id,
+        name: el.brand_name,
+        img: el.images[0].src,
+        price: el.price,
+      }
+    })
 
-      const sendData = data.data.products.map((el) => {
-        return (
-          ({
-            id: el.id,
-            name: el.name,
-            img: el.images[0].src,
-            price: el.price,
-          },
-          ctx.commit('SET_PRODUCTS_LIST', sendData)),
-          ctx.commit(
-            'SET_HAS_CONTENT',
-            !sendData.length ? 'no_content' : 'content'
-          )
-        )
-      })
-    } catch (err) {
-      // console.log(err)
-      ctx.commit('SET_LOADING', true)
-    } finally {
-      ctx.commit('SET_LOADING', false)
-    }
+    ctx.commit('SET_PRODUCTS_LIST', sendData)
+    ctx.commit('SET_LOADING', false)
+    ctx.commit('SET_HAS_CONTENT', !sendData.length ? 'no_content' : 'content')
   },
 
   async changePriceProducts(ctx, { axios, searchQ, maxPrice, minPrice }) {
@@ -105,11 +103,10 @@ export const actions = {
         },
       }
     )
-
     const sendData = data.data.products.map((el) => {
       return {
         id: el.id,
-        name: el.name,
+        name: el.brand_name,
         img: el.images[0].src,
         price: el.price,
       }

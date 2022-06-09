@@ -38,7 +38,7 @@ export default {
     async fetchItems() {
       try {
         this.loading = true
-        const { data } = await this.$axios.get('admin/blog/posts', {})
+        const { data } = await this.$axios.get('blog/posts', {})
 
         this.blogList = {
           image: data.posts[0].image,

@@ -1,8 +1,6 @@
 <script>
 import {} from '@chakra-ui/vue'
 import BreadCumb from '../../my-components/breadcumb/Breadcumb.vue'
-
-import LoaderComponent from '../../library/LoaderComponent.vue'
 import ProductDescription from '~/my-components/product-description/ProductDescription.vue'
 import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
@@ -12,10 +10,8 @@ import 'aos/dist/aos.css'
 
 export default {
   name: 'ProductPage',
-
   components: {
     BreadCumb,
-    LoaderComponent,
     ProductDescription,
     ProductSlider,
     ChakraTab,
@@ -23,10 +19,30 @@ export default {
 
   layout: 'ProductLayout',
 
+  async asyncData({ $axios, params }) {
+    const { data } = await $axios.get(`/product/${params.id}`)
+
+    const propsList = {
+      imageList: data.product.images,
+      name: data.product.name,
+      price: data.product.price,
+      disc: data.product.description,
+      compares: data.compares,
+      shop: data.product['shop.name'],
+      link: data.product.link,
+      logo: data.product['shop.logo'],
+      shopLink: data.product['shop.link'],
+    }
+
+    return {
+      props: propsList,
+      productData: data,
+    }
+  },
+
   data() {
     return {
       route: this.$route,
-      loading: false,
     }
   },
 
@@ -34,49 +50,9 @@ export default {
     this.storeData()
     AOS.init({})
   },
-
   methods: {
     storeData() {
       this.$store.dispatch('addBreadcumbs', this.route)
-    },
-
-    showToast(title, text) {
-      this.$toast({
-        title: title ?? 'An error occurred.',
-        description: text ?? 'Unable to load sharingan. Please shadow clones.',
-        status: 'error',
-        duration: 10000,
-        position: 'top',
-      })
-    },
-
-    async asyncData({ $axios, params }) {
-      this.loading = true
-
-      try {
-        const { data } = await $axios.get(`/product/${params.id}`)
-
-        const propsList = {
-          imageList: data.product.images,
-          name: data.product.name,
-          price: data.product.price,
-          disc: data.product.description,
-          compares: data.compares,
-          shop: data.product['shop.name'],
-          link: data.product.link,
-          logo: data.product['shop.logo'],
-          shopLink: data.product['shop.link'],
-        }
-
-        return {
-          props: propsList,
-          productData: data,
-        }
-      } catch (err) {
-        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
-      } finally {
-        this.loading = false
-      }
     },
   },
 }
@@ -85,9 +61,7 @@ export default {
 <template>
   <div>
     <BreadCumb />
-
     <LoaderComponent v-if="$store.state.loading" />
-
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
       <ProductSlider :images="props.imageList" />
       <product-description :items="props" class="product__disc" />
@@ -105,7 +79,6 @@ export default {
   margin-top: 40px;
   align-items: center;
 }
-
 @media screen and (max-width: 1024px) {
   .product__page {
     display: grid;
@@ -115,7 +88,6 @@ export default {
     display: none;
   }
 }
-
 @media screen and (max-width: 768px) {
   .product__tab {
     margin-top: 235px;

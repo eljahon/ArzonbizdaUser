@@ -41,7 +41,7 @@ export default {
       this.loading = true
 
       try {
-        const { data } = await this.$axios.get('admin/blog/psts', {})
+        const { data } = await this.$axios.get('blog/posts', {})
 
         this.blogList = {
           image: data.posts[0].image,

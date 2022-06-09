@@ -16,7 +16,6 @@ export default {
   props: {
     images: {
       type: Array || Object,
-      default: null,
       required: true,
     },
   },
@@ -31,6 +30,7 @@ export default {
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
+    console.log(this.props)
   },
 
   methods: {
@@ -103,6 +103,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.slick-next {
+  display: none !important;
+}
 .slider__wrapper {
   height: 583px;
   background-color: #f4f4f4;
@@ -127,7 +130,7 @@ export default {
 
 .slider__image {
   margin: 0 auto;
-  width: 80%;
+  max-width: 100%;
 }
 
 .slider__footer {
