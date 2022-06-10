@@ -30,7 +30,6 @@ export default {
   mounted() {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
-    console.log(this.props)
   },
 
   methods: {

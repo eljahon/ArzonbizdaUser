@@ -1,18 +1,18 @@
 <script>
 import { CFlex, CBox } from '@chakra-ui/vue'
 import BannerImage from '../bannerImgBox/BannerImg.vue'
-import CategoryFilter from './CategoryFilter.vue'
 import CategoryMainWrapper from './CategoryMainWrapper.vue'
+import CategoryTestFilter from './CategoryTestFilter.vue'
 
 export default {
   name: 'CategoryMain',
 
   components: {
-    CategoryFilter,
     BannerImage,
     CategoryMainWrapper,
     CFlex,
     CBox,
+    CategoryTestFilter,
   },
 
   data() {
@@ -33,7 +33,7 @@ export default {
   <div>
     <div class="category__main" :class="{ showHide: !switched }">
       <CBox v-if="switched">
-        <CategoryFilter class="category" />
+        <CategoryTestFilter />
       </CBox>
       <CBox>
         <CFlex direction="column">
@@ -66,3 +66,5 @@ export default {
   }
 }
 </style>
+<!--         <CategoryFilter class="category" />
+ -->
