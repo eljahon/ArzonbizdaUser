@@ -41,7 +41,7 @@ export default {
   },
 
   mounted() {
-    this.getIdProduct(this.$route.params.id)
+    // this.getIdProduct(this.$   route.params.id)
   },
 
   methods: {
@@ -89,8 +89,7 @@ export default {
   align-items: center;
   background: #f5f7f7;
   height: 48px;
-}
-.breadcumb-item {
+}.breadcumb-item {
   color: #0f6cb0;
 }
 </style>

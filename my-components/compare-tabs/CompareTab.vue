@@ -22,8 +22,8 @@ export default {
 
   props: {
     item: {
-      type: Object || Array,
-      default: null,
+      type: Object,
+      default: () => {},
       required: true,
     },
   },

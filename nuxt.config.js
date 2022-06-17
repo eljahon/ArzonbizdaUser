@@ -1,7 +1,6 @@
 import customTheme from './custom-theme'
 import icons from './icons'
 import { vueI18n } from './locales/i18n-config'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
@@ -36,7 +35,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~plugins/router'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -57,6 +56,9 @@ export default {
   ],
   axios: {
     baseURL: process.env.API_BASE_URL,
+  },
+  env: {
+    baseUrl: process.env.API_BASE_URL || 'https://apis.arzonbizda.uz',
   },
   i18n: vueI18n,
 

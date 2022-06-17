@@ -5,20 +5,19 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'IndexComponent',
 
   async asyncData({ $axios, store, query }) {
-    await store.dispatch('changeProducts', {
-      axios: $axios,
-      query: query.search,
-    })
-  },
-
-  computed: {
-    ...mapGetters(['productsList']),
+   try {
+     await store.dispatch('changeProducts', {
+       axios: $axios,
+       query: query.search,
+     });
+     const blogList = await $axios.get('blog/posts')
+     store.dispatch('blogListAdd', blogList.data.posts)
+   } catch(err) {
+   }
   },
 }
 </script>

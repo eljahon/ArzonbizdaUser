@@ -14,18 +14,15 @@ export default {
 </script>
 
 <template>
-  <c-box>
+  <c-box padding="0">
     <c-text
-      mt="24px"
-      font-family="Yandex Sans Display"
-      :font-size="['12px', '13px', '12px', '12px', '16px', '16px']"
-      :line-height="['15px', '17px', '19px', '20px', '23px', '24px']"
-      font-weight="700"
-      font-style="normal"
+      padding="0 0 0 0"
       color="color.TextColor1"
+      :font-size="['8px', '9px', '10px', '12px', '14px', '16px']"
+      line-height="24px"
+      font-family="Yandex Sans Display"
+      font-weight="700"
       >{{ item.key }}</c-text
     >
   </c-box>
 </template>
-
-<style></style>

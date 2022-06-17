@@ -12,5 +12,3 @@ export default {
     <BannerImg mt="88px" image-path="banner1.png" />
   </CThemeProvider>
 </template>
-
-<style></style>

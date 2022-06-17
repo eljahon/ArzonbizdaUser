@@ -98,5 +98,3 @@ export default { CBox, CText, CTextarea }
     </CBox>
   </CBox>
 </template>
-
-<style></style>

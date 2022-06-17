@@ -18,14 +18,14 @@ export default {
 
   methods: {
     searchProductGetAll() {
-      this.$router.push({
-        path: this.localePath('/search'),
-        query: { search: this.search },
-      })
-      this.$store.dispatch('changeProducts', {
-        axios: this.$axios,
-        query: this.search,
-      })
+      if (this.search) {
+        this.$router.push({
+          path: this.localePath('/search'),
+          query: { search: this.search },
+        })
+      } else {
+        this.$router.push({path: this.localePath('/')})
+      }
     },
     handleKeyPress(event) {
       if (event.charCode === 13) {

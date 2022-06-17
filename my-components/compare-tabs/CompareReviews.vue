@@ -2,6 +2,7 @@
 import CompareReviewsItem from './CompareReviewsItem.vue'
 
 export default {
+  name: 'CompareReviewsItem',
   components: { CompareReviewsItem },
 
   data() {
@@ -49,5 +50,3 @@ export default {
     />
   </div>
 </template>
-
-<style></style>

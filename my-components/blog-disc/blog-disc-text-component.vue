@@ -7,8 +7,8 @@ export default {
   components: { CBox, CText },
 
   props: {
-    blog: {
-      type: Object || Array,
+    body: {
+      type: String,
       default: null,
       required: true,
     },
@@ -26,9 +26,7 @@ export default {
       mt="24px"
       :line-height="['16px', '18px', '20px', '21px', '22px', '24px']"
     >
-      {{ blog.body }}
+      {{ body }}
     </c-text>
   </c-box>
 </template>
-
-<style></style>

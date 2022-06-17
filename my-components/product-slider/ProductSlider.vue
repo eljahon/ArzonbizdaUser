@@ -15,7 +15,8 @@ export default {
 
   props: {
     images: {
-      type: Array || Object,
+      type: Array,
+      default: () => [],
       required: true,
     },
   },
@@ -59,7 +60,7 @@ export default {
         :arrows="false"
         :dots="false"
         :as-nav-for="c2"
-        focus-on-select="true"
+        :focus-on-select="true"
         :infinite="true"
         class="slider__wrapper"
       >

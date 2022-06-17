@@ -7,7 +7,12 @@ export default {
     CBox,
     CText,
   },
-  props: ['descriptionText'],
+  props: {
+    descriptionText: {
+      type: String,
+      required: true
+    }
+  },
 }
 </script>
 <template>
@@ -28,5 +33,3 @@ export default {
     </CBox>
   </CThemeProvider>
 </template>
-
-<style></style>

@@ -61,12 +61,12 @@ export default {
       cursor="pointer"
       @click="openProductPage(item.id)"
     >
-      <CImage
-        :w="['86px', '104px', '122px', '140px', '158px', '176px']"
-        :h="['104px', '126px', '146px', '168', '190px', '212px']"
-        :src="item.img"
-        object-fit="contain"
-      />
+        <CImage
+          :w="['86px', '104px', '122px', '140px', '158px', '176px']"
+          :h="['104px', '126px', '146px', '168', '190px', '212px']"
+          :src="item.img"
+          object-fit="contain"
+        />
     </CBox>
     <CBox>
       <CStack>
@@ -132,4 +132,6 @@ export default {
   </CBox>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

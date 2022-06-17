@@ -6,7 +6,12 @@ export default {
     CText,
   },
 
-  props: ['data'],
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
 }
 </script>
 
@@ -21,4 +26,3 @@ export default {
     >{{ data.key }}</CText
   >
 </template>
-<style></style>

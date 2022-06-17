@@ -1,5 +1,5 @@
 <script>
-import { CBox, CStack, CFlex } from '@chakra-ui/vue'
+import { CBox, CStack, CFlex, CButton } from '@chakra-ui/vue'
 
 import priceSpacer from '@/helpers/price-spacer'
 
@@ -9,6 +9,7 @@ export default {
   components: {
     CBox,
     CStack,
+    CButton,
     CFlex,
   },
 
@@ -25,6 +26,12 @@ export default {
       type: Object || Array,
       default: null,
       required: true,
+    },
+  },
+  methods: {
+    removeButton(id) {
+      this.$store.dispatch('removeItem', id)
+      this.$router.push('/')
     },
   },
 }
@@ -233,6 +240,7 @@ export default {
         <br /><br />
         Доставка выполняется ежедневно с 09:00 до 19:00 часов.
       </c-text>
+
       <c-stack>
         <c-text
           font-size="20px"
@@ -244,28 +252,50 @@ export default {
         <!-- <c-text line-height="20px" color="color.WarningColor1"
           >В наличии у {{ item.compares.length }} продавцов</c-text
         > -->
-        <c-link
-          :href="item.link"
-          is-external
-          height="64px"
-          max-w="337px"
-          w="100%"
-          mr="30px"
-          border="1px"
-          border-color="color.BorderColor"
-          rounded="12px"
-          bg="color.BorderColor"
-          _hover="{{}}"
-          _active="{{}}"
-          _focus="{{}}"
-          font-weight="400"
-          color="white"
-          mt="24px"
-          text-align="center"
-          pt="20px"
-        >
-          Смотреть
-        </c-link>
+
+        <c-flex align="center">
+          <c-link
+            :href="item.link"
+            is-external
+            height="64px"
+            max-w="337px"
+            w="100%"
+            mr="30px"
+            border="1px"
+            border-color="color.BorderColor"
+            rounded="12px"
+            bg="color.BorderColor"
+            _hover="{{}}"
+            _active="{{}}"
+            _focus="{{}}"
+            font-weight="400"
+            color="white"
+            text-align="center"
+            pt="20px"
+          >
+            Смотреть
+          </c-link>
+          <c-button
+            align-item="center"
+            variant-color="color.WhiteColor"
+            border-color="color.BorderColor"
+            border="1px solid"
+            font-weight="400"
+            rounded="12"
+            _focus="none"
+            color="color.InputBorder"
+            cursor="pointer"
+            background-color="none"
+            justify-content="center"
+            gap="8.5px"
+            bg="transparent"
+            height="64px"
+            w="100%"
+            @click="removeButton(item.id)"
+          >
+            Отменить
+          </c-button>
+        </c-flex>
       </c-stack>
     </c-stack>
   </c-box>

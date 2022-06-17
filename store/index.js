@@ -9,6 +9,7 @@ export const getters = {
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
   has_content: (state) => state.has_content,
+  blogList: (state) => state.blogList,
 }
 
 export const state = () => {
@@ -20,11 +21,19 @@ export const state = () => {
     loading: false,
     has_content: 'pending',
     breadCumbs: [],
+    blogList: [],
+    singBlog: {},
   }
 }
 export const mutations = {
+  SET_BLOG_LIST: (state, payload) => {
+    state.blogList = payload
+  },
   SET_PRODUCTS_LIST(state, payload) {
     state.productsList = payload
+  },
+  SET_SING_BLOG: (state, payload) => {
+    state.singBlog = payload
   },
 
   SET_BREADCUMBS(state, payload) {
@@ -54,19 +63,48 @@ export const mutations = {
   SET_LOADING(state, payload) {
     state.loading = payload
   },
+  SET_SELECT_ID(state, payloy) {
+    state.isBadge = payloy
+  },
 
   SET_HAS_CONTENT(state, payload) {
     state.has_content = payload
+  },
+
+  removeProduct(state, payload) {
+    state.isBadge = payload
   },
 }
 export const actions = {
   actionsIsCom(ctx, payload) {
     ctx.commit('SET_ISCOM', payload)
   },
+  setSelectId(ctx, payload) {
+    ctx.commit('SET_SELECT_ID', payload)
+  },
+  removeItem(ctx, id) {
+    const Itemid = ctx.state.isBadge.filter((el) => el !== id)
+    ctx.commit('removeProduct', Itemid)
+  },
+
+  singBlogChanges({ commit }, payload) {
+    commit('SET_SING_BLOG', payload)
+  },
+
   addBreadcumbs(ctx, payload) {
     ctx.commit('SET_BREADCUMBS', payload)
   },
 
+  blogListAdd({ commit }, payload) {
+    const blogListAll = payload.map((el) => {
+      return {
+        id: el.id,
+        image: process.env.baseUrl + el.image,
+        title: el.title,
+      }
+    })
+    commit('SET_BLOG_LIST', blogListAll)
+  },
   async changeProducts(ctx, { axios, query }) {
     ctx.commit('SET_LOADING', true)
     ctx.commit('SET_HAS_CONTENT', 'pending')
@@ -83,7 +121,6 @@ export const actions = {
         price: el.price,
       }
     })
-
     ctx.commit('SET_PRODUCTS_LIST', sendData)
     ctx.commit('SET_LOADING', false)
     ctx.commit('SET_HAS_CONTENT', !sendData.length ? 'no_content' : 'content')

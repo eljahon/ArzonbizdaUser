@@ -1,7 +1,6 @@
 <script>
 import { CThemeProvider, CBox, CSimpleGrid, CHeading } from '@chakra-ui/vue'
 import NewBlogcard from '@/my-components/newBlog/NewBlogcard.vue'
-
 export default {
   components: {
     NewBlogcard,
@@ -21,36 +20,8 @@ export default {
 
   mounted() {
     this.$store.dispatch('addBreadcumbs', this.route)
-    this.fetchItems()
   },
 
-  methods: {
-    showToast(title, text) {
-      this.$toast({
-        title: title ?? 'An error occurred.',
-        description: text ?? 'Unable to load sharingan. Please shadow clones.',
-        status: 'error',
-        duration: 10000,
-        position: 'top',
-      })
-    },
-
-    async fetchItems() {
-      try {
-        this.loading = true
-        const { data } = await this.$axios.get('blog/posts', {})
-
-        this.blogList = {
-          image: data.posts[0].image,
-          title: data.posts[0].title,
-        }
-      } catch (err) {
-        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
-      } finally {
-        this.loading = false
-      }
-    },
-  },
 }
 </script>
 
@@ -67,23 +38,25 @@ export default {
         :line-height="['16px', '18px', '20px', '24px']"
         >{{ $t('newBlogWord') }}</CHeading
       >
-      <nuxt-link to="/blog">
         <CSimpleGrid
           align-items="center"
           :columns="['3', '3', '3', '3', '4', '4']"
           :spacing="['10px', '12px', '15px', '20px', '25px', '30px']"
         >
           <CBox
+           v-for="(item, index) in $store.state.blogList" :key="index"
             width="100%"
             class="products__div"
             justify-content="center"
             align-items="center"
             display="flex"
           >
-            <NewBlogcard :blog="blogList" />
+            <nuxt-link :to="localePath({name: 'blog-id', params: {id: item.id}})" style="width: 100%">
+              <NewBlogcard style="width: 100%" :blog="item"/>
+            </nuxt-link>
           </CBox>
         </CSimpleGrid>
-      </nuxt-link>
+<!--      </nuxt-link>-->
     </div>
   </CThemeProvider>
 </template>

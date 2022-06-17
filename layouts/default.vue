@@ -36,14 +36,22 @@ export default {
 </script>
 
 <template>
+  <no-ssr>
   <CThemeProvider>
     <div class="containerBox">
+      <no-ssr>
       <CReset />
+      </no-ssr>
+        <no-ssr>
       <Header />
+        </no-ssr>
+          <no-ssr>
       <Nuxt />
+          </no-ssr>
     </div>
     <FooterGlobal />
   </CThemeProvider>
+  </no-ssr>
 </template>
 
 <style lang="scss" scoped></style>

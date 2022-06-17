@@ -11,7 +11,12 @@ export default {
     TabReviewsImg,
   },
 
-  props: ['item'],
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  },
 
   data() {
     return {

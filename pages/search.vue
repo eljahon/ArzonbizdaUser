@@ -1,17 +1,17 @@
 <script>
 import popularProducts from '~/my-components/popular-products/popularProducts.vue'
 import LoaderComponent from '~/library/LoaderComponent.vue'
-
-import AOS from '@/node_modules/aos/dist/aos'
-import 'aos/dist/aos.css'
-
+import Mixins from "@/mixins/aos"
 export default {
   name: 'SearchComponent',
   components: { popularProducts, LoaderComponent },
-
-  mounted() {
-    AOS.init({})
-  },
+  mixins: [Mixins],
+  async asyncData ({$axios,store, params}) {
+   await store.dispatch('changeProducts', {
+      axios: $axios,
+      query: params.search,
+    })
+  }
 }
 </script>
 

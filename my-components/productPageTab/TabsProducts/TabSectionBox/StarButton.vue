@@ -20,5 +20,3 @@ export default {}
     <CIcon name="star" mb="3px" width="14px" />
   </CBox>
 </template>
-
-<style></style>

@@ -36,6 +36,7 @@ export default {
         <c-box class="wrapper-logo" width="139px" height="40px">
           <NuxtLink as="router-link" to="/">
             <svg
+              class="logo__icon"
               width="188"
               height="42"
               viewBox="0 0 188 42"
@@ -186,6 +187,11 @@ export default {
   }
   .wrapper-logo {
     width: 115px !important;
+  }
+}
+@media screen and(max-width: 320px) {
+  .logo__icon {
+    width: 137px;
   }
 }
 </style>

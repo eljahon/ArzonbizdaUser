@@ -6,7 +6,12 @@ export default {
     CBox,
     CImage,
   },
-  props: ['imagePath'],
+  props: {
+    imagePath: {
+      type: String,
+      required:true
+    }
+  },
 }
 </script>
 
@@ -28,5 +33,3 @@ export default {
     />
   </CBox>
 </template>
-
-<style></style>

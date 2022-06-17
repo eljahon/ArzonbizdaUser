@@ -16,7 +16,13 @@
 <script>
 export default {
   name: 'SingleStarRating',
-  props: ['rating'],
+  props: {
+    rating: {
+      type: Number,
+      required: true 
+
+    }
+  },
 }
 </script>
 

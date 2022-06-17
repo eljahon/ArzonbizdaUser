@@ -26,26 +26,12 @@ export default {
 <template>
   <div class="slider__hero" :width="['320px', '468px', '920px', '1400px']">
     <VueSlickCarousel v-bind="settings">
-      <div>
+      <div v-for="(item, index) in 4" :key="index">
         <div class="banner__hero">
           <img src="@/assets/img/slide.png" alt="" />
         </div>
       </div>
-      <div>
-        <div class="banner__hero">
-          <img src="@/assets/img/slide.png" alt="" />
-        </div>
-      </div>
-      <div>
-        <div class="banner__hero">
-          <img src="@/assets/img/slide.png" alt="" />
-        </div>
-      </div>
-      <div>
-        <div class="banner__hero">
-          <img src="@/assets/img/slide.png" alt="" />
-        </div>
-      </div>
+
     </VueSlickCarousel>
   </div>
 </template>

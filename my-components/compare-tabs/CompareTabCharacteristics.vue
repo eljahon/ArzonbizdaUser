@@ -1,5 +1,5 @@
 <script>
-import { CThemeProvider, CBox, CFlex } from '@chakra-ui/vue'
+import { CThemeProvider, CBox } from '@chakra-ui/vue'
 import PhoneModel from './compare-tab-simple-comonents/PhoneModel.vue'
 import PhoneVersion from './compare-tab-simple-comonents/PhoneVersion.vue'
 
@@ -11,13 +11,12 @@ export default {
     CBox,
     PhoneModel,
     PhoneVersion,
-    CFlex,
   },
 
   props: {
     item: {
-      type: Object || Array,
-      default: null,
+      type: Array,
+      default: () => Array,
       required: true,
     },
   },
@@ -33,30 +32,30 @@ export default {
 
 <template>
   <CThemeProvider>
-    <c-box
-      :padding="[
-        '15px 25px',
-        '15px 25px',
-        '17px',
-        '20px 30px',
-        '22px 43px',
-        '24px 45px',
-      ]"
-    >
-      <c-flex>
-        <c-box>
-          <c-box v-for="(el, id) in item" :key="id">
-            <phone-model :item="el" />
-          </c-box>
-        </c-box>
+    <c-box :padding="['0', '0', '17px', '20px 30px', '22px 43px', '24px 45px']">
+      <div class="character__hero">
         <c-box>
           <c-box v-for="(el, id) in item" :key="id">
             <phone-version :item="el" />
           </c-box>
         </c-box>
-      </c-flex>
+
+        <c-box>
+          <c-box v-for="(el, id) in item" :key="id">
+            <phone-model :item="el" />
+          </c-box>
+        </c-box>
+      </div>
     </c-box>
   </CThemeProvider>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.character__hero {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5px;
+}
+</style>

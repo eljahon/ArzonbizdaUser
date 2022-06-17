@@ -7,7 +7,12 @@ export default {
 
   components: { CBox, CGrid, TabReviewsImg },
 
-  props: ['item'],
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  },
 
   data() {
     return {
@@ -131,5 +136,3 @@ export default {
     </CBox>
   </CBox>
 </template>
-
-<style></style>

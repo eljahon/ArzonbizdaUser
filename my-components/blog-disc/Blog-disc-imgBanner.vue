@@ -7,7 +7,7 @@ export default {
   components: { CBox, CImage },
 
   props: {
-    blog: {
+    image: {
       type: Object || Array,
       default: null,
       required: true,
@@ -25,7 +25,7 @@ export default {
   >
     <c-image
       border-radius="12px"
-      :src="blog.image"
+      :src="image"
       position="absolute"
       width="100%"
       height="100%"
@@ -34,5 +34,3 @@ export default {
     </c-image>
   </c-box>
 </template>
-
-<style></style>

@@ -57,8 +57,7 @@ export default {
             q: '',
           },
         })
-        .then((res) => {
-          console.log(res)
+        .then(() => {
         })
     },
   },
@@ -68,7 +67,7 @@ export default {
 <template>
   <div class="slider__price">
     <div>
-      <vue-slider v-model="value"></vue-slider>
+      <VueSlider v-model="value" :focus-on-select="true"></VueSlider>
     </div>
 
     <CFlex align="center" gap="9px" mt="29px">
@@ -116,7 +115,7 @@ export default {
 </template>
 
 <style>
-.slider__price {
+.slider_price {
   margin-top: 32px;
 }
 .vue-slider {

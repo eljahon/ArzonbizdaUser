@@ -8,12 +8,12 @@ export default {
     CButton,
   },
 
-  props: {
-    items: {
-      type: Object || Array,
-      required: true,
-    },
-  },
+  // props: {
+  //   items: {
+  //     type: Object || Array,
+  //     required: true,
+  //   },
+  // },
 
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
       } else if (this.isBadgeLength === 2) {
-        console.log(this.$store.state.isBadge)
+        // console.log(this.$store.state.isBadge)
       }
     },
   },

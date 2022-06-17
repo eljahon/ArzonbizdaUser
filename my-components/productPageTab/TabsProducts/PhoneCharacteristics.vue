@@ -6,7 +6,12 @@ export default {
     CText,
   },
 
-  props: ['datas'],
+  props: {
+    datas: {
+      type: Object,
+      required: true
+    }
+  },
 }
 </script>
 
@@ -21,5 +26,3 @@ export default {
     >{{ datas.value }}</CText
   >
 </template>
-
-<style></style>

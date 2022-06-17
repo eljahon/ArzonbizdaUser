@@ -8,7 +8,7 @@ export default {
   },
   props: {
     blog: {
-      type: Object || Array,
+      type: Object,
       default: null,
       required: true,
     },

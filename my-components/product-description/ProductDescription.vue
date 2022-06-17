@@ -61,8 +61,6 @@ export default {
       this.$store.dispatch('actionsIsCom', this.$route.params.id)
       if (this.isBadgeLength < 2) {
         this.$router.push('/')
-      } else if (this.isBadgeLength === 2) {
-        console.log(this.$store.state.isBadge)
       }
     },
   },

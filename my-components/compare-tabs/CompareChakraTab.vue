@@ -3,6 +3,7 @@ import { CThemeProvider, CGrid, CBox } from '@chakra-ui/vue'
 import CompareTab from './CompareTab.vue'
 
 export default {
+  name: 'CompareChakraTabe',
   components: {
     CThemeProvider,
     CGrid,
@@ -24,5 +25,3 @@ export default {
     </c-grid>
   </CThemeProvider>
 </template>
-
-<style scoped></style>

@@ -4,7 +4,12 @@ import { CImage } from '@chakra-ui/vue'
 export default {
   name: 'TabReviewsImg',
   components: { CImage },
-  props: ['data'],
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
 }
 </script>
 

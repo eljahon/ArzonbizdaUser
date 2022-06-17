@@ -203,5 +203,3 @@ export default {
     ></CBox>
   </CThemeProvider>
 </template>
-
-<style></style>

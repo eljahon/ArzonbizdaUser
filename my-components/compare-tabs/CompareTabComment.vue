@@ -35,5 +35,3 @@ export default {
     </c-box>
   </CThemeProvider>
 </template>
-
-<style></style>

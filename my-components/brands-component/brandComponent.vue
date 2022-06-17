@@ -10,7 +10,12 @@ export default {
     CText,
   },
 
-  props: ['item'],
+  props:{
+    item: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -39,3 +44,8 @@ export default {
     </c-flex>
   </CThemeProvider>
 </template>
+<style scoped>
+.card__image__box:hover img {
+  transform: scale(1.2);
+}
+</style>

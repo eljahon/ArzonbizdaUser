@@ -1,11 +1,11 @@
 <script>
 import { CThemeProvider, CBox, CText, CIcon } from '@chakra-ui/vue'
+import dayjs from "dayjs"
 import BlogDiscImgBanner from './Blog-disc-imgBanner.vue'
 import BlogDiscTextComponent from './blog-disc-text-component.vue'
 
 export default {
   name: 'BlogDiscComponents',
-
   components: {
     CThemeProvider,
     CBox,
@@ -14,14 +14,9 @@ export default {
     BlogDiscImgBanner,
     BlogDiscTextComponent,
   },
-
-  props: {
-    blog: {
-      type: Object || Array,
-      default: null,
-      required: true,
-    },
-  },
+methods: {
+    dayjs
+},
 }
 </script>
 
@@ -52,7 +47,7 @@ export default {
           font-family="Yandex Sans Display"
           :font-weight="['700', '700', '700', '400', '400', '400']"
           :line-height="['16px', '20px', '24px', '30px', '44px', '48px']"
-          >{{ blog.title }}
+          >{{ $store.state.singBlog['title'] }}
         </CText>
         <CBox
           :mt="['9px', '12px', '14px', '16px', '18px', '20px']"
@@ -72,7 +67,7 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >{{ blog.firstName }}</CText
+              >{{ $store.state.singBlog['admin.first_name'] }}</CText
             >
             <CText
               ml="5px"
@@ -81,7 +76,7 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >{{ blog.lastName }}</CText
+              >{{ $store.state.singBlog['admin.last_name'] }}</CText
             >
           </CBox>
           <CBox ml="42px" display="flex" align-items="center">
@@ -97,15 +92,13 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['10px', '12px', '14px', '16px', '18px', '20px']"
-              >{{ blog.time }}</CText
+              >{{ dayjs($store.state.singBlog['createAt']).format('DD.MM.YYYY') }}</CText
             >
           </CBox>
         </CBox>
-        <blog-disc-img-banner :blog="blog" />
-        <blog-disc-text-component :blog="blog" />
+        <blog-disc-img-banner :image="$store.state.singBlog.avatar" />
+        <blog-disc-text-component :body="$store.state.singBlog['body']" />
       </CBox>
     </CBox>
   </CThemeProvider>
 </template>
-
-<style></style>

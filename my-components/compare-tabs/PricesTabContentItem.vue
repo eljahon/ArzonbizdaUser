@@ -86,5 +86,3 @@ export default {
     </CLink>
   </c-box>
 </template>
-
-<style></style>

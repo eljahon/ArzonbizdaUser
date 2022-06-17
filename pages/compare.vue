@@ -18,45 +18,23 @@ export default {
     ProductSlider,
     LoaderComponent,
   },
-
+  async asyncData({ route, $axios, store }) {
+    const query = { prs: [route.query.firstId, route.query.secondId] }
+    store.dispatch('setSelectId', query.prs)
+    const list = await $axios.get('product/compare', {
+      params: query,
+    })
+    const renderData = list.data.data.products
+    return {
+      renderData,
+    }
+  },
   data() {
     return {
       loading: false,
       products: null,
       error: null,
     }
-  },
-
-  mounted() {
-    this.fetchItems()
-  },
-
-  methods: {
-    showToast(title, text) {
-      this.$toast({
-        title: title ?? 'An error occurred.',
-        description: text ?? 'Unable to load sharingan. Please shadow clones.',
-        status: 'error',
-        duration: 10000,
-        position: 'top',
-      })
-    },
-
-    async fetchItems() {
-      const query = { prs: this.$store.state.isBadge }
-
-      this.loading = true
-      try {
-        const { data } = await this.$axios.get('product/compare', {
-          params: query,
-        })
-        this.products = data.data.products
-      } catch (err) {
-        this.showToast('Serverda muammo bor', "Birozdan so'ng urinib ko'ring")
-      } finally {
-        this.loading = false
-      }
-    },
   },
 }
 </script>
@@ -67,10 +45,10 @@ export default {
 
     <div v-if="!loading">
       <c-grid template-columns="repeat(2, 50%)" gap="6" mt="64px">
-        <div v-for="(item, id) in products" :key="id" class="compare__wrapper">
+        <div v-for="(item,index) in renderData" :key="index" class="compare__wrapper">
           <product-slider :images="item.images" class="product__slider" />
           <compare-product class="compare__product" :item="item" />
-          <compare-product-mobile :item="item" />
+          <compare-product-mobile :items="item" />
           <compare-tab :item="item" />
         </div>
       </c-grid>
