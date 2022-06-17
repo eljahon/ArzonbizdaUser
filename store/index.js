@@ -38,20 +38,6 @@ export const mutations = {
 
   SET_BREADCUMBS(state, payload) {
     state.breadCumbs.push(payload)
-    // if(state.breadCumbs){
-    //   state.breadCumbs.forEach(el => {
-    //     if(el.name !== payload.name) {
-    //         state.breadCumbs.push(payload)
-    //       // if(el.params.id && el.params.id !== payload.params.id){
-    //       //   console.log("ok")
-    //       // }
-    //     } else if(el.params.id !== payload.params.id){
-    //       state.breadCumbs.push(payload)
-    //     }
-    //  })
-    // } else {
-    //   console.log('salom')
-    // }
   },
 
   SET_ISCOM(state, payload) {

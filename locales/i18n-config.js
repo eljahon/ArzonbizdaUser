@@ -8,7 +8,7 @@ export const vueI18n = {
   defaultLocale: 'ru',
 
   vueI18n: {
-    fallbackLocale: 'en',
+    fallbackLocale: 'ru',
     messages: {
       en,
       ru,

@@ -41,7 +41,7 @@ data(){
         <PopularProducts
           data-aos="fade-up"
           :products="$store.state.productsList"
-          title="Популярные товары"
+          :title="$t('populargoods')"
           :columns="columns"
         />
       </no-ssr>
@@ -59,7 +59,7 @@ data(){
       <PopularProducts
         :columns="columns"
         data-aos="fade-up"
-        title="Популярные товары"
+        :title="$t('populargoods')"
         data-aos-duration="1000"
       />
     </no-ssr>
