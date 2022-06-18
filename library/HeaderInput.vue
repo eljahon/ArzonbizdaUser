@@ -24,7 +24,7 @@ export default {
           query: { search: this.search },
         })
       } else {
-        this.$router.push({path: this.localePath('/')})
+        this.$router.push({ path: this.localePath('/') })
       }
     },
     handleKeyPress(event) {

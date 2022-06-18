@@ -1,4 +1,14 @@
 export const en = {
+  bestPrice: 'Best price',
+  dailyUpdate: 'Prices are updated every day',
+  delivery: 'Delivery is carried out daily from 09:00 to 19:00',
+  proposals: 'Proposals',
+  availability: 'Available from',
+  sellers: 'sellers',
+  attention:
+    'Attention! Incorrect phone number, inaccurate or incomplete address may result in additional delay! Please carefully check your personal data when registering and placing an order. The confidentiality of your registration data is guaranteed    ',
+  pickup: 'Pickup from the store',
+  deliverDay: 'Delivery in Tashkent up to 1 day, in Uzbekistan up to 5 days',
   error: 'error',
   populargoods: 'Popular goods',
   currency: 'sum',

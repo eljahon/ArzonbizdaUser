@@ -1,4 +1,16 @@
 export const uz = {
+  bestPrice: 'Eng yaxshi narx',
+  dailyUpdate: 'Narxlar har kuni yangilanadi',
+  delivery:
+    'Yetkazib berish har kuni soat 09:00 dan 19:00 gacha amalga oshiriladi.',
+  proposals: 'Takliflar',
+  availability: 'dan mavjud',
+  sellers: 'sotuvchilar',
+  attention:
+    'Diqqat! Telefon raqami noto‘g‘ri, noto‘g‘ri yoki to‘liq manzil qo/`shimcha kechikishga olib kelishi mumkin! Iltimos, ehtiyot bo`ling ro`yxatdan o`tish va buyurtma berishda shaxsiy ma`lumotlaringizni tekshiring. Ro`yxatdan o`tish ma`lumotlarining maxfiyligi kafolatlanadi.',
+  pickup: 'Do`kondan olib ketish ',
+  deliverDay:
+    'Toshkent bo`ylab yetkazib berish 1 kungacha, O`zbekiston bo`ylab 5 kungacha ',
   error: 'xato',
   populargoods: 'Ommabop tovarlar',
   currency: "so'mdan",

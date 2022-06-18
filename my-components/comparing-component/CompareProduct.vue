@@ -49,7 +49,7 @@ export default {
         >{{ item.name }}</c-heading
       >
       <c-flex>
-        <c-box d="flex" align-items="center">
+        <!-- <c-box d="flex" align-items="center">
           <c-icon
             name="star"
             :size="['12px', '14px', '14px', '16px', '20px', '24px']"
@@ -84,8 +84,8 @@ export default {
             color="color.TextColor5"
             >4,8</c-box
           >
-        </c-box>
-        <c-divider orientation="vertical" border-color="color.iconBg" />
+        </c-box> -->
+        <!-- <c-divider orientation="vertical" border-color="color.iconBg" />
         <c-box d="flex" align-items="center">
           <c-icon
             name="comment"
@@ -95,8 +95,8 @@ export default {
             :mr="['10px', '10px', '10px', '12px', '14px', '24px']"
             fill="transparent"
             color="color.TextColor5"
-          />
-          <!-- <c-box
+          /> -->
+        <!-- <c-box
             as="span"
             font-weight="400"
             :font-size="['10px', '10px', '10px', '12px', '14px', '16px']"
@@ -105,8 +105,8 @@ export default {
             :mr="['10px', '10px', '12px', '14px', '16px', '24px']"
             >{{ item.comments.length }}</c-box
           > -->
-        </c-box>
-        <c-divider orientation="vertical" border-color="color.iconBg" />
+        <!-- </c-box> -->
+        <!-- <c-divider orientation="vertical" border-color="color.iconBg" />
         <c-box d="flex" align-items="center">
           <c-icon
             name="view"
@@ -123,7 +123,7 @@ export default {
             color="color.TextColor5"
             >16 452</c-box
           >
-        </c-box>
+        </c-box> -->
       </c-flex>
     </c-stack>
     <c-stack :spacing="8">
@@ -133,7 +133,7 @@ export default {
             font-size="20px"
             line-height="24px"
             color="color.WarningColor1"
-            >Лучшая цена</c-text
+            >{{ $t('bestPrice') }}</c-text
           >
           <c-heading
             as="h1"
@@ -147,7 +147,7 @@ export default {
             font-size="14px"
             line-height="16px"
             color="color.TextColor5"
-            >Цены обновляются каждый день</c-box
+            >{{ $t('dailyUpdate') }}</c-box
           >
         </c-stack>
         <c-link
@@ -168,7 +168,7 @@ export default {
               color="color.TextColor5"
               letter-spacing="0.02em"
               mb="18px"
-              >МАГАЗИН</c-text
+              >{{ $t('magazin') }}</c-text
             >
             <c-icon name="greenTick" color="color.greenTick" size="20px" />
           </c-flex>
@@ -202,7 +202,7 @@ export default {
               line-height="19px"
               color="color.InputColor"
               ml="12px"
-              >Без кредита</c-text
+              >{{ $t('NoCredit') }}</c-text
             >
           </c-box>
           <c-box d="flex" align-items="center" ml="5px">
@@ -212,7 +212,7 @@ export default {
               line-height="19px"
               color="color.InputColor"
               ml="12px"
-              >Самовывоз из магазина</c-text
+              >{{ $t('pickup') }}</c-text
             >
           </c-box>
           <c-box d="flex" align-items="center" ml="5px" class="fast__delivery">
@@ -222,7 +222,7 @@ export default {
               line-height="19px"
               color="color.InputColor"
               ml="12px"
-              >Доставка по Ташкенту до 1 дня, по Узбекистану до 5 дней</c-text
+              >{{ $t('deliverDay') }}</c-text
             >
           </c-box>
         </c-box>
@@ -233,12 +233,9 @@ export default {
         line-height="24px"
         color="color.InputColor"
         mt="32px"
-        >Внимание! Неправильно указанный номер телефона, неточный или неполный
-        адрес могут привести к дополнительной задержке! Пожалуйста, внимательно
-        проверяйте Ваши персональные данные при регистрации и оформлении заказа.
-        Конфиденциальность ваших регистрационных данных гарантируется.
-        <br /><br />
-        Доставка выполняется ежедневно с 09:00 до 19:00 часов.
+      >
+        {{ $t('attention') }} <br /><br />
+        {{ $t('delivery') }}
       </c-text>
 
       <c-stack>
@@ -247,7 +244,7 @@ export default {
           line-height="24px"
           color="color.TextColor2"
           mt="32px"
-          >25 предложений</c-text
+          >25 {{ $t('proposals') }}</c-text
         >
         <!-- <c-text line-height="20px" color="color.WarningColor1"
           >В наличии у {{ item.compares.length }} продавцов</c-text
@@ -273,7 +270,7 @@ export default {
             text-align="center"
             pt="20px"
           >
-            Смотреть
+            {{ $t('view') }}
           </c-link>
           <c-button
             align-item="center"
@@ -293,7 +290,7 @@ export default {
             w="100%"
             @click="removeButton(item.id)"
           >
-            Отменить
+            {{ $t('compare') }}
           </c-button>
         </c-flex>
       </c-stack>

@@ -4,7 +4,7 @@ import {
   CStack,
   CHeading,
   CFlex,
-  CDivider,
+  // CDivider,
   CIcon,
   CText,
   CButton,
@@ -23,7 +23,7 @@ export default {
     CStack,
     CHeading,
     CFlex,
-    CDivider,
+    // CDivider,
     CIcon,
     CText,
     CButton,
@@ -78,7 +78,7 @@ export default {
         >{{ items.name }}</CHeading
       >
       <CFlex>
-        <CBox d="flex" align-items="center">
+        <!-- <CBox d="flex" align-items="center">
           <CIcon name="star" mr="5px" />
           <CIcon name="star" mr="5px" />
           <CIcon name="star" mr="5px" />
@@ -94,9 +94,9 @@ export default {
             color="color.TextColor5"
             >4,8</CBox
           >
-        </CBox>
-        <CDivider orientation="vertical" border-color="color.iconBg" />
-        <CBox d="flex" align-items="center">
+        </CBox> -->
+        <!-- <CDivider orientation="vertical" border-color="color.iconBg" /> -->
+        <!-- <CBox d="flex" align-items="center">
           <CIcon
             name="comment"
             width="24px"
@@ -109,33 +109,36 @@ export default {
           <CBox as="span" font-weight="400" color="color.TextColor5" mr="24px"
             >26</CBox
           >
-        </CBox>
-        <CDivider orientation="vertical" border-color="color.iconBg" />
+        </CBox> -->
+        <!-- <CDivider orientation="vertical" border-color="color.iconBg" />
         <CBox d="flex" align-items="center">
           <CIcon name="view" fill="white" size="24px" ml="24px" mr="10px" />
           <CBox as="span" font-weight="400" color="color.TextColor5"
             >16 452</CBox
           >
-        </CBox>
+        </CBox> -->
       </CFlex>
       <CFlex mt="32px" justify="space-between">
         <CStack>
-          <CText font-size="20px" line-height="24px" color="color.WarningColor1"
-            >Лучшая цена</CText
+          <CText
+            font-size="20px"
+            line-height="24px"
+            color="color.WarningColor1"
+            >{{ $t('bestPrice') }}</CText
           >
           <CHeading
             as="h1"
             font-size="36px"
             line-height="48px"
             color="color.TextColor2"
-            >{{ priceSpacer(items.price.toString()) }} сум
+            >{{ priceSpacer(items.price.toString()) }} {{ $t('currency') }}
           </CHeading>
           <CBox
             as="span"
             font-size="14px"
             line-height="16px"
             color="color.TextColor5"
-            >Цены обновляются каждый день</CBox
+            >{{ $t('dailyUpdate') }}</CBox
           >
         </CStack>
         <CLink
@@ -158,7 +161,7 @@ export default {
               color="color.TextColor5"
               letter-spacing="0.02em"
               mb="18px"
-              >МАГАЗИН</CLink
+              >{{ $t('magazin') }}</CLink
             >
             <CIcon name="greenTick" color="color.greenTick" size="20px" />
           </CFlex>
@@ -173,7 +176,7 @@ export default {
         color="color.InputColor"
         mt="32px"
         >{{ items.disc }} <br /><br />
-        Доставка выполняется ежедневно с 09:00 до 19:00 часов.
+        {{ $t('delivery') }}
       </CText>
 
       <CText
@@ -181,10 +184,10 @@ export default {
         line-height="24px"
         color="color.TextColor2"
         mt="32px"
-        >25 предложений</CText
+        >25 {{ $t('proposals') }}</CText
       >
       <CText line-height="20px" color="color.WarningColor1">
-        В наличии у {{ items.compares.length }} продавцов
+        {{ $t('availability') }} {{ items.compares.length }} {{ $t('sellers') }}
       </CText>
 
       <CBox d="flex" justify-content="space-between" mt="24px">
@@ -207,7 +210,7 @@ export default {
           text-align="center"
           pt="20px"
         >
-          Смотреть
+          {{ $t('view') }}
         </CLink>
 
         <CButton
@@ -227,7 +230,7 @@ export default {
           @click="IsComponents"
         >
           <CIcon name="compare" size="24px" mr="10px" />
-          Сравнить
+          {{ $t('compare') }}
         </CButton>
       </CBox>
     </CStack>

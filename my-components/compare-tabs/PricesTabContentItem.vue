@@ -71,7 +71,7 @@ export default {
           font-weight="400"
           font-style="normal"
           :line-height="['15px', '20px', '23px', '24px', '28px', '32px']"
-          >Без кредита</c-text
+          >{{ $t('NoCredit') }}</c-text
         >
         <c-text
           color="color.TextColor2"

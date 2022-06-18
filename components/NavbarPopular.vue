@@ -32,6 +32,7 @@ export default {
           :to="localePath({ name: 'category', params: { category: 'phones' } })"
           :hover="{ color: 'color.BorderColor', textDecoration: false }"
           :focus="false"
+          color="#E50914"
           >{{ $t('category_phones') }}</CLink
         ></CBox
       >
@@ -126,19 +127,7 @@ export default {
           >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
-      <CBox
-        as="li"
-        :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
-        line-height="24px"
-        color="color.InputColor"
-        ><CLink
-          as="router-link"
-          to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
-          >{{ $t('category_monitors') }}</CLink
-        ></CBox
-      >
+
       <CBox
         as="li"
         :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"

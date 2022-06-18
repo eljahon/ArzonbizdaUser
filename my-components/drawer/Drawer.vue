@@ -11,8 +11,6 @@ export default {
     CIcon,
     PriceRangeSlider,
   },
-
-  
 }
 </script>
 
@@ -133,20 +131,6 @@ export default {
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
           :_focus="false"
           >{{ $t('category_fridge') }}</CLink
-        ></CBox
-      >
-      <CBox
-        mb="20px"
-        as="li"
-        :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
-        line-height="24px"
-        color="color.InputColor"
-        ><CLink
-          as="router-link"
-          to="#"
-          :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
-          >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
       <CBox

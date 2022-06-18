@@ -57,8 +57,7 @@ export default {
             q: '',
           },
         })
-        .then(() => {
-        })
+        .then(() => {})
     },
   },
 }
@@ -80,7 +79,7 @@ export default {
         border-radius="12px"
         border-color="borders.InputBorder"
         bg="transparent"
-        placeholder="от"
+        placeholder="0"
       />
 
       <CIcon name="priceIcon" />
@@ -94,7 +93,7 @@ export default {
         border-radius="12px"
         border-color="borders.InputBorder"
         bg="transparent"
-        placeholder="до"
+        placeholder="1000000"
       />
 
       <c-button
