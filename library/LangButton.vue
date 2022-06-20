@@ -31,7 +31,7 @@ export default {
     <CThemeProvider>
       <c-box w="87px" height="56px">
         <c-select
-          v-model="loacales"
+          v-model="$i18n.locale"
           border-radius="12px"
           :_focus="false"
           border="LangBorder"
