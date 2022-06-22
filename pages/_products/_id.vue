@@ -5,7 +5,7 @@ import ProductSlider from '~/my-components/product-slider/ProductSlider.vue'
 import ChakraTab from '~/my-components/productPageTab/TabsProducts/ChakraTab.vue'
 import Mixins from '@/mixins/aos'
 export default {
-  name: 'ProductPage',
+  name: 'ProductPageList',
   components: {
     BreadCumb,
     ProductDescription,
@@ -40,6 +40,17 @@ export default {
   data() {
     return {
       route: this.$route,
+      propsList: {
+        imageList: [],
+        name: '',
+        price: null,
+        disc: '',
+        compares: [],
+        shop: '',
+        link: '',
+        logo: '',
+        shopLink: '',
+      }
     }
   },
 
