@@ -2,7 +2,7 @@
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import ViewAll from '../../library/viewAll.vue'
 import PopularProduct from './popularProduct.vue'
-import LoaderComponent from '~/library/LoaderComponent.vue'
+// import LoaderComponent from '~/library/LoaderComponent.vue'
 
 export default {
   name: 'PopularProducts',
@@ -13,7 +13,6 @@ export default {
     CBox,
     PopularProduct,
     ViewAll,
-    LoaderComponent,
   },
 
   props: {
@@ -85,29 +84,12 @@ export default {
         </CSimpleGrid>
       </CBox>
 
-      <loader-component v-if="isLoading" />
+<!--      <loader-component v-if="isLoading" />-->
     </CThemeProvider>
   </div>
 </template>
 
 <style lang="scss" scoped>
-// .popular__product {
-//   @media screen and(max-width: 62em) {
-//     &:nth-child(n + 10) {
-//       display: none;
-//     }
-//   }
-//   @media screen and(max-width: 48em) {
-//     &:nth-child(n + 7) {
-//       display: none;
-//     }
-//   }
-//   @media screen and(max-width: 30em) {
-//     &:nth-child(n + 4) {
-//       display: none;
-//     }
-//   }
-// }
 @media screen and (max-width: 350px) {
   .popular-wrapper {
     margin-top: 24px;

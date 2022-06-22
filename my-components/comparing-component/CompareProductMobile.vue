@@ -105,41 +105,9 @@ export default {
           </c-text></c-box
         >
       </c-flex>
-      <!-- 
-      <c-box
-        d="flex"
-        align-items="center"
-        justify-content="space-between"
-        border="LangBorder"
-        rounded="5px"
-        :max-w="['80px', '107px', '134px', '161px', '188px', '215px']"
-        :max-h="['20px', '35px', '50px', '65px', '75px', '96px']"
-        :p="['6px', '8px', '12px', '18px', '24px', '26px']"
-      > -->
-      <!-- <c-link
-          :href="someVariable"
-          :font-size="['8px', '10px', '14px', '14px', '16px', '16px']"
-          :line-height="['9px', '10px', '14px', '16px', '20px', '24px']"
-          color="color.TextColor2"
-          :_hover="false"
-          cursor="pointer"
-          >UPD Mobile</c-link
-        > -->
-      <!-- <c-icon name="greenTick" size="9px" color="color.greenTick" /> -->
-      <!-- </c-box> -->
+
     </c-stack>
 
-    <!-- <c-text
-      :font-size="['8px', '10px', '12px', '14px', '16px', '16px']"
-      :line-height="['14px', '16px', '18px', '20px', '22px', '24px']"
-      color="color.TextColor1"
-      >Внимание! Неправильно указанный номер телефона, неточный или неполный
-      адрес могут привести к дополнительной задержке! Пожалуйста, внимательно
-      проверяйте Ваши персональные данные при регистрации и оформлении заказа.
-      Конфиденциальность ваших регистрационных данных гарантируется. <br />
-      <br />
-      Доставка выполняется ежедневно с 09:00 до 19:00 часов.
-    </c-text> -->
 
     <compare-tab-characteristics
       :item="items.characteristics"
@@ -176,7 +144,7 @@ export default {
         border="1px solid"
         font-weight="400"
         rounded="12"
-        _focus="none"
+        _focus="{{}}"
         color="color.InputBorder"
         cursor="pointer"
         background-color="none"

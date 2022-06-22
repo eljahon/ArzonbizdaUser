@@ -33,7 +33,7 @@ export default {
         <c-select
           v-model="$i18n.locale"
           border-radius="12px"
-          :_focus="false"
+          _focus="{{}}"
           border="LangBorder"
           color="color.InputColor"
           placeholder="Рус"

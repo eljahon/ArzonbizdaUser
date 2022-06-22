@@ -35,7 +35,7 @@ export default {
       h="56px"
       bg="transparent"
       cursor="pointer"
-      :_focus="false"
+      _focus="{{}}"
       ml="20px"
       mr="20px"
       @click="isOpen = true"

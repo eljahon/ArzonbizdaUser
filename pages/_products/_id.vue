@@ -32,8 +32,8 @@ export default {
     }
 
     return {
-      props: propsList,
-      productData: data,
+      propsList,
+       data,
     }
   },
 
@@ -59,11 +59,11 @@ export default {
     <BreadCumb />
     <LoaderComponent v-if="$store.state.loading" />
     <div class="product__page" data-aos="fade-up" data-aos-duration="1000">
-      <ProductSlider :images="props.imageList" />
-      <product-description :items="props" class="product__disc" />
+      <ProductSlider :images="propsList.imageList" />
+      <product-description :items="propsList" class="product__disc" />
     </div>
 
-    <ChakraTab :selected-product="productData" class="product__tab" />
+    <ChakraTab :selected-product="data" class="product__tab" />
   </div>
 </template>
 

@@ -35,7 +35,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/axios.js'],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,10 +55,10 @@ export default {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: process.env.API_BASE_URL,
+    baseURL: 'https://apis.arzonbizda.uz',
   },
   env: {
-    baseURL: process.env.API_BASE_URL || 'https://apis.arzonbizda.uz',
+    baseUrl: 'https://apis.arzonbizda.uz',
   },
   i18n: vueI18n,
 

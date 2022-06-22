@@ -279,7 +279,7 @@ export default {
             border="1px solid"
             font-weight="400"
             rounded="12"
-            _focus="none"
+            _focus="{{}}"
             color="color.InputBorder"
             cursor="pointer"
             background-color="none"

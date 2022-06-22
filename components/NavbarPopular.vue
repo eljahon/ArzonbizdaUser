@@ -45,7 +45,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_tablets') }}</CLink
         ></CBox
       >
@@ -58,7 +58,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_tv') }}</CLink
         ></CBox
       >
@@ -71,7 +71,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_laptops') }}</CLink
         ></CBox
       >
@@ -84,7 +84,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('smart_watches') }}</CLink
         ></CBox
       >
@@ -97,7 +97,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_ac') }}</CLink
         ></CBox
       >
@@ -110,7 +110,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_fridge') }}</CLink
         ></CBox
       >
@@ -123,7 +123,7 @@ export default {
           as="router-link"
           to="#"
           :_hover="{ color: 'color.BorderColor', textDecoration: false }"
-          :_focus="false"
+          _focus="{{}}"
           >{{ $t('category_monitors') }}</CLink
         ></CBox
       >
@@ -133,7 +133,7 @@ export default {
         :font-size="['12px', '12px', '12px', '14px', '14px', '16px']"
         line-height="24px"
         color="color.InputBorder"
-        ><CLink as="router-link" to="#" :_hover="false" :_focus="false"
+        ><CLink as="router-link" to="#" _hover="{{}}" _focus="{{}}"
           ><CIcon
             name="fire"
             mr="8px"

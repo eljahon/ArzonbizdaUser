@@ -23,6 +23,8 @@ export const state = () => {
     breadCumbs: [],
     blogList: [],
     singBlog: {},
+    singilPraduct: {},
+    singilPraductAll: {},
   }
 }
 export const mutations = {
@@ -31,6 +33,12 @@ export const mutations = {
   },
   SET_PRODUCTS_LIST(state, payload) {
     state.productsList = payload
+  },
+  SET_SINGIL_PR: (state, payload) => {
+    state.singilPraduct = payload
+  },
+  SET_SINGIL_PR_ALL: (state, payload) => {
+    state.singilPraductAll = payload
   },
   SET_SING_BLOG: (state, payload) => {
     state.singBlog = payload
@@ -64,6 +72,23 @@ export const mutations = {
 export const actions = {
   actionsIsCom(ctx, payload) {
     ctx.commit('SET_ISCOM', payload)
+  },
+  singilProduct(ctx, payload) {
+    const data = {
+      imageList: payload.product.images,
+      name: payload.product.name,
+      price: payload.product.price,
+      disc: payload.product.description,
+      compares: payload.compares,
+      shop: payload.product['shop.name'],
+      link: payload.product.link,
+      logo: payload.product['shop.logo'],
+      shopLink: payload.product['shop.link'],
+    }
+    ctx.commit('SET_SINGIL_PR', data)
+    ctx.commit('SET_SINGIL_PR_ALL', payload)
+    // console.log(data);
+    // console.log(payload)
   },
   setSelectId(ctx, payload) {
     ctx.commit('SET_SELECT_ID', payload)

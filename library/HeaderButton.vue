@@ -44,7 +44,7 @@ export default {
         border-color="color.BorderColor"
         border="1px solid"
         rounded="12"
-        _focus="none"
+        _focus="{{}}"
         color="color.InputBorder"
         height="56px"
         cursor="pointer"
