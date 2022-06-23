@@ -56,9 +56,7 @@ export default {
   ],
   axios: {
     baseURL: 'https://apis.arzonbizda.uz',
-  },
-  env: {
-    baseUrl: 'https://apis.arzonbizda.uz',
+    https: true,
   },
   i18n: vueI18n,
 
