@@ -17,7 +17,7 @@ export default {
   layout: 'ProductLayout',
 
   async asyncData({ $axios, params }) {
-    const { data } = await $axios.get(`/product/${params.id}`)
+    const { data } = await $axios.get(`product/${params.id}`)
 
     const propsList = {
       imageList: data.product.images,
@@ -33,7 +33,7 @@ export default {
 
     return {
       propsList,
-       data,
+      data,
     }
   },
 
@@ -50,7 +50,7 @@ export default {
         link: '',
         logo: '',
         shopLink: '',
-      }
+      },
     }
   },
 
