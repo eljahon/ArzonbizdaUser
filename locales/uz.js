@@ -14,6 +14,9 @@ export const uz = {
   error: 'xato',
   populargoods: 'Ommabop tovarlar',
   currency: "so'mdan",
+  categoryProduct: 'Mahsulot toifasi',
+  home: 'Uy',
+
   from: '',
   viewAll: "Hammasini ko'rish",
   category: 'Kategoriyalar',

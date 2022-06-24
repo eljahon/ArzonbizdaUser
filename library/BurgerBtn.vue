@@ -58,7 +58,7 @@ export default {
           justify-content="space-between"
           pr="25px"
         >
-          <c-drawer-header>Категория товаров </c-drawer-header>
+          <c-drawer-header>{{ $t('categoryProduct') }}</c-drawer-header>
           <c-drawer-header><LangButton /> </c-drawer-header>
           <c-close-button @click="isOpen = false" />
         </c-box>

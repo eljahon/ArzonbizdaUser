@@ -10,7 +10,7 @@ export const ru = {
   pickup: 'Самовывоз из магазина',
   error: 'ошибка',
   deliverDay: 'Доставка по Ташкенту до 1 дня, по Узбекистану до 5 дней',
-
+  categoryProduct: 'Категория товаров',
   populargoods: 'Популярные товары',
   currency: 'сум',
   from: 'от',
@@ -28,6 +28,8 @@ export const ru = {
   company: 'О компании',
   vacancy: 'Вакансии',
   address: 'Адрес',
+  home: 'Главная',
+
   reviews: 'Оставить отзыв',
   search: 'Поиск...',
   compare: 'Сравнить',

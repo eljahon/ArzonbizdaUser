@@ -60,7 +60,7 @@ export default {
     <c-breadcrumb font-weight="medium" font-size="sm">
       <c-breadcrumb-item gap="30px">
         <c-breadcrumb-link as="nuxt-link" to="/">
-          <p class="breadcumb-item">Главная</p>
+          <p class="breadcumb-item">{{ $t('home') }}</p>
         </c-breadcrumb-link>
       </c-breadcrumb-item>
       <c-breadcrumb-item
@@ -89,7 +89,8 @@ export default {
   align-items: center;
   background: #f5f7f7;
   height: 48px;
-}.breadcumb-item {
+}
+.breadcumb-item {
   color: #0f6cb0;
 }
 </style>

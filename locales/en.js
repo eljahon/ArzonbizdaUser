@@ -12,7 +12,10 @@ export const en = {
   error: 'error',
   populargoods: 'Popular goods',
   currency: 'sum',
+  categoryProduct: 'Product category',
   from: 'from',
+  home: 'Home',
+
   viewAll: 'View all',
   category: 'Categories',
   brand: 'Brands',

@@ -14,15 +14,16 @@ export default {
   data() {
     return {
       loacale: this.$i18n.locale,
+
       list: {
-        'ru': 'Ru',
-        'en': 'En',
-        'uz': 'Uz'
-      }
+        ru: 'Ru',
+        en: 'En',
+        uz: 'Uz',
+      },
     }
   },
   watch: {
-    '$i18n.locale' (event) {
+    '$i18n.locale'(event) {
       this.$router.push(this.switchLocalePath(event))
     },
   },
@@ -43,8 +44,12 @@ export default {
           color="color.InputColor"
           h="56px"
         >
-          <option v-for="(item, index) in $i18n.locales"  :key="index" :value="item">
-            {{list[item]}}
+          <option
+            v-for="(item, index) in $i18n.locales"
+            :key="index"
+            :value="item"
+          >
+            {{ list[item] }}
           </option>
         </c-select>
       </c-box>

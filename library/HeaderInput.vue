@@ -45,7 +45,7 @@ export default {
           class="header___input"
           type="text"
           _focus-border-color="color.InputColor"
-          placeholder="Поиск..."
+          :placeholder="$t('search')"
           color="color.InputColor"
           :width="['100%', '100%', '100%', '430px', '300px', '540px']"
           height="56px"
