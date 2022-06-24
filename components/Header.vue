@@ -34,7 +34,7 @@ export default {
         flex-wrap="wrap"
       >
         <c-box class="wrapper-logo" width="139px" height="40px">
-          <NuxtLink as="router-link" to="/">
+          <NuxtLink as="router-link" :to="localePath('/')">
             <svg
               class="logo__icon"
               width="188"

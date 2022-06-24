@@ -22,7 +22,7 @@ export default {
     }
   },
   watch: {
-    loacale(event) {
+    '$i18n.locale' (event) {
       this.$router.push(this.switchLocalePath(event))
     },
   },
@@ -36,7 +36,7 @@ export default {
     <CThemeProvider>
       <c-box w="87px" height="56px">
         <c-select
-          v-model="loacale"
+          v-model="$i18n.locale"
           border-radius="12px"
           _focus="{{}}"
           border="LangBorder"
