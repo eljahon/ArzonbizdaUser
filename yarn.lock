@@ -1108,7 +1108,7 @@
 
 "@growthbunker/vueflags@^0.1.14":
   version "0.1.14"
-  resolved "https://registry.npmjs.org/@growthbunker/vueflags/-/vueflags-0.1.14.tgz"
+  resolved "https://registry.yarnpkg.com/@growthbunker/vueflags/-/vueflags-0.1.14.tgz#a4e756789c4e7c258c4bb82ebf5736c9549db5cb"
   integrity sha512-iw0r5QIHV9j2YDLf71m0RsZPIueVwGyBlYfqtzHZUtXJq+uBYERSmpZeTeGh6XhwFR63aIvOITvq6hRHBxdXLw==
 
 "@gulp-sourcemaps/map-sources@1.X":

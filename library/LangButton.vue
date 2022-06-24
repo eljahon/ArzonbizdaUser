@@ -13,11 +13,16 @@ export default {
   },
   data() {
     return {
-      loacales: '',
+      loacale: this.$i18n.locale,
+      list: {
+        'ru': 'Ru',
+        'en': 'En',
+        'uz': 'Uz'
+      }
     }
   },
   watch: {
-    loacales(event) {
+    loacale(event) {
       this.$router.push(this.switchLocalePath(event))
     },
   },
@@ -31,17 +36,16 @@ export default {
     <CThemeProvider>
       <c-box w="87px" height="56px">
         <c-select
-          v-model="$i18n.locale"
+          v-model="loacale"
           border-radius="12px"
           _focus="{{}}"
           border="LangBorder"
           color="color.InputColor"
-          placeholder="Рус"
           h="56px"
         >
-          <option value="ru">Ru</option>
-          <option value="uz">Uzb</option>
-          <option value="en">Eng</option>
+          <option v-for="(item, index) in $i18n.locales"  :key="index" :value="item">
+            {{list[item]}}
+          </option>
         </c-select>
       </c-box>
     </CThemeProvider>
