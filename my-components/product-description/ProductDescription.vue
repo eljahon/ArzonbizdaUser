@@ -60,7 +60,7 @@ export default {
     IsComponents() {
       this.$store.dispatch('actionsIsCom', this.$route.params.id)
       if (this.isBadgeLength < 2) {
-        this.$router.push('/')
+        this.$router.push(this.localePath('/'))
       }
     },
   },
@@ -78,45 +78,6 @@ export default {
         >{{ items.name }}</CHeading
       >
       <CFlex>
-        <!-- <CBox d="flex" align-items="center">
-          <CIcon name="star" mr="5px" />
-          <CIcon name="star" mr="5px" />
-          <CIcon name="star" mr="5px" />
-          <CIcon name="star" mr="5px" />
-          <CIcon name="star" />
-          <CBox
-            as="span"
-            ml="10px"
-            mr="24px"
-            font-size="16px"
-            line-height="24px"
-            font-weight="400"
-            color="color.TextColor5"
-            >4,8</CBox
-          >
-        </CBox> -->
-        <!-- <CDivider orientation="vertical" border-color="color.iconBg" /> -->
-        <!-- <CBox d="flex" align-items="center">
-          <CIcon
-            name="comment"
-            width="24px"
-            height="24px"
-            ml="24px"
-            mr="10px"
-            fill="transparent"
-            color="color.TextColor5"
-          />
-          <CBox as="span" font-weight="400" color="color.TextColor5" mr="24px"
-            >26</CBox
-          >
-        </CBox> -->
-        <!-- <CDivider orientation="vertical" border-color="color.iconBg" />
-        <CBox d="flex" align-items="center">
-          <CIcon name="view" fill="white" size="24px" ml="24px" mr="10px" />
-          <CBox as="span" font-weight="400" color="color.TextColor5"
-            >16 452</CBox
-          >
-        </CBox> -->
       </CFlex>
       <CFlex mt="32px" justify="space-between">
         <CStack>
