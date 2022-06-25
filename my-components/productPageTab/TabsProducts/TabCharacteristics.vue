@@ -14,36 +14,6 @@ export default {
       required: true,
     },
   },
-  // data() {
-  //   return {
-  //     PhoneName: [
-  //       { id: 1, namephone: 'Android 11' },
-  //       { id: 2, namephone: 'Android 11' },
-  //       { id: 3, namephone: 'Android 11' },
-  //       { id: 4, namephone: 'Android 11' },
-  //       { id: 5, namephone: 'Android 11' },
-  //       { id: 6, namephone: 'Android 11' },
-  //       { id: 7, namephone: 'Android 11' },
-  //       { id: 8, namephone: 'Android 11' },
-  //       { id: 9, namephone: 'Android 11' },
-  //       { id: 10, namephone: 'Android 11' },
-  //       { id: 11, namephone: 'Android 11' },
-  //     ],
-  //     phoneVersion: [
-  //       { id: 1, versionForPhone: 'OS versiyasi' },
-  //       { id: 2, versionForPhone: 'OS versiyasi' },
-  //       { id: 3, versionForPhone: 'OS versiyasi' },
-  //       { id: 4, versionForPhone: 'OS versiyasi' },
-  //       { id: 5, versionForPhone: 'OS versiyasi' },
-  //       { id: 6, versionForPhone: 'OS versiyasi' },
-  //       { id: 7, versionForPhone: 'OS versiyasi' },
-  //       { id: 8, versionForPhone: 'OS versiyasi' },
-  //       { id: 9, versionForPhone: 'OS versiyasi' },
-  //       { id: 10, versionForPhone: 'OS versiyasi' },
-  //       { id: 11, versionForPhone: 'OS versiyasi' },
-  //     ],
-  //   }
-  // },
 }
 </script>
 

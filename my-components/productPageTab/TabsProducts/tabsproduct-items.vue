@@ -125,7 +125,7 @@ export default {
               font-family="Yandex Sans Display"
               font-weight="400"
               :line-height="['9px', '12px', '16px', '20px', '22px', '24px']"
-              >{{ $t('UPDMobile') }}</CHeading
+              >{{ item['shop.name'] }}</CHeading
             >
             <CIcon name="green_tick" color="color.greenTick" />
           </CBox>

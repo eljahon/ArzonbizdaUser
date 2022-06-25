@@ -6,6 +6,7 @@ export const uz = {
   proposals: 'Takliflar',
   availability: 'dan mavjud',
   sellers: 'sotuvchilar',
+  similarPraducts: "O'xshash maxsulotlar",
   attention:
     'Diqqat! Telefon raqami noto‘g‘ri, noto‘g‘ri yoki to‘liq manzil qo/`shimcha kechikishga olib kelishi mumkin! Iltimos, ehtiyot bo`ling ro`yxatdan o`tish va buyurtma berishda shaxsiy ma`lumotlaringizni tekshiring. Ro`yxatdan o`tish ma`lumotlarining maxfiyligi kafolatlanadi.',
   pickup: 'Do`kondan olib ketish ',

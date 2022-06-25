@@ -13,6 +13,7 @@ export const en = {
   populargoods: 'Popular goods',
   currency: 'sum',
   from: 'from',
+  similarPraducts: 'Similar Products',
   viewAll: 'View all',
   category: 'Categories',
   brand: 'Brands',

@@ -23,6 +23,7 @@ export default {
 
 <template>
   <CBox
+    style="background-color: white"
     mt="12px"
     :bg="['white', 'white', 'white', 'white', 'color.BgColor', 'color.BgColor']"
     :padding="['0px', '0px', '0px', '0px', '20px', '20px']"

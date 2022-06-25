@@ -10,7 +10,7 @@ export const ru = {
   pickup: 'Самовывоз из магазина',
   error: 'ошибка',
   deliverDay: 'Доставка по Ташкенту до 1 дня, по Узбекистану до 5 дней',
-
+  similarPraducts: 'Похожие продукты',
   populargoods: 'Популярные товары',
   currency: 'сум',
   from: 'от',
