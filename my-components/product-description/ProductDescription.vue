@@ -58,7 +58,15 @@ export default {
 
   methods: {
     IsComponents() {
-      this.$store.dispatch('actionsIsCom', this.$route.params.id)
+      const data = {
+        name: this.items.name,
+        image: this.items.imageList[0].src,
+        id: this.items.imageList[0].product_id
+      }
+      this.$store.dispatch('actionsIsCom', data)
+        .catch((err) => {
+          console.log(err);
+        })
       if (this.isBadgeLength < 2) {
         this.$router.push(this.localePath('/'))
       }

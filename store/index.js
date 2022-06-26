@@ -5,6 +5,7 @@ export const getters = {
   isBadgeLength: (state) => {
     return state.isBadge.length
   },
+  isBadgeList: (state) => state.isBadge,
   breadCumbs: (state) => state.breadCumbs,
   brandItem: (state) => state.brandItem,
   loading: (state) => state.loading,
@@ -71,7 +72,19 @@ export const mutations = {
 }
 export const actions = {
   actionsIsCom(ctx, payload) {
-    ctx.commit('SET_ISCOM', payload)
+    return new Promise((resolve, reject) => {
+      if (ctx.state.isBadge.length > 0) {
+        ctx.state.isBadge.forEach((el) => {
+          if (el.id !== payload.id) {
+            ctx.commit('SET_ISCOM', payload)
+          }
+          // eslint-disable-next-line prefer-promise-reject-errors
+          reject('error')
+        })
+      } else {
+        ctx.commit('SET_ISCOM', payload)
+      }
+    })
   },
   singilProduct(ctx, payload) {
     const data = {
@@ -90,6 +103,11 @@ export const actions = {
     // console.log(data);
     // console.log(payload)
   },
+  setSelectIdFilter(ctx, id) {
+    const data = ctx.state.isBadge.filter((el) => el.id !== id)
+    ctx.commit('SET_SELECT_ID', data)
+  },
+
   setSelectId(ctx, payload) {
     ctx.commit('SET_SELECT_ID', payload)
   },
@@ -110,7 +128,7 @@ export const actions = {
     const blogListAll = payload.map((el) => {
       return {
         id: el.id,
-        image: process.env.baseUrl + el.image,
+        image: 'https://apis.arzonbizda.uz' + el.image,
         title: el.title,
       }
     })

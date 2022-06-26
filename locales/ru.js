@@ -14,6 +14,7 @@ export const ru = {
   populargoods: 'Популярные товары',
   currency: 'сум',
   from: 'от',
+  allCanseld: 'Отменить все',
   viewAll: 'Просмотреть все',
   category: 'Категории',
   brand: 'Бренды',

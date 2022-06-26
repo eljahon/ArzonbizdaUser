@@ -14,6 +14,7 @@ export const en = {
   currency: 'sum',
   from: 'from',
   similarPraducts: 'Similar Products',
+  allCanseld: 'отменить все',
   viewAll: 'View all',
   category: 'Categories',
   brand: 'Brands',

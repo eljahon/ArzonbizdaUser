@@ -2,7 +2,6 @@
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import { mapGetters } from 'vuex'
 import BrandComponent from '~/my-components/brands-component/brandComponent.vue'
-import ViewAll from '~/library/viewAll.vue'
 
 export default {
   name: 'BrandsComponent',
@@ -12,7 +11,6 @@ export default {
     CThemeProvider,
     CSimpleGrid,
     CBox,
-    ViewAll,
   },
 
   data() {
@@ -37,8 +35,7 @@ export default {
         justify="space-between"
         :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
       >
-        <h1 class="main_header">{{ $t('brand') }}</h1>
-        <ViewAll />
+        <h1 class="main_header">{{ $t('brand') }}</h1>  
       </CFlex>
 
       <CSimpleGrid

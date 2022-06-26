@@ -1,7 +1,6 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
 import CategoryComponent from '~/my-components/categories-component/categoryComponent.vue'
-import ViewAll from '~/library/viewAll.vue'
 
 export default {
   name: 'CategoriesComponent',
@@ -10,7 +9,6 @@ export default {
     CThemeProvider,
     CSimpleGrid,
     CBox,
-    ViewAll,
   },
 
   data() {
@@ -43,7 +41,6 @@ export default {
         :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
       >
         <h1 class="main_header">{{ $t('category') }}</h1>
-        <ViewAll />
       </CFlex>
 
       <CSimpleGrid

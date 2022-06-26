@@ -20,11 +20,24 @@ export default {
   },
   async asyncData({ route, $axios, store }) {
     const query = { prs: [route.query.firstId, route.query.secondId] }
-    store.dispatch('setSelectId', query.prs)
     const list = await $axios.get('product/compare', {
       params: query,
     })
-    const renderData = list.data.data.products
+    // const {data} = list
+    const renderData = list.data.data.products;
+    const dataList = [
+      {
+        name: renderData[0].name,
+        image: renderData[0].images[0].src,
+        id: renderData[0].images[0].product_id
+      },
+      {
+        name: renderData[1].name,
+        image: renderData[1].images[0].src,
+        id: renderData[1].images[0].product_id
+      }
+    ]
+    store.dispatch('setSelectId', dataList)
     return {
       renderData,
     }

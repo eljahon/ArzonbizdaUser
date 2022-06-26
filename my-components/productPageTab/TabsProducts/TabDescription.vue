@@ -1,18 +1,11 @@
 <script>
 import { CBox, CText } from '@chakra-ui/vue'
-import TabsProducts from './TabsProducts.vue'
+
 export default {
   components: {
     CBox,
     CText,
-    TabsProducts
   },
-  props: {
-    dataList: {
-      type: Array,
-      required: true
-    }
-  }
 }
 </script>
 
@@ -48,20 +41,9 @@ export default {
      </CText>
    </CBox
    >
-   <div>
-     <br>
-     <h1 class="textList">{{$t('similarPraducts')}}</h1>
-     <div>
-       <tabs-products
-         :products="dataList"
-         data-aos="fade-up"
-       />
-     </div>
-   </div>
  </div>
 </template>
-
-<style lang="scss" scoped>
+<style>
 h1 {
   width: 80%;
   margin: auto;

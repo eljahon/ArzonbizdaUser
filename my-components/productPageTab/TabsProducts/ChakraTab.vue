@@ -113,11 +113,12 @@ mixins: [Mixins],
           <CTabPanel>
             <tab-characteristics
               data-aos="fade-up"
+              :data-list="selectedProduct.compares"
               :characterics="selectedProduct.product.characteristics"
             />
           </CTabPanel>
           <CTabPanel>
-            <tab-description :data-list="selectedProduct.compares" data-aos="fade-up" />
+            <tab-description data-aos="fade-up" />
           </CTabPanel>
 
         </CTabPanels> </CTabs

@@ -1,6 +1,6 @@
 <script>
 import { CThemeProvider, CSimpleGrid, CBox } from '@chakra-ui/vue'
-import ViewAll from '../../library/viewAll.vue'
+// import ViewAll from '../../library/viewAll.vue'
 import PopularProduct from './popularProduct.vue'
 // import LoaderComponent from '~/library/LoaderComponent.vue'
 
@@ -12,7 +12,7 @@ export default {
     CSimpleGrid,
     CBox,
     PopularProduct,
-    ViewAll,
+    // ViewAll,
   },
 
   props: {
@@ -53,17 +53,10 @@ export default {
         mt="88px"
         :mb="['27px', '38px', '52px', '64px', '76px', '88px']"
       >
-        <CFlex
-          align="center"
-          justify="space-between"
-          :mb="['10px', '15px', '20px', '25px', '30px', '40px']"
-        >
-          <h1 class="main_header">
-            {{ title }}
-          </h1>
 
-          <ViewAll />
-        </CFlex>
+         <div style="margin-bottom: 20px"> <h1 class="main_header">
+           {{ title }}
+         </h1></div>
 
         <CSimpleGrid
           :columns="

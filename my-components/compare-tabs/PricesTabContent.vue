@@ -66,7 +66,7 @@ export default {
 
 <template>
   <CThemeProvider>
-    <c-box v-for="(data,index ) in item" :key="index"
-      ><prices-tab-content-item :item="item" /></c-box
+    <c-box v-for="(data,index ) in item.compares" :key="index"
+      ><prices-tab-content-item :item="data" /></c-box
   ></CThemeProvider>
 </template>

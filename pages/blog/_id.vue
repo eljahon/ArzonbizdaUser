@@ -12,7 +12,7 @@ export default {
     const blogList = await $axios.get('blog/posts')
 
     const dataFormat = {
-      avatar: process.env.baseUrl+data.post.image,
+      avatar: 'https://apis.arzonbizda.uz'+data.post.image,
       ...data.post
     }
     store.dispatch('blogListAdd', blogList.data.posts)

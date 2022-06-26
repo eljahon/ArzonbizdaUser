@@ -2,24 +2,31 @@
 import { CBox } from '@chakra-ui/vue'
 import PhoneCharacteristics from './PhoneCharacteristics.vue'
 import PhoneName from './PhoneName.vue'
+import TabsProducts from './TabsProducts.vue'
 export default {
   components: {
     CBox,
     PhoneName,
     PhoneCharacteristics,
+    TabsProducts
   },
   props: {
     characterics: {
       type: Array || Object,
       required: true,
     },
+    dataList: {
+      type: Array,
+      required: true
+    }
   },
 }
 </script>
 
 <template>
-  <CBox
-    :padding="[
+ <div>
+   <CBox
+     :padding="[
       '15px 10px',
       '20px 15px',
       '20px 15px',
@@ -27,7 +34,7 @@ export default {
       '30px 24px',
       '32px 24px',
     ]"
-    :bg="[
+     :bg="[
       'initial',
       'initial',
       'initial',
@@ -35,27 +42,38 @@ export default {
       'color.BgColor',
       'color.BgColor',
     ]"
-  >
-    <CFlex>
-      <CBox>
-        <CBox
-          v-for="data in characterics"
-          :key="data.id"
-          :width="['153px', '170px', '300px', '320px', '320px', '314px']"
-        >
-          <PhoneName :data="data" />
-        </CBox>
-      </CBox>
-      <CBox display="flex" flex-direction="column">
-        <CBox
-          v-for="datas in characterics"
-          :key="datas.id"
-          display="flex"
-          margin-left="30px"
-        >
-          <PhoneCharacteristics :datas="datas" />
-        </CBox>
-      </CBox>
-    </CFlex>
-  </CBox>
+   >
+     <CFlex>
+       <CBox>
+         <CBox
+           v-for="data in characterics"
+           :key="data.id"
+           :width="['153px', '170px', '300px', '320px', '320px', '314px']"
+         >
+           <PhoneName :data="data" />
+         </CBox>
+       </CBox>
+       <CBox display="flex" flex-direction="column">
+         <CBox
+           v-for="datas in characterics"
+           :key="datas.id"
+           display="flex"
+           margin-left="30px"
+         >
+           <PhoneCharacteristics :datas="datas" />
+         </CBox>
+       </CBox>
+     </CFlex>
+   </CBox>
+   <div>
+     <br>
+     <h1 class="textList">{{$t('similarPraducts')}}</h1>
+     <div>
+       <tabs-products
+         :products="dataList"
+         data-aos="fade-up"
+       />
+     </div>
+   </div>
+ </div>
 </template>

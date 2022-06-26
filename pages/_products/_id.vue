@@ -16,7 +16,7 @@ export default {
 
   layout: 'ProductLayout',
 
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, params,store }) {
     const { data } = await $axios.get(`product/${params.id}`)
 
     const propsList = {
@@ -30,7 +30,14 @@ export default {
       logo: data.product['shop.logo'],
       shopLink: data.product['shop.link'],
     }
-
+    // const dataList = {
+    //   name: propsList.name,
+    //   image: propsList.imageList[0].src,
+    //   id: propsList.imageList[0].product_id
+    // }
+    // if(store.state.isBadge.length === 0) {
+    //   store.dispatch('actionsIsCom', dataList)
+    // }
     return {
       propsList,
       data,
@@ -40,17 +47,6 @@ export default {
   data() {
     return {
       route: this.$route,
-      propsList: {
-        imageList: [],
-        name: '',
-        price: null,
-        disc: '',
-        compares: [],
-        shop: '',
-        link: '',
-        logo: '',
-        shopLink: '',
-      },
     }
   },
 

@@ -51,7 +51,7 @@ export default {
       ]"
     >
       <c-tab
-        class="c-tab1"
+        class="c-tab4"
         :_active="{ bg: 'transparent' }"
         :_selected="{
           fontWeight: '700',
@@ -65,21 +65,12 @@ export default {
         color="color.TextColor1"
         :width="['100%', '100%', '100%', 'initial', 'initial', 'initial']"
         :px="['6px', '6px', '8px', '8px', '20px', '20px']"
-        :border-right-color="[
-          'none',
-          'none',
-          'none',
-          'color.TabBorderRightColor',
-          'color.TabBorderRightColor',
-          'color.TabBorderRightColor',
-        ]"
-        :border-right-width="['0px', '0px', '0px', '0px', '1px', '1px']"
         text-align="center"
-        :font-size="['10px', '11px', '12px', '12px', '14px', '16px']"
+        :font-size="['10px', '11px', '14px', '12px', '14px', '16px']"
         font-family="Yandex Sans Display"
         font-weight="400"
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >{{ $t('tab1') }}</c-tab
+      >{{ $t('tab4') }}</c-tab
       >
       <c-tab
         class="c-tab2"
@@ -112,73 +103,20 @@ export default {
         :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
         >{{ $t('tab2') }}</c-tab
       >
-      <!-- <c-tab
-        class="c-tab3"
-        :_active="{ bg: 'transparent' }"
-        :_selected="{
-          fontWeight: '700',
-          color: 'color.WarningColor1',
-          borderBottomColor: 'color.WarningColor1',
-          borderBottomWidth: '3px',
-          borderBottomRightRadius: '2px',
-          borderBottomLeftRadius: '2px',
-        }"
-        :_focus="{ outline: 'none' }"
-        color="color.TextColor1"
-        :width="['100%', '100%', '100%', 'initial', 'initial', 'initial']"
-        :px="['6px', '6px', '8px', '8px', '20px', '20px']"
-        :border-right-color="[
-          'none',
-          'none',
-          'none',
-          'color.TabBorderRightColor',
-          'color.TabBorderRightColor',
-          'color.TabBorderRightColor',
-        ]"
-        :border-right-width="['0px', '0px', '0px', '0px', '1px', '1px']"
-        text-align="center"
-        :font-size="['10px', '11px', '12px', '12px', '14px', '16px']"
-        font-family="Yandex Sans Display"
-        font-weight="400"
-        :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >{{ $t('tab3') }}</c-tab
-      > -->
-      <c-tab
-        class="c-tab4"
-        :_active="{ bg: 'transparent' }"
-        :_selected="{
-          fontWeight: '700',
-          color: 'color.WarningColor1',
-          borderBottomColor: 'color.WarningColor1',
-          borderBottomWidth: '3px',
-          borderBottomRightRadius: '2px',
-          borderBottomLeftRadius: '2px',
-        }"
-        :_focus="{ outline: 'none' }"
-        color="color.TextColor1"
-        :width="['100%', '100%', '100%', 'initial', 'initial', 'initial']"
-        :px="['6px', '6px', '8px', '8px', '20px', '20px']"
-        text-align="center"
-        :font-size="['10px', '11px', '14px', '12px', '14px', '16px']"
-        font-family="Yandex Sans Display"
-        font-weight="400"
-        :line-height="['10px', '11px', '14px', '16px', '16px', '24px']"
-        >{{ $t('tab4') }}</c-tab
-      >
     </c-tab-list>
 
     <c-tab-panels>
-      <c-tab-panel>
-        <prices-tab-content :item="item" />
-      </c-tab-panel>
       <!-- <c-tab-panel>
         <compare-tab-comment :item="item" />
       </c-tab-panel> -->
       <c-tab-panel>
-        <compare-reviews :item="item" />
+        <compare-tab-characteristics :item="item.characteristics" />
+        <br>
+        <h1>{{$t('similarPraducts')}}</h1>
+        <prices-tab-content :item="item" />
       </c-tab-panel>
       <c-tab-panel>
-        <compare-tab-characteristics :item="item.characteristics" />
+        <compare-reviews :item="item" />
       </c-tab-panel>
     </c-tab-panels>
   </c-tabs>
@@ -198,5 +136,8 @@ export default {
   .c-tab4 {
     padding: initial 20px;
   }
+}
+h1{
+  text-align: center;
 }
 </style>
