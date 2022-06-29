@@ -33,19 +33,10 @@ export default {
 <template>
   <CThemeProvider>
     <c-box :padding="['0', '0', '17px', '20px 30px', '22px 43px', '24px 45px']">
-      <div class="character__hero">
-        <c-box>
-          <c-box v-for="(el, id) in item" :key="id">
+      <div  v-for="(el, id) in item" :key="id" class="character__hero">
             <phone-version :item="el" />
-          </c-box>
-        </c-box>
-
-        <c-box>
-          <c-box v-for="(el, id) in item" :key="id">
             <phone-model :item="el" />
-          </c-box>
-        </c-box>
-      </div>
+        </div>
     </c-box>
   </CThemeProvider>
 </template>

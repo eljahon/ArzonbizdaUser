@@ -64,8 +64,7 @@ export default {
         id: this.items.imageList[0].product_id
       }
       this.$store.dispatch('actionsIsCom', data)
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
         })
       if (this.isBadgeLength < 2) {
         this.$router.push(this.localePath('/'))
@@ -97,8 +96,9 @@ export default {
           >
           <CHeading
             as="h1"
-            font-size="36px"
-            line-height="48px"
+            style="display: flex"
+            font-size="16px"
+            line-height="32px"
             color="color.TextColor2"
             >{{ priceSpacer(items.price.toString()) }} {{ $t('currency') }}
           </CHeading>

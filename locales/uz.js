@@ -14,7 +14,7 @@ export const uz = {
     'Toshkent bo`ylab yetkazib berish 1 kungacha, O`zbekiston bo`ylab 5 kungacha ',
   error: 'xato',
   populargoods: 'Ommabop tovarlar',
-  currency: "so'mdan",
+  currency: "so'm",
   from: '',
   viewAll: "Hammasini ko'rish",
   category: 'Kategoriyalar',

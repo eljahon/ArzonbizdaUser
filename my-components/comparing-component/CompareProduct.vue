@@ -17,6 +17,13 @@ export default {
     {
       methods: {
         priceSpacer,
+        textFormat(item) {
+          if(item.length > 26) {
+            return item.slice(0, 28)
+          } else {
+            return  item
+          }
+        }
       },
     },
   ],
@@ -46,7 +53,7 @@ export default {
         :font-size="['24px', '24px', '26px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
-        >{{ item.name }}</c-heading
+        >{{textFormat(item.name)}}</c-heading
       >
       <c-flex>
       </c-flex>
@@ -62,7 +69,7 @@ export default {
           >
           <c-heading
             as="h1"
-            :font-size="['12px', '18px', '20px', '24px', '32px', '36px']"
+            :font-size="['12px', '18px', '20px', '24px', '22px', '24px']"
             :line-height="['13px', '24px', '26px', '28px', '42px', '48px']"
             color="color.TextColor2"
             >{{ priceSpacer(item.price.toString()) }}</c-heading

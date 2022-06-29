@@ -37,7 +37,17 @@ export default {
         id: renderData[1].images[0].product_id
       }
     ]
-    store.dispatch('setSelectId', dataList)
+    let indexList;
+    store.dispatch('setSelectId', dataList);
+   if(renderData[0].characteristics.length > renderData[1].characteristics.length) {
+      indexList  = renderData[1].characteristics.map((el, index) => index)
+     renderData[0].characteristics = renderData[0].characteristics.filter((el, index) => index === indexList[index]);
+
+   } else  {
+     indexList  = renderData[0].characteristics.map((el, index) => index)
+     renderData[1].characteristics=renderData[1].characteristics.filter((el, index) => index === indexList[index]);
+   }
+
     return {
       renderData,
     }

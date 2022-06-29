@@ -28,6 +28,18 @@ export default {
     {
       methods: {
         priceSpacer,
+        openProductPage(item) {
+          this.$router.push(
+            this.localePath({
+              name: 'products-id',
+
+              params: {
+                products: this.$route.params.category ?? 'products',
+                id: item.id,
+              },
+            })
+          )
+        },
       },
     },
   ],
@@ -193,8 +205,7 @@ export default {
             bg="transparent"
             :_hover="{ bg: 'transparent' }"
             :_focus="{ outline: 'none' }"
-            as="router-link"
-            to="/"
+           @click="openProductPage(item)"
             >{{ $t('more') }}</CButton
           >
           <c-box mt="12px">
