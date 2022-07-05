@@ -28,7 +28,7 @@ export default {
     <VueSlickCarousel v-bind="settings">
       <div v-for="(item, index) in 4" :key="index">
         <div class="banner__hero">
-          <img src="@/assets/img/slide.png" alt="" />
+          <img src="@/assets/img/slide.png" alt="my images" />
         </div>
       </div>
 

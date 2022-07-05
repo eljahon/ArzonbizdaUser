@@ -65,7 +65,7 @@ export default {
         class="slider__wrapper"
       >
         <div v-for="(item, index) in images" :key="index">
-          <img :src="item.src" alt="" class="slider__image" />
+          <img :src="item.src" alt="my images" class="slider__image"/>
         </div>
       </VueSlickCarousel>
     </div>

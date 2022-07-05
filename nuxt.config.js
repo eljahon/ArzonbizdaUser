@@ -3,7 +3,7 @@ import icons from './icons'
 import { vueI18n } from './locales/i18n-config'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-
+  // ssr: false,
   head: {
     title: 'Arzon bizda',
 
@@ -14,7 +14,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'arzon.uz, arzonbizda.uz, bizda.uz, zon.uz, kirdit.uz',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
 
@@ -57,6 +61,9 @@ export default {
   axios: {
     baseURL: 'https://apis.arzonbizda.uz',
     https: true,
+  },
+  router: {
+    prefetchLinks: false,
   },
   i18n: vueI18n,
 
