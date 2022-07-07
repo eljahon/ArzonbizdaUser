@@ -34,8 +34,8 @@ export default {
   <CThemeProvider>
     <c-box :padding="['0', '0', '17px', '20px 30px', '22px 43px', '24px 45px']">
       <div  v-for="(el, id) in item" :key="id" class="character__hero">
-            <phone-version :item="el" />
-            <phone-model :item="el" />
+            <phone-version v-if="id < 6" :item="el" />
+            <phone-model v-if="id < 6" :item="el" />
         </div>
     </c-box>
   </CThemeProvider>

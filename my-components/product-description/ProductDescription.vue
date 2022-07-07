@@ -57,6 +57,13 @@ export default {
   },
 
   methods: {
+    stringFormat (item) {
+      if (item.length > 20) {
+        return item.slice(0, 20)
+      } else {
+        return  item
+      }
+    },
     IsComponents() {
       const data = {
         name: this.items.name,
@@ -82,10 +89,8 @@ export default {
         :font-size="['24px', '24px', '25px', '26px', '27px', '28px']"
         :line-height="['32px', '32px', '38px', '42px', '45px', '48px']"
         color="color.TextColor2"
-        >{{ items.name }}</CHeading
+        >{{stringFormat(items.name) }}</CHeading
       >
-      <CFlex>
-      </CFlex>
       <CFlex mt="32px" justify="space-between">
         <CStack>
           <CText
@@ -97,7 +102,7 @@ export default {
           <CHeading
             as="h1"
             style="display: flex"
-            font-size="16px"
+            font-size="18px"
             line-height="32px"
             color="color.TextColor2"
             >{{ priceSpacer(items.price.toString()) }} {{ $t('currency') }}

@@ -19,12 +19,14 @@ export default {
     BurgerBtn,
     CBox,
 },
+
 }
 </script>
 
 <template>
-  <CThemeProvider>
-    <header class="header">
+  <CThemeProvider >
+    <div>
+      <header class="header" >
       <c-flex
         class="header-flex"
         align="center"
@@ -122,14 +124,15 @@ export default {
             <HeaderButton class="mobile" />
           </c-flex>
         </c-box>
-
         <HeaderInput class="header__input" />
         <LangButton class="lang__btn" />
         <HeaderButton class="desktop" />
+
       </c-flex>
     </header>
 
-    <NavbarPopular />
+    <NavbarPopular /></div>
+
   </CThemeProvider>
 </template>
 
@@ -193,5 +196,9 @@ export default {
   .logo__icon {
     width: 137px;
   }
+}
+
+.wrapper-compre-class {
+  display: flex;
 }
 </style>

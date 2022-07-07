@@ -26,6 +26,10 @@ export default {
       default: () => {},
       required: true,
     },
+    index: {
+      type: Number,
+      required: true
+    }
   },
 }
 </script>
@@ -106,9 +110,6 @@ export default {
     </c-tab-list>
 
     <c-tab-panels>
-      <!-- <c-tab-panel>
-        <compare-tab-comment :item="item" />
-      </c-tab-panel> -->
       <c-tab-panel>
         <compare-tab-characteristics :item="item.characteristics" />
         <br>

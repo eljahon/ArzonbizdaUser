@@ -121,7 +121,8 @@ mixins: [Mixins],
             <tab-description data-aos="fade-up" />
           </CTabPanel>
 
-        </CTabPanels> </CTabs
+        </CTabPanels>
+      </CTabs
     ></CBox>
   </CThemeProvider>
 </template>

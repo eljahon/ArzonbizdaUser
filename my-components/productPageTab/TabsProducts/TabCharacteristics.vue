@@ -46,21 +46,21 @@ export default {
      <CFlex>
        <CBox>
          <CBox
-           v-for="data in characterics"
+           v-for="(data, index) in characterics"
            :key="data.id"
            :width="['153px', '170px', '300px', '320px', '320px', '314px']"
          >
-           <PhoneName :data="data" />
+           <PhoneName v-if="index < 6" :data="data" />
          </CBox>
        </CBox>
-       <CBox display="flex" flex-direction="column">
+       <CBox display="flex" flex-direction="column" >
          <CBox
-           v-for="datas in characterics"
+           v-for="(datas, index) in characterics"
            :key="datas.id"
            display="flex"
            margin-left="30px"
          >
-           <PhoneCharacteristics :datas="datas" />
+           <PhoneCharacteristics v-if="index < 6" :datas="datas" />
          </CBox>
        </CBox>
      </CFlex>

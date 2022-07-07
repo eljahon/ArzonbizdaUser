@@ -63,6 +63,7 @@ export default {
     https: true,
   },
   router: {
+    // mode: 'hash',
     prefetchLinks: false,
   },
   i18n: vueI18n,
@@ -91,7 +92,15 @@ export default {
     height: '2px',
   },
 
-  build: {},
+  build: {
+    extractCSS: true,
+    extend(config, ctx) {
+      console.log(config, ctx)
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
+      }
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
 }

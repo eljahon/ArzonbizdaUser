@@ -1,7 +1,6 @@
 <script>
 export default {
   name: 'ContainerBox',
-
   computed: {
     crumbs() {
       const crumbs = []
@@ -54,4 +53,11 @@ export default {
   </no-ssr>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.activeClass{
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+  width: 92%;
+  background-color: white;
+}</style>

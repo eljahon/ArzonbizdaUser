@@ -35,6 +35,13 @@ export default {
   },
 
   methods: {
+    stringFormat (item) {
+      if (item.length > 20) {
+        return item.slice(0, 25)
+      } else {
+        return  item
+      }
+    },
     openProductPage(item) {
       this.$router.push(
         this.localePath({
@@ -88,7 +95,7 @@ export default {
             :font-size="['12px', '13px', '14px', '16px', '18px', '20px']"
             :line-height="['15px', '18px', '20px', '24px', '26px', '30px']"
             color="color.TextColor2"
-            >{{ item.name }}</CBox
+            >{{ stringFormat(item.name) }}</CBox
           >
         </CBox>
       </CStack>

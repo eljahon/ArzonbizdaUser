@@ -63,25 +63,26 @@ export default {
     <CThemeProvider>
       <c-menu>
         <c-menu-button
-:mw="['56px', '56px', '56px', '56px', '56px', '215px']"
-                       _focus="{{}}"
-                       align-item="center"
-                       background-color="none"
-                       bg="transparent"
-                       border="1px solid"
-                       border-color="color.BorderColor"
-                       class="header__button"
-                       color="color.InputBorder"
-                       cursor="pointer"
-                       gap="8.5px"
-                       height="56px"
-                       justify-content="center"
-                       ml="20px"
-                       right-icon="chevron-down"
-                       rounded="12"
-                       style="background-color: white"
-                       variant-color="color.WhiteColor">
-          {{ $t('compare') }}
+          :mw="['56px', '56px', '56px', '56px', '56px', '215px']"
+          _focus="{{}}"
+          align-item="center"
+          background-color="none"
+          bg="transparent"
+          border="1px solid"
+          border-color="color.BorderColor"
+          class="header__button"
+          color="color.InputBorder"
+          cursor="pointer"
+          gap="8.5px"
+          height="56px"
+          justify-content="center"
+          ml="20px"
+          right-icon="chevron-down"
+          rounded="12"
+          style="background-color: white"
+          variant-color="color.WhiteColor"><span class="icon"><c-icon name="compare" size="24px" mr="10px"/></span>
+          <span class="icon-text">{{ $t('compare') }}</span>
+
           <CBadge
             variant="solid"
             background="#6FCF97"
@@ -111,13 +112,13 @@ export default {
           </c-menu-item>
           <c-menu-item style="margin-top: 10px">
             <c-button
-class="header__button"
-                      style="width: 100%"
-                      size="xs" variant-color="color.WhiteColor"
-                      border-color="color.BorderColor"
-                      right-icon="arrow-forward"
-                      variant="outline"
-                      @click="toRoute">
+              class="header__button"
+              style="width: 100%"
+              size="xs" variant-color="color.WhiteColor"
+              border-color="color.BorderColor"
+              right-icon="arrow-forward"
+              variant="outline"
+              @click="toRoute">
               <span style="color: red">{{ $t('compare') }}</span>
             </c-button>
           </c-menu-item>
@@ -147,17 +148,26 @@ class="header__button"
   .icon__text {
     display: none;
   }
+
 }
 
 @media screen and(max-width: 768px) {
   .header__button {
     margin-left: 0;
   }
+  .icon-text {
+    display: none;
+  }
 }
 
 @media screen and(max-width: 350px) {
   .header__button {
     height: 48px !important;
+  }
+}
+@media screen and(max-width: 10px) {
+  .icon{
+  display: block;
   }
 }
 </style>

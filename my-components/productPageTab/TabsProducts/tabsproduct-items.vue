@@ -40,6 +40,13 @@ export default {
             })
           )
         },
+        stringFormat (item) {
+          if (item.length > 20) {
+            return item.slice(0, 20)
+          } else {
+            return  item
+          }
+        },
       },
     },
   ],
@@ -107,7 +114,7 @@ export default {
           font-weight="400"
           :line-height="['15px', '20px', '25px', '30px', '35px', '40px']"
         >
-          {{ item.name }}</CHeading
+          {{ stringFormat(item.name)  }}</CHeading
         >
 
         <CBox
